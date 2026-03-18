@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "15.4.1",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -155,7 +155,7 @@
         "min": 1200,
         "max": 1500,
         "step": 20,
-        "default": 1380,      
+        "default": 1380,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },
