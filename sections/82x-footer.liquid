@@ -1,0 +1,444 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+{{ 'brand-sections.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .footer-82x {
+    --footer-pt: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+  .footer-82x__bottom { padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px; }
+
+  @media screen and (min-width: 750px) {
+    .footer-82x {
+      --footer-pt: {{ section.settings.padding_top }}px;
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+    .footer-82x__bottom { padding-bottom: {{ section.settings.padding_bottom }}px; }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign has_social = false
+  if settings.social_facebook_link != blank or settings.social_instagram_link != blank or settings.social_tiktok_link != blank or settings.social_twitter_link != blank or settings.social_youtube_link != blank or settings.social_pinterest_link != blank
+    assign has_social = true
+  endif
+-%}
+
+<footer class="footer-82x color-{{ section.settings.color_scheme }} gradient">
+  <div class="footer-82x__top page-width">
+
+    <!-- ── Col 1: Brand info ─────────────────────────────────────── -->
+    <div class="footer-82x__brand{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if settings.logo != blank -%}
+        <div class="footer-82x__logo-wrap">
+          {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+          {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+          {{
+            settings.logo
+            | image_url: width: 400
+            | image_tag:
+              loading: 'lazy',
+              widths: '100, 150, 200, 300, 400',
+              height: logo_height,
+              width: settings.logo_width,
+              alt: logo_alt
+          }}
+        </div>
+      {%- else -%}
+        <p class="h3" style="margin:0 0 1.6rem;">{{ shop.name }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.tagline != blank -%}
+        <p class="footer-82x__tagline">{{ section.settings.tagline }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.show_social and has_social -%}
+        {%- if section.settings.social_label != blank -%}
+          <p class="footer-82x__social-label">{{ section.settings.social_label | escape }}</p>
+        {%- endif -%}
+        {%- render 'social-icons', class: 'footer-82x__social-list' -%}
+      {%- endif -%}
+
+      {%- if section.settings.fda_disclaimer != blank -%}
+        <div class="footer-82x__disclaimer">
+          {{ section.settings.fda_disclaimer }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <!-- ── Dynamic blocks: link_list + text ─────────────────────── -->
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'link_list' -%}
+          <div
+            class="footer-82x__col{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.heading != blank -%}
+              <h3 class="footer-82x__col-heading">{{ block.settings.heading | escape }}</h3>
+            {%- endif -%}
+            {%- if block.settings.menu != blank -%}
+              <ul class="footer-82x__links" role="list">
+                {%- for link in block.settings.menu.links -%}
+                  <li>
+                    <a
+                      href="{{ link.url }}"
+                      class="footer-82x__link{% if link.active %} footer-82x__link--active{% endif %}"
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+
+        {%- when 'text' -%}
+          <div
+            class="footer-82x__col{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.heading != blank -%}
+              <h3 class="footer-82x__col-heading">{{ block.settings.heading | escape }}</h3>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+              <div class="footer-82x__col-text rte">{{ block.settings.content }}</div>
+            {%- endif -%}
+          </div>
+
+      {%- endcase -%}
+    {%- endfor -%}
+
+    <!-- ── Col last: Newsletter + Norton badge ───────────────────── -->
+    <div class="footer-82x__newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- if section.settings.newsletter_heading != blank -%}
+        <h3 class="footer-82x__nl-heading">{{ section.settings.newsletter_heading }}</h3>
+      {%- endif -%}
+
+      {%- if section.settings.newsletter_subtext != blank -%}
+        <p class="footer-82x__nl-sub">{{ section.settings.newsletter_subtext | escape }}</p>
+      {%- endif -%}
+
+      {%- form 'customer', id: 'Footer82xNewsletter', class: 'footer-82x__form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+
+        <input
+          id="Footer82x--{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          class="footer-82x__input"
+          value="{{ form.email }}"
+          placeholder="{{ section.settings.email_placeholder | default: 'Enter your email' | escape }}"
+          aria-required="true"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+          {% if form.errors %}
+            autofocus
+            aria-invalid="true"
+          {% endif %}
+          required
+        >
+        <label class="visually-hidden" for="Footer82x--{{ section.id }}">
+          {{ section.settings.email_placeholder | default: 'Enter your email' | escape }}
+        </label>
+
+        <button
+          type="submit"
+          class="footer-82x__subscribe button button--primary"
+          name="commit"
+        >
+          {{- section.settings.subscribe_label | default: 'SUBSCRIBE' | escape -}}
+        </button>
+
+        {%- if form.posted_successfully? -%}
+          <p class="footer-82x__form-msg" tabindex="-1" autofocus>
+            <span class="svg-wrapper">{{- 'icon-success.svg' | inline_asset_content -}}</span>
+            {{- 'newsletter.success' | t -}}
+          </p>
+        {%- endif -%}
+
+        {%- if form.errors -%}
+          <p class="footer-82x__form-msg" style="color:var(--color-error);">
+            {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
+          </p>
+        {%- endif -%}
+      {%- endform -%}
+
+      {%- if section.settings.trust_badge_image != blank or section.settings.trust_badge_label != blank -%}
+        <div class="footer-82x__trust">
+          {%- if section.settings.trust_badge_image != blank -%}
+            {{
+              section.settings.trust_badge_image
+              | image_url: width: 120
+              | image_tag:
+                loading: 'lazy',
+                widths: '56, 80, 120',
+                class: 'footer-82x__trust-img',
+                alt: section.settings.trust_badge_label | default: 'Trust badge'
+            }}
+          {%- endif -%}
+          {%- if section.settings.trust_badge_label != blank -%}
+            <div class="footer-82x__trust-text">{{ section.settings.trust_badge_label }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+  </div><!-- /footer-82x__top -->
+
+  <!-- ── Bottom bar ──────────────────────────────────────────────── -->
+  <div class="footer-82x__bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="page-width">
+
+      <!-- Row 1: localization (left) + payment (right) -->
+      <div class="footer-82x__bottom-row">
+        <div>
+          {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+            <localization-form>
+              {%- form 'localization', id: 'Footer82xCountryForm', class: 'localization-form' -%}
+                <div>
+                  <h2 class="visually-hidden" id="Footer82xCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                  {%- render 'country-localization', localPosition: 'Footer82xCountry' -%}
+                </div>
+              {%- endform -%}
+            </localization-form>
+          {%- endif -%}
+        </div>
+
+        {%- if section.settings.payment_enable -%}
+          <div class="footer__payment">
+            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+            <ul class="list list-payment" role="list">
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="list-payment__item">
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Row 2: copyright -->
+      <div class="footer-82x__copyright">
+        <small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}. {{ section.settings.copyright_text | default: 'All Rights Reserved.' | escape }}</small>
+        <small>{{ powered_by_link }}</small>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+{% schema %}
+{
+  "name": "82X Footer",
+  "class": "footer-section",
+  "enabled_on": { "groups": ["footer"] },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand column"
+    },
+    {
+      "type": "paragraph",
+      "content": "Logo is set in Theme Settings › Logo. Social links are set in Theme Settings › Social Media."
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline text",
+      "default": "To create high quality, plant-based products that are safe for people and the planet."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show social icons",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "social_label",
+      "label": "Social label",
+      "default": "Follow Us On Social"
+    },
+    {
+      "type": "richtext",
+      "id": "fda_disclaimer",
+      "label": "FDA disclaimer (shown in box)",
+      "default": "<p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter column"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Heading",
+      "default": "Join Us On The Path To Better Health."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_subtext",
+      "label": "Subtext",
+      "default": "Be the first to know about our biggest and best sales."
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email input placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "subscribe_label",
+      "label": "Subscribe button text",
+      "default": "SUBSCRIBE"
+    },
+    {
+      "type": "header",
+      "content": "Trust / Norton badge"
+    },
+    {
+      "type": "image_picker",
+      "id": "trust_badge_image",
+      "label": "Badge image (e.g. Norton logo)"
+    },
+    {
+      "type": "text",
+      "id": "trust_badge_label",
+      "label": "Badge label",
+      "default": "100% Secured Shopping\nby Norton"
+    },
+    {
+      "type": "header",
+      "content": "Bottom bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "label": "Show country selector",
+      "default": true,
+      "info": "Requires multiple countries in Shopify Markets"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright suffix",
+      "default": "All Rights Reserved."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0, "max": 100, "step": 4, "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0, "max": 100, "step": 4, "unit": "px",
+      "label": "Top padding",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0, "max": 100, "step": 4, "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Navigation menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Information"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "default": "footer",
+          "info": "Create menus in Navigation settings"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text / Address block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Headquarters"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Address 1: 16192 Coastal Highway, Lewes, Delaware 19958, County of sussex, US</p><p>Address 2: 2453-1 Minamiusa Usa, Oita, JAPAN</p>"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "text",
+        "settings": {
+          "heading": "Headquarters",
+          "content": "<p>Address 1: 16192 Coastal Highway, Lewes, Delaware 19958, County of sussex, US</p><p>Address 2: 2453-1 Minamiusa Usa, Oita, JAPAN</p>"
+        }
+      },
+      {
+        "type": "link_list",
+        "settings": {
+          "heading": "Information",
+          "menu": "footer"
+        }
+      },
+      {
+        "type": "link_list",
+        "settings": {
+          "heading": "Policy",
+          "menu": "footer"
+        }
+      }
+    ]
+  }
+}
+{% endschema %}

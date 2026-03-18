@@ -1,0 +1,183 @@
+{{ 'brand-sections.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- assign photo_blocks = section.blocks | where: 'type', 'photo' -%}
+
+<div class="review-stats-82x color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="page-width">
+
+    <!-- Stars -->
+    {%- assign rating_int = section.settings.rating -%}
+    <div class="review-stats-82x__stars" aria-label="{{ rating_int }} out of 5 stars" role="img">
+      {%- for i in (1..5) -%}
+        {%- if i <= rating_int -%}
+          <span aria-hidden="true">★</span>
+        {%- else -%}
+          <span aria-hidden="true" style="opacity:.3;">★</span>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- Big review count -->
+    {%- if section.settings.count != blank -%}
+      <p class="review-stats-82x__count">{{ section.settings.count }}</p>
+    {%- endif -%}
+
+    <!-- Label -->
+    {%- if section.settings.label != blank -%}
+      <p class="review-stats-82x__label">{{ section.settings.label | escape }}</p>
+    {%- endif -%}
+
+    <!-- Overlapping customer photos -->
+    {%- if photo_blocks.size > 0 -%}
+      <div class="review-stats-82x__photos" aria-hidden="true">
+        {%- for block in photo_blocks -%}
+          <div class="review-stats-82x__photo" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 112
+                | image_tag:
+                  widths: '56, 112',
+                  sizes: '5.6rem',
+                  loading: 'lazy',
+                  alt: ''
+              }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <!-- CTA -->
+    {%- if section.settings.button_label != blank -%}
+      <div class="review-stats-82x__cta">
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
+          class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "82X Review Stats",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "range",
+      "id": "rating",
+      "min": 1, "max": 5, "step": 1,
+      "label": "Star rating display",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "count",
+      "label": "Review count (display text)",
+      "default": "45,893",
+      "info": "Displayed as large headline number"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label below count",
+      "default": "5 Star Brand Reviews"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Read All Reviews"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "Use outline button style",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0, "max": 100, "step": 4, "unit": "px",
+      "label": "Top padding",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0, "max": 100, "step": 4, "unit": "px",
+      "label": "Bottom padding",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Customer photo",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Customer photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "82X Review Stats",
+      "blocks": [
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" },
+        { "type": "photo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

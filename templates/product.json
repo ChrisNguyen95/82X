@@ -1,0 +1,362 @@
+{
+  "sections": {
+
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor":           { "type": "text",             "settings": { "text": "{{ product.vendor }}", "text_style": "uppercase" } },
+        "title":            { "type": "title",            "settings": {} },
+        "price":            { "type": "price",            "settings": {} },
+        "variant_picker":   { "type": "variant_picker",   "settings": { "picker_type": "button", "swatch_shape": "circle" } },
+        "quantity_selector":{ "type": "quantity_selector","settings": {} },
+        "buy_buttons":      { "type": "buy_buttons",      "settings": { "show_dynamic_checkout": true, "show_gift_card_recipient": false } },
+        "description":      { "type": "description",      "settings": {} },
+        "share":            { "type": "share",            "settings": { "share_label": "Share" } }
+      },
+      "block_order": ["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+
+    "product_faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Are The Benefits Of 82X Sakura Placenta?",
+            "icon": "none",
+            "row_content": "<p>82X Sakura Placenta is formulated to brighten skin, reduce pigmentation, support collagen production, and deliver a more even, radiant complexion within weeks of consistent use.</p>"
+          }
+        },
+        "faq2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Should I Take 82X Sakura Placenta?",
+            "icon": "none",
+            "row_content": "<p>Drink one bottle (30ml) per day, preferably on an empty stomach in the morning for best absorption. Results are typically visible within 3–4 weeks of daily use.</p>"
+          }
+        },
+        "faq3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Long Does It Take To See Results?",
+            "icon": "none",
+            "row_content": "<p>Most customers notice improvements in skin hydration and radiance within 2–3 weeks. Optimal results for firmness and fine line reduction are seen after 4–8 weeks of consistent daily use.</p>"
+          }
+        },
+        "faq4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who Should Use This Product?",
+            "icon": "none",
+            "row_content": "<p>82X is suitable for adults of all skin types looking to improve skin hydration, firmness, brightness, and overall appearance. Consult a physician if pregnant or nursing.</p>"
+          }
+        }
+      },
+      "block_order": ["faq1","faq2","faq3","faq4"],
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+
+    "money_back": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": { "heading": "Get Results Or Your Money Back", "heading_size": "h1" }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are so confident in the results that 82X delivers, that if you aren't satisfied within 30 days of purchase we will refund you in full. No hassle. No questions asked.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": { "button_label": "Shop Now", "button_link": "shopify://collections/all", "button_style_secondary": false }
+        }
+      },
+      "block_order": ["heading","text","button"],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "testimonial_quote": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": { "heading": "\"Less Effort, Better Skin.\"", "heading_size": "hxl" }
+        },
+        "text": {
+          "type": "text",
+          "settings": { "text": "<p>Laura K., 38 — 82X Customer</p>" }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Read More",
+            "button_link_1": "",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": ["heading","text","buttons"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "product_doctors": {
+      "type": "82x-doctors-team",
+      "blocks": {
+        "doc1": {
+          "type": "doctor",
+          "settings": {
+            "name": "Dr. Alyssa Dweck",
+            "credentials": "Board Certified Gynaecologist, OBGYN",
+            "bio": "<p>\"The collagen science behind 82X is compelling. I recommend it to patients seeking a safe, evidence-backed approach to skin health.\"</p>"
+          }
+        },
+        "doc2": {
+          "type": "doctor",
+          "settings": {
+            "name": "Dr. Paul Bhandal",
+            "credentials": "Integrative Functional Medicine Physician",
+            "bio": "<p>\"82X combines traditional Japanese wisdom with modern nutritional science. The results my patients report are genuinely impressive.\"</p>"
+          }
+        },
+        "doc3": {
+          "type": "doctor",
+          "settings": {
+            "name": "Dr. Katherine Klos",
+            "credentials": "Dermatologist",
+            "bio": "<p>\"Collagen supplementation through a high-bioavailability liquid formula like 82X is one of the most effective ways to support skin from the inside out.\"</p>"
+          }
+        }
+      },
+      "block_order": ["doc1","doc2","doc3"],
+      "settings": {
+        "heading": "Meet The Doctors And Scientists Helping 82x Make A Difference",
+        "heading_size": "h1",
+        "button_label": "Meet Our Scientists",
+        "button_style_secondary": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "support_products": {
+      "type": "82x-support-products",
+      "blocks": {
+        "sp1": {
+          "type": "product",
+          "settings": {
+            "product_name": "82X Sakura Placenta – White & Contour",
+            "benefits": "Brightens and evens skin tone\nReduces fine lines and wrinkles\nBoosts collagen synthesis naturally\nSupports skin elasticity and firmness\nDelivers deep hydration",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "sp2": {
+          "type": "product",
+          "settings": {
+            "product_name": "82X Collagen Classic – Liquid Marine Collagen Drink",
+            "benefits": "Restores skin firmness and bounce\nReduces visible signs of ageing\nHigh-concentration marine collagen peptides\nSupports joint and bone health",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "sp3": {
+          "type": "product",
+          "settings": {
+            "product_name": "Kaharu Collagen – Premium Japanese Marine Collagen Drink",
+            "benefits": "Ultra-premium Japanese formulation\nEnhances radiance and daily glow\nBoosts natural collagen production\nRich in antioxidants and vitamins",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": ["sp1","sp2","sp3"],
+      "settings": {
+        "heading": "3 Parts To Our Maximum Support",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "product_review_stats": {
+      "type": "82x-review-stats",
+      "blocks": {
+        "rp1": { "type": "photo", "settings": {} },
+        "rp2": { "type": "photo", "settings": {} },
+        "rp3": { "type": "photo", "settings": {} },
+        "rp4": { "type": "photo", "settings": {} },
+        "rp5": { "type": "photo", "settings": {} }
+      },
+      "block_order": ["rp1","rp2","rp3","rp4","rp5"],
+      "settings": {
+        "rating": 5,
+        "count": "45,893",
+        "label": "5 Star Brand Reviews",
+        "button_label": "Read All Reviews",
+        "button_style_secondary": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "product_reviews": {
+      "type": "82x-customer-reviews",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Luca R.", "reviewer_location": "Rome, Italy",
+            "rating": 5, "review_title": "Results in just 3 weeks!",
+            "review_body": "<p>I was skeptical at first, but after 3 weeks my skin is noticeably more luminous. Worth every penny!</p>",
+            "verified": true
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Emma K.", "reviewer_location": "London, UK",
+            "rating": 5, "review_title": "My skin has never looked better",
+            "review_body": "<p>82X is now part of my daily routine. My fine lines are less visible and my skin feels incredibly hydrated and firm.</p>",
+            "verified": true
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Yuki T.", "reviewer_location": "Tokyo, Japan",
+            "rating": 5, "review_title": "Best collagen drink I've tried",
+            "review_body": "<p>As a Japanese customer, I've tried many collagen drinks. 82X is by far the most effective I've ever used.</p>",
+            "verified": true
+          }
+        },
+        "r4": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Sarah M.", "reviewer_location": "New York, USA",
+            "rating": 5, "review_title": "Amazing results in 4 weeks!",
+            "review_body": "<p>I started seeing a difference after 2 weeks. My skin looks more youthful and dark spots have faded noticeably.</p>",
+            "verified": true
+          }
+        },
+        "r5": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Marie D.", "reviewer_location": "Paris, France",
+            "rating": 5, "review_title": "Produit incroyable",
+            "review_body": "<p>Mon meilleur investissement beauté cette année. Ma peau est vraiment transformée!</p>",
+            "verified": true
+          }
+        },
+        "r6": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Anita L.", "reviewer_location": "Singapore",
+            "rating": 5, "review_title": "Glowing skin every day",
+            "review_body": "<p>This has completely transformed my skin. I get so many compliments now. Will repurchase forever!</p>",
+            "verified": true
+          }
+        }
+      },
+      "block_order": ["r1","r2","r3","r4","r5","r6"],
+      "settings": {
+        "heading": "Customer's Review",
+        "heading_size": "h1",
+        "show_summary": true,
+        "avg_rating": "4.9",
+        "total_reviews": "45,893",
+        "pct_5": 89, "pct_4": 7, "pct_3": 2, "pct_2": 1, "pct_1": 1,
+        "button_label": "See More Reviews",
+        "button_style_secondary": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+
+    "related_products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+
+  },
+  "order": [
+    "main",
+    "product_faqs",
+    "money_back",
+    "testimonial_quote",
+    "product_doctors",
+    "support_products",
+    "product_review_stats",
+    "product_reviews",
+    "related_products"
+  ]
+}
