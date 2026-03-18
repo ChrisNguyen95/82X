@@ -23,49 +23,63 @@
    Hero Split — #HeroSplit-{{ section.id }}
    ───────────────────────────────────────────── */
 
-/* --- Wrapper --- */
+/* ── WRAPPER ──
+   position: relative + overflow: hidden để chứa ảnh absolute.
+   Chiều cao đến từ ::before (adapt) hoặc min-height (fixed).
+   Không dùng flex trên wrapper vì content-outer là absolute.
+──────────────────────────────────────────────── */
 #HeroSplit-{{ section.id }} {
   position: relative;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
 }
 
 /* ── MOBILE HEIGHT ── */
-{%- if mobile_height == 'adapt' -%}
-  {%- if has_mobile_img -%}
-    #HeroSplit-{{ section.id }} .hero-split__media--mobile::before {
-      content: '';
-      display: block;
-      padding-bottom: {{ 1 | divided_by: section.settings.image_mobile.aspect_ratio | times: 100 }}%;
-    }
-  {%- elsif has_image -%}
-    #HeroSplit-{{ section.id }} .hero-split__media--desktop::before {
-      content: '';
-      display: block;
-      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-    }
+@media screen and (max-width: 749px) {
+  {%- if mobile_height == 'adapt' -%}
+    {%- comment -%}
+      Dùng ::before padding-bottom trick trực tiếp trên section.
+      Chọn tỉ lệ ảnh mobile nếu có, nếu không thì dùng ảnh desktop.
+    {%- endcomment -%}
+    {%- if has_mobile_img -%}
+      #HeroSplit-{{ section.id }}::before {
+        content: '';
+        display: block;
+        padding-bottom: {{ 1 | divided_by: section.settings.image_mobile.aspect_ratio | times: 100 }}%;
+      }
+    {%- elsif has_image -%}
+      #HeroSplit-{{ section.id }}::before {
+        content: '';
+        display: block;
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+      }
+    {%- else -%}
+      #HeroSplit-{{ section.id }} { min-height: 48rem; }
+    {%- endif -%}
+  {%- elsif mobile_height == 'small' -%}
+    #HeroSplit-{{ section.id }} { min-height: 36rem; }
+  {%- elsif mobile_height == 'medium' -%}
+    #HeroSplit-{{ section.id }} { min-height: 48rem; }
+  {%- elsif mobile_height == 'large' -%}
+    #HeroSplit-{{ section.id }} { min-height: 64rem; }
+  {%- elsif mobile_height == 'fullscreen' -%}
+    #HeroSplit-{{ section.id }} { min-height: 100svh; }
   {%- endif -%}
-{%- elsif mobile_height == 'small' -%}
-  #HeroSplit-{{ section.id }} { min-height: 36rem; }
-{%- elsif mobile_height == 'medium' -%}
-  #HeroSplit-{{ section.id }} { min-height: 48rem; }
-{%- elsif mobile_height == 'large' -%}
-  #HeroSplit-{{ section.id }} { min-height: 64rem; }
-{%- elsif mobile_height == 'fullscreen' -%}
-  #HeroSplit-{{ section.id }} { min-height: 100svh; }
-{%- endif -%}
+}
 
 /* ── DESKTOP HEIGHT ── */
 @media screen and (min-width: 750px) {
   {%- if desktop_height == 'adapt' -%}
     {%- if has_image -%}
-      #HeroSplit-{{ section.id }} .hero-split__media--desktop::before {
+      #HeroSplit-{{ section.id }}::before {
         content: '';
         display: block;
         padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
       }
+    {%- else -%}
+      #HeroSplit-{{ section.id }} { min-height: 56rem; }
     {%- endif -%}
+    /* Reset min-height ở desktop adapt để tránh xung đột với mobile min-height */
+    #HeroSplit-{{ section.id }} { min-height: 0; }
   {%- elsif desktop_height == 'small' -%}
     #HeroSplit-{{ section.id }} { min-height: 42rem; }
   {%- elsif desktop_height == 'medium' -%}
@@ -77,54 +91,78 @@
   {%- endif -%}
 }
 
-/* ── BACKGROUND MEDIA ── */
-.hero-split__media {
+/* ── BACKGROUND MEDIA ──
+   Luôn position: absolute; inset: 0 để fill toàn bộ section
+   (cả khi adapt dùng ::before, cả khi fixed dùng min-height).
+──────────────────────────────────────────────── */
+#HeroSplit-{{ section.id }} .hero-split__media {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
-.hero-split__media img {
+#HeroSplit-{{ section.id }} .hero-split__media img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: {{ section.settings.image_fit }};
   object-position: {{ section.settings.image_position }};
+  display: block;
 }
 
 /* desktop / mobile image visibility */
-.hero-split__media--desktop { display: none; }
-.hero-split__media--mobile  { display: block; }
+#HeroSplit-{{ section.id }} .hero-split__media--desktop { display: none; }
+#HeroSplit-{{ section.id }} .hero-split__media--mobile  { display: block; }
 
 @media screen and (min-width: 750px) {
-  .hero-split__media--desktop { display: block; }
-  .hero-split__media--mobile  { display: none; }
+  #HeroSplit-{{ section.id }} .hero-split__media--desktop { display: block; }
+  #HeroSplit-{{ section.id }} .hero-split__media--mobile  { display: none; }
 }
 
 /* overlay */
-.hero-split__media::after {
+#HeroSplit-{{ section.id }} .hero-split__media::after {
   content: '';
   position: absolute;
   inset: 0;
   background: #000;
   opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
   z-index: 1;
+  pointer-events: none;
 }
 
-/* ── CONTENT LAYER ── */
-.hero-split__content-outer {
-  position: relative;
+/* ── CONTENT LAYER ──
+   position: absolute; inset: 0 → overlay lên ảnh nền.
+   display: flex để căn chỉnh theo vertical setting.
+   padding tạo khoảng cách từ cạnh section.
+──────────────────────────────────────────────── */
+#HeroSplit-{{ section.id }} .hero-split__content-outer {
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  width: 100%;
-  flex: 1;
   display: flex;
-  align-items: {{ section.settings.desktop_vertical | replace: 'top','flex-start' | replace: 'middle','center' | replace: 'bottom','flex-end' }};
+  width: 100%;
+
+  /* vertical alignment (mobile) */
+  align-items: {%- case section.settings.mobile_vertical -%}
+    {%- when 'top' -%}    flex-start
+    {%- when 'bottom' -%} flex-end
+    {%- else -%}          center
+  {%- endcase -%};
+
   padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
 }
 
 @media screen and (min-width: 750px) {
-  .hero-split__content-outer {
+  #HeroSplit-{{ section.id }} .hero-split__content-outer {
+    /* vertical alignment (desktop) */
+    align-items: {%- case section.settings.desktop_vertical -%}
+      {%- when 'top' -%}    flex-start
+      {%- when 'bottom' -%} flex-end
+      {%- else -%}          center
+    {%- endcase -%};
+
     padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
   }
 }
