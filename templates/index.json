@@ -89,7 +89,7 @@
         "image_6": "shopify://shop_images/Picture6.jpg",
         "image_gap": 8,
         "image_border_radius": 8,
-        "image_aspect_ratio": "3 / 4",
+        "image_aspect_ratio": "adapt",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
