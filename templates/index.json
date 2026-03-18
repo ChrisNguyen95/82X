@@ -9,69 +9,52 @@
  */
 {
   "sections": {
-    "hero_split_Jnw3GL": {
-      "type": "hero-split",
+    "image_banner_zLMi9G": {
+      "type": "image-banner",
       "blocks": {
-        "icon_badge_LB9MTK": {
-          "type": "icon_badge",
+        "heading_ePAb3H": {
+          "type": "heading",
           "settings": {
-            "icon_label": "Beauty Placenta"
+            "heading": "Image banner",
+            "heading_size": "h1"
           }
         },
-        "icon_badge_JVpBPT": {
-          "type": "icon_badge",
+        "text_jq6YaU": {
+          "type": "text",
           "settings": {
-            "icon_label": "Fish Collage"
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
-        "icon_badge_6hJFk3": {
-          "type": "icon_badge",
+        "buttons_qNPmhb": {
+          "type": "buttons",
           "settings": {
-            "icon_label": "Sakura Extract"
-          }
-        },
-        "icon_badge_jNthBc": {
-          "type": "icon_badge",
-          "settings": {
-            "icon_label": "Natural Ingredients"
-          }
-        },
-        "icon_badge_rHe8DJ": {
-          "type": "icon_badge",
-          "settings": {
-            "icon_label": "Made In Japan"
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "icon_badge_LB9MTK",
-        "icon_badge_JVpBPT",
-        "icon_badge_6hJFk3",
-        "icon_badge_jNthBc",
-        "icon_badge_rHe8DJ"
+        "heading_ePAb3H",
+        "text_jq6YaU",
+        "buttons_qNPmhb"
       ],
-      "name": "Hero Split",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "caption": "Start Your Premium Collagen Journey For",
-        "heading": "Reveal Your Natural Glow - Just $5 Per Day",
-        "heading_size": "h0",
-        "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.</p>",
-        "button_1_label": "Shop Now",
-        "button_1_link": "",
-        "button_2_label": "Take Quiz",
-        "button_2_link": "",
-        "image": "shopify://shop_images/Product_image_tab.png",
-        "image_max_height": 600,
-        "image_position": "right",
-        "text_column_width": "45%",
-        "desktop_text_align": "left",
-        "mobile_text_align": "left",
-        "icon_size": 36,
-        "background_color": "#E1EEF8",
-        "min_height": 900,
-        "min_height_mobile": 600,
-        "padding_top": 60,
-        "padding_bottom": 0
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     },
     "image_grid_with_text_HFJfaW": {
@@ -127,7 +110,7 @@
     }
   },
   "order": [
-    "hero_split_Jnw3GL",
+    "image_banner_zLMi9G",
     "image_grid_with_text_HFJfaW"
   ]
 }
