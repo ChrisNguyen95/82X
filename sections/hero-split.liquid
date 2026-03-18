@@ -1,0 +1,519 @@
+{%- style -%}
+  /* ── Hero Split – section {{ section.id }} ── */
+  .hero-split-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    min-height: {{ section.settings.min_height_mobile }}px;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      min-height: {{ section.settings.min_height }}px;
+    }
+  }
+
+  /* ── Wrapper ── */
+  .hero-split-{{ section.id }} .hero-split__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split-{{ section.id }} .hero-split__inner {
+      flex-direction: {% if section.settings.image_position == 'left' %}row-reverse{% else %}row{% endif %};
+      align-items: center;
+      gap: 0;
+      padding: 0 5rem;
+    }
+  }
+
+  /* ── Text column ── */
+  .hero-split-{{ section.id }} .hero-split__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: {{ section.settings.mobile_text_align }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split-{{ section.id }} .hero-split__text {
+      flex: 0 0 {{ section.settings.text_column_width }};
+      max-width: {{ section.settings.text_column_width }};
+      text-align: {{ section.settings.desktop_text_align }};
+      padding-right: {% if section.settings.image_position == 'right' %}4rem{% else %}0{% endif %};
+      padding-left: {% if section.settings.image_position == 'left' %}4rem{% else %}0{% endif %};
+    }
+  }
+
+  /* ── Caption ── */
+  .hero-split__caption {
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  /* ── Heading ── */
+  .hero-split__heading {
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  /* ── Body text ── */
+  .hero-split__body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  /* ── Buttons row ── */
+  .hero-split__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    {% if section.settings.mobile_text_align == 'center' %}justify-content: center;{% endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split__buttons {
+      {% if section.settings.desktop_text_align == 'center' %}justify-content: center;
+      {% elsif section.settings.desktop_text_align == 'right' %}justify-content: flex-end;
+      {% else %}justify-content: flex-start;{% endif %}
+    }
+  }
+
+  /* ── Icon badges row ── */
+  .hero-split__icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 2.4rem;
+    {% if section.settings.mobile_text_align == 'center' %}justify-content: center;{% endif %}
+    margin-top: 0.8rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split__icons {
+      {% if section.settings.desktop_text_align == 'center' %}justify-content: center;
+      {% elsif section.settings.desktop_text_align == 'right' %}justify-content: flex-end;
+      {% else %}justify-content: flex-start;{% endif %}
+    }
+  }
+
+  .hero-split__icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
+    max-width: 80px;
+  }
+
+  .hero-split__icon-item img,
+  .hero-split__icon-item svg {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .hero-split__icon-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* ── Image column ── */
+  .hero-split-{{ section.id }} .hero-split__image {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split-{{ section.id }} .hero-split__image {
+      align-self: stretch;
+      justify-content: {% if section.settings.image_position == 'right' %}flex-end{% else %}flex-start{% endif %};
+    }
+  }
+
+  .hero-split-{{ section.id }} .hero-split__image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    {% if section.settings.image_max_height > 0 %}
+    max-height: {{ section.settings.image_max_height }}px;
+    {% endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .hero-split-{{ section.id }} .hero-split__image img {
+      max-height: none;
+      {% if section.settings.min_height > 0 %}
+      max-height: {{ section.settings.min_height | plus: 80 }}px;
+      {% endif %}
+    }
+  }
+
+  .hero-split__image-placeholder {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    background: rgba(0,0,0,0.06);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-split__image-placeholder svg {
+    width: 40%;
+    height: 40%;
+    opacity: 0.3;
+  }
+{%- endstyle -%}
+
+<div class="hero-split-{{ section.id }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="hero-split__inner">
+
+    {%- comment -%}── TEXT COLUMN ──{%- endcomment -%}
+    <div class="hero-split__text">
+
+      {%- if section.settings.caption != blank -%}
+        <p class="hero-split__caption">{{ section.settings.caption | escape }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="hero-split__heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="hero-split__body rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_1_label != blank or section.settings.button_2_label != blank -%}
+        <div class="hero-split__buttons">
+          {%- if section.settings.button_1_label != blank -%}
+            <a
+              {% if section.settings.button_1_link != blank %}href="{{ section.settings.button_1_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+              class="button button--primary"
+            >
+              {{ section.settings.button_1_label | escape }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.button_2_label != blank -%}
+            <a
+              {% if section.settings.button_2_link != blank %}href="{{ section.settings.button_2_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+              class="button button--secondary"
+            >
+              {{ section.settings.button_2_label | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}── ICON BADGES ──{%- endcomment -%}
+      {%- assign icon_blocks = section.blocks | where: 'type', 'icon_badge' -%}
+      {%- if icon_blocks.size > 0 -%}
+        <div class="hero-split__icons">
+          {%- for block in icon_blocks -%}
+            <div class="hero-split__icon-item" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon_image != blank -%}
+                {{
+                  block.settings.icon_image
+                  | image_url: width: 120
+                  | image_tag: loading: 'lazy', widths: '60, 80, 120', alt: block.settings.icon_label | escape
+                }}
+              {%- else -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+              {%- endif -%}
+              {%- if block.settings.icon_label != blank -%}
+                <p class="hero-split__icon-label">{{ block.settings.icon_label | escape }}</p>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+    </div>
+
+    {%- comment -%}── IMAGE COLUMN ──{%- endcomment -%}
+    <div class="hero-split__image">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            loading: 'eager',
+            fetchpriority: 'high',
+            widths: '400, 600, 800, 1000, 1200',
+            sizes: '(min-width: 750px) 55vw, 100vw',
+            alt: section.settings.image.alt | escape
+        }}
+      {%- else -%}
+        <div class="hero-split__image-placeholder">
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Split",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption (above heading)",
+      "default": "Start Your Premium Collagen Journey For"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Reveal Your Natural Glow - Just $5 Per Day"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2",  "label": "Small" },
+        { "value": "h1",  "label": "Medium" },
+        { "value": "h0",  "label": "Large" },
+        { "value": "hxl", "label": "Extra large" }
+      ],
+      "default": "h0"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Body text",
+      "default": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_1_label",
+      "label": "Button 1 label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button 2 label (outline)",
+      "default": "Take Quiz"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "range",
+      "id": "image_max_height",
+      "min": 0,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Max image height (mobile)",
+      "info": "Set 0 for auto",
+      "default": 360
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position (desktop)",
+      "options": [
+        { "value": "right", "label": "Right" },
+        { "value": "left",  "label": "Left" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "text_column_width",
+      "label": "Text column width (desktop)",
+      "options": [
+        { "value": "40%", "label": "40%" },
+        { "value": "45%", "label": "45%" },
+        { "value": "50%", "label": "50%" },
+        { "value": "55%", "label": "55%" }
+      ],
+      "default": "45%"
+    },
+    {
+      "type": "select",
+      "id": "desktop_text_align",
+      "label": "Text alignment (desktop)",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_text_align",
+      "label": "Text alignment (mobile)",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Icon badges"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 32,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#E1EEF8"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Min height (desktop)",
+      "default": 620
+    },
+    {
+      "type": "range",
+      "id": "min_height_mobile",
+      "min": 300,
+      "max": 700,
+      "step": 20,
+      "unit": "px",
+      "label": "Min height (mobile)",
+      "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_badge",
+      "name": "Icon Badge",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon image (SVG / PNG)"
+        },
+        {
+          "type": "text",
+          "id": "icon_label",
+          "label": "Label",
+          "default": "Beauty Placenta"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Split",
+      "blocks": [
+        { "type": "icon_badge", "settings": { "icon_label": "Beauty Placenta" } },
+        { "type": "icon_badge", "settings": { "icon_label": "Fish Collage" } },
+        { "type": "icon_badge", "settings": { "icon_label": "Sakura Extract" } },
+        { "type": "icon_badge", "settings": { "icon_label": "Natural Ingredients" } },
+        { "type": "icon_badge", "settings": { "icon_label": "Made In Japan" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
