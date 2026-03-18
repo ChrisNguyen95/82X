@@ -1,0 +1,444 @@
+{%- style -%}
+/* ═══════════════════════════════════════════════════════════════
+   Logo Marquee — #LogoMarquee-{{ section.id }}
+   Full-width auto-scrolling logo strip (CSS animation + JS clone).
+
+   Cách hoạt động:
+   ─────────────────────────────────────────────────────────────
+   JS (MarqueeElement) clone toàn bộ items → track = [A B C … A' B' C'…]
+   CSS animates translateX(0 → -(origWidth + gap)) → vòng lặp liên tục.
+   Điểm seam: khi A' về vị trí 0, animation reset về 0 → seamless ✓
+   ═══════════════════════════════════════════════════════════════ */
+
+#LogoMarquee-{{ section.id }} {
+  --lm-gap:      {{ section.settings.gap }}px;
+  --lm-height:   {{ section.settings.logo_height }}px;
+  --lm-duration: {{ section.settings.speed }}s;
+
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  overflow: hidden;
+}
+@media screen and (min-width: 750px) {
+  #LogoMarquee-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Subheading ── */
+#LogoMarquee-{{ section.id }} .lm-subheading {
+  text-align: center;
+  margin: 0 0 {{ section.settings.subheading_gap }}px;
+  font-size: 1.6rem;
+  color: {{ section.settings.text_color }};
+  opacity: 0.75;
+}
+
+/* ── marquee-element: clips overflow ── */
+#LogoMarquee-{{ section.id }} marquee-element {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  /* Ẩn cho đến khi JS chạy xong để tránh flash layout */
+  visibility: hidden;
+}
+#LogoMarquee-{{ section.id }} marquee-element.lm-ready {
+  visibility: visible;
+}
+
+/* ── Track ── */
+#LogoMarquee-{{ section.id }} .lm-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--lm-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  will-change: transform;
+  animation: lm-scroll-{{ section.id }} var(--lm-duration) linear infinite;
+  {%- if section.settings.direction == 'right' -%}
+  animation-direction: reverse;
+  {%- endif -%}
+}
+
+/* Pause on hover */
+#LogoMarquee-{{ section.id }} marquee-element[data-pause-hover]:hover .lm-track {
+  animation-play-state: paused;
+}
+
+/* Keyframe: to = seam point (set chính xác bởi JS qua --lm-translate-x) */
+@keyframes lm-scroll-{{ section.id }} {
+  to { transform: translateX(var(--lm-translate-x, -50%)); }
+}
+
+/* ── Item ── */
+#LogoMarquee-{{ section.id }} .lm-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image logo */
+#LogoMarquee-{{ section.id }} .lm-item img {
+  display: block;
+  height: var(--lm-height);
+  width: auto;
+  object-fit: contain;
+  max-width: none; /* override Dawn img max-width: 100% */
+}
+
+/* Text logo */
+#LogoMarquee-{{ section.id }} .lm-text {
+  display: block;
+  line-height: var(--lm-height);
+  color: {{ section.settings.text_color }};
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<section
+  id="LogoMarquee-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+
+  {%- comment -%}── Subheading ──{%- endcomment -%}
+  {%- unless section.settings.subheading == blank -%}
+    <div class="page-width">
+      <p class="lm-subheading h4">{{ section.settings.subheading | escape }}</p>
+    </div>
+  {%- endunless -%}
+
+  {%- comment -%}── Marquee ──{%- endcomment -%}
+  <marquee-element
+    id="lm-el-{{ section.id }}"
+    {% if section.settings.pause_on_hover %}data-pause-hover{% endif %}
+  >
+    <ul class="lm-track" role="list">
+      {%- for block in section.blocks -%}
+        <li class="lm-item" {{ block.shopify_attributes }}>
+
+          {%- case block.type -%}
+
+            {%- when 'image' -%}
+              {%- if block.settings.image != blank -%}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" aria-label="{{ block.settings.image.alt | default: shop.name | escape }}">
+                {%- endif -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 600
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '80, 120, 160, 200, 300, 400, 600',
+                      sizes: '200px',
+                      alt: block.settings.image.alt | default: ''
+                  }}
+                {%- if block.settings.link != blank -%}</a>{%- endif -%}
+              {%- endif -%}
+
+            {%- when 'text' -%}
+              {%- if block.settings.text != blank -%}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}"
+                    class="lm-text"
+                    style="font-size: {{ block.settings.font_size }}rem;"
+                  >{{- block.settings.text | escape -}}</a>
+                {%- else -%}
+                  <span
+                    class="lm-text"
+                    style="font-size: {{ block.settings.font_size }}rem;"
+                  >{{- block.settings.text | escape -}}</span>
+                {%- endif -%}
+              {%- endif -%}
+
+          {%- endcase -%}
+
+        </li>
+      {%- endfor -%}
+    </ul>
+  </marquee-element>
+
+</section>
+{%- endif -%}
+
+<script>
+(function () {
+  /* ═══════════════════════════════════════════════════════════════
+     MarqueeElement — Custom Element dùng chung, reusable
+     ─────────────────────────────────────────────────────────────
+     Params (HTML attributes trên <marquee-element>):
+       data-pause-hover   — pause animation khi hover
+
+     JS logic:
+       1. Đo origW = scrollWidth trước khi clone
+       2. Clone tất cả items và append (aria-hidden="true")
+       3. Set --lm-translate-x = -(origW + gap)
+          → animate từ 0 → seam point → reset về 0 → seamless
+     ═══════════════════════════════════════════════════════════════ */
+
+  if (customElements.get('marquee-element')) return;
+
+  class MarqueeElement extends HTMLElement {
+    connectedCallback() {
+      // Đợi layout hoàn tất rồi mới đo kích thước
+      requestAnimationFrame(() => this._setup());
+    }
+
+    disconnectedCallback() {
+      if (this._ro) { this._ro.disconnect(); this._ro = null; }
+    }
+
+    _setup() {
+      var track = this.querySelector('.lm-track');
+      if (!track) return;
+      this._track = track;
+
+      // Xóa clones cũ (khi re-init trong theme editor)
+      track.querySelectorAll('[aria-hidden="true"]').forEach(function (el) { el.remove(); });
+
+      if (!track.children.length) return;
+
+      var gap   = parseFloat(getComputedStyle(track).columnGap) || 0;
+      var origW = track.scrollWidth;                    // width of original set
+      var vpW   = this.offsetWidth || window.innerWidth; // visible viewport
+
+      /* How many clone sets needed so logos fill screen at ALL animation positions.
+         At worst frame: visible window = [origW+gap … origW+gap+vpW]
+         Need total track width >= origW + gap + vpW
+         → copies >= (gap + vpW) / (origW + gap)
+         Minimum 2 copies so short logo lists always loop visibly. */
+      var copies = Math.max(2, Math.ceil((vpW + gap) / (origW + gap)));
+      var origItems = [].slice.call(track.children);
+
+      for (var c = 0; c < copies; c++) {
+        origItems.forEach(function (item) {
+          var clone = item.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          track.appendChild(clone);
+        });
+      }
+
+      /* Seam point = origW + 1 gap (one full set width).
+         Animation: translateX(0 → -(origW+gap)) then resets → seamless ✓ */
+      track.style.setProperty('--lm-translate-x', '-' + (origW + gap) + 'px');
+
+      // Hiện section sau khi setup xong
+      this.classList.add('lm-ready');
+
+      // Resize observer: recalculate khi kích thước thay đổi
+      if (window.ResizeObserver && !this._ro) {
+        var self = this;
+        var resizeTimeout;
+        this._ro = new ResizeObserver(function () {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(function () { self._setup(); }, 250);
+        });
+        this._ro.observe(this.parentElement || this);
+      }
+    }
+  }
+
+  customElements.define('marquee-element', MarqueeElement);
+
+  /* Theme editor: re-init khi section reload (thêm/xóa block) */
+  document.addEventListener('shopify:section:load', function (e) {
+    var el = e.target.querySelector('marquee-element');
+    if (el && el._setup) el._setup();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Logo Marquee",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading text",
+      "default": "As Featured In"
+    },
+    {
+      "type": "range",
+      "id": "subheading_gap",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap below subheading",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Marquee"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Scroll direction",
+      "options": [
+        { "value": "left",  "label": "← Left" },
+        { "value": "right", "label": "→ Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 8,
+      "max": 80,
+      "step": 4,
+      "unit": "s",
+      "label": "Speed — duration (higher = slower)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Logo / icon height",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 16,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap between logos",
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text / icon color",
+      "default": "#111111"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Logo (image)",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Logo (text)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Brand name",
+          "default": "Men'sHealth"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 1,
+          "max": 4,
+          "step": 0.2,
+          "unit": "rem",
+          "label": "Font size",
+          "default": 2.2
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Marquee",
+      "blocks": [
+        { "type": "text", "settings": { "text": "Men'sHealth",    "font_size": 2.2 } },
+        { "type": "text", "settings": { "text": "Women'sHealth",  "font_size": 2.2 } },
+        { "type": "text", "settings": { "text": "BYRDIE",         "font_size": 2.0 } },
+        { "type": "text", "settings": { "text": "essence",        "font_size": 2.4 } },
+        { "type": "text", "settings": { "text": "Us Weekly",      "font_size": 2.0 } }
+      ]
+    }
+  ]
+}
+{% endschema %}

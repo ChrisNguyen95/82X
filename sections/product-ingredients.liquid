@@ -1,0 +1,519 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  assign loading_attr   = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading_attr   = 'eager'
+  endif
+
+  assign desktop_img = section.settings.image
+  assign mobile_img  = section.settings.mobile_image | default: section.settings.image
+-%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Product Ingredients — #ProdIngr-{{ section.id }}
+   Desktop: image left | content right
+   Mobile:  image → card → dosage (stacked)
+   ══════════════════════════════════════════════════════════════ */
+
+#ProdIngr-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Layout wrapper ── */
+/* Mobile: stacked column */
+#ProdIngr-{{ section.id }} .pi-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+/* Desktop: 2-column grid */
+@media screen and (min-width: 750px) {
+  #ProdIngr-{{ section.id }} .pi-wrap {
+    display: grid;
+    grid-template-columns: {{ section.settings.image_col_width }}% 1fr;
+    gap: {{ section.settings.col_gap | times: 0.75 | round: 0 }}px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-wrap {
+    gap: {{ section.settings.col_gap }}px;
+  }
+}
+
+/* ── Image column ── */
+/* Desktop image: hidden on mobile; mobile image: hidden on desktop */
+#ProdIngr-{{ section.id }} .pi-img--desktop { display: none; }
+#ProdIngr-{{ section.id }} .pi-img--mobile  { display: block; width: 100%; }
+
+@media screen and (min-width: 750px) {
+  #ProdIngr-{{ section.id }} .pi-img--desktop { display: block; }
+  #ProdIngr-{{ section.id }} .pi-img--mobile  { display: none; }
+}
+
+#ProdIngr-{{ section.id }} .pi-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Content column ── */
+#ProdIngr-{{ section.id }} .pi-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: {{ section.settings.table_dosage_gap | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-content-col {
+    gap: {{ section.settings.table_dosage_gap }}px;
+  }
+}
+
+/* ── Ingredient card ── */
+#ProdIngr-{{ section.id }} .pi-card {
+  background-color: {{ section.settings.card_bg }};
+  border-radius: {{ section.settings.card_radius }}px;
+  padding: 2.4rem 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-card {
+    padding: 3.2rem 2.8rem;
+  }
+}
+
+/* Card heading */
+#ProdIngr-{{ section.id }} .pi-card__heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: {{ section.settings.text_color }};
+  margin: 0 0 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-card__heading {
+    font-size: 2rem;
+  }
+}
+
+/* ── Ingredient table ── */
+#ProdIngr-{{ section.id }} .pi-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+#ProdIngr-{{ section.id }} .pi-table tr + tr td {
+  border-top: 1px solid {{ section.settings.row_divider_color }};
+}
+#ProdIngr-{{ section.id }} .pi-table td {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: {{ section.settings.text_color }};
+  vertical-align: middle;
+}
+#ProdIngr-{{ section.id }} .pi-td-name {
+  padding-right: 1.6rem;
+}
+#ProdIngr-{{ section.id }} .pi-td-amount {
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Divider ── */
+#ProdIngr-{{ section.id }} .pi-divider {
+  border: none;
+  border-top: 1px solid {{ section.settings.divider_color }};
+  margin: 2rem 0;
+}
+
+/* ── Full ingredients list ── */
+#ProdIngr-{{ section.id }} .pi-full-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: {{ section.settings.text_color }};
+  margin: 0 0 0.8rem;
+  text-align: center;
+}
+#ProdIngr-{{ section.id }} .pi-full-text {
+  font-size: 1.3rem;
+  color: {{ section.settings.text_color }};
+  opacity: 0.85;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-full-text { font-size: 1.4rem; }
+}
+
+/* ── Dosage section (outside card) ── */
+#ProdIngr-{{ section.id }} .pi-dosage {
+  text-align: {{ section.settings.dosage_align }};
+}
+#ProdIngr-{{ section.id }} .pi-dosage__heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: {{ section.settings.heading_color }};
+  margin: 0 0 0.8rem;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-dosage__heading { font-size: 2rem; }
+}
+#ProdIngr-{{ section.id }} .pi-dosage__text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: {{ section.settings.heading_color }};
+  margin: 0;
+}
+/* Allow richtext bold to render properly */
+#ProdIngr-{{ section.id }} .pi-dosage__text strong,
+#ProdIngr-{{ section.id }} .pi-dosage__text b { font-weight: 700; }
+{%- endstyle -%}
+
+<section
+  id="ProdIngr-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+    <div class="pi-wrap">
+
+      {%- comment -%}══ IMAGE COLUMN ══{%- endcomment -%}
+      <div class="pi-img-col">
+
+        {%- unless desktop_img == blank -%}
+          <div class="pi-img--desktop">
+            {%- assign img_sizes = '(min-width: 990px) ' 
+            | append: section.settings.image_col_width 
+            | append: 'vw, 100vw' 
+          -%}
+          {{-
+            desktop_img
+            | image_url: width: 1400
+            | image_tag:
+              loading: loading_attr,
+              fetchpriority: fetch_priority,
+              widths: '400, 600, 800, 1000, 1200, 1400',
+              sizes: img_sizes,
+              alt: desktop_img.alt | default: ''
+          -}}
+                    </div>
+        {%- endunless -%}
+
+        {%- unless mobile_img == blank -%}
+          <div class="pi-img--mobile">
+            {{-
+              mobile_img
+              | image_url: width: 800
+              | image_tag:
+                loading: loading_attr,
+                fetchpriority: fetch_priority,
+                widths: '375, 480, 600, 750, 800',
+                sizes: '100vw',
+                alt: mobile_img.alt | default: ''
+            -}}
+          </div>
+        {%- endunless -%}
+
+      </div>
+
+      {%- comment -%}══ CONTENT COLUMN ══{%- endcomment -%}
+      <div class="pi-content-col">
+
+        {%- comment -%}── Ingredient card ──{%- endcomment -%}
+        <div class="pi-card">
+
+          {%- unless section.settings.table_heading == blank -%}
+            <h3 class="pi-card__heading">{{ section.settings.table_heading | escape }}</h3>
+          {%- endunless -%}
+
+          {%- comment -%} Ingredient rows from blocks {%- endcomment -%}
+          {%- assign has_rows = false -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'ingredient_row' -%}{%- assign has_rows = true -%}{%- break -%}{%- endif -%}
+          {%- endfor -%}
+
+          {%- if has_rows -%}
+            <table class="pi-table">
+              <tbody>
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'ingredient_row' -%}
+                    <tr {{ block.shopify_attributes }}>
+                      <td class="pi-td-name">{{ block.settings.name | escape }}</td>
+                      <td class="pi-td-amount">{{ block.settings.amount | escape }}</td>
+                    </tr>
+                  {%- endif -%}
+                {%- endfor -%}
+              </tbody>
+            </table>
+          {%- endif -%}
+
+          {%- comment -%} Full list section {%- endcomment -%}
+          {%- unless section.settings.full_list_heading == blank and section.settings.full_list_text == blank -%}
+            <hr class="pi-divider">
+            {%- unless section.settings.full_list_heading == blank -%}
+              <p class="pi-full-heading">{{ section.settings.full_list_heading | escape }}</p>
+            {%- endunless -%}
+            {%- unless section.settings.full_list_text == blank -%}
+              <div class="pi-full-text rte">{{ section.settings.full_list_text }}</div>
+            {%- endunless -%}
+          {%- endunless -%}
+
+        </div>
+        {%- comment -%}── end .pi-card ──{%- endcomment -%}
+
+        {%- comment -%}── Dosage / extra text (outside card) ──{%- endcomment -%}
+        {%- unless section.settings.dosage_heading == blank and section.settings.dosage_text == blank -%}
+          <div class="pi-dosage">
+            {%- unless section.settings.dosage_heading == blank -%}
+              <p class="pi-dosage__heading">{{ section.settings.dosage_heading | escape }}</p>
+            {%- endunless -%}
+            {%- unless section.settings.dosage_text == blank -%}
+              <div class="pi-dosage__text rte">{{ section.settings.dosage_text }}</div>
+            {%- endunless -%}
+          </div>
+        {%- endunless -%}
+
+      </div>
+      {%- comment -%}── end .pi-content-col ──{%- endcomment -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Ingredients",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image — Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Image — Mobile (fallback: desktop image)"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "image_col_width",
+      "min": 30,
+      "max": 65,
+      "step": 5,
+      "unit": "%",
+      "label": "Image column width (desktop)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "col_gap",
+      "min": 16,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap — image & content (desktop)",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "table_dosage_gap",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap — table card & dosage text",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Table card"
+    },
+    {
+      "type": "text",
+      "id": "table_heading",
+      "label": "Card heading",
+      "default": "Each Bottle Contains"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#E8F2FB"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "row_divider_color",
+      "label": "Row separator color",
+      "default": "#C8D8E8"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Section divider color",
+      "default": "#A0B8CC"
+    },
+    {
+      "type": "header",
+      "content": "Full ingredients list"
+    },
+    {
+      "type": "text",
+      "id": "full_list_heading",
+      "label": "Full list heading",
+      "default": "Full List Of Ingredients:"
+    },
+    {
+      "type": "richtext",
+      "id": "full_list_text",
+      "label": "Full list text",
+      "default": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>"
+    },
+    {
+      "type": "header",
+      "content": "Dosage / Extra text"
+    },
+    {
+      "type": "text",
+      "id": "dosage_heading",
+      "label": "Heading",
+      "default": "Recommended Dosage"
+    },
+    {
+      "type": "richtext",
+      "id": "dosage_text",
+      "label": "Text (supports bold)",
+      "default": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>"
+    },
+    {
+      "type": "select",
+      "id": "dosage_align",
+      "label": "Dosage text alignment",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Dosage heading color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body text color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient_row",
+      "name": "Ingredient row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Ingredient name",
+          "default": "Porcine Placenta Extract"
+        },
+        {
+          "type": "text",
+          "id": "amount",
+          "label": "Amount",
+          "default": "9,000 mg"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Ingredients",
+      "blocks": [
+        { "type": "ingredient_row", "settings": { "name": "Porcine Placenta Extract",  "amount": "9,000 mg"  } },
+        { "type": "ingredient_row", "settings": { "name": "Fish Collagen Peptide",      "amount": "15,000 mg" } },
+        { "type": "ingredient_row", "settings": { "name": "Fermented Plant Extract",    "amount": "5,000 mg"  } },
+        { "type": "ingredient_row", "settings": { "name": "African Mango Extract",      "amount": "5,000 mg"  } },
+        { "type": "ingredient_row", "settings": { "name": "Brewer's Yeast Peptide",     "amount": "4,160 mg"  } },
+        { "type": "ingredient_row", "settings": { "name": "Pineapple Fruit Extract",    "amount": "2,000 mg"  } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,441 @@
+{%- style -%}
+/* ════════════════════════════════════════════════════════
+   Logo Content Banner — #LogoContentBanner-{{ section.id }}
+   Layout: [Logo] | [Heading + Text + Button]
+   Desktop: 2 cột flex-row  |  Mobile: stack flex-column
+   ════════════════════════════════════════════════════════ */
+
+#LogoContentBanner-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+  #LogoContentBanner-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Inner wrapper ── */
+#LogoContentBanner-{{ section.id }} .lcb-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: {{ section.settings.mobile_align }};
+  gap: {{ section.settings.gap_mobile }}px;
+}
+@media screen and (min-width: 750px) {
+  #LogoContentBanner-{{ section.id }} .lcb-inner {
+    flex-direction: row;
+    align-items: {{ section.settings.desktop_vertical_align }};
+    gap: {{ section.settings.gap_desktop }}px;
+  }
+}
+
+/* ── Logo ── */
+#LogoContentBanner-{{ section.id }} .lcb-logo {
+  flex-shrink: 0;
+  display: flex;
+}
+#LogoContentBanner-{{ section.id }} .lcb-logo img {
+  display: block;
+  width: {{ section.settings.logo_width_mobile }}px;
+  height: auto;
+  object-fit: contain;
+}
+@media screen and (min-width: 750px) {
+  #LogoContentBanner-{{ section.id }} .lcb-logo img {
+    width: {{ section.settings.logo_width_desktop }}px;
+  }
+}
+
+/* ── Content side ──
+   Design system spacing:
+   • Gap logo / heading / text:  16px mobile → 20px desktop
+   • Gap before button:          32px mobile → 40px desktop
+     (achieved via extra margin-top on .lcb-btn-wrap) */
+#LogoContentBanner-{{ section.id }} .lcb-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  {%- if section.settings.content_max_width > 0 -%}
+  max-width: {{ section.settings.content_max_width }}px;
+  {%- endif -%}
+}
+@media screen and (min-width: 750px) {
+  #LogoContentBanner-{{ section.id }} .lcb-content {
+    gap: 20px;
+  }
+}
+
+/* ── Heading block ── */
+#LogoContentBanner-{{ section.id }} .lcb-heading {
+  margin: 0;
+  color: {{ section.settings.heading_color }};
+}
+
+/* ── Text block ── */
+#LogoContentBanner-{{ section.id }} .lcb-text {
+  margin: 0;
+  color: {{ section.settings.text_color }};
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+#LogoContentBanner-{{ section.id }} .lcb-text p { margin: 0; }
+
+/* ── Button block ── */
+#LogoContentBanner-{{ section.id }} .lcb-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 16px; /* mobile:  16 (gap) + 16 (extra) = 32px total */
+}
+@media screen and (min-width: 750px) {
+  #LogoContentBanner-{{ section.id }} .lcb-btn-wrap {
+    margin-top: 20px; /* desktop: 20 (gap) + 20 (extra) = 40px total */
+  }
+}
+
+/* Button wrapper */
+#LogoContentBanner-{{ section.id }} .lcb-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+{%- endstyle -%}
+
+<section
+  id="LogoContentBanner-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+    <div class="lcb-inner">
+
+      {%- comment -%}── Logo ──{%- endcomment -%}
+      {%- if section.settings.logo != blank -%}
+        <div class="lcb-logo">
+          {%- assign logo_sizes = "(min-width: 750px) " 
+            | append: section.settings.logo_width_desktop 
+            | append: "px, " 
+            | append: section.settings.logo_width_mobile 
+            | append: "px" 
+          -%}
+
+          {{ section.settings.logo
+            | image_url: width: 600
+            | image_tag:
+                loading: 'lazy',
+                widths: '120, 160, 200, 280, 360, 480, 600',
+                sizes: logo_sizes,
+                alt: section.settings.logo.alt | default: shop.name
+          }}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}── Content blocks ──{%- endcomment -%}
+      {%- if section.blocks.size > 0 -%}
+        <div class="lcb-content">
+          {%- for block in section.blocks -%}
+
+            {%- case block.type -%}
+
+              {%- when 'heading' -%}
+                <{{ block.settings.heading_tag }}
+                  class="lcb-heading {{ block.settings.heading_size }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {{- block.settings.heading -}}
+                </{{ block.settings.heading_tag }}>
+
+              {%- when 'text' -%}
+                <div class="lcb-text rte" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+
+              {%- when 'button' -%}
+                <div class="lcb-btn-wrap" {{ block.shopify_attributes }}>
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      href="{{ block.settings.button_link | default: '#' }}"
+                      class="button{% if block.settings.button_style == 'outline' %} button--secondary{% endif %}{% if block.settings.button_full_mobile %} button--mobile-full-width{% endif %}"
+                    >
+                      {{- block.settings.button_label -}}
+                    </a>
+                  {%- endif -%}
+                </div>
+
+            {%- endcase -%}
+
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Logo Content Banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_desktop",
+      "min": 60,
+      "max": 400,
+      "step": 4,
+      "unit": "px",
+      "label": "Logo width (desktop)",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width (mobile)",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "desktop_vertical_align",
+      "label": "Vertical alignment (desktop)",
+      "options": [
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center",     "label": "Center" },
+        { "value": "flex-end",   "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_align",
+      "label": "Alignment (mobile)",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center",     "label": "Center" }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap logo ↔ content (desktop)",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap logo ↕ content (mobile)",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 0,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "label": "Content max width (0 = no limit)",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Typography color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#444444"
+    },
+    {
+      "type": "header",
+      "content": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "btn_primary_bg",
+      "label": "Primary button background",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "btn_primary_color",
+      "label": "Primary button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Try It, Risk - Free!"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            { "value": "h3", "label": "Small" },
+            { "value": "h2", "label": "Medium" },
+            { "value": "h1", "label": "Large" },
+            { "value": "h0", "label": "Extra large" }
+          ],
+          "default": "h1"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "HTML tag",
+          "options": [
+            { "value": "h1", "label": "h1" },
+            { "value": "h2", "label": "h2" },
+            { "value": "h3", "label": "h3" },
+            { "value": "p",  "label": "p (paragraph)" }
+          ],
+          "default": "h2"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "CHECKOUT NOW"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary", "label": "Primary (solid)" },
+            { "value": "outline", "label": "Outline" }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_full_mobile",
+          "label": "Full width on mobile",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Content Banner",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "button" }
+      ]
+    }
+  ]
+}
+{% endschema %}

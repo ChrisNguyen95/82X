@@ -1,0 +1,303 @@
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Logo Grid — #LogoGrid-{{ section.id }}
+   CSS Grid layout — configurable columns per row (desktop / mobile).
+   Each block controls its own logo display width.
+   ══════════════════════════════════════════════════════════════ */
+
+#LogoGrid-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+  #LogoGrid-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Subheading ── */
+#LogoGrid-{{ section.id }} .lg-subheading {
+  text-align: center;
+  margin: 0 0 {{ section.settings.subheading_gap }}px;
+  font-size: 1.6rem;
+  color: {{ section.settings.text_color }};
+  opacity: 0.75;
+}
+
+/* ── Grid ── */
+#LogoGrid-{{ section.id }} .lg-grid {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.cols_mobile }}, 1fr);
+  gap: {{ section.settings.gap_mobile }}px;
+  align-items: center;
+  justify-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  #LogoGrid-{{ section.id }} .lg-grid {
+    grid-template-columns: repeat({{ section.settings.cols_desktop }}, 1fr);
+    gap: {{ section.settings.gap_desktop }}px;
+  }
+}
+
+/* ── Item ── */
+#LogoGrid-{{ section.id }} .lg-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#LogoGrid-{{ section.id }} .lg-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ── Logo size wrapper — width controlled inline per block ── */
+#LogoGrid-{{ section.id }} .lg-logo-wrap {
+  display: block;
+  max-width: 100%;
+}
+#LogoGrid-{{ section.id }} .lg-logo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: none; /* let wrapper div control width */
+}
+
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<section
+  id="LogoGrid-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Subheading ──{%- endcomment -%}
+    {%- unless section.settings.subheading == blank -%}
+      <p class="lg-subheading h4">{{ section.settings.subheading | escape }}</p>
+    {%- endunless -%}
+
+    {%- comment -%}── Logo grid ──{%- endcomment -%}
+    <ul class="lg-grid" role="list">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          {%- assign img_sizes = '(min-width: 750px) '
+            | append: block.settings.logo_width_desktop
+            | append: 'px, '
+            | append: block.settings.logo_width_mobile
+            | append: 'px'
+          -%}
+
+          {%- comment -%} Per-block width: mobile default → desktop override {%- endcomment -%}
+          <style>
+            #lg-block-{{ block.id }} .lg-logo-wrap { width: {{ block.settings.logo_width_mobile }}px; }
+            @media screen and (min-width: 750px) {
+              #lg-block-{{ block.id }} .lg-logo-wrap { width: {{ block.settings.logo_width_desktop }}px; }
+            }
+          </style>
+
+          <li id="lg-block-{{ block.id }}" class="lg-item" {{ block.shopify_attributes }}>
+
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" aria-label="{{ block.settings.image.alt | default: shop.name | escape }}">
+            {%- endif -%}
+
+            <div class="lg-logo-wrap">
+              {{
+                block.settings.image
+                | image_url: width: 600
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '60, 80, 100, 120, 160, 200, 280, 360, 480, 600',
+                  sizes: img_sizes,
+                  alt: block.settings.image.alt | default: ''
+              }}
+            </div>
+
+            {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+
+  </div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Logo Grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading text",
+      "default": "Our Partners"
+    },
+    {
+      "type": "range",
+      "id": "subheading_gap",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap below subheading",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Grid layout"
+    },
+    {
+      "type": "range",
+      "id": "cols_desktop",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": "Logos per row (desktop)",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "cols_mobile",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Logos per row (mobile)",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 8,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between logos (desktop)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 8,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between logos (mobile)",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Subheading color",
+      "default": "#111111"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "range",
+          "id": "logo_width_desktop",
+          "min": 40,
+          "max": 300,
+          "step": 4,
+          "unit": "px",
+          "label": "Logo width — Desktop",
+          "default": 120
+        },
+        {
+          "type": "range",
+          "id": "logo_width_mobile",
+          "min": 40,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "Logo width — Mobile",
+          "default": 80
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Grid",
+      "blocks": [
+        { "type": "logo", "settings": { "logo_width_desktop": 120, "logo_width_mobile": 80 } },
+        { "type": "logo", "settings": { "logo_width_desktop": 120, "logo_width_mobile": 80 } },
+        { "type": "logo", "settings": { "logo_width_desktop": 120, "logo_width_mobile": 80 } },
+        { "type": "logo", "settings": { "logo_width_desktop": 120, "logo_width_mobile": 80 } }
+      ]
+    }
+  ]
+}
+{% endschema %}

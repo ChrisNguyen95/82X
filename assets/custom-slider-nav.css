@@ -1,0 +1,83 @@
+/* ══════════════════════════════════════════════════════════════
+   Custom Slider Nav  —  dùng chung cho mọi slider section
+
+   Cách tích hợp:
+   ─────────────────────────────────────────────────────────────
+   1. Load CSS trong section:
+        {{- 'custom-slider-nav.css' | asset_url | stylesheet_tag -}}
+
+   2. Render buttons qua snippet:
+        {% render 'slider-nav-buttons',
+          section_id: section.id,
+          id_prefix:  'ig'           %}   → tạo id="ig-prev-{id}", id="ig-next-{id}"
+
+   3. Override màu per-section trong {%- style -%}:
+        #MySectionID .custom-slider-nav { --csn-color: #hexcolor; }
+
+   CSS variable duy nhất:
+     --csn-color   màu border + icon + hover-bg   (default: #1C2B6B)
+   ══════════════════════════════════════════════════════════════ */
+
+.custom-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ── Button base ── */
+.custom-slider-nav .slider-button {
+  --csn-color: #1C2B6B;
+
+  display: flex !important;
+  visibility: visible !important;
+  flex-shrink: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 0.15rem solid var(--csn-color);
+  background: transparent;
+  color: var(--csn-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* ── Hover ── */
+.custom-slider-nav .slider-button:hover:not([disabled]) {
+  background: var(--csn-color);
+  color: #fff;
+}
+
+/* ── Disabled (non-loop mode) ── */
+.custom-slider-nav .slider-button[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── SVG wrapper ── */
+.custom-slider-nav .slider-button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  pointer-events: none;
+}
+
+.custom-slider-nav .slider-button .svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Icon transform reset ──────────────────────────────────────
+   arrow-left-long.svg / arrow-right-long.svg có class .icon.
+   Dawn's component-slider.css rotate .icon bên trong .slider-button
+   (vì nghĩ là icon-caret — phải rotate để thành ← và →).
+   Với arrow SVGs đã đúng hướng sẵn → reset transform về none.
+   ──────────────────────────────────────────────────────────── */
+.custom-slider-nav .slider-button .icon {
+  transform: none !important;
+}

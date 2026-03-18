@@ -1,0 +1,213 @@
+{%- comment -%}
+  snippet: slider-loop-js.liquid
+  ════════════════════════════════════════════════════════════════
+  JavaScript dùng chung cho loop / non-loop custom slider.
+
+  Tham số bắt buộc:
+  ────────────────────────────────────────────────────────────────
+  track_id      {String}  — ID của phần tử scroll track
+  prev_id       {String}  — ID nút prev
+  next_id       {String}  — ID nút next
+  loop_enabled  {Boolean} — true = loop vô hạn | false = dừng ở biên
+
+  Tham số tùy chọn:
+  ────────────────────────────────────────────────────────────────
+  snap_center   {Boolean} — true  = scroll-snap-align: center  (testimonial)
+                            false = scroll-snap-align: start   (ingredient)
+                            mặc định: false
+  item_selector {String}  — CSS selector cho slide items   (mặc định: '.slide-item')
+  clone_class   {String}  — class thêm vào cloned elements (mặc định: 'slide-item--clone')
+
+  Ví dụ (ingredient — snap start, loop optional):
+    {%- assign _track_id = 'ig-track-' | append: section.id -%}
+    {%- assign _prev_id  = 'ig-prev-'  | append: section.id -%}
+    {%- assign _next_id  = 'ig-next-'  | append: section.id -%}
+    {% render 'slider-loop-js',
+      track_id:      _track_id,
+      prev_id:       _prev_id,
+      next_id:       _next_id,
+      loop_enabled:  section.settings.loop_enabled,
+      snap_center:   false,
+      item_selector: '.ig-item',
+      clone_class:   'ig-item--clone' %}
+
+  Ví dụ (testimonial — snap center, loop optional):
+    {% render 'slider-loop-js',
+      track_id:      _track_id,
+      prev_id:       _prev_id,
+      next_id:       _next_id,
+      loop_enabled:  section.settings.loop_enabled,
+      snap_center:   true,
+      item_selector: '.ts-item',
+      clone_class:   'ts-item--clone' %}
+
+  Loop mechanism:
+  ────────────────────────────────────────────────────────────────
+  DOM sau khi JS init:
+    [clone_LAST] [real_0] [real_1] ... [real_N] [clone_FIRST]
+  → Khi scroll dừng ở clone, silently jump sang real counterpart
+  → Người dùng thấy loop liên tục, không flash
+{%- endcomment -%}
+
+{%- comment -%} Xử lý defaults an toàn (Liquid: false | default: x trả false, không đổi) {%- endcomment -%}
+{%- assign _item_sel  = item_selector | default: '.slide-item' -%}
+{%- assign _clone_cls = clone_class   | default: 'slide-item--clone' -%}
+{%- assign _snap_ctr  = false -%}
+{%- if snap_center == true -%}{%- assign _snap_ctr = true -%}{%- endif -%}
+
+<script>
+(function () {
+  'use strict';
+
+  var track  = document.getElementById({{ track_id  | json }});
+  var prevEl = document.getElementById({{ prev_id   | json }});
+  var nextEl = document.getElementById({{ next_id   | json }});
+  var isLoop     = {{ loop_enabled | json }};
+  var snapCenter = {{ _snap_ctr    | json }};
+  var ITEM_SEL   = {{ _item_sel   | json }};
+  var CLONE_CLS  = {{ _clone_cls  | json }};
+
+  if (!track || !prevEl || !nextEl) return;
+
+  /* ══════════ Helpers ══════════ */
+
+  function getSlideWidth() {
+    var el = track.querySelector(ITEM_SEL);
+    return el ? el.offsetWidth : 0;
+  }
+  function getGap() {
+    return parseFloat(getComputedStyle(track).columnGap) || 0;
+  }
+  function getStep() { return getSlideWidth() + getGap(); }
+
+  /* scrollLeft để item DOM-index i nằm đúng vị trí snap */
+  function scrollForIdx(i) {
+    var step = getStep();
+    if (snapCenter) {
+      var itemW = getSlideWidth();
+      var vpW   = track.clientWidth;
+      return Math.max(0, i * step + itemW / 2 - vpW / 2);
+    }
+    return i * step;
+  }
+
+  /* DOM index của item đang snap hiện tại */
+  function getCurrentIdx() {
+    var step = getStep();
+    if (!step) return 0;
+    if (snapCenter) {
+      var slideW = getSlideWidth();
+      var vpW    = track.clientWidth;
+      return Math.round((track.scrollLeft + vpW / 2 - slideW / 2) / step);
+    }
+    return Math.round(track.scrollLeft / step);
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     LOOP MODE
+     DOM sau init: [clone_LAST] [real_0 ... real_N] [clone_FIRST]
+     Scroll dừng ở clone → silent jump → real counterpart
+     ══════════════════════════════════════════════════════════════ */
+  if (isLoop) {
+
+    var realItems = Array.from(track.querySelectorAll(ITEM_SEL));
+    var totalReal = realItems.length;
+    if (totalReal < 2) return;
+
+    /* Clone last → prepend; clone first → append */
+    var cloneLast  = realItems[totalReal - 1].cloneNode(true);
+    var cloneFirst = realItems[0].cloneNode(true);
+    [cloneLast, cloneFirst].forEach(function (c) {
+      c.classList.add(CLONE_CLS);
+      c.removeAttribute('id');
+      c.removeAttribute('data-real-index');
+    });
+    track.insertBefore(cloneLast, realItems[0]);
+    track.appendChild(cloneFirst);
+
+    var jumping  = false;
+    var totalAll = totalReal + 2;   /* total sau khi thêm 2 clone */
+
+    function jumpTo(idx, animate) {
+      jumping = true;
+      if (!animate) track.style.scrollBehavior = 'auto';
+      track.scrollLeft = scrollForIdx(idx);
+      if (!animate) {
+        requestAnimationFrame(function () {
+          track.style.scrollBehavior = '';
+          requestAnimationFrame(function () { jumping = false; });
+        });
+      } else {
+        jumping = false;
+      }
+    }
+
+    /* Khởi động: định vị tại real_first (DOM index 1) */
+    requestAnimationFrame(function () { jumpTo(1, false); });
+
+    /* Phát hiện đang ở clone → nhảy về real counterpart */
+    function checkLoop() {
+      if (jumping) return;
+      var idx = getCurrentIdx();
+      if (idx <= 0)                 jumpTo(totalReal, false);  /* clone_last  → real_last  */
+      else if (idx >= totalAll - 1) jumpTo(1, false);          /* clone_first → real_first */
+    }
+
+    if ('onscrollend' in track) {
+      track.addEventListener('scrollend', checkLoop, { passive: true });
+    } else {
+      var _t1;
+      track.addEventListener('scroll', function () {
+        clearTimeout(_t1);
+        _t1 = setTimeout(checkLoop, 150);
+      }, { passive: true });
+    }
+
+    prevEl.addEventListener('click', function () {
+      if (jumping) return;
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+    nextEl.addEventListener('click', function () {
+      if (jumping) return;
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+
+    /* Recalculate khi resize (tránh mất vị trí) */
+    if (window.ResizeObserver) {
+      new ResizeObserver(function () { jumpTo(1, false); }).observe(track);
+    }
+
+  /* ══════════════════════════════════════════════════════════════
+     NON-LOOP MODE
+     Prev/Next bị disable ở biên đầu / cuối
+     ══════════════════════════════════════════════════════════════ */
+  } else {
+
+    function updateButtons() {
+      var max = track.scrollWidth - track.clientWidth;
+      prevEl.disabled = track.scrollLeft <= 2;
+      nextEl.disabled = track.scrollLeft >= max - 2;
+    }
+
+    if ('onscrollend' in track) {
+      track.addEventListener('scrollend', updateButtons, { passive: true });
+    } else {
+      var _t2;
+      track.addEventListener('scroll', function () {
+        clearTimeout(_t2);
+        _t2 = setTimeout(updateButtons, 150);
+      }, { passive: true });
+    }
+
+    prevEl.addEventListener('click', function () {
+      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+    nextEl.addEventListener('click', function () {
+      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+
+    updateButtons();
+  }
+
+})();
+</script>

@@ -1,0 +1,539 @@
+{{- 'component-slider.css'    | asset_url | stylesheet_tag -}}
+{{- 'custom-slider-nav.css'  | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+/* ════════════════════════════════════════════════════════
+   Testimonial Slider (Loop) — #TestimonialSlider-{{ section.id }}
+
+   Loop mechanism (JS-driven):
+   ─────────────────────────────────────────────────────
+   DOM sau khi JS khởi tạo:
+   [clone_LAST] [real_0] [real_1] ... [real_N] [clone_FIRST]
+   → Khi scroll đến clone, JS silently jump đến real counterpart
+   → Card đầu tiên: trái peek = clone_LAST = nội dung card cuối ✓
+   → Card cuối cùng: phải peek = clone_FIRST = nội dung card đầu ✓
+
+   Card width = 100% - 2*(peek) px
+   → Mỗi bên có peek px space → nội dung adjacent visible ≈ peek - gap
+   ════════════════════════════════════════════════════════ */
+
+/* ── CSS Variables ── */
+#TestimonialSlider-{{ section.id }} {
+  --ts-gap-desktop:  {{ section.settings.card_gap_desktop }}px;
+  --ts-gap-mobile:   {{ section.settings.card_gap_mobile }}px;
+  --ts-peek-mobile:  {{ section.settings.card_peek_mobile }}px;
+  --ts-radius:       {{ section.settings.card_radius }}px;
+  --ts-border-color: {{ section.settings.card_border_color }};
+  --ts-border-w:     {{ section.settings.card_border_width }}px;
+
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+  #TestimonialSlider-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Section heading ── */
+#TestimonialSlider-{{ section.id }} .ts-heading {
+  text-align: {{ section.settings.heading_align }};
+  margin: 0 0 4.8rem;
+}
+
+/* ════════════════════════════════════════════════════════
+   OUTER — clips overflow để chỉ thấy peek
+   Mobile: full viewport width
+   Desktop: page-width
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-outer {
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-outer {
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
+    padding-inline: 5rem;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   TRACK
+   - Không có padding-inline → card đầu tiên bắt đầu từ LEFT EDGE ✓
+   - scroll-snap: center → center của mỗi card = center của viewport
+   - scroll-behavior: smooth cho prev/next
+   - Ẩn scrollbar (chỉ dùng prev/next buttons)
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-track {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0 1.2rem;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Ẩn scrollbar — user dùng buttons */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* Mobile gap */
+  gap: var(--ts-gap-mobile);
+
+  /* Không có padding-inline:
+     → card[0] bắt đầu tại x=0 trong track
+     → scroll=0: card[0] ở sát trái viewport, KHÔNG có "card ma" bên trái ✓
+     → JS sẽ offset về real_first sau khi thêm clones            */
+}
+#TestimonialSlider-{{ section.id }} .ts-track::-webkit-scrollbar { display: none; }
+
+/* ── Desktop: gap riêng ── */
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-track {
+    gap: var(--ts-gap-desktop);
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   SLIDE ITEM
+
+   Mobile  : card chiếm (100% - 2*peek) → peek px mỗi bên → LOOP hiện adjacent
+   Desktop : chia đều 4 cột
+
+   scroll-snap-align: center
+   → Khi snap vào card N: center của card N = center của viewport
+   → Khi có clones: clone_LAST peek ở trái, real_1 peek ở phải của real_0 ✓
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-item {
+  /* Mobile: 100% - 2*(peek) = viewportWidth - 2*ts-peek-mobile */
+  flex: 0 0 calc(100% - 2 * var(--ts-peek-mobile));
+  max-width: calc(100% - 2 * var(--ts-peek-mobile));
+  min-width: 0;
+  scroll-snap-align: center;
+
+  /* Transition để clone-jump không nhìn thấy */
+  transition: opacity 0.15s ease;
+}
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-item {
+    flex: 0 0 calc((100% - 3 * var(--ts-gap-desktop)) / 4);
+    max-width: calc((100% - 3 * var(--ts-gap-desktop)) / 4);
+    scroll-snap-align: start;
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   CARD
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 100%;
+  padding: 2.8rem 2.4rem;
+  text-align: center;
+
+  border: var(--ts-border-w) solid var(--ts-border-color);
+  border-radius: var(--ts-radius);
+  background-color: {{ section.settings.card_bg }};
+  box-sizing: border-box;
+}
+
+/* ── Stars ── */
+#TestimonialSlider-{{ section.id }} .ts-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+#TestimonialSlider-{{ section.id }} .ts-star {
+  font-size: 2.2rem;
+  color: {{ section.settings.star_color_empty }};
+}
+#TestimonialSlider-{{ section.id }} .ts-star--filled {
+  color: {{ section.settings.star_color }};
+}
+
+/* ── Author ── */
+#TestimonialSlider-{{ section.id }} .ts-author {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ── Review text ── */
+#TestimonialSlider-{{ section.id }} .ts-text {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.65;
+  opacity: 0.75;
+  flex: 1;
+}
+
+/* Nav — override màu (styles chung trong custom-slider-nav.css) */
+#TestimonialSlider-{{ section.id }} .custom-slider-nav {
+  --csn-color: {{ section.settings.nav_color }};
+  margin-top: 4rem;
+}
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<section
+  id="TestimonialSlider-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+
+  {%- comment -%}── Heading ──{%- endcomment -%}
+  <div class="page-width">
+    {%- unless section.settings.heading == blank -%}
+      <h2 class="ts-heading inline-richtext {{ section.settings.heading_size }}">
+        {{- section.settings.heading -}}
+      </h2>
+    {%- endunless -%}
+  </div>
+
+  {%- comment -%}── Slider: full-bleed track ──{%- endcomment -%}
+  <div class="ts-outer">
+    <ul
+      id="ts-track-{{ section.id }}"
+      class="ts-track"
+      role="list"
+      aria-label="{{ section.settings.heading | escape }}"
+    >
+      {%- for block in section.blocks -%}
+        {%- assign star_count = block.settings.star_rating | default: 5 -%}
+        <li
+          id="ts-item-{{ section.id }}-{{ forloop.index }}"
+          class="ts-item"
+          role="listitem"
+          data-real-index="{{ forloop.index0 }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="ts-card">
+            <div class="ts-stars" role="img" aria-label="{{ star_count }} out of 5 stars">
+              {%- for i in (1..5) -%}
+                <span class="ts-star{% if i <= star_count %} ts-star--filled{% endif %}" aria-hidden="true">★</span>
+              {%- endfor -%}
+            </div>
+            {%- if block.settings.author != blank -%}
+              <p class="ts-author">
+                {{- block.settings.author | escape -}}
+                {%- if block.settings.location != blank -%}
+                  <span aria-hidden="true"> · </span>{{ block.settings.location | escape }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="ts-text">{{ block.settings.text | escape }}</p>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  {%- comment -%}── Navigation ──{%- endcomment -%}
+  <div class="page-width">
+    {%- render 'slider-nav-buttons',
+      section_id: section.id,
+      id_prefix:  'ts'
+    -%}
+  </div>
+
+</section>
+
+{%- assign _track_id = 'ts-track-' | append: section.id -%}
+{%- assign _prev_id  = 'ts-prev-'  | append: section.id -%}
+{%- assign _next_id  = 'ts-next-'  | append: section.id -%}
+{%- render 'slider-loop-js',
+  track_id:      _track_id,
+  prev_id:       _prev_id,
+  next_id:       _next_id,
+  loop_enabled:  section.settings.loop_enabled,
+  snap_center:   true,
+  item_selector: '.ts-item',
+  clone_class:   'ts-item--clone'
+-%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Quality Ingredients Lead To Happy Customers."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2",  "label": "Small" },
+        { "value": "h1",  "label": "Medium" },
+        { "value": "h0",  "label": "Large" },
+        { "value": "hxl", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color",
+      "default": "#E0E0E0"
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Card border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Stars"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Filled star color",
+      "default": "#F5A623"
+    },
+    {
+      "type": "color",
+      "id": "star_color_empty",
+      "label": "Empty star color",
+      "default": "#D4D4D4"
+    },
+    {
+      "type": "header",
+      "content": "Spacing — Mobile"
+    },
+    {
+      "type": "range",
+      "id": "card_peek_mobile",
+      "min": 16,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Peek size (each side)",
+      "info": "Khoảng trống mỗi bên — nội dung card liền kề hiện ≈ peek - gap",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_gap_mobile",
+      "min": 4,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Spacing — Desktop"
+    },
+    {
+      "type": "range",
+      "id": "card_gap_desktop",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable loop (infinite scroll)",
+      "info": "Khi bật: slider lặp vô hạn, hiện peek của slide cuối ở bên trái slide đầu.",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Button color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review card",
+      "settings": [
+        {
+          "type": "range",
+          "id": "star_rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author name",
+          "default": "Anna Tran"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location",
+          "default": "Texas, USA"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Slider",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "author": "Anna Tran",
+            "location": "Texas, USA",
+            "star_rating": 5,
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "author": "Kevin Pham",
+            "location": "Washington, USA",
+            "star_rating": 5,
+            "text": "After using 2 boxes of Sakura Collagen, I see fewer wrinkles and a more even tone. Even my wife noticed and said I look younger!"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "author": "Lisa Nguyen",
+            "location": "California, USA",
+            "star_rating": 5,
+            "text": "I started using 82X Sakura Collagen to improve my skin and balance my hormones, and I was really impressed after just one bottle."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "author": "Rachel Thompson",
+            "location": "New York, USA",
+            "star_rating": 5,
+            "text": "I've tried many collagen brands, but Sakura Collagen stands out. My skin feels smooth, and my nails are growing stronger too!"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

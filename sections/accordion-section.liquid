@@ -1,0 +1,558 @@
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Accordion Section — #AccordionSection-{{ section.id }}
+   Dual mode:
+   • "Benefits" — white/plain bg, heading + tag pills + subtext + accordion
+   • "FAQ"       — card with rounded bg, heading + accordion
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Section wrapper ── */
+#AccordionSection-{{ section.id }} {
+  background-color: {{ section.settings.section_bg }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+  #AccordionSection-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Card wrapper (when card_style = true) ── */
+#AccordionSection-{{ section.id }} .ac-card {
+  background-color: {{ section.settings.card_bg }};
+  border-radius: {{ section.settings.card_radius }}px;
+  padding: {{ section.settings.card_padding_v | times: 0.75 | round: 0 }}px {{ section.settings.card_padding_h | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+  #AccordionSection-{{ section.id }} .ac-card {
+    padding: {{ section.settings.card_padding_v }}px {{ section.settings.card_padding_h }}px;
+  }
+}
+
+/* ── Header area ── */
+#AccordionSection-{{ section.id }} .ac-header {
+  text-align: {{ section.settings.text_align }};
+  margin-bottom: 3.2rem;
+}
+@media screen and (min-width: 750px) {
+  #AccordionSection-{{ section.id }} .ac-header {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Heading */
+#AccordionSection-{{ section.id }} .ac-heading {
+  margin: 0;
+  color: {{ section.settings.heading_color }};
+  {%- if section.settings.heading_max_width > 0 -%}
+  max-width: {{ section.settings.heading_max_width }}px;
+  margin-left: auto;
+  margin-right: auto;
+  {%- endif -%}
+}
+
+/* Tags row */
+#AccordionSection-{{ section.id }} .ac-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: {{ section.settings.text_align | replace: 'left', 'flex-start' | replace: 'center', 'center' | replace: 'right', 'flex-end' }};
+}
+
+/* Tag pill — fixed height 44px, padding 9px 30px */
+#AccordionSection-{{ section.id }} .ac-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 4.4rem;
+  padding: 0.9rem 3rem;
+  border-radius: 10rem;
+  background-color: {{ section.settings.tag_bg }};
+  color: {{ section.settings.tag_color }};
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Subtext */
+#AccordionSection-{{ section.id }} .ac-subtext {
+  margin: 1.6rem 0 0;
+  font-size: 1.4rem;
+  color: {{ section.settings.subtext_color }};
+  line-height: 1.6;
+}
+
+/* ── Accordion list ── */
+#AccordionSection-{{ section.id }} .ac-list {
+  {%- if section.settings.list_max_width > 0 -%}
+  max-width: {{ section.settings.list_max_width }}px;
+  margin-left: auto;
+  margin-right: auto;
+  {%- endif -%}
+}
+
+/* ── Accordion item ── */
+#AccordionSection-{{ section.id }} .ac-item {
+  border-bottom: 0.1rem solid {{ section.settings.divider_color }};
+}
+#AccordionSection-{{ section.id }} .ac-item:first-child {
+  border-top: 0.1rem solid {{ section.settings.divider_color }};
+}
+
+/* ── Summary (clickable row) ── */
+#AccordionSection-{{ section.id }} .ac-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#AccordionSection-{{ section.id }} .ac-summary::-webkit-details-marker { display: none; }
+
+#AccordionSection-{{ section.id }} .ac-summary__title {
+  flex: 1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: {{ section.settings.title_color }};
+  line-height: 1.4;
+}
+@media screen and (min-width: 750px) {
+  #AccordionSection-{{ section.id }} .ac-summary__title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ── +/− Icon ── */
+#AccordionSection-{{ section.id }} .ac-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  color: {{ section.settings.icon_color }};
+}
+/* Horizontal bar — always visible */
+#AccordionSection-{{ section.id }} .ac-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background: currentColor;
+  border-radius: 0.1rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+/* Vertical bar — visible when closed, hidden when open */
+#AccordionSection-{{ section.id }} .ac-icon::after {
+  content: '';
+  position: absolute;
+  width: 0.2rem;
+  height: 100%;
+  background: currentColor;
+  border-radius: 0.1rem;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#AccordionSection-{{ section.id }} details[open] .ac-icon::after {
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0);
+}
+
+/* ── Accordion body ── */
+#AccordionSection-{{ section.id }} .ac-body {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: {{ section.settings.body_color }};
+}
+#AccordionSection-{{ section.id }} .ac-body p { margin: 0; }
+#AccordionSection-{{ section.id }} .ac-body p + p { margin-top: 0.8em; }
+
+{%- endstyle -%}
+
+<section
+  id="AccordionSection-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Card wrapper (conditional) ──{%- endcomment -%}
+    {%- if section.settings.card_style -%}<div class="ac-card">{%- endif -%}
+
+    {%- comment -%}── Header ──{%- endcomment -%}
+    {%- assign has_heading = false -%}
+    {%- assign has_tags    = false -%}
+    {%- unless section.settings.heading == blank -%}{%- assign has_heading = true -%}{%- endunless -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'tag' -%}{%- assign has_tags = true -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if has_heading or has_tags or section.settings.subtext != blank -%}
+      <div class="ac-header">
+
+        {%- if has_heading -%}
+          <{{ section.settings.heading_tag }}
+            class="ac-heading {{ section.settings.heading_size }}"
+          >
+            {{- section.settings.heading -}}
+          </{{ section.settings.heading_tag }}>
+        {%- endif -%}
+
+        {%- comment -%}── Tag pills ──{%- endcomment -%}
+        {%- if has_tags -%}
+          <div class="ac-tags" role="list">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'tag' -%}
+                <span class="ac-tag" role="listitem" {{ block.shopify_attributes }}>
+                  {{- block.settings.label | escape -}}
+                </span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- comment -%}── Subtext ──{%- endcomment -%}
+        {%- unless section.settings.subtext == blank -%}
+          <p class="ac-subtext">{{ section.settings.subtext | escape }}</p>
+        {%- endunless -%}
+
+      </div>
+    {%- endif -%}
+
+    {%- comment -%}── Accordion list ──{%- endcomment -%}
+    <div class="ac-list">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'item' -%}
+          <details
+            class="ac-item"
+            {% if block.settings.open_by_default %}open{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <summary class="ac-summary">
+              <span class="ac-summary__title">{{ block.settings.title | escape }}</span>
+              <span class="ac-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="ac-body rte">
+              {{ block.settings.content }}
+            </div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.card_style -%}</div>{%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Accordion / FAQ",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "82X Sakura Placenta Has Been Used For Centuries As A Traditional Remedy For"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small"       },
+        { "value": "h2", "label": "Medium"      },
+        { "value": "h1", "label": "Large"       },
+        { "value": "h0", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "min": 0,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "label": "Heading max width (0 = no limit)",
+      "default": 800
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Rejuvenate and Protect Your Natural Beauty"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "list_max_width",
+      "min": 0,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "label": "Accordion max width (0 = full)",
+      "info": "Useful for centered single-column FAQ layout.",
+      "default": 860
+    },
+    {
+      "type": "header",
+      "content": "Tag pills style"
+    },
+    {
+      "type": "color",
+      "id": "tag_bg",
+      "label": "Tag background",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "color",
+      "id": "tag_color",
+      "label": "Tag text",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "header",
+      "content": "Accordion style"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#E0E0E0"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Item title color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Item body color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon (+/−) color",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_style",
+      "label": "Display as card (rounded background)",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background color",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card corner radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_padding_v",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Card inner padding (top/bottom)",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "card_padding_h",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Card inner padding (left/right)",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Subtext color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tag",
+      "name": "Tag pill",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tag label",
+          "default": "Digestion"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "name": "Accordion item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Skin Cell Regeneration"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion — Benefits",
+      "settings": {
+        "heading": "82X Sakura Placenta Has Been Used For Centuries As A Traditional Remedy For",
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "card_style": false
+      },
+      "blocks": [
+        { "type": "tag",  "settings": { "label": "Digestion"    } },
+        { "type": "tag",  "settings": { "label": "Gut Health"   } },
+        { "type": "item", "settings": { "title": "Skin Cell Regeneration",  "open_by_default": true  } },
+        { "type": "item", "settings": { "title": "Hormone Balance"                                   } },
+        { "type": "item", "settings": { "title": "Brightens Skin"                                    } },
+        { "type": "item", "settings": { "title": "Anti-Aging"                                        } },
+        { "type": "item", "settings": { "title": "Boosts Natural Moisture"                           } },
+        { "type": "item", "settings": { "title": "Supports Overall Health"                           } }
+      ]
+    },
+    {
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "subtext": "",
+        "text_align": "center",
+        "card_style": true,
+        "card_bg": "#D6E8F8"
+      },
+      "blocks": [
+        { "type": "item", "settings": { "title": "What Are The Benefits Of 82X Sakura Placenta?", "open_by_default": true  } },
+        { "type": "item", "settings": { "title": "How Should I Take 82X Sakura Placenta?"                                  } },
+        { "type": "item", "settings": { "title": "How Long Does It Take To See Results?"                                   } },
+        { "type": "item", "settings": { "title": "Who Should Use This Product?"                                            } }
+      ]
+    }
+  ]
+}
+{% endschema %}

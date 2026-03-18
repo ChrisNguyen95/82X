@@ -1,0 +1,42 @@
+{%- comment -%}
+  snippet: slider-nav-buttons.liquid
+  ════════════════════════════════════════════════════════════════
+  Renders cặp nút Prev / Next dùng chung cho mọi custom slider.
+  Styles nằm trong: assets/custom-slider-nav.css
+  JS nằm trong snippet: slider-loop-js.liquid
+
+  Tham số (dùng với {% render %}):
+  ────────────────────────────────────────────────────────────────
+  section_id    {String}  bắt buộc — section.id
+  id_prefix     {String}  bắt buộc — tiền tố, vd 'ig' → 'ig-prev-{id}'
+  wrapper_class {String}  tùy chọn — class thêm vào wrapper
+
+  Ví dụ:
+    {% render 'slider-nav-buttons',
+      section_id:    section.id,
+      id_prefix:     'ig',
+      wrapper_class: 'ig-nav' %}
+{%- endcomment -%}
+
+<div
+  class="custom-slider-nav{% if wrapper_class != blank %} {{ wrapper_class }}{% endif %}"
+  role="group"
+  aria-label="{{ 'general.slider.name' | t }}"
+>
+  <button
+    type="button"
+    id="{{ id_prefix }}-prev-{{ section_id }}"
+    class="slider-button slider-button--prev"
+    aria-label="{{ 'general.slider.previous_slide' | t }}"
+  >
+    <span class="svg-wrapper">{{- 'arrow-left-long.svg' | inline_asset_content -}}</span>
+  </button>
+  <button
+    type="button"
+    id="{{ id_prefix }}-next-{{ section_id }}"
+    class="slider-button slider-button--next"
+    aria-label="{{ 'general.slider.next_slide' | t }}"
+  >
+    <span class="svg-wrapper">{{- 'arrow-right-long.svg' | inline_asset_content -}}</span>
+  </button>
+</div>

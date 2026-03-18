@@ -1,0 +1,495 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  assign loading_attr   = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading_attr   = 'eager'
+  endif
+-%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Icon Badges — #IconBadges-{{ section.id }}
+   Heading → Icon grid (image + label) → Button
+   ══════════════════════════════════════════════════════════════ */
+
+#IconBadges-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  text-align: {{ section.settings.text_align }};
+}
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Heading ── */
+#IconBadges-{{ section.id }} .ib-heading {
+  margin: 0 auto;
+  color: {{ section.settings.heading_color }};
+  {%- if section.settings.heading_max_width > 0 %}
+  max-width: {{ section.settings.heading_max_width }}px;
+  {%- endif %}
+}
+
+/* ── Heading → Grid gap ── */
+#IconBadges-{{ section.id }} .ib-grid-wrap {
+  margin-top: 4rem;   /* 40px mobile */
+}
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} .ib-grid-wrap {
+    margin-top: 5rem; /* 50px desktop */
+  }
+}
+
+/* ── Mobile: flexbox + justify-center → hàng cuối luôn canh giữa ── */
+#IconBadges-{{ section.id }} .ib-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: {{ section.settings.row_gap_mobile }}px {{ section.settings.col_gap_mobile }}px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Mỗi item chiếm đúng 1/cols_mobile chiều rộng (trừ gaps) */
+#IconBadges-{{ section.id }} .ib-item {
+  flex: 0 0 calc(
+    (100% - {{ section.settings.col_gap_mobile }}px * {{ section.settings.cols_mobile | minus: 1 }})
+    / {{ section.settings.cols_mobile }}
+  );
+  min-width: 0;
+}
+
+/* ── Tablet 750px+: switch sang Grid ── */
+@media screen and (min-width: 750px) {
+  #IconBadges-{{ section.id }} .ib-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.cols_tablet }}, 1fr);
+    justify-content: center;
+    gap: {{ section.settings.row_gap_desktop }}px {{ section.settings.col_gap_desktop }}px;
+  }
+  #IconBadges-{{ section.id }} .ib-item {
+    flex: unset;
+  }
+}
+
+/* ── Desktop 990px+ ── */
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} .ib-grid {
+    grid-template-columns: repeat({{ section.settings.cols_desktop }}, 1fr);
+  }
+}
+
+/* ── Single icon block ── */
+#IconBadges-{{ section.id }} .ib-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+#IconBadges-{{ section.id }} .ib-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Icon image wrapper (per-block width via CSS var) ── */
+#IconBadges-{{ section.id }} .ib-icon-wrap {
+  width: var(--ib-w-mobile, 6.4rem);
+  height: var(--ib-w-mobile, 6.4rem);
+  flex-shrink: 0;
+}
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} .ib-icon-wrap {
+    width: var(--ib-w-desktop, 6.4rem);
+    height: var(--ib-w-desktop, 6.4rem);
+  }
+}
+#IconBadges-{{ section.id }} .ib-icon-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Icon label ── */
+#IconBadges-{{ section.id }} .ib-label {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: {{ section.settings.label_color }};
+  margin: 0;
+}
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} .ib-label {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── Grid → Button gap ── */
+#IconBadges-{{ section.id }} .ib-btn-wrap {
+  margin-top: 3.2rem;  /* 32px mobile */
+  display: flex;
+  justify-content: {{ section.settings.text_align | replace: 'left', 'flex-start' | replace: 'center', 'center' | replace: 'right', 'flex-end' }};
+}
+@media screen and (min-width: 990px) {
+  #IconBadges-{{ section.id }} .ib-btn-wrap {
+    margin-top: 4rem; /* 40px desktop */
+  }
+}
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<section
+  id="IconBadges-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Heading ──{%- endcomment -%}
+    {%- unless section.settings.heading == blank -%}
+      <{{ section.settings.heading_tag }}
+        class="ib-heading {{ section.settings.heading_size }}"
+      >
+        {{- section.settings.heading -}}
+      </{{ section.settings.heading_tag }}>
+    {%- endunless -%}
+
+    {%- comment -%}── Icon grid ──{%- endcomment -%}
+    <div class="ib-grid-wrap">
+      <ul class="ib-grid" role="list">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.image != blank -%}
+
+            {%- comment -%} Per-block icon sizes as CSS custom properties {%- endcomment -%}
+            {%- assign w_d = block.settings.image_width_desktop -%}
+            {%- assign w_m = block.settings.image_width_mobile -%}
+            {%- assign img_sizes = '(min-width: 990px) ' | append: w_d | append: 'px, ' | append: w_m | append: 'px' -%}
+            {%- assign img_max_w = w_d | at_least: w_m -%}
+
+            <li
+              class="ib-item"
+              style="--ib-w-desktop: {{ w_d }}px; --ib-w-mobile: {{ w_m }}px;"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" aria-label="{{ block.settings.label | default: block.settings.image.alt | default: shop.name | escape }}">
+              {%- endif -%}
+
+              <div class="ib-icon-wrap">
+                {{
+                  block.settings.image
+                  | image_url: width: 320
+                  | image_tag:
+                    loading: loading_attr,
+                    fetchpriority: fetch_priority,
+                    widths: '64, 80, 96, 128, 160, 200, 280, 320',
+                    sizes: img_sizes,
+                    alt: block.settings.image.alt | default: block.settings.label | default: ''
+                }}
+              </div>
+
+              {%- unless block.settings.label == blank -%}
+                <p class="ib-label">{{ block.settings.label | escape }}</p>
+              {%- endunless -%}
+
+              {%- if block.settings.link != blank -%}</a>{%- endif -%}
+            </li>
+
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    {%- comment -%}── Button ──{%- endcomment -%}
+    {%- unless section.settings.button_label == blank -%}
+      <div class="ib-btn-wrap">
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
+          class="button{% if section.settings.button_style == 'outline' %} button--secondary{% endif %}"
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      </div>
+    {%- endunless -%}
+
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Icon Badges",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Body And Taste Buds Will Thank You."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small"       },
+        { "value": "h2", "label": "Medium"      },
+        { "value": "h1", "label": "Large"       },
+        { "value": "h0", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "min": 0,
+      "max": 1200,
+      "step": 20,
+      "unit": "px",
+      "label": "Heading max width (0 = no limit)",
+      "default": 800
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alignment",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Grid layout"
+    },
+    {
+      "type": "range",
+      "id": "cols_desktop",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": "Icons per row — Desktop (≥990px)",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "cols_tablet",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Icons per row — Tablet (750–989px)",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "cols_mobile",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Icons per row — Mobile (<750px)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "col_gap_desktop",
+      "min": 8,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Column gap — Desktop",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "row_gap_desktop",
+      "min": 8,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Row gap — Desktop",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "col_gap_mobile",
+      "min": 4,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Column gap — Mobile",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "row_gap_mobile",
+      "min": 4,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Row gap — Mobile",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "BUY NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "value": "primary", "label": "Primary (solid)"  },
+        { "value": "outline", "label": "Outline"          }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Icon label color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon image"
+        },
+        {
+          "type": "range",
+          "id": "image_width_desktop",
+          "min": 32,
+          "max": 160,
+          "step": 4,
+          "unit": "px",
+          "label": "Icon size — Desktop",
+          "default": 64
+        },
+        {
+          "type": "range",
+          "id": "image_width_mobile",
+          "min": 32,
+          "max": 120,
+          "step": 4,
+          "unit": "px",
+          "label": "Icon size — Mobile",
+          "default": 64
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Icon label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Badges",
+      "blocks": [
+        { "type": "icon", "settings": { "label": "Beauty Placenta" } },
+        { "type": "icon", "settings": { "label": "Fish Collage"    } },
+        { "type": "icon", "settings": { "label": "Sakura Extract"  } },
+        { "type": "icon", "settings": { "label": "Natural Ingredients" } },
+        { "type": "icon", "settings": { "label": "Made In Japan"   } }
+      ]
+    }
+  ]
+}
+{% endschema %}

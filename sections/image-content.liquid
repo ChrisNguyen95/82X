@@ -1,0 +1,715 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  assign loading_attr   = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading_attr   = 'eager'
+  endif
+
+  assign desktop_img = section.settings.image
+  assign mobile_img  = section.settings.mobile_image | default: section.settings.image
+
+  assign desktop_ar = desktop_img.aspect_ratio | default: 1.7778
+  assign mobile_ar  = mobile_img.aspect_ratio  | default: desktop_ar
+
+  assign desktop_pb = 1 | divided_by: desktop_ar | times: 100 | round: 3
+  assign mobile_pb  = 1 | divided_by: mobile_ar  | times: 100 | round: 3
+
+  case section.settings.h_align_desktop
+    when 'left'
+      assign justify_d = 'flex-start'
+      assign text_d    = 'left'
+    when 'right'
+      assign justify_d = 'flex-end'
+      assign text_d    = 'right'
+    else
+      assign justify_d = 'center'
+      assign text_d    = 'center'
+  endcase
+
+  case section.settings.h_align_mobile
+    when 'left'
+      assign justify_m = 'flex-start'
+      assign text_m    = 'left'
+    when 'right'
+      assign justify_m = 'flex-end'
+      assign text_m    = 'right'
+    else
+      assign justify_m = 'center'
+      assign text_m    = 'center'
+  endcase
+
+  case section.settings.v_align_desktop
+    when 'top'
+      assign align_d = 'flex-start'
+    when 'bottom'
+      assign align_d = 'flex-end'
+    else
+      assign align_d = 'center'
+  endcase
+
+  case section.settings.v_align_mobile
+    when 'top'
+      assign align_m = 'flex-start'
+    when 'bottom'
+      assign align_m = 'flex-end'
+    else
+      assign align_m = 'center'
+  endcase
+-%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Image Content Banner — #ImageContent-{{ section.id }}
+   Full-width background image, content overlaid on top.
+   Desktop image / Mobile image — separate settings.
+   ══════════════════════════════════════════════════════════════ */
+
+#ImageContent-{{ section.id }} {
+  position: relative;
+  overflow: hidden;
+  background-color: {{ section.settings.background_color }};
+}
+
+/* ── MOBILE HEIGHT ── */
+@media screen and (max-width: 749px) {
+  {%- if section.settings.mobile_height == 'adapt' -%}
+    #ImageContent-{{ section.id }}::before {
+      content: '';
+      display: block;
+      padding-bottom: {{ mobile_pb }}%;
+    }
+  {%- elsif section.settings.mobile_height == 'small' -%}
+    #ImageContent-{{ section.id }} { min-height: 32rem; }
+  {%- elsif section.settings.mobile_height == 'medium' -%}
+    #ImageContent-{{ section.id }} { min-height: 48rem; }
+  {%- elsif section.settings.mobile_height == 'large' -%}
+    #ImageContent-{{ section.id }} { min-height: 60rem; }
+  {%- elsif section.settings.mobile_height == 'fullscreen' -%}
+    #ImageContent-{{ section.id }} { min-height: 100svh; }
+  {%- endif -%}
+}
+
+/* ── DESKTOP HEIGHT ── */
+@media screen and (min-width: 750px) {
+  {%- if section.settings.desktop_height == 'adapt' -%}
+    #ImageContent-{{ section.id }}::before {
+      content: '';
+      display: block;
+      padding-bottom: {{ desktop_pb }}%;
+    }
+  {%- elsif section.settings.desktop_height == 'small' -%}
+    #ImageContent-{{ section.id }} { min-height: 40rem; }
+  {%- elsif section.settings.desktop_height == 'medium' -%}
+    #ImageContent-{{ section.id }} { min-height: 55rem; }
+  {%- elsif section.settings.desktop_height == 'large' -%}
+    #ImageContent-{{ section.id }} { min-height: 72rem; }
+  {%- elsif section.settings.desktop_height == 'fullscreen' -%}
+    #ImageContent-{{ section.id }} { min-height: 100svh; }
+  {%- endif -%}
+}
+
+/* ── Background image layer ── */
+#ImageContent-{{ section.id }} .ic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+#ImageContent-{{ section.id }} .ic-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: {{ section.settings.image_position }};
+  display: block;
+}
+
+/* Desktop/mobile image visibility */
+#ImageContent-{{ section.id }} .ic-bg--desktop { display: none; }
+#ImageContent-{{ section.id }} .ic-bg--mobile  { display: block; }
+@media screen and (min-width: 750px) {
+  #ImageContent-{{ section.id }} .ic-bg--desktop { display: block; }
+  #ImageContent-{{ section.id }} .ic-bg--mobile  { display: none; }
+}
+
+/* ── Overlay ── */
+#ImageContent-{{ section.id }} .ic-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: {{ section.settings.overlay_color }};
+  opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+}
+
+/* ── Content outer: fills section, flex for alignment ──
+   Mobile alignment default → Desktop override via media query */
+#ImageContent-{{ section.id }} .ic-content-outer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: {{ align_m }};
+  justify-content: {{ justify_m }};
+  padding: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px {{ section.settings.padding_h }}px;
+}
+@media screen and (min-width: 750px) {
+  #ImageContent-{{ section.id }} .ic-content-outer {
+    align-items: {{ align_d }};
+    justify-content: {{ justify_d }};
+    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_h }}px {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Content inner: block stack ──
+   Design system spacing:
+   • Gap logo / heading / text:  16px mobile → 20px desktop
+   • Gap before button:          32px mobile → 40px desktop
+     (achieved via extra margin-top on .ic-btn-wrap) */
+#ImageContent-{{ section.id }} .ic-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: {{ text_m }};
+  width: 100%;
+  {%- if section.settings.content_max_width > 0 -%}
+  max-width: {{ section.settings.content_max_width }}px;
+  {%- endif -%}
+}
+@media screen and (min-width: 750px) {
+  #ImageContent-{{ section.id }} .ic-content {
+    gap: 20px;
+    text-align: {{ text_d }};
+  }
+}
+
+/* Button wrapper: extra top margin to reach design-system spacing */
+#ImageContent-{{ section.id }} .ic-btn-wrap {
+  margin-top: 16px; /* mobile:  16 (gap) + 16 (extra) = 32px total */
+}
+@media screen and (min-width: 750px) {
+  #ImageContent-{{ section.id }} .ic-btn-wrap {
+    margin-top: 20px; /* desktop: 20 (gap) + 20 (extra) = 40px total */
+  }
+}
+
+/* ── BLOCKS ── */
+
+/* Heading */
+#ImageContent-{{ section.id }} .ic-heading {
+  margin: 0;
+  color: {{ section.settings.heading_color }};
+}
+
+/* Text */
+#ImageContent-{{ section.id }} .ic-text {
+  margin: 0;
+  color: {{ section.settings.text_color }};
+  font-size: 1.5rem;
+  line-height: 1.65;
+}
+#ImageContent-{{ section.id }} .ic-text p { margin: 0; }
+#ImageContent-{{ section.id }} .ic-text p + p { margin-top: 0.8em; }
+
+/* Button wrapper — flex + alignment */
+#ImageContent-{{ section.id }} .ic-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+{%- endstyle -%}
+
+<section
+  id="ImageContent-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+
+  {%- comment -%}── Background images ──{%- endcomment -%}
+
+  {%- comment -%} Desktop image {%- endcomment -%}
+  <div class="ic-bg ic-bg--desktop" aria-hidden="true">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3200
+        | image_tag:
+          loading: loading_attr,
+          fetchpriority: fetch_priority,
+          widths: '750, 1000, 1400, 1800, 2400, 3200',
+          sizes: '100vw',
+          alt: ''
+      }}
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Mobile image {%- endcomment -%}
+  <div class="ic-bg ic-bg--mobile" aria-hidden="true">
+    {%- assign mob_img = section.settings.mobile_image | default: section.settings.image -%}
+    {%- if mob_img != blank -%}
+      {{
+        mob_img
+        | image_url: width: 1200
+        | image_tag:
+          loading: loading_attr,
+          fetchpriority: fetch_priority,
+          widths: '375, 480, 600, 750, 900, 1200',
+          sizes: '100vw',
+          alt: ''
+      }}
+    {%- endif -%}
+  </div>
+
+  {%- comment -%}── Overlay ──{%- endcomment -%}
+  {%- if section.settings.overlay_opacity > 0 -%}
+    <div class="ic-overlay" aria-hidden="true"></div>
+  {%- endif -%}
+
+  {%- comment -%}── Content ──{%- endcomment -%}
+  <div class="ic-content-outer">
+    <div class="page-width" style="width:100%;">
+      <div class="ic-content text-al-desk-{{ text_d }} text-al-mobile-{{text_m}}">
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'logo' -%}
+              {%- if block.settings.image != blank -%}
+                {%- assign logo_sizes = '(min-width: 750px) '
+                  | append: block.settings.logo_width_desktop
+                  | append: 'px, '
+                  | append: block.settings.logo_width_mobile
+                  | append: 'px'
+                -%}
+                <div class="ic-logo" {{ block.shopify_attributes }}>
+                  {{
+                    block.settings.image
+                    | image_url: width: 480
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '60, 80, 100, 120, 160, 200, 280, 360, 480',
+                      sizes: logo_sizes,
+                      alt: block.settings.image.alt | default: shop.name
+                  }}
+                </div>
+                <style>
+                  #ImageContent-{{ section.id }} .ic-logo img {
+                      height: auto;
+                      width: {{ block.settings.logo_width_mobile }}px
+                    }
+                  @media screen and (min-width: 750px) {
+                    #ImageContent-{{ section.id }} .ic-logo img {
+                      width: {{ block.settings.logo_width_desktop }}px !important;
+                    }
+                  }
+                </style>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+              <{{ block.settings.heading_tag }}
+                class="ic-heading {{ block.settings.heading_size }}"
+                {{ block.shopify_attributes }}
+              >
+                {{- block.settings.heading -}}
+              </{{ block.settings.heading_tag }}>
+
+            {%- when 'text' -%}
+              <div class="ic-text rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <div class="ic-btn-wrap" {{ block.shopify_attributes }}>
+                  <a
+                    href="{{ block.settings.button_link | default: '#' }}"
+                    class="button{% if block.settings.button_style == 'outline' %} button--secondary{% endif %}{% if block.settings.button_full_mobile %} button--mobile-full-width{% endif %}"
+                    {% if block.settings.button_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                  >
+                    {{- block.settings.button_label -}}
+                  </a>
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Image + Content",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile background image",
+      "info": "Leave blank to use desktop image on mobile"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image focal point",
+      "options": [
+        { "value": "top left",      "label": "Top left"      },
+        { "value": "top center",    "label": "Top center"    },
+        { "value": "top right",     "label": "Top right"     },
+        { "value": "center left",   "label": "Middle left"   },
+        { "value": "center center", "label": "Middle center" },
+        { "value": "center right",  "label": "Middle right"  },
+        { "value": "bottom left",   "label": "Bottom left"   },
+        { "value": "bottom center", "label": "Bottom center" },
+        { "value": "bottom right",  "label": "Bottom right"  }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Section height"
+    },
+    {
+      "type": "select",
+      "id": "desktop_height",
+      "label": "Desktop height",
+      "options": [
+        { "value": "adapt",      "label": "Adapt to image"  },
+        { "value": "small",      "label": "Small (400px)"   },
+        { "value": "medium",     "label": "Medium (550px)"  },
+        { "value": "large",      "label": "Large (720px)"   },
+        { "value": "fullscreen", "label": "Full screen"     }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "select",
+      "id": "mobile_height",
+      "label": "Mobile height",
+      "options": [
+        { "value": "adapt",      "label": "Adapt to image"  },
+        { "value": "small",      "label": "Small (320px)"   },
+        { "value": "medium",     "label": "Medium (480px)"  },
+        { "value": "large",      "label": "Large (600px)"   },
+        { "value": "fullscreen", "label": "Full screen"     }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content alignment — Desktop"
+    },
+    {
+      "type": "select",
+      "id": "h_align_desktop",
+      "label": "Horizontal position (desktop)",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right"  }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "v_align_desktop",
+      "label": "Vertical position (desktop)",
+      "options": [
+        { "value": "top",    "label": "Top"    },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Content alignment — Mobile"
+    },
+    {
+      "type": "select",
+      "id": "h_align_mobile",
+      "label": "Horizontal position (mobile)",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right"  }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "v_align_mobile",
+      "label": "Vertical position (mobile)",
+      "options": [
+        { "value": "top",    "label": "Top"    },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 0,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Content max width (0 = no limit)",
+      "default": 600
+    },
+    {
+      "type": "header",
+      "content": "Typography color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body text color",
+      "default": "#444444"
+    },
+    {
+      "type": "header",
+      "content": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button background",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "btn_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color (fallback)",
+      "default": "#D6E8F8"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_h",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding left / right",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "range",
+          "id": "logo_width_desktop",
+          "min": 40,
+          "max": 320,
+          "step": 4,
+          "unit": "px",
+          "label": "Logo width — Desktop",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "logo_width_mobile",
+          "min": 40,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "Logo width — Mobile",
+          "default": 80
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "At The Core Of It All, We Lead With Purpose"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Size",
+          "options": [
+            { "value": "h3", "label": "Small"       },
+            { "value": "h2", "label": "Medium"      },
+            { "value": "h1", "label": "Large"       },
+            { "value": "h0", "label": "Extra large" }
+          ],
+          "default": "h1"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "HTML tag",
+          "options": [
+            { "value": "h1", "label": "h1" },
+            { "value": "h2", "label": "h2" },
+            { "value": "h3", "label": "h3" },
+            { "value": "p",  "label": "p"  }
+          ],
+          "default": "h2"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>82X is a premium beauty drink crafted in Japan.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary", "label": "Primary (solid)" },
+            { "value": "outline", "label": "Outline"         }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_full_mobile",
+          "label": "Full width on mobile",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "button_new_tab",
+          "label": "Open in new tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image + Content",
+      "blocks": [
+        { "type": "logo" },
+        {
+          "type": "heading",
+          "settings": { "heading": "At The Core Of It All, We Lead With Purpose" }
+        },
+        { "type": "button", "settings": { "button_label": "Learn More" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
