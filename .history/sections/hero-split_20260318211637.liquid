@@ -1,16 +1,8 @@
 {%- liquid
   assign desktop_height = section.settings.desktop_height
-  assign mobile_height = section.settings.mobile_height
-
-  assign has_image = false
-  if section.settings.image != blank
-    assign has_image = true
-  endif
-
-  assign has_mobile_img = false
-  if section.settings.image_mobile != blank
-    assign has_mobile_img = true
-  endif
+  assign mobile_height  = section.settings.mobile_height
+  assign has_image      = section.settings.image != blank
+  assign has_mobile_img = section.settings.image_mobile != blank
 
   assign fetch_priority = 'auto'
   if section.index == 1
