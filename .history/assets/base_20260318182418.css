@@ -2414,7 +2414,7 @@ input[type='checkbox'] {
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 13660px) {
   .header--middle-left {
     column-gap: 14.3rem;
   }
