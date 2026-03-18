@@ -1,0 +1,553 @@
+{{- 'component-slider.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+  assign columns_desktop = 4
+  assign columns_mobile   = 2
+
+  -%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════
+   Ingredient Slider  —  #IngredientSlider-{{ section.id }}
+   ══════════════════════════════════════════════════ */
+
+/* ── Section wrapper ── */
+#IngredientSlider-{{ section.id }} {
+  --card-gap:    {{ section.settings.card_gap }}px;
+  --card-radius: {{ section.settings.card_radius }}px;
+
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+
+@media screen and (min-width: 750px) {
+  #IngredientSlider-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Title ── */
+#IngredientSlider-{{ section.id }} .ingredient-slider__title-wrap {
+  text-align: {{ section.settings.title_align }};
+  margin-bottom: 4rem;
+}
+
+/* ── Slider list ──
+   Flexbox + overflow scroll trên mọi breakpoint.
+   Mỗi item có flex-basis cố định để hiện đúng số cột.
+   Dawn slider-component JS scroll list này qua aria-controls.
+────────────────────────────────────────────────── */
+#IngredientSlider-{{ section.id }} .ingredient-slider__list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--card-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* Scroll ngang — scrollbar ẩn */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* Quan trọng: clip nội dung thừa */
+  overflow-y: visible;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-slider__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Slide item — chiều rộng cố định theo số cột ──
+   Mobile  : 2 cột → mỗi item = (100% - 1 gap) / 2
+   Desktop : 4 cột → mỗi item = (100% - 3 gap) / 4
+────────────────────────────────────────────────── */
+#IngredientSlider-{{ section.id }} .ingredient-slider__item {
+  flex: 0 0 calc((100% - ({{ columns_mobile }} - 1) * var(--card-gap)) / {{ columns_mobile }});
+  max-width: calc((100% - ({{ columns_mobile }} - 1) * var(--card-gap)) / {{ columns_mobile }});
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+@media screen and (min-width: 990px) {
+  #IngredientSlider-{{ section.id }} .ingredient-slider__item {
+    flex: 0 0 calc((100% - ({{ columns_desktop }} - 1) * var(--card-gap)) / {{ columns_desktop }});
+    max-width: calc((100% - ({{ columns_desktop }} - 1) * var(--card-gap)) / {{ columns_desktop }});
+  }
+}
+
+/* ── Card ── */
+#IngredientSlider-{{ section.id }} .ingredient-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: {{ section.settings.card_text_align }};
+}
+
+/* ── Card image wrapper ── */
+#IngredientSlider-{{ section.id }} .ingredient-card__image-wrap {
+  border-radius: var(--card-radius);
+  background-color: {{ section.settings.card_bg }};
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  {%- if section.settings.image_ratio == 'square' -%}
+    aspect-ratio: 1 / 1;
+  {%- elsif section.settings.image_ratio == 'portrait' -%}
+    aspect-ratio: 3 / 4;
+  {%- elsif section.settings.image_ratio == 'landscape' -%}
+    aspect-ratio: 4 / 3;
+  {%- elsif section.settings.image_ratio == 'adapt' -%}
+    /* set via inline style below using highest ratio */
+  {%- endif -%}
+}
+
+/* ── Card image ── */
+#IngredientSlider-{{ section.id }} .ingredient-card__image-wrap img,
+#IngredientSlider-{{ section.id }} .ingredient-card__image-wrap .placeholder-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* contain: hiện toàn bộ ảnh, không cắt */
+  {%- if section.settings.image_ratio != 'adapt' -%}
+    position: absolute;
+    inset: 0;
+  {%- endif -%}
+}
+
+/* ── Card info ── */
+#IngredientSlider-{{ section.id }} .ingredient-card__info {
+  padding: 1.6rem 0.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-card__info h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-card__info .rte {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.55;
+  opacity: 0.75;
+}
+
+/* ── Navigation buttons ──
+   Luôn hiển thị cả desktop và mobile, căn giữa dưới slider.
+────────────────────────────────────────────────── */
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 4rem;
+}
+
+/* Override Dawn's slider-buttons hide logic cho section này */
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button {
+  display: flex !important;
+  visibility: visible !important;
+
+  /* Circular style theo design */
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  border: 0.15rem solid currentColor;
+  background: transparent;
+  color: {{ section.settings.nav_color }};
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button:not([disabled]):hover {
+  background: {{ section.settings.nav_color }};
+  color: #fff;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Icon carets */
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button--prev .svg-wrapper {
+  transform: rotate(90deg);
+}
+
+#IngredientSlider-{{ section.id }} .ingredient-slider__nav .slider-button--next .svg-wrapper {
+  transform: rotate(-90deg);
+}
+{%- endstyle -%}
+
+{%- liquid
+  comment
+    Tính padding-bottom % cho image_ratio == 'adapt':
+    dùng tỉ lệ cao nhất (lowest aspect_ratio) trong tất cả blocks
+    để mọi ảnh hiện đầy đủ không bị cắt.
+  endcomment
+
+  assign highest_ratio = 0
+  for block in section.blocks
+    if block.settings.image != blank and block.settings.image.aspect_ratio > highest_ratio
+      assign highest_ratio = block.settings.image.aspect_ratio
+    endif
+  endfor
+
+  if highest_ratio == 0
+    assign highest_ratio = 1
+  endif
+
+  assign adapt_padding = 1 | divided_by: highest_ratio | times: 100
+
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<section
+  id="IngredientSlider-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  aria-label="{{ section.settings.title | escape }}"
+>
+  <div class="page-width">
+
+    {%- unless section.settings.title == blank -%}
+      <div class="ingredient-slider__title-wrap">
+        <h2 class="inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+    {%- endunless -%}
+
+    {%- comment -%}
+      slider-component là Dawn custom element.
+      Nó tự xử lý prev/next buttons qua aria-controls.
+      Nguồn: assets/slider.js (đã có sẵn trong Dawn).
+    {%- endcomment -%}
+    <slider-component class="ingredient-slider__slider-wrap">
+
+      {%- comment -%}── Slide list ──{%- endcomment -%}
+      <ul
+        id="Slider-{{ section.id }}"
+        class="ingredient-slider__list"
+        role="list"
+        aria-label="{{ 'sections.featured_blog.onboarding_title' | t }}"
+      >
+        {%- for block in section.blocks -%}
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="ingredient-slider__item"
+            {{ block.shopify_attributes }}
+          >
+            <div class="ingredient-card">
+
+              {%- comment -%}── Image ──{%- endcomment -%}
+              <div
+                class="ingredient-card__image-wrap"
+                {%- if section.settings.image_ratio == 'adapt' -%}
+                  style="padding-bottom: {{ adapt_padding | round: 2 }}%;"
+                {%- endif -%}
+              >
+                {%- if block.settings.image != blank -%}
+                  {%- liquid
+                    assign number_of_cols    = columns_desktop
+                    assign grid_gap_px       = section.settings.card_gap | times: number_of_cols | minus: 1
+                    assign page_width_px     = settings.page_width | append: 'px'
+                  -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1000
+                    | image_tag:
+                      loading: 'lazy',
+                      fetchpriority: fetch_priority,
+                      widths: '180, 280, 380, 500, 700',
+                      sizes: '(min-width: 990px) calc((min(100vw,' | append: page_width_px | append: ') - ' | append: grid_gap_px | append: 'px) / ' | append: number_of_cols | append: '), calc((100vw - ' | append: section.settings.card_gap | append: 'px) / 2)',
+                      alt: block.settings.image.alt | default: block.settings.title | escape
+                  }}
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+
+              {%- comment -%}── Info ──{%- endcomment -%}
+              <div class="ingredient-card__info">
+                {%- if block.settings.title != blank -%}
+                  <h3>{{ block.settings.title | escape }}</h3>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="rte">{{ block.settings.text }}</div>
+                {%- endif -%}
+              </div>
+
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- comment -%}── Nav buttons (always shown) ──{%- endcomment -%}
+      <div class="ingredient-slider__nav slider-buttons">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
+
+    </slider-component>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ingredient Slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Ingredients You Can Recognize"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Title size",
+      "options": [
+        { "value": "h2",  "label": "Small" },
+        { "value": "h1",  "label": "Medium" },
+        { "value": "h0",  "label": "Large" },
+        { "value": "hxl", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "Title alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Card images"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "info": "\"Adapt to image\" giữ đúng tỉ lệ gốc, không cắt ảnh.",
+      "options": [
+        { "value": "adapt",     "label": "Adapt to image (original ratio)" },
+        { "value": "square",    "label": "Square (1:1)" },
+        { "value": "portrait",  "label": "Portrait (3:4)" },
+        { "value": "landscape", "label": "Landscape (4:3)" }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card image background",
+      "default": "#D9E9F8"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card corner radius",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "card_text_align",
+      "label": "Card text alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Navigation buttons"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Button color",
+      "default": "#1C2E5E"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "info": "Overrides color scheme background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Vitamin E"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description",
+          "default": "<p>Protects skin from free radicals and maintains moisture.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredient Slider",
+      "blocks": [
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Grape Extract",
+            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Pineapple Extract",
+            "text": "<p>Improves skin elasticity and firmness.</p>"
+          }
+        },
+        {
+          "type": "ingredient",
+          "settings": {
+            "title": "Fermented Plant Extract",
+            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
