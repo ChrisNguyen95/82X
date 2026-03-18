@@ -81,6 +81,12 @@
       ],
       "name": "Image Grid With Text",
       "settings": {
+        "image_1": "shopify://shop_images/Picture.jpg",
+        "image_2": "shopify://shop_images/Picture2.jpg",
+        "image_3": "shopify://shop_images/Picture3.jpg",
+        "image_4": "shopify://shop_images/Picture4.jpg",
+        "image_5": "shopify://shop_images/Picture5.jpg",
+        "image_6": "shopify://shop_images/Picture6.jpg",
         "image_gap": 8,
         "image_border_radius": 8,
         "image_aspect_ratio": "1 / 1",
