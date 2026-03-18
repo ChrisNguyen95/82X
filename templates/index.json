@@ -59,9 +59,74 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "hero_split_Jnw3GL": {
+      "type": "hero-split",
+      "blocks": {
+        "icon_badge_LB9MTK": {
+          "type": "icon_badge",
+          "settings": {
+            "icon_label": "Beauty Placenta"
+          }
+        },
+        "icon_badge_JVpBPT": {
+          "type": "icon_badge",
+          "settings": {
+            "icon_label": "Fish Collage"
+          }
+        },
+        "icon_badge_6hJFk3": {
+          "type": "icon_badge",
+          "settings": {
+            "icon_label": "Sakura Extract"
+          }
+        },
+        "icon_badge_jNthBc": {
+          "type": "icon_badge",
+          "settings": {
+            "icon_label": "Natural Ingredients"
+          }
+        },
+        "icon_badge_rHe8DJ": {
+          "type": "icon_badge",
+          "settings": {
+            "icon_label": "Made In Japan"
+          }
+        }
+      },
+      "block_order": [
+        "icon_badge_LB9MTK",
+        "icon_badge_JVpBPT",
+        "icon_badge_6hJFk3",
+        "icon_badge_jNthBc",
+        "icon_badge_rHe8DJ"
+      ],
+      "name": "Hero Split",
+      "settings": {
+        "caption": "Start Your Premium Collagen Journey For",
+        "heading": "Reveal Your Natural Glow - Just $5 Per Day",
+        "heading_size": "h0",
+        "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.</p>",
+        "button_1_label": "Shop Now",
+        "button_1_link": "",
+        "button_2_label": "Take Quiz",
+        "button_2_link": "",
+        "image_max_height": 360,
+        "image_position": "right",
+        "text_column_width": "45%",
+        "desktop_text_align": "left",
+        "mobile_text_align": "left",
+        "icon_size": 48,
+        "background_color": "#E1EEF8",
+        "min_height": 620,
+        "min_height_mobile": 400,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
+    "hero_split_Jnw3GL",
     "image_grid_with_text_HFJfaW"
   ]
 }
