@@ -1,0 +1,451 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ── Image Grid with Text – scoped styles ── */
+  .image-grid-with-text-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .image-grid-with-text-{{ section.id }} {
+      grid-template-columns: 1fr 1fr;
+      gap: 4.8rem;
+    }
+
+    .image-grid-with-text-{{ section.id }}.layout--text-first .igwt-images {
+      order: 2;
+    }
+
+    .image-grid-with-text-{{ section.id }}.layout--text-first .igwt-content {
+      order: 1;
+    }
+  }
+
+  /* 6-image grid: 3 cols × 2 rows */
+  .igwt-images__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ section.settings.image_gap }}px;
+  }
+
+  .igwt-images__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ section.settings.image_border_radius }}px;
+    aspect-ratio: {{ section.settings.image_aspect_ratio }};
+    background-color: #f4f4f4;
+  }
+
+  .igwt-images__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .igwt-images__item:hover img {
+    transform: scale(1.05);
+  }
+
+  .igwt-images__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+  }
+
+  .igwt-images__placeholder svg {
+    width: 40%;
+    height: 40%;
+    fill: #c4c4c4;
+  }
+
+  /* Text content */
+  .igwt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .igwt-content--top    { justify-content: flex-start; }
+  .igwt-content--middle { justify-content: center; }
+  .igwt-content--bottom { justify-content: flex-end; }
+
+  .igwt-content__heading {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .igwt-content__text {
+    margin: 0;
+  }
+
+  .igwt-content__button {
+    margin-top: 0.8rem;
+    align-self: flex-start;
+  }
+
+  /* Mobile text alignment */
+  .igwt-content--mobile-center { text-align: center; }
+  .igwt-content--mobile-center .igwt-content__button { align-self: center; }
+  .igwt-content--mobile-left   { text-align: left; }
+  .igwt-content--mobile-right  { text-align: right; }
+  .igwt-content--mobile-right .igwt-content__button { align-self: flex-end; }
+
+  @media screen and (min-width: 750px) {
+    .igwt-content--desktop-center { text-align: center; }
+    .igwt-content--desktop-center .igwt-content__button { align-self: center; }
+    .igwt-content--desktop-left   { text-align: left; }
+    .igwt-content--desktop-left .igwt-content__button { align-self: flex-start; }
+    .igwt-content--desktop-right  { text-align: right; }
+    .igwt-content--desktop-right .igwt-content__button { align-self: flex-end; }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign layout_class = ''
+  if section.settings.layout == 'text_first'
+    assign layout_class = 'layout--text-first'
+  endif
+  assign content_pos = section.settings.desktop_content_position
+  assign desktop_align = section.settings.desktop_content_alignment
+  assign mobile_align  = section.settings.mobile_content_alignment
+-%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <div class="image-grid-with-text-{{ section.id }} {{ layout_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+
+      {%- comment -%} ── LEFT / IMAGE GRID ── {%- endcomment -%}
+      <div class="igwt-images">
+        <div class="igwt-images__grid">
+          {%- for i in (1..6) -%}
+            {%- assign img_key = 'image_' | append: i -%}
+            {%- assign img = section.settings[img_key] -%}
+            <div class="igwt-images__item">
+              {%- if img != blank -%}
+                {{
+                  img
+                  | image_url: width: 600
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '165, 300, 400, 600',
+                    sizes: '(min-width: 750px) calc((100vw - 13rem) / 6), calc((100vw - 3rem) / 3)',
+                    alt: img.alt | escape
+                }}
+              {%- else -%}
+                <div class="igwt-images__placeholder">
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- comment -%} ── RIGHT / TEXT CONTENT ── {%- endcomment -%}
+      <div class="igwt-content igwt-content--{{ content_pos }} igwt-content--desktop-{{ desktop_align }} igwt-content--mobile-{{ mobile_align }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'heading' -%}
+              <h2
+                class="igwt-content__heading {{ block.settings.heading_size }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.heading }}
+              </h2>
+
+            {%- when 'text' -%}
+              <div
+                class="igwt-content__text rte {{ block.settings.text_style }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.text }}
+              </div>
+
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <div class="igwt-content__button" {{ block.shopify_attributes }}>
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                </div>
+              {%- endif -%}
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Grid With Text",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "6 Images Grid"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Image 6"
+    },
+    {
+      "type": "range",
+      "id": "image_gap",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between images",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "1 / 1",   "label": "Square (1:1)" },
+        { "value": "4 / 3",   "label": "Landscape (4:3)" },
+        { "value": "3 / 4",   "label": "Portrait (3:4)" },
+        { "value": "16 / 9",  "label": "Wide (16:9)" }
+      ],
+      "default": "1 / 1"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        { "value": "image_first", "label": "Image first (left)" },
+        { "value": "text_first",  "label": "Text first (left)" }
+      ],
+      "default": "image_first",
+      "label": "Desktop layout"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        { "value": "top",    "label": "Top" },
+        { "value": "middle", "label": "Middle" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "middle",
+      "label": "Desktop content position"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Desktop text alignment"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Mobile text alignment"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "Section color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "You've Tried Everything Else, Now Try Something That Works",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            { "value": "h2",  "label": "Small" },
+            { "value": "h1",  "label": "Medium" },
+            { "value": "h0",  "label": "Large" },
+            { "value": "hxl", "label": "Extra large" }
+          ],
+          "default": "h1",
+          "label": "Heading size"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe your product or share a benefit here.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            { "value": "body",     "label": "Body" },
+            { "value": "subtitle", "label": "Subtitle" }
+          ],
+          "default": "body",
+          "label": "Text style"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Learn more",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "Outline button style"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Grid With Text",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "button" }
+      ]
+    }
+  ]
+}
+{% endschema %}
