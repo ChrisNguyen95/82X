@@ -6,21 +6,21 @@
         "subtext_YD7YNq": {
           "type": "subtext",
           "settings": {
-            "subtext": "Japanese Placenta & Collagen Beauty Drink",
+            "subtext": "Start Your Premium Collagen Journey For",
             "subtext_style": "caption-with-letter-spacing"
           }
         },
         "heading_W4eLAb": {
           "type": "heading",
           "settings": {
-            "heading": "82X Sakura Placenta",
+            "heading": "Reveal Your Natural Glow - Just $5 per day",
             "heading_size": "h0"
           }
         },
         "text_4C77xy": {
           "type": "text",
           "settings": {
-            "text": "<p>A premium Japanese beauty drink with placenta and collagen that helps brighten skin, improve elasticity, reduce signs of aging, and nourish the body from within.<\/p>",
+            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.<\/p>",
             "text_style": "body"
           }
         },
@@ -30,7 +30,7 @@
             "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": false,
-            "button_label_2": "",
+            "button_label_2": "TAKE QUIZ",
             "button_link_2": "shopify:\/\/pages\/82x-quiz",
             "button_style_secondary_2": true
           }
@@ -38,7 +38,7 @@
         "icon_list_U8wiDQ": {
           "type": "icon_list",
           "settings": {
-            "icon_label_color": "",
+            "icon_label_color": "#1c2b6b",
             "icon_1": "shopify:\/\/shop_images\/Icon_Container.svg",
             "label_1": "Beauty Placenta",
             "icon_2": "shopify:\/\/shop_images\/Icon_rContainer.svg",
@@ -70,16 +70,17 @@
         "image_position": "center center",
         "overlay_opacity": 0,
         "desktop_height": "adapt",
-        "mobile_height": "large",
+        "mobile_height": "adapt",
         "desktop_vertical": "middle",
-        "mobile_vertical": "middle",
+        "mobile_vertical": "top",
         "desktop_horizontal": "left",
         "desktop_align": "left",
         "mobile_align": "left",
         "content_max_width": 55,
         "content_max_width_mobile": 100,
+        "section_color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "show_text_box": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "icon_size": 48,
         "padding_top": 64,
         "padding_bottom": 64,
@@ -87,24 +88,24 @@
         "padding_bottom_mobile": 40
       }
     },
-    "image_grid_with_text_HFJfaW": {
+    "image_grid_with_text_a3Lyam": {
       "type": "image-grid-with-text",
       "blocks": {
-        "heading_J8JHEE": {
+        "heading_iXHixr": {
           "type": "heading",
           "settings": {
-            "heading": "You've Tried Everything Else, Now Try Something That Works",
+            "heading": "You’ve tried everything Else, now try something that works",
             "heading_size": "h1"
           }
         },
-        "text_pT6reB": {
+        "text_mDfYea": {
           "type": "text",
           "settings": {
             "text": "<p>You're not alone. We're helping over 800,000 people of all ages healthy with our practive urinary tract products.<\/p>",
             "text_style": "body"
           }
         },
-        "button_AJwzQz": {
+        "button_p8FMbQ": {
           "type": "button",
           "settings": {
             "button_label": "READ REVIEWS",
@@ -114,9 +115,9 @@
         }
       },
       "block_order": [
-        "heading_J8JHEE",
-        "text_pT6reB",
-        "button_AJwzQz"
+        "heading_iXHixr",
+        "text_mDfYea",
+        "button_p8FMbQ"
       ],
       "name": "Image Grid With Text",
       "settings": {
@@ -127,8 +128,8 @@
         "image_5": "shopify:\/\/shop_images\/Picture5.jpg",
         "image_6": "shopify:\/\/shop_images\/Picture6.jpg",
         "image_gap": 24,
-        "image_gap_mobile": 6,
-        "image_border_radius": 12,
+        "image_gap_mobile": 12,
+        "image_border_radius": 8,
         "image_aspect_ratio": "adapt",
         "layout": "image_first",
         "mobile_layout": "text_first",
@@ -142,6 +143,325 @@
         "padding_bottom": 100
       }
     },
+    "image_with_text_XkgVPx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gJXVpA": {
+          "type": "heading",
+          "settings": {
+            "heading": "82X – Premium collagen & placenta drink from Japan",
+            "heading_size": "h1"
+          }
+        },
+        "text_iti9gR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XWPjwc": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gJXVpA",
+        "text_iti9gR",
+        "button_XWPjwc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_GkqWwX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YrCKxF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsure about which item suits your needs?",
+            "heading_size": "h1"
+          }
+        },
+        "text_gAg4tt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start by taking our quick 2-minute quiz.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_rTbc9J": {
+          "type": "button",
+          "settings": {
+            "button_label": "TRY RISK FREE",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YrCKxF",
+        "text_gAg4tt",
+        "button_rTbc9J"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Pictures_container.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "accordion_section_LXcTpy": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_cBMGT4": {
+          "type": "item",
+          "settings": {
+            "title": "What Are The Benefits Of 82X Sakura Placenta?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "open_by_default": true
+          }
+        },
+        "item_Jy86pY": {
+          "type": "item",
+          "settings": {
+            "title": "How Should I Take 82X Sakura Placenta?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "open_by_default": false
+          }
+        },
+        "item_m6crw9": {
+          "type": "item",
+          "settings": {
+            "title": "How Long Does It Take To See Results?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "open_by_default": false
+          }
+        },
+        "item_Xd6RzC": {
+          "type": "item",
+          "settings": {
+            "title": "Who Should Use This Product?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_cBMGT4",
+        "item_Jy86pY",
+        "item_m6crw9",
+        "item_Xd6RzC"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_max_width": 800,
+        "subtext": "",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#d9eeff",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d9eeff",
+        "card_radius": 20,
+        "card_padding_v": 100,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 120
+      }
+    },
+    "multicolumn_Y8AfLg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FeEUEA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LKjqwM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aU8Egq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
+            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FeEUEA",
+        "column_LKjqwM",
+        "column_aU8Egq"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Meet the doctors and scientists helping 82x make a difference",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 760,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "MEET OUR ADVISORS",
+        "button_link": "shopify:\/\/pages\/hero-products",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_bQNCQa": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YFLnJJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Liquid Collagen from Japan",
+            "heading_size": "h1"
+          }
+        },
+        "text_fRTthn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by the delicate beauty philosophy of Japan and the fragile yet resilient charm of Sakura, 82X was born with the mission to nurture skin from within. Combining advanced liquid collagen technology with the spirit of a \"beauty ritual,\" 82X is not just a skincare product but a lifestyle habit — where beauty is awakened through balance, health, and naturalness every day.<\/p><p>82X Liquid Collagen Japanese Beauty Secret. Healthy inside. Radiant outside.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_r6Tj8K": {
+          "type": "button",
+          "settings": {
+            "button_label": "ABOUT BRAND STORY",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YFLnJJ",
+        "text_fRTthn",
+        "button_r6Tj8K"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Guarantee_image_81515e70-efaf-4d7b-af5a-462556be2e03.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_mbAnL8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_htWgNr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Refund Policy",
+            "heading_size": "h1"
+          }
+        },
+        "text_DPBVhm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your health and happiness are our top priorities. If 82x doesn't satisfy your needs, we’ll refund your purchase. Our dedicated customer success team is here to assist you with ease. We take pride in our attentive, compassionate team of real people who are eager to address your questions and provide support in any way possible.<\/p>"
+          }
+        },
+        "button_46WnVJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_htWgNr",
+        "text_DPBVhm",
+        "button_46WnVJ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "testimonial_slider_7t8nhQ": {
       "type": "testimonial-slider",
       "blocks": {
@@ -152,7 +472,7 @@
             "star_rating": 5,
             "author": "Lily Wang",
             "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "text": "I used to compare my skin to everyone else's and never felt good enough. But after using 82X Sakura Placenta, I realized I don't need 'perfect' glass skin—I just wanted healthy skin.\nMy skin isn't bleached white, but it's even, strong, and clear. Reaching this stable 'good' level feels amazing. I’ve stopped obsessing over every flaw and finally feel comfortable in my own skin. It’s such a relief."
           }
         },
         "review_jGnEXy": {
@@ -162,7 +482,7 @@
             "star_rating": 5,
             "author": "Kaede",
             "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "text": "I have more energy to tackle my day, even with less sleep. Sakura Placenta is a lifesaver. My friends are all asking what my secret is. It's 82X, and it's popular!"
           }
         },
         "review_q4bPwc": {
@@ -172,7 +492,7 @@
             "star_rating": 5,
             "author": "Mia Nguyen",
             "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "text": "As a new mom who recently weaned, I know firsthand the struggle of post-pregnancy skin. My hormones were all over the place, and I was left with stubborn melasma that just wouldn't budge. I tried various creams and serums, but nothing truly addressed the dark spots."
           }
         }
       },
@@ -214,8 +534,91 @@
         "nav_color": "#1c2b6b",
         "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
         "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 104
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "icon_badges_ajkPPR": {
+      "type": "icon-badges",
+      "blocks": {
+        "icon_TVjUy3": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Benefit_icon_group.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Japanese Standard Collagen & Placenta",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_4eeNUQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Benefit_icon_group_ecc063e8-3c6a-447a-af09-79c746f98a94.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Over 500,000 customers have trusted us",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_y8CHhV": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/eqq.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "The component has been thoroughly researched",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_iqQt6x": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/e.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "60-Day Satisfaction Guarantee",
+            "label_font_heading": true,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_TVjUy3",
+        "icon_4eeNUQ",
+        "icon_y8CHhV",
+        "icon_iqQt6x"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.ib-label {font-size: 1.6rem; }}"
+      ],
+      "name": "Icon Badges",
+      "settings": {
+        "heading": "Discover the standout benefits of the 82X product",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_max_width": 600,
+        "heading_color": "#1c2b6b",
+        "text_align": "center",
+        "grid_max_width": 1120,
+        "cols_desktop": 4,
+        "cols_tablet": 4,
+        "cols_mobile": 2,
+        "col_gap_desktop": 48,
+        "row_gap_desktop": 32,
+        "col_gap_mobile": 16,
+        "row_gap_mobile": 24,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "background_color": "#d9eeff",
+        "label_color": "#1c2b6b",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "featured_collection_LKTG3X": {
@@ -224,6 +627,7 @@
       "settings": {
         "collection": "gut-heart-health",
         "products_to_show": 12,
+        "subheading": "",
         "title": "Discover 82X’s premium collagen lineup",
         "heading_size": "h1",
         "description": "",
@@ -236,7 +640,7 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "heading_align": "center",
         "card_content_align": "center",
         "card_title_lines": 2,
@@ -255,15 +659,22 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 0,
+        "padding_top": 100,
         "padding_bottom": 100
       }
     }
   },
   "order": [
     "hero_split_B6wwGe",
-    "image_grid_with_text_HFJfaW",
+    "image_grid_with_text_a3Lyam",
+    "image_with_text_XkgVPx",
+    "image_with_text_GkqWwX",
+    "accordion_section_LXcTpy",
+    "multicolumn_Y8AfLg",
+    "image_with_text_bQNCQa",
+    "rich_text_mbAnL8",
     "testimonial_slider_7t8nhQ",
+    "icon_badges_ajkPPR",
     "featured_collection_LKTG3X"
   ]
 }
