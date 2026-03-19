@@ -20,7 +20,7 @@
         "text_4C77xy": {
           "type": "text",
           "settings": {
-            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.<\/p>",
+            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.</p>",
             "text_style": "body"
           }
         },
@@ -28,10 +28,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "TAKE QUIZ",
-            "button_link_2": "shopify:\/\/pages\/82x-quiz",
+            "button_link_2": "shopify://pages/82x-quiz",
             "button_style_secondary_2": true
           }
         },
@@ -39,15 +39,15 @@
           "type": "icon_list",
           "settings": {
             "icon_label_color": "#1c2b6b",
-            "icon_1": "shopify:\/\/shop_images\/Icon_Container.svg",
+            "icon_1": "shopify://shop_images/Icon_Container.svg",
             "label_1": "Beauty Placenta",
-            "icon_2": "shopify:\/\/shop_images\/Icon_rContainer.svg",
+            "icon_2": "shopify://shop_images/Icon_rContainer.svg",
             "label_2": "Fish Collagen",
-            "icon_3": "shopify:\/\/shop_images\/Icon_Corntainer.svg",
+            "icon_3": "shopify://shop_images/Icon_Corntainer.svg",
             "label_3": "Sakura Extract",
-            "icon_4": "shopify:\/\/shop_images\/Icon_Contairrner.svg",
+            "icon_4": "shopify://shop_images/Icon_Contairrner.svg",
             "label_4": "Natural Ingredients",
-            "icon_5": "shopify:\/\/shop_images\/logo_82XSS_2.png",
+            "icon_5": "shopify://shop_images/logo_82XSS_2.png",
             "label_5": "Made In Japan",
             "label_6": "",
             "label_7": "",
@@ -64,8 +64,8 @@
       ],
       "name": "Hero Split",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
-        "image_mobile": "shopify:\/\/shop_images\/image_18.jpg",
+        "image": "shopify://shop_images/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
+        "image_mobile": "shopify://shop_images/image_18.jpg",
         "image_fit": "cover",
         "image_position": "center center",
         "overlay_opacity": 0,
@@ -101,7 +101,7 @@
         "text_mDfYea": {
           "type": "text",
           "settings": {
-            "text": "<p>You're not alone. We're helping over 800,000 people of all ages healthy with our practive urinary tract products.<\/p>",
+            "text": "<p>You're not alone. We're helping over 800,000 people of all ages healthy with our practive urinary tract products.</p>",
             "text_style": "body"
           }
         },
@@ -109,7 +109,7 @@
           "type": "button",
           "settings": {
             "button_label": "READ REVIEWS",
-            "button_link": "shopify:\/\/pages\/all-review",
+            "button_link": "shopify://pages/all-review",
             "button_style_secondary": false
           }
         }
@@ -121,12 +121,12 @@
       ],
       "name": "Image Grid With Text",
       "settings": {
-        "image_1": "shopify:\/\/shop_images\/Picture.jpg",
-        "image_2": "shopify:\/\/shop_images\/Picture2.jpg",
-        "image_3": "shopify:\/\/shop_images\/Picture3.jpg",
-        "image_4": "shopify:\/\/shop_images\/Picture4.jpg",
-        "image_5": "shopify:\/\/shop_images\/Picture5.jpg",
-        "image_6": "shopify:\/\/shop_images\/Picture6.jpg",
+        "image_1": "shopify://shop_images/Picture.jpg",
+        "image_2": "shopify://shop_images/Picture2.jpg",
+        "image_3": "shopify://shop_images/Picture3.jpg",
+        "image_4": "shopify://shop_images/Picture4.jpg",
+        "image_5": "shopify://shop_images/Picture5.jpg",
+        "image_6": "shopify://shop_images/Picture6.jpg",
         "image_gap": 24,
         "image_gap_mobile": 12,
         "image_border_radius": 8,
@@ -156,7 +156,7 @@
         "text_iti9gR": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
             "text_style": "body"
           }
         },
@@ -164,7 +164,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style_secondary": false
           }
         }
@@ -176,7 +176,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -205,7 +205,7 @@
         "text_gAg4tt": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.<\/p>",
+            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
             "text_style": "body"
           }
         },
@@ -213,7 +213,7 @@
           "type": "button",
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style_secondary": false
           }
         }
@@ -225,7 +225,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Pictures_container.jpg",
+        "image": "shopify://shop_images/Pictures_container.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -248,7 +248,7 @@
           "type": "item",
           "settings": {
             "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
             "open_by_default": true
           }
         },
@@ -256,7 +256,7 @@
           "type": "item",
           "settings": {
             "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
             "open_by_default": false
           }
         },
@@ -264,7 +264,7 @@
           "type": "item",
           "settings": {
             "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
             "open_by_default": false
           }
         },
@@ -272,7 +272,7 @@
           "type": "item",
           "settings": {
             "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.<\/p>",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
             "open_by_default": false
           }
         }
@@ -317,9 +317,9 @@
         "column_FeEUEA": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
+            "image": "shopify://shop_images/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -327,9 +327,9 @@
         "column_LKjqwM": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
+            "image": "shopify://shop_images/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -337,9 +337,9 @@
         "column_aU8Egq": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
-            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
+            "image": "shopify://shop_images/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
+            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -359,7 +359,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify:\/\/pages\/hero-products",
+        "button_link": "shopify://pages/hero-products",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -383,7 +383,7 @@
         "text_fRTthn": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by the delicate beauty philosophy of Japan and the fragile yet resilient charm of Sakura, 82X was born with the mission to nurture skin from within. Combining advanced liquid collagen technology with the spirit of a \"beauty ritual,\" 82X is not just a skincare product but a lifestyle habit — where beauty is awakened through balance, health, and naturalness every day.<\/p><p>82X Liquid Collagen Japanese Beauty Secret. Healthy inside. Radiant outside.<\/p>",
+            "text": "<p>Inspired by the delicate beauty philosophy of Japan and the fragile yet resilient charm of Sakura, 82X was born with the mission to nurture skin from within. Combining advanced liquid collagen technology with the spirit of a \"beauty ritual,\" 82X is not just a skincare product but a lifestyle habit — where beauty is awakened through balance, health, and naturalness every day.</p><p>82X Liquid Collagen Japanese Beauty Secret. Healthy inside. Radiant outside.</p>",
             "text_style": "body"
           }
         },
@@ -391,7 +391,7 @@
           "type": "button",
           "settings": {
             "button_label": "ABOUT BRAND STORY",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style_secondary": false
           }
         }
@@ -403,7 +403,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Guarantee_image_81515e70-efaf-4d7b-af5a-462556be2e03.jpg",
+        "image": "shopify://shop_images/Guarantee_image_81515e70-efaf-4d7b-af5a-462556be2e03.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -432,14 +432,14 @@
         "text_DPBVhm": {
           "type": "text",
           "settings": {
-            "text": "<p>Your health and happiness are our top priorities. If 82x doesn't satisfy your needs, we’ll refund your purchase. Our dedicated customer success team is here to assist you with ease. We take pride in our attentive, compassionate team of real people who are eager to address your questions and provide support in any way possible.<\/p>"
+            "text": "<p>Your health and happiness are our top priorities. If 82x doesn't satisfy your needs, we’ll refund your purchase. Our dedicated customer success team is here to assist you with ease. We take pride in our attentive, compassionate team of real people who are eager to address your questions and provide support in any way possible.</p>"
           }
         },
         "button_46WnVJ": {
           "type": "button",
           "settings": {
             "button_label": "Shop now",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -468,7 +468,7 @@
         "review_nfEAET": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1111.jpg",
+            "image": "shopify://shop_images/1111.jpg",
             "star_rating": 5,
             "author": "Lily Wang",
             "location": "Texas, USA",
@@ -478,7 +478,7 @@
         "review_jGnEXy": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/222.jpg",
+            "image": "shopify://shop_images/222.jpg",
             "star_rating": 5,
             "author": "Kaede",
             "location": "Texas, USA",
@@ -488,7 +488,7 @@
         "review_q4bPwc": {
           "type": "review",
           "settings": {
-            "image": "shopify:\/\/shop_images\/33.jpg",
+            "image": "shopify://shop_images/33.jpg",
             "star_rating": 5,
             "author": "Mia Nguyen",
             "location": "Texas, USA",
@@ -523,7 +523,7 @@
         "star_color": "#f5a623",
         "star_color_empty": "#d4d4d4",
         "button_label": "Read all reviews",
-        "button_link": "shopify:\/\/pages\/all-review",
+        "button_link": "shopify://pages/all-review",
         "button_secondary": false,
         "footer_gap": 40,
         "card_peek_mobile": 32,
@@ -544,7 +544,7 @@
         "icon_TVjUy3": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Benefit_icon_group.png",
+            "image": "shopify://shop_images/Benefit_icon_group.png",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Japanese Standard Collagen & Placenta",
@@ -555,7 +555,7 @@
         "icon_4eeNUQ": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Benefit_icon_group_ecc063e8-3c6a-447a-af09-79c746f98a94.png",
+            "image": "shopify://shop_images/Benefit_icon_group_ecc063e8-3c6a-447a-af09-79c746f98a94.png",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Over 500,000 customers have trusted us",
@@ -566,7 +566,7 @@
         "icon_y8CHhV": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/eqq.png",
+            "image": "shopify://shop_images/eqq.png",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "The component has been thoroughly researched",
@@ -577,7 +577,7 @@
         "icon_iqQt6x": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/e.png",
+            "image": "shopify://shop_images/e.png",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "60-Day Satisfaction Guarantee",

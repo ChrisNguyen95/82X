@@ -351,9 +351,6 @@
                         width: block.settings.badge_image_width,
                         alt: block.settings.badge_text | default: ''
                   }}
-                  {%- unless block.settings.badge_text == blank -%}
-                    <span class="footer-block__badge-text">{{ block.settings.badge_text | escape }}</span>
-                  {%- endunless -%}
                 </div>
               {%- endif -%}
 
@@ -628,12 +625,6 @@
           "unit": "px",
           "label": "Badge image width",
           "default": 64
-        },
-        {
-          "type": "text",
-          "id": "badge_text",
-          "label": "Badge text",
-          "default": "100% Secured Shopping by Norton"
         },
         {
           "type": "select",
