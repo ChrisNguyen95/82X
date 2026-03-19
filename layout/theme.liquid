@@ -546,14 +546,19 @@
           overlay.offsetHeight; // eslint-disable-line no-unused-expressions
         }
 
-        /* Fade out as soon as the page is ready */
-        if (document.readyState === 'complete') {
-          requestAnimationFrame(hide);
-        } else {
-          window.addEventListener('load', function () {
+        /* Fade out as soon as DOM is parsed — much faster than window.load
+           which waits for all images/fonts/scripts to finish              */
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function () {
             requestAnimationFrame(hide);
           });
+        } else {
+          /* readyState is 'interactive' or 'complete' — DOM already ready */
+          requestAnimationFrame(hide);
         }
+
+        /* Safety net: force-hide after 1.5 s no matter what */
+        setTimeout(hide, 1500);
 
         /* Show on internal page navigation */
         document.addEventListener('click', function (e) {
