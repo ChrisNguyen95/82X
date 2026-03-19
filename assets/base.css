@@ -2455,7 +2455,7 @@ input[type='checkbox'] {
 }
 @media screen and (min-width: 1440px) {
   .header--middle-left {
-    column-gap: 14.3rem;
+    column-gap: 13.3rem;
   }
 }
 .header *[tabindex='-1']:focus {
@@ -3647,6 +3647,9 @@ details-disclosure > details {
   --color-foreground: 0 0 0;
   color: rgb(var(--color-foreground));
 }
-.header__heading-logo {
-    width: 48px;
+
+@media screen and (max-width: 749px) {
+  .header__heading-logo {
+      width: 48px;
+  }
 }
