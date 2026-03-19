@@ -262,10 +262,22 @@
         "id": "page_transition_effect",
         "label": "Loading indicator",
         "options": [
-          { "value": "none",    "label": "None (overlay only)" },
-          { "value": "spinner", "label": "Spinner"             },
-          { "value": "dots",    "label": "Dots"                },
-          { "value": "logo",    "label": "Logo"                }
+          {
+            "value": "none",
+            "label": "None (overlay only)"
+          },
+          {
+            "value": "spinner",
+            "label": "Spinner"
+          },
+          {
+            "value": "dots",
+            "label": "Dots"
+          },
+          {
+            "value": "logo",
+            "label": "Logo"
+          }
         ],
         "default": "spinner"
       },
