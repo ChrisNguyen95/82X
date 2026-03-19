@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo_82X_1.png",
+    "logo": "shopify://shop_images/logo_82X_1.png",
     "logo_width": 74,
-    "favicon": "shopify:\/\/shop_images\/Favicon_904263f2-21a3-4a9c-9802-73120ec2d0f7.png",
+    "favicon": "shopify://shop_images/Favicon_904263f2-21a3-4a9c-9802-73120ec2d0f7.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
@@ -13,10 +22,10 @@
     "spacing_grid_vertical": 24,
     "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
-    "page_transition_enable": false,
+    "page_transition_enable": true,
     "page_transition_color": "#d9eeff",
     "page_transition_effect": "logo",
-    "page_transition_logo": "shopify:\/\/shop_images\/logo_82X_1.png",
+    "page_transition_logo": "shopify://shop_images/logo_82X_1.png",
     "page_transition_logo_width": 130,
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
@@ -104,12 +113,12 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-4",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
-    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
-    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+    "social_facebook_link": "https://facebook.com/shopify",
+    "social_instagram_link": "http://instagram.com/shopify",
+    "social_youtube_link": "https://www.youtube.com/shopify",
+    "social_tiktok_link": "https://tiktok.com/@shopify",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -386,7 +395,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
