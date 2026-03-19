@@ -3,8 +3,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.54 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.54 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -13,6 +13,25 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* ── Heading alignment & max-width ── */
+  .section-{{ section.id }}-padding .multicolumn__title {
+    text-align: {{ section.settings.heading_align | default: 'center' }};
+    margin-bottom: 4rem
+  }
+  {%- if section.settings.heading_max_width > 0 %}
+  .section-{{ section.id }}-padding .multicolumn__title h2 {
+    max-width: {{ section.settings.heading_max_width }}px;
+    margin-left: {% if section.settings.heading_align == 'center' %}auto{% else %}0{% endif %};
+    margin-right: {% if section.settings.heading_align == 'center' %}auto{% else %}0{% endif %};
+  }
+  {%- endif %}
+
+   @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding .multicolumn__title {
+        margin-bottom: 5rem
+      }
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -35,11 +54,7 @@
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
-            {{- section.settings.button_label | escape -}}
-          </a>
-        {%- endif -%}
+    
       </div>
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
@@ -147,7 +162,7 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons large-up-hide">
+        <div class="slider-buttons small-hide">
           <button
             type="button"
             class="slider-button slider-button--prev"
@@ -173,7 +188,7 @@
         </div>
       {%- endif -%}
     </slider-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div class="center">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button button--primary"
@@ -232,6 +247,27 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "min": 0,
+      "max": 1200,
+      "step": 40,
+      "unit": "px",
+      "label": "Heading max width",
+      "default": 0,
+      "info": "Set to 0 for no limit."
     },
     {
       "type": "header",

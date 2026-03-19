@@ -197,11 +197,11 @@
 }
 
 .hero-split__buttons {
-  margin-top: 3.8rem;
+  margin-top: 2rem;
 }
 
 .hero-split__icons {
-  margin-top: 2.4rem;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -259,7 +259,7 @@
 .hero-split__icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.8rem 0.2rem;
   align-items: flex-start;
   justify-content: {% if section.settings.mobile_align == 'center' %}center{% elsif section.settings.mobile_align == 'right' %}flex-end{% else %}flex-start{% endif %};
 }
@@ -276,13 +276,13 @@
   align-items: center;
   gap: 0.5rem;
   text-align: center;
-  max-width: 8rem;
-  min-width: 13.4rem;
+  min-width: 7rem;
+  max-width: 7.8rem
 }
 
 .hero-split__icon-item .icon-img {
-  width: {{ section.settings.icon_size }}px;
-  height: {{ section.settings.icon_size }}px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
@@ -290,18 +290,42 @@
 
 .hero-split__icon-label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
   word-break: break-word;
   color: var(--hs-icon-label-color, inherit);
 }
+@media screen and (min-width: 990px) {
+  .hero-split__icon-item .icon-img {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+  }
+
+  .hero-split__icon-label {
+    font-size: 1.2rem;
+  }
+  .hero-split__icons {
+    gap: 0.8rem;
+  }
+  .hero-split__icon-item {
+    min-width: 13.4rem;
+    max-width: 14.8rem
+  }
+  .hero-split__buttons {
+    margin-top: 3.8rem;
+  }
+  .hero-split__icons {
+    margin-top: 2.4rem;
+  }
+
+}
 {%- endstyle -%}
 
 <div
   id="HeroSplit-{{ section.id }}"
-  class="hero-split{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="hero-split color-{{ section.settings.section_color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
 
   {%- comment -%}─── BACKGROUND IMAGES ───{%- endcomment -%}
@@ -644,6 +668,16 @@
       "unit": "%",
       "label": "Content max width (mobile)",
       "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Section color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "Section color scheme",
+      "default": "scheme-1"
     },
     {
       "type": "header",

@@ -25,7 +25,7 @@
 #AccordionSection-{{ section.id }} .ac-card {
   background-color: {{ section.settings.card_bg }};
   border-radius: {{ section.settings.card_radius }}px;
-  padding: {{ section.settings.card_padding_v | times: 0.75 | round: 0 }}px {{ section.settings.card_padding_h | times: 0.75 | round: 0 }}px;
+  padding: {{ section.settings.card_padding_v | times: 0.54 | round: 0 }}px {{ section.settings.card_padding_h | times: 0.75 | round: 0 }}px;
 }
 @media screen and (min-width: 750px) {
   #AccordionSection-{{ section.id }} .ac-card {
@@ -36,7 +36,7 @@
 /* ── Header area ── */
 #AccordionSection-{{ section.id }} .ac-header {
   text-align: {{ section.settings.text_align }};
-  margin-bottom: 4rem;
+  margin-bottom: 2.4rem;
 }
 @media screen and (min-width: 990px) {
   #AccordionSection-{{ section.id }} .ac-header {
@@ -208,7 +208,8 @@
           {%- render 'section-heading',
             heading:      section.settings.heading,
             heading_tag:  section.settings.heading_tag,
-            heading_size: section.settings.heading_size
+            heading_size: section.settings.heading_size,
+            heading_align: section.settings.text_align,
           -%}
         {%- endif -%}
 

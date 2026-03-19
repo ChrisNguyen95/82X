@@ -66,6 +66,7 @@
   width: 100%;
   max-width: 45rem;
   word-break: break-word;
+  margin-top: 3.2rem;
 }
 
 .rich-text__buttons--multiple > * {
@@ -83,4 +84,10 @@
 
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
+}
+
+@media screen and (min-width: 990px) {
+  .rich-text__buttons {
+    margin-top: 4rem;
+  }
 }

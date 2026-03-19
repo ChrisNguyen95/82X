@@ -203,7 +203,7 @@
               </div>
 
               {%- unless block.settings.label == blank -%}
-                <p class="ib-label">{{ block.settings.label | escape }}</p>
+                <p class="ib-label{% if block.settings.label_font_heading %} font-heading{% endif %}">{{ block.settings.label | escape }}</p>
               {%- endunless -%}
 
               {%- if block.settings.link != blank -%}</a>{%- endif -%}
@@ -487,6 +487,12 @@
           "id": "label",
           "label": "Label",
           "default": "Icon label"
+        },
+        {
+          "type": "checkbox",
+          "id": "label_font_heading",
+          "label": "Use heading font for label",
+          "default": false
         },
         {
           "type": "url",
