@@ -132,9 +132,9 @@
         "subtext": "Rejuvenate and Protect Your Natural Beauty",
         "text_align": "center",
         "list_max_width": 860,
-        "tag_bg": "#D6E8F8",
-        "tag_color": "#1C2B6B",
-        "divider_color": "#E0E0E0",
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
         "title_color": "#111111",
         "body_color": "#555555",
         "icon_color": "#111111",
@@ -145,10 +145,10 @@
         "card_padding_h": 48,
         "heading_color": "#111111",
         "subtext_color": "#555555",
-        "section_bg": "#FFFFFF",
+        "section_bg": "#ffffff",
         "color_scheme": "",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 100,
+        "padding_bottom": 0
       }
     },
     "image_with_text_9pQ8im": {
@@ -247,7 +247,7 @@
         "mobile_layout": "text_first",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "padding_top": 100,
+        "padding_top": 0,
         "padding_bottom": 100
       }
     },
