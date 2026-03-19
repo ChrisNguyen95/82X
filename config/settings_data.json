@@ -21,7 +21,7 @@
     "spacing_grid_horizontal": 24,
     "spacing_grid_vertical": 24,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "3d-lift",
+    "animations_hover_elements": "vertical-lift",
     "page_transition_enable": true,
     "page_transition_color": "#d9eeff",
     "page_transition_effect": "dots",
