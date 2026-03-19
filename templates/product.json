@@ -1,21 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
+        "title_BYxPjh": {
           "type": "title",
           "settings": {}
         },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
           "settings": {}
         },
         "variant_picker": {
@@ -25,37 +31,20 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
+        "title_BYxPjh",
         "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
         "description",
-        "share"
+        "variant_picker",
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -96,10 +85,10 @@
       "name": "Review Badge",
       "settings": {
         "bg_color": "#d9eeff",
-        "star_color": "#F5B427",
-        "number_color": "#1C2B6B",
-        "title_color": "#1C2B6B",
-        "text_color": "#1C2B6B",
+        "star_color": "#f5b427",
+        "number_color": "#1c2b6b",
+        "title_color": "#1c2b6b",
+        "text_color": "#1c2b6b",
         "show_stars": true,
         "star_count": 5,
         "star_size": 28,
