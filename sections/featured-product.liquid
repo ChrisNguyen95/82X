@@ -39,6 +39,37 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+    /* ── Featured product: image card styling ── */
+    .section-{{ section.id }}-padding .product__media-wrapper .product-media-container {
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    /* ── Variant pills ── */
+    .section-{{ section.id }}-padding .product-form__input--pill input[type='radio'] + label {
+      border-radius: 10rem;
+      padding: 1.2rem 2.8rem;
+      min-height: 5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 500;
+      background-color: #FFFFFF80;
+      color: rgb(var(--color-foreground));
+      text-transform: uppercase;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+    .section-{{ section.id }}-padding .product-form__input--pill input[type='radio']:checked + label {
+      background-color: #fff;
+      color: #234082;
+      border-color: #fff;
+    }
+    .section-{{ section.id }}-padding .product-form__input--pill input[type='radio'] + label:hover {
+      border-color: #234082;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -448,19 +479,24 @@
                   {%- endif -%}
                 {%- when 'icon-with-text' -%}
                   {% render 'icon-with-text', block: block %}
+                {%- when 'amazon_button' -%}
+                  {%- if block.settings.url != blank -%}
+                    <a
+                      href="{{ block.settings.url }}"
+                      class="button button--secondary button--full-width quick-add-hidden"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      {{ block.shopify_attributes }}
+                    >
+                      <span class="svg-wrapper" style="display:inline-flex;align-items:center;margin-right:0.8rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.004.494.255.102.259.007.424-.288.494-.596.198-1.374.46-2.332.785-2.99.94-6.075 1.41-9.257 1.41-4.537 0-8.735-1.006-12.594-3.018-.276-.148-.33-.335-.295-.56zm15.198-5.518c.96.682 2.064 1.024 3.31 1.024.63 0 1.265-.088 1.906-.264.04-.01.07-.02.09-.03.14-.04.24 0 .3.12.06.12.04.23-.06.33-.43.39-.97.72-1.62.99-1.37.55-2.82.75-4.35.6-1.53-.15-2.88-.62-4.06-1.41-.1-.07-.12-.16-.04-.28.076-.12.17-.14.29-.07.72.41 1.5.71 2.32.91.82.2 1.64.28 2.46.24-.05-.05-.1-.1-.15-.16-.6-.69-.9-1.55-.9-2.56 0-.93.27-1.75.81-2.45.54-.7 1.23-1.18 2.07-1.44.84-.26 1.67-.27 2.48-.03.81.24 1.47.67 1.97 1.3.5.63.75 1.36.75 2.18 0 .67-.17 1.3-.51 1.87-.34.57-.8 1.02-1.38 1.35l-.01.01c.36-.04.71-.12 1.05-.23.34-.11.64-.24.92-.38.06-.03.11-.03.17 0 .06.03.1.08.1.14 0 .06-.04.12-.11.16-.64.36-1.35.61-2.12.75-.78.14-1.56.17-2.34.08z"/></svg>
+                      </span>
+                      {{- block.settings.text | default: 'Buy on Amazon' -}}
+                    </a>
+                  {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
-            <a
-              {% if product == blank %}
-                role="link" aria-disabled="true"
-              {% else %}
-                href="{{ product.url }}"
-              {% endif %}
-              class="link product__view-details animate-arrow"
-            >
-              {{ 'products.product.view_full_details' | t }}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
-            </a>
+           
           </section>
         </div>
       </div>
@@ -1330,6 +1366,24 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "amazon_button",
+      "name": "Buy on Amazon",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Amazon product URL"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Button text",
+          "default": "Buy on Amazon"
         }
       ]
     }

@@ -253,6 +253,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   font-weight: var(--font-body-weight);
 }
 
+/* Heading font utility — apply to non-heading tags that need heading typeface */
+.font-heading {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+}
+
 h1,
 h2,
 h3,
@@ -421,9 +427,8 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
 }
 
 .color-foreground {
@@ -1243,6 +1248,9 @@ button.shopify-payment-button__button--unbranded {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
+  text-transform: uppercase;
+  font-family: var(--font-body-family);
+  font-weight: 700;
 }
 
 .button:before,
@@ -2829,7 +2837,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .header__menu-item:hover {

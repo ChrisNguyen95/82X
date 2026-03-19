@@ -1,0 +1,867 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  assign loading_attr   = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading_attr   = 'eager'
+  endif
+  assign initial_count = section.settings.initial_count
+-%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Clinician Grid — #ClinGrid-{{ section.id }}
+   ══════════════════════════════════════════════════════════════ */
+
+#ClinGrid-{{ section.id }} {
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 990px) {
+  #ClinGrid-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Section header ── */
+#ClinGrid-{{ section.id }} .cg-header {
+  text-align: {{ section.settings.text_align }};
+  margin-bottom: 3.2rem;
+}
+@media screen and (min-width: 750px) {
+  #ClinGrid-{{ section.id }} .cg-header { margin-bottom: 5rem; }
+}
+#ClinGrid-{{ section.id }} .cg-heading {
+  margin: 0 auto;
+  {%- if section.settings.heading_max_width > 0 %}
+  max-width: {{ section.settings.heading_max_width }}px;
+  {%- endif %}
+}
+#ClinGrid-{{ section.id }} .cg-subtext {
+  margin: 1.6rem auto 0;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  {%- if section.settings.heading_max_width > 0 %}
+  max-width: {{ section.settings.heading_max_width }}px;
+  {%- endif %}
+}
+
+/* ── Card hidden state ── */
+#ClinGrid-{{ section.id }} .cg-card--hidden { display: none; }
+
+/* ── Card: mobile stack ── */
+#ClinGrid-{{ section.id }} .cg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3.2rem 0;
+  border-bottom: 1px solid {{ section.settings.border_color }};
+}
+#ClinGrid-{{ section.id }} .cg-card:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+#ClinGrid-{{ section.id }} .cg-card:first-of-type {
+  border-top: 1px solid {{ section.settings.border_color }};
+}
+
+/* ── Card: desktop 2-col grid ── */
+@media screen and (min-width: 750px) {
+  #ClinGrid-{{ section.id }} .cg-card {
+    display: grid;
+    grid-template-columns: {{ section.settings.left_col_width }}px 1fr;
+    gap: {{ section.settings.card_h_gap }}px;
+    align-items: start;
+    padding: 5rem 0;
+  }
+}
+
+/* ══ LEFT COL: doctor info ══ */
+
+/* Avatar */
+#ClinGrid-{{ section.id }} .cg-avatar {
+  overflow: hidden;
+  border-radius: {{ section.settings.avatar_radius }}px;
+  margin-bottom: 1.2rem; /* 12px gap avatar → info */
+}
+#ClinGrid-{{ section.id }} .cg-avatar.ratio-square    { aspect-ratio: 1 / 1; }
+#ClinGrid-{{ section.id }} .cg-avatar.ratio-portrait  { aspect-ratio: 3 / 4; }
+#ClinGrid-{{ section.id }} .cg-avatar.ratio-landscape { aspect-ratio: 4 / 3; }
+#ClinGrid-{{ section.id }} .cg-avatar img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+#ClinGrid-{{ section.id }} .cg-avatar.ratio-original img {
+  height: auto;
+}
+
+/* Name */
+#ClinGrid-{{ section.id }} .cg-name {
+  margin: 0 0 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Verified badge */
+#ClinGrid-{{ section.id }} .cg-verified {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+  color: {{ section.settings.verified_color }};
+  margin-bottom: 1.4rem;
+}
+#ClinGrid-{{ section.id }} .cg-verified  span {
+  color: rgba(var(--color-foreground), 0.75);
+}
+#ClinGrid-{{ section.id }} .cg-verified svg {
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Divider above info rows */
+#ClinGrid-{{ section.id }} .cg-info-divider {
+  border: none;
+  border-top: 1px solid {{ section.settings.border_color }};
+  margin: 0 0 1.2rem;
+}
+
+/* Info rows — no border, 8px gap between rows */
+#ClinGrid-{{ section.id }} .cg-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+#ClinGrid-{{ section.id }} .cg-info-row:last-child { margin-bottom: 0; }
+#ClinGrid-{{ section.id }} .cg-info-label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+#ClinGrid-{{ section.id }} .cg-info-value {
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+/* ══ RIGHT COL: review content ══ */
+#ClinGrid-{{ section.id }} .cg-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Review title */
+#ClinGrid-{{ section.id }} .cg-review-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+@media screen and (min-width: 750px) {
+  #ClinGrid-{{ section.id }} .cg-review-title { font-size: 2rem; }
+}
+
+/* Review text — clamped */
+#ClinGrid-{{ section.id }} .cg-review-text {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp applied via inline style per block */
+}
+#ClinGrid-{{ section.id }} .cg-review-text.is-expanded {
+  display: block;
+  overflow: visible;
+}
+#ClinGrid-{{ section.id }} .cg-review-text p  { margin: 0; }
+#ClinGrid-{{ section.id }} .cg-review-text p + p { margin-top: 0.8em; }
+
+/* Show more/less button */
+#ClinGrid-{{ section.id }} .cg-show-more {
+  display: none; /* shown by JS when text overflows */
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: {{ section.settings.show_more_color }};
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Highlights row */
+#ClinGrid-{{ section.id }} .cg-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+@media screen and (min-width: 750px) {
+  #ClinGrid-{{ section.id }} .cg-highlights {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+}
+#ClinGrid-{{ section.id }} .cg-highlights__label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+#ClinGrid-{{ section.id }} .cg-highlights__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  #ClinGrid-{{ section.id }} .cg-highlights__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem 2.4rem;
+  }
+}
+#ClinGrid-{{ section.id }} .cg-highlights__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+}
+#ClinGrid-{{ section.id }} .cg-highlights__item svg {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: {{ section.settings.show_more_color }};
+}
+
+/* ── Footer ── */
+#ClinGrid-{{ section.id }} .cg-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+{%- endstyle -%}
+
+<section
+  id="ClinGrid-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Section header ──{%- endcomment -%}
+    {%- unless section.settings.heading == blank and section.settings.subtext == blank -%}
+      <div class="cg-header">
+        {%- unless section.settings.heading == blank -%}
+          <{{ section.settings.heading_tag }} class="cg-heading {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </{{ section.settings.heading_tag }}>
+        {%- endunless -%}
+        {%- unless section.settings.subtext == blank -%}
+          <p class="cg-subtext">{{ section.settings.subtext | escape }}</p>
+        {%- endunless -%}
+      </div>
+    {%- endunless -%}
+
+    {%- comment -%}── Cards ──{%- endcomment -%}
+    <div class="cg-list" id="cg-list-{{ section.id }}">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'clinician' -%}
+
+          {%- liquid
+            assign text_id = 'cg-text-' | append: section.id | append: '-' | append: forloop.index
+            assign has_info = false
+            if block.settings.row1_label != blank or block.settings.row1_value != blank
+              assign has_info = true
+            endif
+            if block.settings.row2_label != blank or block.settings.row2_value != blank
+              assign has_info = true
+            endif
+            if block.settings.row3_label != blank or block.settings.row3_value != blank
+              assign has_info = true
+            endif
+            assign highlights_raw = block.settings.highlights | newline_to_br
+            assign highlight_items = highlights_raw | split: '<br />'
+          -%}
+
+          <div
+            class="cg-card{% if forloop.index > initial_count %} cg-card--hidden{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index <= initial_count %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll and forloop.index <= initial_count %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}
+            {{ block.shopify_attributes }}
+          >
+
+            {%- comment -%}── Left: Doctor info ──{%- endcomment -%}
+            <div class="cg-left">
+
+              {%- unless block.settings.image == blank -%}
+                <div
+                  class="cg-avatar ratio-{{ block.settings.image_ratio }}"
+                  style="max-width: {{ block.settings.image_width }}px;"
+                >
+                 {%- assign img_sizes = block.settings.image_width | append: 'px' -%}
+
+                  {{
+                    block.settings.image
+                    | image_url: width: 600
+                    | image_tag:
+                      loading: loading_attr,
+                      fetchpriority: fetch_priority,
+                      widths: '144, 200, 288, 400, 600',
+                      sizes: img_sizes,
+                      alt: block.settings.image.alt | default: block.settings.name | escape
+                  }}
+                </div>
+              {%- endunless -%}
+
+              {%- unless block.settings.name == blank -%}
+                <p class="cg-name font-heading ">{{ block.settings.name | escape }}</p>
+              {%- endunless -%}
+
+              {%- if block.settings.verified -%}
+                <div class="cg-verified">
+                  <span>{{- block.settings.verified_label | default: 'Verified Clinician' | escape -}}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+                  </svg>
+                  
+                </div>
+              {%- endif -%}
+
+              {%- if has_info -%}
+                <hr class="cg-info-divider">
+
+                {%- unless block.settings.row1_label == blank and block.settings.row1_value == blank -%}
+                  <div class="cg-info-row">
+                    <span class="cg-info-label font-heading">{{ block.settings.row1_label | escape }}</span>
+                    <span class="cg-info-value">{{ block.settings.row1_value | escape }}</span>
+                  </div>
+                {%- endunless -%}
+
+                {%- unless block.settings.row2_label == blank and block.settings.row2_value == blank -%}
+                  <div class="cg-info-row">
+                    <span class="cg-info-label font-heading">{{ block.settings.row2_label | escape }}</span>
+                    <span class="cg-info-value">{{ block.settings.row2_value | escape }}</span>
+                  </div>
+                {%- endunless -%}
+
+                {%- unless block.settings.row3_label == blank and block.settings.row3_value == blank -%}
+                  <div class="cg-info-row">
+                    <span class="cg-info-label">{{ block.settings.row3_label | escape }}</span>
+                    <span class="cg-info-value">{{ block.settings.row3_value | escape }}</span>
+                  </div>
+                {%- endunless -%}
+              {%- endif -%}
+
+            </div>{%- comment -%}/.cg-left{%- endcomment -%}
+
+            {%- comment -%}── Right: Review content ──{%- endcomment -%}
+            <div class="cg-right">
+
+              {%- unless block.settings.review_title == blank -%}
+                <h3 class="cg-review-title font-heading ">{{ block.settings.review_title | escape }}</h3>
+              {%- endunless -%}
+
+              {%- unless block.settings.review_text == blank -%}
+                <div class="cg-review-body">
+                  <div
+                    class="cg-review-text"
+                    id="{{ text_id }}"
+                    style="-webkit-line-clamp: {{ block.settings.text_clamp_lines }};"
+                  >
+                    {{ block.settings.review_text }}
+                  </div>
+                  <button
+                    class="cg-show-more"
+                    data-target="{{ text_id }}"
+                    data-show="{{ section.settings.show_more_label | default: 'Show more' | escape }}"
+                    data-hide="{{ section.settings.show_less_label | default: 'Show less' | escape }}"
+                  >
+                    {{ section.settings.show_more_label | default: 'Show more' }}
+                  </button>
+                </div>
+              {%- endunless -%}
+
+              {%- unless block.settings.highlights == blank -%}
+                <div class="cg-highlights">
+                  <span class="cg-highlights__label font-heading">
+                    {{- block.settings.highlights_label | default: 'Highlights:' | escape -}}
+                  </span>
+                  <ul class="cg-highlights__list" role="list">
+                    {%- for item in highlight_items -%}
+                      {%- assign item_clean = item | strip -%}
+                      {%- unless item_clean == blank -%}
+                        <li class="cg-highlights__item">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+                            <path d="M1.5 6L5.5 10L14.5 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          {{- item_clean | escape -}}
+                        </li>
+                      {%- endunless -%}
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endunless -%}
+
+            </div>{%- comment -%}/.cg-right{%- endcomment -%}
+
+          </div>{%- comment -%}/.cg-card{%- endcomment -%}
+
+        {%- endif -%}
+      {%- endfor -%}
+    </div>{%- comment -%}/.cg-list{%- endcomment -%}
+
+    {%- comment -%}── Footer: load-more + optional button ──{%- endcomment -%}
+    {%- assign total_clinicians = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'clinician' -%}{%- assign total_clinicians = total_clinicians | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+
+    <div class="cg-footer">
+      {%- if total_clinicians > initial_count -%}
+        <button
+          class="button"
+          id="cg-load-more-{{ section.id }}"
+          data-list="cg-list-{{ section.id }}"
+        >
+          {{- section.settings.load_more_label | default: 'Show More' -}}
+        </button>
+      {%- endif -%}
+
+      {%- unless section.settings.button_label == blank -%}
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
+          class="button{% if section.settings.button_style == 'outline' %} button--secondary{% endif %}{% if section.settings.button_full_mobile %} button--mobile-full-width{% endif %}"
+          {% if section.settings.button_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          {{- section.settings.button_label -}}
+        </a>
+      {%- endunless -%}
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var sec = document.getElementById('ClinGrid-{{ section.id }}');
+  if (!sec) return;
+
+  /* ── Init text "Show more" for a single card ── */
+  function initTextToggle(card) {
+    card.querySelectorAll('.cg-review-text').forEach(function (el) {
+      var btn = el.parentElement.querySelector('.cg-show-more');
+      if (!btn) return;
+
+      /* Show button only when text actually overflows */
+      if (el.scrollHeight > el.clientHeight + 2) {
+        btn.style.display = 'inline-block';
+      }
+
+      btn.addEventListener('click', function () {
+        var expanded = el.classList.toggle('is-expanded');
+        btn.textContent = expanded ? btn.dataset.hide : btn.dataset.show;
+      });
+    });
+  }
+
+  /* Init for initially visible cards */
+  sec.querySelectorAll('.cg-card:not(.cg-card--hidden)').forEach(initTextToggle);
+
+  /* ── Load more cards ── */
+  var loadBtn = document.getElementById('cg-load-more-{{ section.id }}');
+  if (loadBtn) {
+    loadBtn.addEventListener('click', function () {
+      sec.querySelectorAll('.cg-card--hidden').forEach(function (card) {
+        card.classList.remove('cg-card--hidden');
+        /* Init text toggle for newly visible cards */
+        initTextToggle(card);
+      });
+      loadBtn.style.display = 'none';
+    });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Clinician Grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Independent Clinician"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small"       },
+        { "value": "h2", "label": "Medium"      },
+        { "value": "h1", "label": "Large"       },
+        { "value": "h0", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "min": 0,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "label": "Heading max width (0 = no limit)",
+      "default": 800
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Clinicians receive product samples and are never compensated to submit evaluations"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Cards layout"
+    },
+    {
+      "type": "range",
+      "id": "initial_count",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": "Cards shown initially",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "left_col_width",
+      "min": 160,
+      "max": 360,
+      "step": 10,
+      "unit": "px",
+      "label": "Left column width (desktop)",
+      "default": 260
+    },
+    {
+      "type": "range",
+      "id": "card_h_gap",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between columns (desktop)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "avatar_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Avatar border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "text",
+      "id": "show_more_label",
+      "label": "Show more label",
+      "default": "Show more"
+    },
+    {
+      "type": "text",
+      "id": "show_less_label",
+      "label": "Show less label",
+      "default": "Show less"
+    },
+    {
+      "type": "text",
+      "id": "load_more_label",
+      "label": "Load more button label",
+      "default": "Show More"
+    },
+    {
+      "type": "header",
+      "content": "Optional section button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        { "value": "solid",   "label": "Solid (primary)"   },
+        { "value": "outline", "label": "Outline (secondary)" }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_full_mobile",
+      "label": "Full width on mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "button_new_tab",
+      "label": "Open in new tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "verified_color",
+      "label": "Verified badge color",
+      "default": "#2F9E44"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Divider / border color",
+      "default": "#E5E7EB"
+    },
+    {
+      "type": "color",
+      "id": "show_more_color",
+      "label": "Show more / highlights icon color",
+      "default": "#3B82F6"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "clinician",
+      "name": "Clinician",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Doctor info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Avatar image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 80,
+          "max": 300,
+          "step": 4,
+          "unit": "px",
+          "label": "Avatar width",
+          "default": 144
+        },
+        {
+          "type": "select",
+          "id": "image_ratio",
+          "label": "Image ratio",
+          "options": [
+            { "value": "square",    "label": "Square (1:1)"    },
+            { "value": "portrait",  "label": "Portrait (3:4)"  },
+            { "value": "landscape", "label": "Landscape (4:3)" },
+            { "value": "original",  "label": "Original"        }
+          ],
+          "default": "square"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Doctor name",
+          "default": "Dr. Alyssa Dweck"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Show verified badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "verified_label",
+          "label": "Verified badge label",
+          "default": "Verified Clinician"
+        },
+        {
+          "type": "header",
+          "content": "Info rows"
+        },
+        {
+          "type": "text",
+          "id": "row1_label",
+          "label": "Row 1 label",
+          "default": "Specialty"
+        },
+        {
+          "type": "text",
+          "id": "row1_value",
+          "label": "Row 1 value",
+          "default": "Integrative Medicine"
+        },
+        {
+          "type": "text",
+          "id": "row2_label",
+          "label": "Row 2 label",
+          "default": "Years In Practice"
+        },
+        {
+          "type": "text",
+          "id": "row2_value",
+          "label": "Row 2 value",
+          "default": "18"
+        },
+        {
+          "type": "text",
+          "id": "row3_label",
+          "label": "Row 3 label (optional)"
+        },
+        {
+          "type": "text",
+          "id": "row3_value",
+          "label": "Row 3 value"
+        },
+        {
+          "type": "header",
+          "content": "Review"
+        },
+        {
+          "type": "text",
+          "id": "review_title",
+          "label": "Review title",
+          "default": "Nutrient-Rich Placenta Extract May Support Hormonal Balance And Metabolic Wellness"
+        },
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review text",
+          "default": "<p>\"Advanced beauty supplements increasingly combine collagen with placenta extract to address both skin health and internal wellness.\"</p>"
+        },
+        {
+          "type": "range",
+          "id": "text_clamp_lines",
+          "min": 2,
+          "max": 10,
+          "step": 1,
+          "label": "Lines before 'Show more'",
+          "default": 4
+        },
+        {
+          "type": "header",
+          "content": "Highlights"
+        },
+        {
+          "type": "text",
+          "id": "highlights_label",
+          "label": "Highlights label",
+          "default": "Highlights:"
+        },
+        {
+          "type": "textarea",
+          "id": "highlights",
+          "label": "Highlight items (one per line)",
+          "info": "Each line becomes one highlight item with a checkmark",
+          "default": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clinician Grid",
+      "blocks": [
+        { "type": "clinician" },
+        { "type": "clinician" }
+      ]
+    }
+  ]
+}
+{% endschema %}

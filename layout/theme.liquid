@@ -15,6 +15,10 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    <!-- Preload critical brand fonts -->
+    <link rel="preload" as="font" href="{{ 'Almarose-Semibold.otf' | asset_url }}" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ 'Montserrat-Regular.ttf' | asset_url }}" type="font/ttf" crossorigin="anonymous">
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -53,6 +57,51 @@
       {{ body_font_italic | font_face: font_display: 'swap' }}
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+      /* ── Custom brand fonts ── */
+      @font-face {
+        font-family: 'Almarose';
+        src: url('{{ 'Almarose-Semibold.otf' | asset_url }}') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{ 'Montserrat-Regular.ttf' | asset_url }}') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{ 'Montserrat-Italic.ttf' | asset_url }}') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{ 'Montserrat-SemiBold.ttf' | asset_url }}') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{ 'Montserrat-SemiBoldItalic.ttf' | asset_url }}') format('truetype');
+        font-weight: 600;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{ 'Montserrat-Bold.ttf' | asset_url }}') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
 
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
@@ -108,6 +157,15 @@
         --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
+
+        /* ── Brand font overrides ── */
+        --font-heading-family: 'Almarose', sans-serif;
+        --font-heading-style: normal;
+        --font-heading-weight: 600;
+        --font-body-family: 'Montserrat', sans-serif;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+        --font-body-weight-bold: 700;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -255,6 +313,73 @@
       }
     {% endstyle %}
 
+    {%- if settings.page_transition_enable -%}
+    <style>
+      /* ══════════════════════════════════════════
+         Page Transition Overlay
+         ══════════════════════════════════════════ */
+      #pt-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: {{ settings.page_transition_color }};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Visible on page load — no transition yet */
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+      }
+      #pt-overlay.pt-out {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity {{ settings.page_transition_duration }}ms ease,
+                    visibility {{ settings.page_transition_duration }}ms ease;
+      }
+
+      /* ── Spinner ── */
+      .pt-spinner {
+        width: 4rem;
+        height: 4rem;
+        border: 3px solid {{ settings.page_transition_indicator_color | color_modify: 'alpha', 0.2 }};
+        border-top-color: {{ settings.page_transition_indicator_color }};
+        border-radius: 50%;
+        animation: pt-spin 0.7s linear infinite;
+      }
+      @keyframes pt-spin { to { transform: rotate(360deg); } }
+
+      /* ── Dots ── */
+      .pt-dots { display: flex; gap: 0.8rem; align-items: center; }
+      .pt-dots span {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: {{ settings.page_transition_indicator_color }};
+        animation: pt-pulse 1.2s ease-in-out infinite;
+      }
+      .pt-dots span:nth-child(2) { animation-delay: 0.2s; }
+      .pt-dots span:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes pt-pulse {
+        0%, 80%, 100% { transform: scale(0.4); opacity: 0.4; }
+        40%            { transform: scale(1);   opacity: 1;   }
+      }
+
+      /* ── Logo ── */
+      .pt-logo img {
+        width: {{ settings.page_transition_logo_width }}px;
+        height: auto;
+        display: block;
+        animation: pt-breathe 2s ease-in-out infinite;
+      }
+      @keyframes pt-breathe {
+        0%, 100% { opacity: 0.65; transform: scale(0.97); }
+        50%       { opacity: 1;   transform: scale(1);     }
+      }
+    </style>
+    {%- endif -%}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -299,6 +424,28 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+
+    {%- if settings.page_transition_enable -%}
+    <div id="pt-overlay" aria-hidden="true">
+      {%- if settings.page_transition_effect == 'logo' and settings.page_transition_logo != blank -%}
+        <div class="pt-logo">
+          {{- settings.page_transition_logo
+            | image_url: width: settings.page_transition_logo_width
+            | image_tag:
+                loading: 'eager',
+                fetchpriority: 'high',
+                width: settings.page_transition_logo_width,
+                alt: shop.name
+          -}}
+        </div>
+      {%- elsif settings.page_transition_effect == 'spinner' -%}
+        <div class="pt-spinner"></div>
+      {%- elsif settings.page_transition_effect == 'dots' -%}
+        <div class="pt-dots"><span></span><span></span><span></span></div>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -371,6 +518,65 @@
 
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if settings.page_transition_enable -%}
+    <script>
+      (function () {
+        /* Disabled in Shopify editor to avoid interfering with section editing */
+        if (window.Shopify && window.Shopify.designMode) return;
+
+        var overlay = document.getElementById('pt-overlay');
+        if (!overlay) return;
+
+        /* ── Fade out overlay ── */
+        function hide() {
+          overlay.classList.add('pt-out');
+        }
+
+        /* ── Show overlay instantly (no transition) ── */
+        function show() {
+          overlay.classList.remove('pt-out');
+          /* Force a reflow so removing the class takes effect before re-painting */
+          overlay.offsetHeight; // eslint-disable-line no-unused-expressions
+        }
+
+        /* Fade out as soon as the page is ready */
+        if (document.readyState === 'complete') {
+          requestAnimationFrame(hide);
+        } else {
+          window.addEventListener('load', function () {
+            requestAnimationFrame(hide);
+          });
+        }
+
+        /* Show on internal page navigation */
+        document.addEventListener('click', function (e) {
+          /* Ignore modified clicks (Ctrl/Cmd/Shift → open in new tab) */
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+          var link = e.target.closest('a[href]');
+          if (!link || link.target === '_blank') return;
+
+          try {
+            var url = new URL(link.href);
+            /* Skip non-http, external, or same-page anchor links */
+            if (url.protocol !== 'http:' && url.protocol !== 'https:') return;
+            if (url.origin !== window.location.origin) return;
+            if (url.pathname === window.location.pathname && url.hash) return;
+          } catch (_) {
+            return;
+          }
+
+          show();
+        }, true /* capture — runs before other handlers */);
+
+        /* Handle bfcache restore (browser back/forward) */
+        window.addEventListener('pageshow', function (e) {
+          if (e.persisted) requestAnimationFrame(hide);
+        });
+      })();
+    </script>
     {%- endif -%}
   </body>
 </html>

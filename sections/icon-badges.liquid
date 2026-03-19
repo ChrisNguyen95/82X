@@ -38,6 +38,11 @@
 /* ── Heading → Grid gap ── */
 #IconBadges-{{ section.id }} .ib-grid-wrap {
   margin-top: 4rem;   /* 40px mobile */
+  margin-left: auto;
+  margin-right: auto;
+  {%- if section.settings.grid_max_width > 0 %}
+  max-width: {{ section.settings.grid_max_width }}px;
+  {%- endif %}
 }
 @media screen and (min-width: 990px) {
   #IconBadges-{{ section.id }} .ib-grid-wrap {
@@ -121,14 +126,14 @@
 
 /* ── Icon label ── */
 #IconBadges-{{ section.id }} .ib-label {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   color: {{ section.settings.label_color }};
   margin: 0;
 }
 @media screen and (min-width: 990px) {
   #IconBadges-{{ section.id }} .ib-label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -174,8 +179,9 @@
             {%- assign img_max_w = w_d | at_least: w_m -%}
 
             <li
-              class="ib-item"
-              style="--ib-w-desktop: {{ w_d }}px; --ib-w-mobile: {{ w_m }}px;"
+              class="ib-item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              style="--ib-w-desktop: {{ w_d }}px; --ib-w-mobile: {{ w_m }}px;{% if settings.animations_reveal_on_scroll %} --animation-order: {{ forloop.index }};{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.link != blank -%}
@@ -295,6 +301,16 @@
     {
       "type": "header",
       "content": "Grid layout"
+    },
+    {
+      "type": "range",
+      "id": "grid_max_width",
+      "min": 0,
+      "max": 1400,
+      "step": 40,
+      "unit": "px",
+      "label": "Icon grid max width (0 = full width)",
+      "default": 0
     },
     {
       "type": "range",

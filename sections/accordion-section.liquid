@@ -120,7 +120,7 @@
 #AccordionSection-{{ section.id }} .ac-summary__title {
   flex: 1;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   color: {{ section.settings.title_color }};
   line-height: 1.4;
 }
@@ -239,7 +239,7 @@
             {{ block.shopify_attributes }}
           >
             <summary class="ac-summary">
-              <span class="ac-summary__title">{{ block.settings.title | escape }}</span>
+              <span class="ac-summary__title font-heading">{{ block.settings.title | escape }}</span>
               <span class="ac-icon" aria-hidden="true"></span>
             </summary>
             <div class="ac-body rte">

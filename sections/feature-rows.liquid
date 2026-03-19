@@ -1,0 +1,476 @@
+{%- liquid
+  assign fetch_priority = 'auto'
+  assign loading_attr   = 'lazy'
+  if section.index == 1
+    assign fetch_priority = 'high'
+    assign loading_attr   = 'eager'
+  endif
+-%}
+
+{%- style -%}
+/* ══════════════════════════════════════════════════════════════
+   Feature Rows — #FeatureRows-{{ section.id }}
+   ══════════════════════════════════════════════════════════════ */
+
+#FeatureRows-{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 990px) {
+  #FeatureRows-{{ section.id }} {
+    padding-top:    {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Heading ── */
+#FeatureRows-{{ section.id }} .fr-heading {
+  margin: 0 auto;
+  color: {{ section.settings.heading_color }};
+  text-align: {{ section.settings.text_align }};
+  {%- if section.settings.heading_max_width > 0 %}
+  max-width: {{ section.settings.heading_max_width }}px;
+  {%- endif %}
+}
+
+/* ── Rows wrapper ── */
+#FeatureRows-{{ section.id }} .fr-rows {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: {{ section.settings.row_gap_mobile }}px;
+}
+@media screen and (min-width: 990px) {
+  #FeatureRows-{{ section.id }} .fr-rows {
+    margin-top: 5rem;
+    gap: {{ section.settings.row_gap_desktop }}px;
+  }
+}
+
+/* ── Single row — mobile: stack centered ── */
+#FeatureRows-{{ section.id }} .fr-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  text-align: center;
+}
+
+/* ── Single row — desktop: side-by-side ── */
+@media screen and (min-width: 750px) {
+  #FeatureRows-{{ section.id }} .fr-row {
+    flex-direction: row;
+    align-items: center;
+    gap: {{ section.settings.col_gap_desktop }}px;
+  }
+  /* Icon on right */
+  #FeatureRows-{{ section.id }} .fr-row--icon-right {
+    flex-direction: row-reverse;
+  }
+}
+
+/* ── Icon wrapper (size via CSS var) ── */
+#FeatureRows-{{ section.id }} .fr-icon {
+  flex: 0 0 var(--fr-w-mobile, 8rem);
+  width: var(--fr-w-mobile, 8rem);
+}
+@media screen and (min-width: 750px) {
+  #FeatureRows-{{ section.id }} .fr-icon {
+    flex: 0 0 var(--fr-w-desktop, 10rem);
+    width: var(--fr-w-desktop, 10rem);
+  }
+}
+#FeatureRows-{{ section.id }} .fr-icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Content ── */
+#FeatureRows-{{ section.id }} .fr-content {
+  flex: 1;
+  min-width: 0;
+}
+/* Desktop: apply per-block text-align and max-width from CSS vars */
+@media screen and (min-width: 750px) {
+  #FeatureRows-{{ section.id }} .fr-content {
+    text-align: var(--fr-text-align, left);
+    max-width: var(--fr-content-max, none);
+  }
+}
+
+/* ── Title ── */
+#FeatureRows-{{ section.id }} .fr-title {
+  margin: 0 0 1.6rem;
+  color: {{ section.settings.heading_color }};
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+@media screen and (min-width: 750px) {
+  #FeatureRows-{{ section.id }} .fr-title { font-size: 2.2rem; }
+}
+@media screen and (min-width: 990px) {
+  #FeatureRows-{{ section.id }} .fr-title { font-size: 2.4rem; }
+}
+
+/* ── Body text ── */
+#FeatureRows-{{ section.id }} .fr-text {
+  margin: 0;
+  color: {{ section.settings.text_color }};
+}
+#FeatureRows-{{ section.id }} .fr-text > * + * {
+  margin-top: 0.8rem;
+}
+{%- endstyle -%}
+
+{%- if section.blocks.size > 0 -%}
+<section
+  id="FeatureRows-{{ section.id }}"
+  class="color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Heading ──{%- endcomment -%}
+    {%- unless section.settings.heading == blank -%}
+      <{{ section.settings.heading_tag }}
+        class="fr-heading {{ section.settings.heading_size }}"
+      >
+        {{- section.settings.heading -}}
+      </{{ section.settings.heading_tag }}>
+    {%- endunless -%}
+
+    {%- comment -%}── Rows ──{%- endcomment -%}
+    <div class="fr-rows">
+      {%- for block in section.blocks -%}
+
+        {%- comment -%} Build CSS vars for this block {%- endcomment -%}
+        {%- assign w_d = block.settings.image_width_desktop -%}
+        {%- assign w_m = block.settings.image_width_mobile -%}
+
+        {%- capture block_vars -%}
+          --fr-w-desktop: {{ w_d }}px;
+          --fr-w-mobile: {{ w_m }}px;
+          --fr-text-align: {{ block.settings.content_text_align }};
+          {%- if block.settings.content_max_width > 0 -%}
+          --fr-content-max: {{ block.settings.content_max_width }}px;
+          {%- endif -%}
+          {%- if settings.animations_reveal_on_scroll -%}
+          --animation-order: {{ forloop.index }};
+          {%- endif -%}
+        {%- endcapture -%}
+
+        <div
+          class="fr-row{% if block.settings.icon_position == 'right' %} fr-row--icon-right{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          style="{{ block_vars | strip_newlines }}"
+          {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}
+          {{ block.shopify_attributes }}
+        >
+
+          {%- comment -%}── Icon ──{%- endcomment -%}
+          {%- if block.settings.image != blank -%}
+            {%- assign img_sizes = '(min-width: 750px) ' | append: w_d | append: 'px, ' | append: w_m | append: 'px' -%}
+
+            <div class="fr-icon">
+              {{
+                block.settings.image
+                | image_url: width: 400
+                | image_tag:
+                    loading: loading_attr,
+                    fetchpriority: fetch_priority,
+                    widths: '80, 120, 160, 200, 240, 280, 320, 400',
+                    sizes: img_sizes,
+                    alt: block.settings.image.alt | default: block.settings.title | default: ''
+              }}
+            </div>
+          {%- endif -%}
+
+          {%- comment -%}── Content ──{%- endcomment -%}
+          <div class="fr-content">
+            {%- unless block.settings.title == blank -%}
+              <p class="fr-title font-heading">{{- block.settings.title | escape -}}</p>
+            {%- endunless -%}
+
+            {%- unless block.settings.text == blank -%}
+              <div class="fr-text rte">{{ block.settings.text }}</div>
+            {%- endunless -%}
+          </div>
+
+        </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Feature Rows",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Secret To Radiant Beauty With 82X"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small"       },
+        { "value": "h2", "label": "Medium"      },
+        { "value": "h1", "label": "Large"       },
+        { "value": "h0", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "range",
+      "id": "heading_max_width",
+      "min": 0,
+      "max": 1200,
+      "step": 20,
+      "unit": "px",
+      "label": "Heading max width (0 = no limit)",
+      "default": 800
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left"   },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "col_gap_desktop",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon ↔ Content gap — Desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "row_gap_desktop",
+      "min": 16,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Row gap — Desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "row_gap_mobile",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Row gap — Mobile",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Title color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Feature row",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon image"
+        },
+        {
+          "type": "select",
+          "id": "icon_position",
+          "label": "Icon position",
+          "options": [
+            { "value": "left",  "label": "Left"  },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "range",
+          "id": "image_width_desktop",
+          "min": 40,
+          "max": 240,
+          "step": 4,
+          "unit": "px",
+          "label": "Icon width — Desktop",
+          "default": 120
+        },
+        {
+          "type": "range",
+          "id": "image_width_mobile",
+          "min": 40,
+          "max": 160,
+          "step": 4,
+          "unit": "px",
+          "label": "Icon width — Mobile",
+          "default": 100
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Describe this feature with a short paragraph. You can include key benefits and details here.</p>"
+        },
+        {
+          "type": "select",
+          "id": "content_text_align",
+          "label": "Text alignment (desktop)",
+          "options": [
+            { "value": "left",   "label": "Left"   },
+            { "value": "center", "label": "Center" },
+            { "value": "right",  "label": "Right"  }
+          ],
+          "default": "left",
+          "info": "Mobile is always centered"
+        },
+        {
+          "type": "range",
+          "id": "content_max_width",
+          "min": 0,
+          "max": 1200,
+          "step": 20,
+          "unit": "px",
+          "label": "Content max width (0 = no limit)",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Rows",
+      "blocks": [
+        {
+          "type": "row",
+          "settings": {
+            "icon_position": "left",
+            "title": "Support Radiant Skin And Anti-Aging",
+            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "icon_position": "right",
+            "title": "Support Hormonal Balance And Wellness",
+            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>"
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "icon_position": "left",
+            "title": "High-Quality Japanese Manufacturing Standards",
+            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

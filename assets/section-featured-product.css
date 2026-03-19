@@ -73,3 +73,9 @@
     z-index: 1;
   }
 }
+
+@media screen and (min-width: 1400px) {
+   .featured-product:not(.product--no-media) > .product__info-wrapper {
+    padding: 0 0 0 13.3rem;
+  }
+}

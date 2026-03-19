@@ -80,31 +80,42 @@
   }
 }
 
-/* ── Ingredient card ── */
+/* ── Ingredient card wrapper ── */
 #ProdIngr-{{ section.id }} .pi-card {
-  background-color: {{ section.settings.card_bg }};
   border-radius: {{ section.settings.card_radius }}px;
-  padding: 2.4rem 2rem;
+  overflow: hidden; /* clip children to rounded corners */
+}
+
+/* Card header — white bg, full width */
+#ProdIngr-{{ section.id }} .pi-card__header {
+  background-color: {{ section.settings.card_header_bg }};
+  padding: 1.8rem 2rem;
   text-align: center;
 }
 @media screen and (min-width: 990px) {
-  #ProdIngr-{{ section.id }} .pi-card {
-    padding: 3.2rem 2.8rem;
-  }
+  #ProdIngr-{{ section.id }} .pi-card__header { padding: 2.2rem 2.8rem; }
 }
 
 /* Card heading */
 #ProdIngr-{{ section.id }} .pi-card__heading {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: {{ section.settings.text_color }};
-  margin: 0 0 2rem;
+  margin: 0;
   text-align: center;
 }
 @media screen and (min-width: 990px) {
-  #ProdIngr-{{ section.id }} .pi-card__heading {
-    font-size: 2rem;
-  }
+  #ProdIngr-{{ section.id }} .pi-card__heading { font-size: 2rem; }
+}
+
+/* Card body — tinted bg */
+#ProdIngr-{{ section.id }} .pi-card__body {
+  background-color: {{ section.settings.card_bg }};
+  padding: 2.4rem 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 990px) {
+  #ProdIngr-{{ section.id }} .pi-card__body { padding: 3.2rem 2.8rem; }
 }
 
 /* ── Ingredient table ── */
@@ -132,17 +143,18 @@
   white-space: nowrap;
 }
 
-/* ── Divider ── */
+/* ── Divider — narrow, centered ── */
 #ProdIngr-{{ section.id }} .pi-divider {
   border: none;
   border-top: 1px solid {{ section.settings.divider_color }};
-  margin: 2rem 0;
+  width: 60%;
+  margin: 2rem auto;
 }
 
 /* ── Full ingredients list ── */
 #ProdIngr-{{ section.id }} .pi-full-heading {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: {{ section.settings.text_color }};
   margin: 0 0 0.8rem;
   text-align: center;
@@ -164,7 +176,7 @@
 }
 #ProdIngr-{{ section.id }} .pi-dosage__heading {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: {{ section.settings.heading_color }};
   margin: 0 0 0.8rem;
 }
@@ -234,41 +246,48 @@
         {%- comment -%}── Ingredient card ──{%- endcomment -%}
         <div class="pi-card">
 
+          {%- comment -%}── Card header: white bg ──{%- endcomment -%}
           {%- unless section.settings.table_heading == blank -%}
-            <h3 class="pi-card__heading">{{ section.settings.table_heading | escape }}</h3>
+            <div class="pi-card__header">
+              <h3 class="pi-card__heading">{{ section.settings.table_heading | escape }}</h3>
+            </div>
           {%- endunless -%}
 
-          {%- comment -%} Ingredient rows from blocks {%- endcomment -%}
-          {%- assign has_rows = false -%}
-          {%- for block in section.blocks -%}
-            {%- if block.type == 'ingredient_row' -%}{%- assign has_rows = true -%}{%- break -%}{%- endif -%}
-          {%- endfor -%}
+          {%- comment -%}── Card body: tinted bg ──{%- endcomment -%}
+          <div class="pi-card__body">
 
-          {%- if has_rows -%}
-            <table class="pi-table">
-              <tbody>
-                {%- for block in section.blocks -%}
-                  {%- if block.type == 'ingredient_row' -%}
-                    <tr {{ block.shopify_attributes }}>
-                      <td class="pi-td-name">{{ block.settings.name | escape }}</td>
-                      <td class="pi-td-amount">{{ block.settings.amount | escape }}</td>
-                    </tr>
-                  {%- endif -%}
-                {%- endfor -%}
-              </tbody>
-            </table>
-          {%- endif -%}
+            {%- assign has_rows = false -%}
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'ingredient_row' -%}{%- assign has_rows = true -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
 
-          {%- comment -%} Full list section {%- endcomment -%}
-          {%- unless section.settings.full_list_heading == blank and section.settings.full_list_text == blank -%}
-            <hr class="pi-divider">
-            {%- unless section.settings.full_list_heading == blank -%}
-              <p class="pi-full-heading">{{ section.settings.full_list_heading | escape }}</p>
+            {%- if has_rows -%}
+              <table class="pi-table">
+                <tbody>
+                  {%- for block in section.blocks -%}
+                    {%- if block.type == 'ingredient_row' -%}
+                      <tr {{ block.shopify_attributes }}>
+                        <td class="pi-td-name">{{ block.settings.name | escape }}</td>
+                        <td class="pi-td-amount">{{ block.settings.amount | escape }}</td>
+                      </tr>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </tbody>
+              </table>
+            {%- endif -%}
+
+            {%- unless section.settings.full_list_heading == blank and section.settings.full_list_text == blank -%}
+              <hr class="pi-divider">
+              {%- unless section.settings.full_list_heading == blank -%}
+                <p class="pi-full-heading font-heading">{{ section.settings.full_list_heading | escape }}</p>
+              {%- endunless -%}
+              {%- unless section.settings.full_list_text == blank -%}
+                <div class="pi-full-text rte">{{ section.settings.full_list_text }}</div>
+              {%- endunless -%}
             {%- endunless -%}
-            {%- unless section.settings.full_list_text == blank -%}
-              <div class="pi-full-text rte">{{ section.settings.full_list_text }}</div>
-            {%- endunless -%}
-          {%- endunless -%}
+
+          </div>
+          {%- comment -%}── end .pi-card__body ──{%- endcomment -%}
 
         </div>
         {%- comment -%}── end .pi-card ──{%- endcomment -%}
@@ -277,7 +296,7 @@
         {%- unless section.settings.dosage_heading == blank and section.settings.dosage_text == blank -%}
           <div class="pi-dosage">
             {%- unless section.settings.dosage_heading == blank -%}
-              <p class="pi-dosage__heading">{{ section.settings.dosage_heading | escape }}</p>
+              <p class="pi-dosage__heading font-heading">{{ section.settings.dosage_heading | escape }}</p>
             {%- endunless -%}
             {%- unless section.settings.dosage_text == blank -%}
               <div class="pi-dosage__text rte">{{ section.settings.dosage_text }}</div>
@@ -361,8 +380,14 @@
     },
     {
       "type": "color",
+      "id": "card_header_bg",
+      "label": "Card header background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
       "id": "card_bg",
-      "label": "Card background",
+      "label": "Card body background",
       "default": "#E8F2FB"
     },
     {
