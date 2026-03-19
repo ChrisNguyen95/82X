@@ -317,6 +317,12 @@
       /* ══════════════════════════════════════════
          Page Transition Overlay
          ══════════════════════════════════════════ */
+
+      /* Hide instantly in Shopify Customizer — JS is disabled there */
+      .shopify-design-mode #pt-overlay {
+        display: none !important;
+      }
+
       #pt-overlay {
         position: fixed;
         inset: 0;
