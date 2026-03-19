@@ -135,7 +135,7 @@
 }
 
 .card__information {
-  grid-row-start: 2;
+  grid-row-start: 1;
   padding: 1.3rem 1rem;
 }
 
@@ -265,8 +265,8 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
+    padding-bottom: 1.6rem;
+    padding-top: 1.6rem;
   }
 }
 
@@ -591,5 +591,22 @@
 
   .grid__item:nth-child(8n) .product-card-wrapper:hover .shape--blob {
     clip-path: polygon(var(--shape--blob-5));
+  }
+}
+
+
+.card-information .price{
+    font-size: 1.4rem; font-weight: 600;
+  }
+@media screen and (max-width: 749px) {
+  .header__heading-logo {
+      width: 48px;
+  }
+  .card .card__inner .card__heading {
+    font-size: 1.6rem;
+  }
+
+  .card__information {
+    text-align: center;
   }
 }

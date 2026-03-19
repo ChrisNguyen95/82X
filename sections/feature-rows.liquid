@@ -1,3 +1,5 @@
+{{- 'section-heading.css' | asset_url | stylesheet_tag -}}
+
 {%- liquid
   assign fetch_priority = 'auto'
   assign loading_attr   = 'lazy'
@@ -25,10 +27,12 @@
 }
 
 /* ── Heading ── */
-#FeatureRows-{{ section.id }} .fr-heading {
+#FeatureRows-{{ section.id }} .section-heading {
+  text-align: {{ section.settings.text_align }};
+}
+#FeatureRows-{{ section.id }} .section-heading__title {
   margin: 0 auto;
   color: {{ section.settings.heading_color }};
-  text-align: {{ section.settings.text_align }};
   {%- if section.settings.heading_max_width > 0 %}
   max-width: {{ section.settings.heading_max_width }}px;
   {%- endif %}
@@ -134,13 +138,11 @@
   <div class="page-width">
 
     {%- comment -%}── Heading ──{%- endcomment -%}
-    {%- unless section.settings.heading == blank -%}
-      <{{ section.settings.heading_tag }}
-        class="fr-heading {{ section.settings.heading_size }}"
-      >
-        {{- section.settings.heading -}}
-      </{{ section.settings.heading_tag }}>
-    {%- endunless -%}
+    {%- render 'section-heading',
+      heading:      section.settings.heading,
+      heading_tag:  section.settings.heading_tag,
+      heading_size: section.settings.heading_size
+    -%}
 
     {%- comment -%}── Rows ──{%- endcomment -%}
     <div class="fr-rows">

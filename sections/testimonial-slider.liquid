@@ -1,20 +1,19 @@
-{{- 'component-slider.css'    | asset_url | stylesheet_tag -}}
-{{- 'custom-slider-nav.css'  | asset_url | stylesheet_tag -}}
+{{- 'component-slider.css'   | asset_url | stylesheet_tag -}}
+{{- 'custom-slider-nav.css' | asset_url | stylesheet_tag -}}
+{{- 'section-heading.css'   | asset_url | stylesheet_tag -}}
+
+{%- liquid
+  assign is_grid      = false
+  if section.settings.desktop_layout == 'grid'
+    assign is_grid = true
+  endif
+  assign cols         = section.settings.desktop_cols | default: 3
+  assign cols_minus_1 = cols | minus: 1
+-%}
 
 {%- style -%}
 /* ════════════════════════════════════════════════════════
-   Testimonial Slider (Loop) — #TestimonialSlider-{{ section.id }}
-
-   Loop mechanism (JS-driven):
-   ─────────────────────────────────────────────────────
-   DOM sau khi JS khởi tạo:
-   [clone_LAST] [real_0] [real_1] ... [real_N] [clone_FIRST]
-   → Khi scroll đến clone, JS silently jump đến real counterpart
-   → Card đầu tiên: trái peek = clone_LAST = nội dung card cuối ✓
-   → Card cuối cùng: phải peek = clone_FIRST = nội dung card đầu ✓
-
-   Card width = 100% - 2*(peek) px
-   → Mỗi bên có peek px space → nội dung adjacent visible ≈ peek - gap
+   Testimonial Slider — #TestimonialSlider-{{ section.id }}
    ════════════════════════════════════════════════════════ */
 
 /* ── CSS Variables ── */
@@ -25,6 +24,7 @@
   --ts-radius:       {{ section.settings.card_radius }}px;
   --ts-border-color: {{ section.settings.card_border_color }};
   --ts-border-w:     {{ section.settings.card_border_width }}px;
+  --ts-img-radius:   {{ section.settings.card_image_radius }}px;
 
   background-color: {{ section.settings.background_color }};
   padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
@@ -37,16 +37,10 @@
   }
 }
 
-/* ── Section heading ── */
-#TestimonialSlider-{{ section.id }} .ts-heading {
-  text-align: {{ section.settings.heading_align }};
-  margin: 0 0 4.8rem;
-}
+/* ── Section heading — spacing handled by section-heading.css ── */
 
 /* ════════════════════════════════════════════════════════
-   OUTER — clips overflow để chỉ thấy peek
-   Mobile: full viewport width
-   Desktop: page-width
+   OUTER
    ════════════════════════════════════════════════════════ */
 #TestimonialSlider-{{ section.id }} .ts-outer {
   width: 100%;
@@ -63,11 +57,7 @@
 }
 
 /* ════════════════════════════════════════════════════════
-   TRACK
-   - Không có padding-inline → card đầu tiên bắt đầu từ LEFT EDGE ✓
-   - scroll-snap: center → center của mỗi card = center của viewport
-   - scroll-behavior: smooth cho prev/next
-   - Ẩn scrollbar (chỉ dùng prev/next buttons)
+   TRACK — SLIDER (default)
    ════════════════════════════════════════════════════════ */
 #TestimonialSlider-{{ section.id }} .ts-track {
   display: flex;
@@ -75,27 +65,16 @@
   list-style: none;
   margin: 0;
   padding: 0.4rem 0 1.2rem;
-
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
-  /* Ẩn scrollbar — user dùng buttons */
   scrollbar-width: none;
   -ms-overflow-style: none;
-
-  /* Mobile gap */
   gap: var(--ts-gap-mobile);
-
-  /* Không có padding-inline:
-     → card[0] bắt đầu tại x=0 trong track
-     → scroll=0: card[0] ở sát trái viewport, KHÔNG có "card ma" bên trái ✓
-     → JS sẽ offset về real_first sau khi thêm clones            */
 }
 #TestimonialSlider-{{ section.id }} .ts-track::-webkit-scrollbar { display: none; }
 
-/* ── Desktop: gap riêng ── */
 @media screen and (min-width: 990px) {
   #TestimonialSlider-{{ section.id }} .ts-track {
     gap: var(--ts-gap-desktop);
@@ -103,30 +82,47 @@
 }
 
 /* ════════════════════════════════════════════════════════
+   TRACK — GRID mode (desktop only)
+   ════════════════════════════════════════════════════════ */
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-track--grid {
+    flex-wrap: wrap;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+}
+
+/* ════════════════════════════════════════════════════════
    SLIDE ITEM
-
-   Mobile  : card chiếm (100% - 2*peek) → peek px mỗi bên → LOOP hiện adjacent
-   Desktop : chia đều 4 cột
-
-   scroll-snap-align: center
-   → Khi snap vào card N: center của card N = center của viewport
-   → Khi có clones: clone_LAST peek ở trái, real_1 peek ở phải của real_0 ✓
    ════════════════════════════════════════════════════════ */
 #TestimonialSlider-{{ section.id }} .ts-item {
-  /* Mobile: 100% - 2*(peek) = viewportWidth - 2*ts-peek-mobile */
   flex: 0 0 calc(100% - 2 * var(--ts-peek-mobile));
   max-width: calc(100% - 2 * var(--ts-peek-mobile));
   min-width: 0;
   scroll-snap-align: center;
-
-  /* Transition để clone-jump không nhìn thấy */
   transition: opacity 0.15s ease;
 }
+
+/* ── Desktop: slider N cols ── */
 @media screen and (min-width: 990px) {
-  #TestimonialSlider-{{ section.id }} .ts-item {
-    flex: 0 0 calc((100% - 3 * var(--ts-gap-desktop)) / 4);
-    max-width: calc((100% - 3 * var(--ts-gap-desktop)) / 4);
+  #TestimonialSlider-{{ section.id }} .ts-track:not(.ts-track--grid) .ts-item {
+    flex: 0 0 calc((100% - {{ cols_minus_1 }} * var(--ts-gap-desktop)) / {{ cols }});
+    max-width: calc((100% - {{ cols_minus_1 }} * var(--ts-gap-desktop)) / {{ cols }});
     scroll-snap-align: start;
+  }
+}
+
+/* ── Desktop: grid N cols ── */
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-track--grid .ts-item {
+    flex: 0 0 calc((100% - {{ cols_minus_1 }} * var(--ts-gap-desktop)) / {{ cols }});
+    max-width: calc((100% - {{ cols_minus_1 }} * var(--ts-gap-desktop)) / {{ cols }});
+    scroll-snap-align: none;
+  }
+  /* Hide loop clones in grid mode — clones still exist for mobile slider peek */
+  #TestimonialSlider-{{ section.id }} .ts-track--grid .ts-item--clone {
+    display: none;
   }
 }
 
@@ -136,27 +132,85 @@
 #TestimonialSlider-{{ section.id }} .ts-card {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.2rem;
   height: 100%;
-  padding: 2.8rem 2.4rem;
-  text-align: center;
+  padding: {{ section.settings.card_padding }}px;
+  text-align: {{ section.settings.card_text_align }};
 
   border: var(--ts-border-w) solid var(--ts-border-color);
   border-radius: var(--ts-radius);
   background-color: {{ section.settings.card_bg }};
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ── No-padding option (image-flush) ── */
+#TestimonialSlider-{{ section.id }} .ts-card--flush {
+  padding: 0;
+}
+#TestimonialSlider-{{ section.id }} .ts-card--flush .ts-card-body {
+  padding: {{ section.settings.card_padding }}px;
+}
+
+/* ════════════════════════════════════════════════════════
+   CARD IMAGE
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-card-img-wrap {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  {%- if section.settings.card_image_radius > 0 and section.settings.card_image_flush == false -%}
+    border-radius: var(--ts-img-radius);
+  {%- endif -%}
+}
+
+/* Flush image: radius only on top corners */
+#TestimonialSlider-{{ section.id }} .ts-card--flush .ts-card-img-wrap {
+  border-radius: 0;
+}
+
+#TestimonialSlider-{{ section.id }} .ts-card-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  {%- if section.settings.card_image_ratio == 'natural' -%}
+    height: auto;
+  {%- elsif section.settings.card_image_ratio == '1/1' -%}
+    aspect-ratio: 1 / 1;
+  {%- elsif section.settings.card_image_ratio == '4/3' -%}
+    aspect-ratio: 4 / 3;
+  {%- elsif section.settings.card_image_ratio == '3/4' -%}
+    aspect-ratio: 3 / 4;
+  {%- elsif section.settings.card_image_ratio == '16/9' -%}
+    aspect-ratio: 16 / 9;
+  {%- endif -%}
+}
+
+/* Non-flush: image radius follows card_image_radius */
+#TestimonialSlider-{{ section.id }} .ts-card:not(.ts-card--flush) .ts-card-img {
+  border-radius: var(--ts-img-radius);
+}
+
+/* ════════════════════════════════════════════════════════
+   CARD BODY (used in flush mode as padding wrapper)
+   ════════════════════════════════════════════════════════ */
+#TestimonialSlider-{{ section.id }} .ts-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
 }
 
 /* ── Stars ── */
 #TestimonialSlider-{{ section.id }} .ts-stars {
   display: flex;
-  justify-content: center;
   gap: 0.2rem;
   line-height: 1;
   flex-shrink: 0;
+  justify-content: {{ section.settings.card_text_align | replace: 'left', 'flex-start' | replace: 'right', 'flex-end' | replace: 'center', 'center' }};
 }
 #TestimonialSlider-{{ section.id }} .ts-star {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: {{ section.settings.star_color_empty }};
 }
 #TestimonialSlider-{{ section.id }} .ts-star--filled {
@@ -166,24 +220,50 @@
 /* ── Author ── */
 #TestimonialSlider-{{ section.id }} .ts-author {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.3;
+  color: {{ section.settings.author_color }};
 }
 
 /* ── Review text ── */
 #TestimonialSlider-{{ section.id }} .ts-text {
   margin: 0;
   font-size: 1.4rem;
-  line-height: 1.65;
-  opacity: 0.75;
+  line-height: 1.7;
+  color: {{ section.settings.review_text_color }};
   flex: 1;
 }
 
-/* Nav — override màu (styles chung trong custom-slider-nav.css) */
+/* ── Nav ── */
 #TestimonialSlider-{{ section.id }} .custom-slider-nav {
   --csn-color: {{ section.settings.nav_color }};
   margin-top: 4rem;
+}
+/* Hide nav on desktop in grid mode — keep in DOM for loop JS */
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-nav--grid-hidden {
+    display: none;
+  }
+}
+/* Hide nav when show_nav setting is off — keep in DOM for loop JS */
+#TestimonialSlider-{{ section.id }} .ts-nav--hidden {
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* ── Footer button ── */
+#TestimonialSlider-{{ section.id }} .ts-footer {
+  text-align: center;
+  padding-top: {{ section.settings.footer_gap | times: 0.8 }}px;
+}
+@media screen and (min-width: 990px) {
+  #TestimonialSlider-{{ section.id }} .ts-footer {
+    padding-top: {{ section.settings.footer_gap }}px;
+  }
 }
 {%- endstyle -%}
 
@@ -195,63 +275,123 @@
 
   {%- comment -%}── Heading ──{%- endcomment -%}
   <div class="page-width">
-    {%- unless section.settings.heading == blank -%}
-      <h2 class="ts-heading inline-richtext {{ section.settings.heading_size }}">
-        {{- section.settings.heading -}}
-      </h2>
-    {%- endunless -%}
+    {%- render 'section-heading',
+      heading:       section.settings.heading,
+      heading_size:  section.settings.heading_size,
+      heading_align: section.settings.heading_align,
+      subheading:    section.settings.subheading,
+      description:   section.settings.description
+    -%}
   </div>
 
-  {%- comment -%}── Slider: full-bleed track ──{%- endcomment -%}
+  {%- comment -%}── Slider / Grid track ──{%- endcomment -%}
   <div class="ts-outer">
     <ul
       id="ts-track-{{ section.id }}"
-      class="ts-track"
+      class="ts-track{% if is_grid %} ts-track--grid{% endif %}"
       role="list"
       aria-label="{{ section.settings.heading | escape }}"
     >
       {%- for block in section.blocks -%}
-        {%- assign star_count = block.settings.star_rating | default: 5 -%}
+        {%- assign star_count  = block.settings.star_rating | default: 5 -%}
+        {%- assign has_image   = false -%}
+        {%- if block.settings.image != blank -%}
+          {%- assign has_image = true -%}
+        {%- endif -%}
+        {%- assign flush_img = false -%}
+        {%- if has_image and section.settings.card_image_flush -%}
+          {%- assign flush_img = true -%}
+        {%- endif -%}
+
         <li
           id="ts-item-{{ section.id }}-{{ forloop.index }}"
-          class="ts-item"
+          class="ts-item{% if settings.animations_reveal_on_scroll and is_grid %} scroll-trigger animate--slide-in{% endif %}"
           role="listitem"
           data-real-index="{{ forloop.index0 }}"
+          {% if settings.animations_reveal_on_scroll and is_grid %}style="--animation-order: {{ forloop.index }};"{% endif %}
           {{ block.shopify_attributes }}
         >
-          <div class="ts-card">
-            <div class="ts-stars" role="img" aria-label="{{ star_count }} out of 5 stars">
-              {%- for i in (1..5) -%}
-                <span class="ts-star{% if i <= star_count %} ts-star--filled{% endif %}" aria-hidden="true">★</span>
-              {%- endfor -%}
-            </div>
-            {%- if block.settings.author != blank -%}
-              <p class="ts-author">
-                {{- block.settings.author | escape -}}
-                {%- if block.settings.location != blank -%}
-                  <span aria-hidden="true"> · </span>{{ block.settings.location | escape }}
-                {%- endif -%}
-              </p>
+          <div class="ts-card{% if flush_img %} ts-card--flush{% endif %}">
+
+            {%- comment -%}── Reviewer image ──{%- endcomment -%}
+            {%- if has_image -%}
+              <div class="ts-card-img-wrap">
+                {{
+                  block.settings.image
+                  | image_url: width: 800
+                  | image_tag:
+                    class: 'ts-card-img',
+                    loading: 'lazy',
+                    widths: '400, 600, 800',
+                    alt: block.settings.author | escape
+                }}
+              </div>
             {%- endif -%}
-            {%- if block.settings.text != blank -%}
-              <p class="ts-text">{{ block.settings.text | escape }}</p>
-            {%- endif -%}
-          </div>
+
+            {%- comment -%}── Card body ──{%- endcomment -%}
+            <div class="ts-card-body">
+
+              {%- comment -%}── Stars ──{%- endcomment -%}
+              {%- if section.settings.show_stars -%}
+                <div class="ts-stars" role="img" aria-label="{{ star_count }} out of 5 stars">
+                  {%- for i in (1..5) -%}
+                    <span class="ts-star{% if i <= star_count %} ts-star--filled{% endif %}" aria-hidden="true">★</span>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+
+              {%- comment -%}── Author ──{%- endcomment -%}
+              {%- if block.settings.author != blank -%}
+                <p class="ts-author font-heading">
+                  {{- block.settings.author | escape -}}
+                  {%- if block.settings.location != blank -%}
+                    <span aria-hidden="true"> · </span>{{ block.settings.location | escape }}
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+
+              {%- comment -%}── Review text ──{%- endcomment -%}
+              {%- if block.settings.text != blank -%}
+                <p class="ts-text">{{ block.settings.text | escape }}</p>
+              {%- endif -%}
+
+            </div>{%- comment -%}/.ts-card-body{%- endcomment -%}
+          </div>{%- comment -%}/.ts-card{%- endcomment -%}
         </li>
       {%- endfor -%}
     </ul>
   </div>
 
-  {%- comment -%}── Navigation ──{%- endcomment -%}
-  <div class="page-width">
+ 
+  {%- comment -%}── Navigation — always in DOM so loop JS can find prevEl/nextEl ──{%- endcomment -%}
+  {%- assign nav_hidden_class = '' -%}
+  {%- if is_grid -%}{%- assign nav_hidden_class = ' ts-nav--grid-hidden' -%}{%- endif -%}
+  {%- unless section.settings.show_nav -%}{%- assign nav_hidden_class = ' ts-nav--hidden' -%}{%- endunless -%}
+  <div class="page-width{{ nav_hidden_class }}">
     {%- render 'slider-nav-buttons',
       section_id: section.id,
       id_prefix:  'ts'
     -%}
   </div>
 
+
+  {%- comment -%}── Footer button ──{%- endcomment -%}
+  {%- if section.settings.button_label != blank -%}
+    <div class="page-width">
+      <div class="ts-footer">
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
+          class="button{% if section.settings.button_secondary %} button--secondary{% else %} button--primary{% endif %}"
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      </div>
+    </div>
+  {%- endif -%}
+
 </section>
 
+{%- comment -%}── Slider loop JS — always rendered (mobile always needs peek/loop) ──{%- endcomment -%}
 {%- assign _track_id = 'ts-track-' | append: section.id -%}
 {%- assign _prev_id  = 'ts-prev-'  | append: section.id -%}
 {%- assign _next_id  = 'ts-next-'  | append: section.id -%}
@@ -264,6 +404,7 @@
   item_selector: '.ts-item',
   clone_class:   'ts-item--clone'
 -%}
+
 {%- endif -%}
 
 {% schema %}
@@ -280,10 +421,21 @@
       "content": "Heading"
     },
     {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading (above title)",
+      "default": ""
+    },
+    {
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
       "default": "Quality Ingredients Lead To Happy Customers."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description (below title)"
     },
     {
       "type": "select",
@@ -310,6 +462,32 @@
     },
     {
       "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop layout",
+      "options": [
+        { "value": "slider", "label": "Slider (scroll)" },
+        { "value": "grid",   "label": "Grid (all visible)" }
+      ],
+      "default": "slider",
+      "info": "Mobile is always a slider regardless of this setting."
+    },
+    {
+      "type": "select",
+      "id": "desktop_cols",
+      "label": "Columns (desktop)",
+      "options": [
+        { "value": "2", "label": "2 columns" },
+        { "value": "3", "label": "3 columns" },
+        { "value": "4", "label": "4 columns" }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "header",
       "content": "Card style"
     },
     {
@@ -321,7 +499,7 @@
     {
       "type": "color",
       "id": "card_border_color",
-      "label": "Card border color",
+      "label": "Border color",
       "default": "#E0E0E0"
     },
     {
@@ -331,8 +509,9 @@
       "max": 4,
       "step": 1,
       "unit": "px",
-      "label": "Card border width",
-      "default": 1
+      "label": "Border width",
+      "info": "Set to 0 to remove border completely.",
+      "default": 0
     },
     {
       "type": "range",
@@ -341,12 +520,88 @@
       "max": 32,
       "step": 2,
       "unit": "px",
-      "label": "Card border radius",
+      "label": "Card corner radius",
       "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Card padding",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "card_text_align",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Card — Image"
+    },
+    {
+      "type": "select",
+      "id": "card_image_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "natural", "label": "Natural (no crop)" },
+        { "value": "1/1",     "label": "Square (1:1)" },
+        { "value": "4/3",     "label": "Landscape (4:3)" },
+        { "value": "3/4",     "label": "Portrait (3:4)" },
+        { "value": "16/9",    "label": "Wide (16:9)" }
+      ],
+      "default": "3/4"
+    },
+    {
+      "type": "range",
+      "id": "card_image_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "card_image_flush",
+      "label": "Flush image (image edge-to-edge, no padding around image)",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Card — Text colors"
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Author name color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review text color",
+      "default": "#3D3D3D"
     },
     {
       "type": "header",
       "content": "Stars"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Show stars",
+      "default": true
     },
     {
       "type": "color",
@@ -362,6 +617,37 @@
     },
     {
       "type": "header",
+      "content": "Footer button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "placeholder": "e.g. READ ALL REVIEWS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_secondary",
+      "label": "Outline style",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "footer_gap",
+      "min": 16,
+      "max": 80,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap above button",
+      "default": 40
+    },
+    {
+      "type": "header",
       "content": "Spacing — Mobile"
     },
     {
@@ -372,7 +658,6 @@
       "step": 4,
       "unit": "px",
       "label": "Peek size (each side)",
-      "info": "Khoảng trống mỗi bên — nội dung card liền kề hiện ≈ peek - gap",
       "default": 32
     },
     {
@@ -397,7 +682,7 @@
       "step": 4,
       "unit": "px",
       "label": "Gap between cards",
-      "default": 20
+      "default": 24
     },
     {
       "type": "header",
@@ -405,15 +690,20 @@
     },
     {
       "type": "checkbox",
+      "id": "show_nav",
+      "label": "Show prev / next buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
       "id": "loop_enabled",
-      "label": "Enable loop (infinite scroll)",
-      "info": "Khi bật: slider lặp vô hạn, hiện peek của slide cuối ở bên trái slide đầu.",
+      "label": "Enable infinite loop",
       "default": true
     },
     {
       "type": "color",
       "id": "nav_color",
-      "label": "Button color",
+      "label": "Nav button color",
       "default": "#1C2B6B"
     },
     {
@@ -463,6 +753,11 @@
       "name": "Review card",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Reviewer photo"
+        },
+        {
           "type": "range",
           "id": "star_rating",
           "min": 1,
@@ -495,43 +790,32 @@
   "presets": [
     {
       "name": "Testimonial Slider",
+      "settings": {
+        "desktop_layout": "slider",
+        "desktop_cols": "4"
+      },
       "blocks": [
-        {
-          "type": "review",
-          "settings": {
-            "author": "Anna Tran",
-            "location": "Texas, USA",
-            "star_rating": 5,
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
-          }
-        },
-        {
-          "type": "review",
-          "settings": {
-            "author": "Kevin Pham",
-            "location": "Washington, USA",
-            "star_rating": 5,
-            "text": "After using 2 boxes of Sakura Collagen, I see fewer wrinkles and a more even tone. Even my wife noticed and said I look younger!"
-          }
-        },
-        {
-          "type": "review",
-          "settings": {
-            "author": "Lisa Nguyen",
-            "location": "California, USA",
-            "star_rating": 5,
-            "text": "I started using 82X Sakura Collagen to improve my skin and balance my hormones, and I was really impressed after just one bottle."
-          }
-        },
-        {
-          "type": "review",
-          "settings": {
-            "author": "Rachel Thompson",
-            "location": "New York, USA",
-            "star_rating": 5,
-            "text": "I've tried many collagen brands, but Sakura Collagen stands out. My skin feels smooth, and my nails are growing stronger too!"
-          }
-        }
+        { "type": "review", "settings": { "author": "Anna Tran",        "location": "Texas, USA",       "star_rating": 5 } },
+        { "type": "review", "settings": { "author": "Kevin Pham",       "location": "Washington, USA",  "star_rating": 5 } },
+        { "type": "review", "settings": { "author": "Lisa Nguyen",      "location": "California, USA",  "star_rating": 5 } },
+        { "type": "review", "settings": { "author": "Rachel Thompson",  "location": "New York, USA",    "star_rating": 5 } }
+      ]
+    },
+    {
+      "name": "Testimonial Grid (Photo)",
+      "settings": {
+        "desktop_layout": "grid",
+        "desktop_cols": "3",
+        "card_border_width": 0,
+        "card_image_ratio": "3/4",
+        "card_image_radius": 16,
+        "card_image_flush": false,
+        "show_stars": false
+      },
+      "blocks": [
+        { "type": "review", "settings": { "author": "Lily Wang",  "star_rating": 5 } },
+        { "type": "review", "settings": { "author": "Kaede",      "star_rating": 5 } },
+        { "type": "review", "settings": { "author": "Mia Nguyen", "star_rating": 5 } }
       ]
     }
   ]

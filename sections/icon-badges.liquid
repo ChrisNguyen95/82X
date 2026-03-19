@@ -1,3 +1,5 @@
+{{- 'section-heading.css' | asset_url | stylesheet_tag -}}
+
 {%- liquid
   assign fetch_priority = 'auto'
   assign loading_attr   = 'lazy'
@@ -27,7 +29,7 @@
 }
 
 /* ── Heading ── */
-#IconBadges-{{ section.id }} .ib-heading {
+#IconBadges-{{ section.id }} .section-heading__title {
   margin: 0 auto;
   color: {{ section.settings.heading_color }};
   {%- if section.settings.heading_max_width > 0 %}
@@ -35,9 +37,9 @@
   {%- endif %}
 }
 
-/* ── Heading → Grid gap ── */
+/* ── Heading → Grid gap (handled by section-heading.css margin-bottom) ── */
 #IconBadges-{{ section.id }} .ib-grid-wrap {
-  margin-top: 4rem;   /* 40px mobile */
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   {%- if section.settings.grid_max_width > 0 %}
@@ -158,13 +160,12 @@
   <div class="page-width">
 
     {%- comment -%}── Heading ──{%- endcomment -%}
-    {%- unless section.settings.heading == blank -%}
-      <{{ section.settings.heading_tag }}
-        class="ib-heading {{ section.settings.heading_size }}"
-      >
-        {{- section.settings.heading -}}
-      </{{ section.settings.heading_tag }}>
-    {%- endunless -%}
+    {%- render 'section-heading',
+      heading:      section.settings.heading,
+      heading_tag:  section.settings.heading_tag,
+      heading_size: section.settings.heading_size,
+      heading_align: section.settings.text_align
+    -%}
 
     {%- comment -%}── Icon grid ──{%- endcomment -%}
     <div class="ib-grid-wrap">

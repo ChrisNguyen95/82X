@@ -1,0 +1,47 @@
+{%- comment -%}
+  ── section-heading ──────────────────────────────────────────
+  Shared heading block for custom sections.
+
+  Parameters:
+    heading       {String}  Main title text — supports inline_richtext
+    heading_tag   {String}  HTML tag: h1 | h2 | h3 | p   (default: h2)
+    heading_size  {String}  Shopify size class: h0 | h1 | h2 | hxl | hxxl (default: h2)
+    heading_align {String}  left | center | right          (default: left)
+    subheading    {String}  Small label rendered above the title (optional)
+    description   {String}  Richtext / HTML rendered below the title (optional)
+
+  Spacing (via section-heading.css):
+    Desktop  ≥990px  →  margin-bottom: 5rem
+    Mobile + Tablet  →  margin-bottom: 4rem
+  ─────────────────────────────────────────────────────────────
+{%- endcomment -%}
+
+{%- if heading != blank or subheading != blank or description != blank -%}
+  {%- assign _tag = heading_tag | default: 'h2' -%}
+  {%- assign _align = heading_align | default: 'left' -%}
+
+  <div class="section-heading section-heading--{{ _align }}">
+
+    {%- if subheading != blank -%}
+      <p class="section-heading__sub">{{ subheading | escape }}</p>
+    {%- endif -%}
+
+    {%- if heading != blank -%}
+      {%- assign _size_class = 'section-heading__title inline-richtext ' | append: heading_size | default: 'h2' -%}
+      {%- if _tag == 'h1' -%}
+        <h1 class="{{ _size_class }}">{{- heading -}}</h1>
+      {%- elsif _tag == 'h3' -%}
+        <h3 class="{{ _size_class }}">{{- heading -}}</h3>
+      {%- elsif _tag == 'p' -%}
+        <p class="{{ _size_class }}">{{- heading -}}</p>
+      {%- else -%}
+        <h2 class="{{ _size_class }}">{{- heading -}}</h2>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if description != blank -%}
+      <div class="section-heading__desc rte">{{ description }}</div>
+    {%- endif -%}
+
+  </div>
+{%- endif -%}

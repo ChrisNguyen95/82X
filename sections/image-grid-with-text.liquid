@@ -17,20 +17,30 @@
   .image-grid-with-text-{{ section.id }} {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3.2rem;
+    gap: {{ section.settings.gap_mobile }}px;
     align-items: center;
   }
+
+  /* Mobile image position */
+  {%- if section.settings.mobile_layout == 'text_first' -%}
+  .image-grid-with-text-{{ section.id }} .igwt-images  { order: 2; }
+  .image-grid-with-text-{{ section.id }} .igwt-content { order: 1; }
+  {%- endif -%}
 
   @media screen and (min-width: 750px) {
     .image-grid-with-text-{{ section.id }} {
       grid-template-columns: 1fr 1fr;
-      gap: 4.8rem;
+      gap: {{ section.settings.gap_desktop }}px;
     }
 
+    /* Reset mobile order on desktop */
+    .image-grid-with-text-{{ section.id }} .igwt-images  { order: unset; }
+    .image-grid-with-text-{{ section.id }} .igwt-content { order: unset; }
+
+    /* Desktop layout: text left, image right */
     .image-grid-with-text-{{ section.id }}.layout--text-first .igwt-images {
       order: 2;
     }
-
     .image-grid-with-text-{{ section.id }}.layout--text-first .igwt-content {
       order: 1;
     }
@@ -40,7 +50,13 @@
   .igwt-images__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: {{ section.settings.image_gap }}px;
+    gap: {{ section.settings.image_gap_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .igwt-images__grid {
+      gap: {{ section.settings.image_gap }}px;
+    }
   }
 
   .igwt-images__item {
@@ -263,8 +279,18 @@
       "max": 24,
       "step": 2,
       "unit": "px",
-      "label": "Gap between images",
+      "label": "Gap between images — Desktop",
       "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_gap_mobile",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between images — Mobile",
+      "default": 6
     },
     {
       "type": "range",
@@ -297,11 +323,41 @@
       "type": "select",
       "id": "layout",
       "options": [
-        { "value": "image_first", "label": "Image first (left)" },
-        { "value": "text_first",  "label": "Text first (left)" }
+        { "value": "image_first", "label": "Image left, Text right" },
+        { "value": "text_first",  "label": "Text left, Image right" }
       ],
       "default": "image_first",
-      "label": "Desktop layout"
+      "label": "Desktop — Image position"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "options": [
+        { "value": "text_first",  "label": "Text above, Image below" },
+        { "value": "image_first", "label": "Image above, Text below" }
+      ],
+      "default": "text_first",
+      "label": "Mobile — Image position"
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap — Desktop (between image & text)",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap — Mobile (between text & image)",
+      "default": 32
     },
     {
       "type": "select",

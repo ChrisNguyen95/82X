@@ -1,0 +1,470 @@
+{%- style -%}
+#ReviewBadge-{{ section.id }} {
+  background-color: {{ section.settings.bg_color }};
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  #ReviewBadge-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+
+/* ── Wrapper ── */
+#ReviewBadge-{{ section.id }} .rb-inner {
+  max-width: {{ section.settings.content_max_width }}px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ── Stars ── */
+#ReviewBadge-{{ section.id }} .rb-stars {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+#ReviewBadge-{{ section.id }} .rb-star {
+  display: block;
+  color: {{ section.settings.star_color }};
+  font-size: {{ section.settings.star_size }}px;
+  line-height: 1;
+}
+
+/* ── Counter number ── */
+#ReviewBadge-{{ section.id }} .rb-counter {
+  font-size: {{ section.settings.number_size_mobile }}px;
+  font-weight: 800;
+  line-height: 1;
+  color: {{ section.settings.number_color }};
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 750px) {
+  #ReviewBadge-{{ section.id }} .rb-counter {
+    font-size: {{ section.settings.number_size }}px;
+  }
+}
+
+/* ── Title ── */
+#ReviewBadge-{{ section.id }} .rb-title {
+  font-size: {{ section.settings.title_size_mobile }}px;
+  font-weight: 700;
+  color: {{ section.settings.title_color }};
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 750px) {
+  #ReviewBadge-{{ section.id }} .rb-title {
+    font-size: {{ section.settings.title_size }}px;
+  }
+}
+
+/* ── Text ── */
+#ReviewBadge-{{ section.id }} .rb-text {
+  font-size: 1.5rem;
+  color: {{ section.settings.text_color }};
+  margin: 0;
+  line-height: 1.6;
+  max-width: 52rem;
+}
+
+/* ── Button ── */
+#ReviewBadge-{{ section.id }} .rb-btn-wrap {
+  margin-top: 0.8rem;
+}
+
+/* ── Count-up animation ── */
+#ReviewBadge-{{ section.id }} .rb-counter {
+  will-change: contents;
+}
+{%- endstyle -%}
+
+<div
+  id="ReviewBadge-{{ section.id }}"
+  class="review-badge{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+>
+  <div class="rb-inner">
+
+    {%- comment -%} Stars {%- endcomment -%}
+    {%- if section.settings.show_stars -%}
+      <div class="rb-stars" aria-label="{{ section.settings.star_count }} out of 5 stars" role="img">
+        {%- for i in (1..5) -%}
+          {%- if i <= section.settings.star_count -%}
+            <span class="rb-star" aria-hidden="true">★</span>
+          {%- else -%}
+            <span class="rb-star" aria-hidden="true" style="opacity: 0.3;">★</span>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Counter number {%- endcomment -%}
+    {%- if section.settings.counter_number != blank -%}
+      <p
+        class="rb-counter"
+        data-rb-target="{{ section.settings.counter_number | replace: ',', '' | replace: '.', '' | strip }}"
+        data-rb-suffix="{{ section.settings.counter_suffix }}"
+        data-rb-prefix="{{ section.settings.counter_prefix }}"
+        data-rb-duration="{{ section.settings.counter_duration }}"
+        aria-live="polite"
+      >
+        {{ section.settings.counter_prefix }}{{ section.settings.counter_number }}{{ section.settings.counter_suffix }}
+      </p>
+    {%- endif -%}
+
+    {%- comment -%} Title {%- endcomment -%}
+    {%- if section.settings.title != blank -%}
+      <p class="rb-title">{{ section.settings.title | escape }}</p>
+    {%- endif -%}
+
+    {%- comment -%} Text {%- endcomment -%}
+    {%- if section.settings.text != blank -%}
+      <p class="rb-text">{{ section.settings.text | escape }}</p>
+    {%- endif -%}
+
+    {%- comment -%} Button {%- endcomment -%}
+    {%- if section.settings.button_label != blank -%}
+      <div class="rb-btn-wrap">
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
+          class="button{% if section.settings.button_secondary %} button--secondary{% else %} button--primary{% endif %}"
+        >
+          {{- section.settings.button_label | escape -}}
+        </a>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- comment -%} Count-up script — runs only once per page, only when feature is used {%- endcomment -%}
+{%- if section.settings.counter_number != blank -%}
+<script>
+(function () {
+  'use strict';
+
+  /* ── Easing: ease-out-cubic ── */
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  /* ── Format number with locale-aware thousands separator ── */
+  function formatNumber(value, originalStr) {
+    /* Detect whether the original uses comma or period as thousands sep */
+    var useComma = originalStr.indexOf(',') !== -1 && originalStr.indexOf('.') === -1;
+    var rounded  = Math.round(value);
+    if (useComma) {
+      return rounded.toLocaleString('en-US');   /* 45,893 */
+    }
+    return rounded.toString();
+  }
+
+  /* ── Core animate function ── */
+  function animateCounter(el) {
+    if (el.dataset.rbDone) return;          /* run only once */
+    el.dataset.rbDone = '1';
+
+    var target    = parseFloat(el.dataset.rbTarget) || 0;
+    var duration  = parseInt(el.dataset.rbDuration, 10) || 1800;
+    var prefix    = el.dataset.rbPrefix || '';
+    var suffix    = el.dataset.rbSuffix || '';
+    var original  = el.dataset.rbTarget;    /* keep original string for format detection */
+
+    var startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed  = timestamp - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased    = easeOutCubic(progress);
+      var current  = eased * target;
+
+      el.textContent = prefix + formatNumber(current, original) + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = prefix + formatNumber(target, original) + suffix;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  /* ── Intersection Observer — fire when ≥30% visible ── */
+  function initCounters() {
+    var counters = document.querySelectorAll('#ReviewBadge-{{ section.id }} [data-rb-target]');
+    if (!counters.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      /* Fallback: just show final value immediately */
+      counters.forEach(function (el) { animateCounter(el); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          obs.unobserve(entry.target);   /* stop watching after first trigger */
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counters.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ── Init after DOM ready ── */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCounters);
+  } else {
+    initCounters();
+  }
+}());
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Review Badge",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#D9E8F5"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#F5B427"
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Number color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "header",
+      "content": "Stars"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Show stars",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "star_count",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star rating",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Star size",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Counter number"
+    },
+    {
+      "type": "text",
+      "id": "counter_number",
+      "label": "Number",
+      "default": "45,893",
+      "info": "Use comma for thousands (e.g. 45,893). Animation strips commas automatically."
+    },
+    {
+      "type": "text",
+      "id": "counter_prefix",
+      "label": "Prefix (optional)",
+      "placeholder": "e.g. $, +"
+    },
+    {
+      "type": "text",
+      "id": "counter_suffix",
+      "label": "Suffix (optional)",
+      "placeholder": "e.g. +, %"
+    },
+    {
+      "type": "range",
+      "id": "counter_duration",
+      "min": 600,
+      "max": 3600,
+      "step": 200,
+      "unit": "ms",
+      "label": "Animation duration",
+      "default": 1800
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "min": 48,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Number size (desktop)",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "number_size_mobile",
+      "min": 40,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Number size (mobile)",
+      "default": 72
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "5 Star Brand Reviews"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size (desktop)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size (mobile)",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description text",
+      "default": "Discover why so many recommend our products for effective, lasting results."
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "READ ALL REVIEWS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_secondary",
+      "label": "Outline style",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 1000,
+      "step": 40,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 680
+    },
+    {
+      "type": "header",
+      "content": "Padding — Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Badge"
+    }
+  ]
+}
+{% endschema %}

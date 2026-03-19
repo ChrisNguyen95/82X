@@ -7,7 +7,7 @@ product-info {
 }
 
 .product.grid {
-  gap: 0;
+  gap: 3.2rem;
 }
 
 .product--no-media {
@@ -20,6 +20,9 @@ product-info {
 }
 
 @media screen and (min-width: 750px) {
+  .product.grid {
+    gap: 0;
+  }
   .product__column-sticky {
     display: block;
     position: sticky;

@@ -1,3 +1,5 @@
+{{- 'section-heading.css' | asset_url | stylesheet_tag -}}
+
 {%- liquid
   assign fetch_priority = 'auto'
   assign loading_attr   = 'lazy'
@@ -27,18 +29,22 @@
 /* ── Section header ── */
 #ClinGrid-{{ section.id }} .cg-header {
   text-align: {{ section.settings.text_align }};
-  margin-bottom: 3.2rem;
+  margin-bottom: 4rem;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   #ClinGrid-{{ section.id }} .cg-header { margin-bottom: 5rem; }
 }
-#ClinGrid-{{ section.id }} .cg-heading {
+/* section-heading inside cg-header — reset its own margin */
+#ClinGrid-{{ section.id }} .cg-header .section-heading {
+  margin-bottom: 0.8rem;
+}
+#ClinGrid-{{ section.id }} .section-heading__title {
   margin: 0 auto;
   {%- if section.settings.heading_max_width > 0 %}
   max-width: {{ section.settings.heading_max_width }}px;
   {%- endif %}
 }
-#ClinGrid-{{ section.id }} .cg-subtext {
+#ClinGrid-{{ section.id }} .section-heading__desc {
   margin: 1.6rem auto 0;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -266,14 +272,13 @@
     {%- comment -%}── Section header ──{%- endcomment -%}
     {%- unless section.settings.heading == blank and section.settings.subtext == blank -%}
       <div class="cg-header">
-        {%- unless section.settings.heading == blank -%}
-          <{{ section.settings.heading_tag }} class="cg-heading {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </{{ section.settings.heading_tag }}>
-        {%- endunless -%}
-        {%- unless section.settings.subtext == blank -%}
-          <p class="cg-subtext">{{ section.settings.subtext | escape }}</p>
-        {%- endunless -%}
+        {%- render 'section-heading',
+          heading:      section.settings.heading,
+          heading_tag:  section.settings.heading_tag,
+          heading_size: section.settings.heading_size,
+          description:  section.settings.subtext,
+          heading_align: section.settings.text_align
+        -%}
       </div>
     {%- endunless -%}
 

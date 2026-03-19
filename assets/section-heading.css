@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════════════
+   Section Heading — shared snippet styles
+   snippet: snippets/section-heading.liquid
+   ═══════════════════════════════════════════════════════════ */
+
+.section-heading {
+  margin-bottom: 4rem; /* mobile + tablet */
+}
+
+@media screen and (min-width: 990px) {
+  .section-heading {
+    margin-bottom: 5rem; /* desktop */
+  }
+}
+
+/* Alignment modifiers */
+.section-heading--left   { text-align: left; }
+.section-heading--center { text-align: center; }
+.section-heading--right  { text-align: right; }
+
+/* Subheading label above title */
+.section-heading__sub {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+  margin: 0 0 0.8rem;
+}
+
+/* Main title — margin reset (size class handles font-size) */
+.section-heading__title {
+  margin: 0;
+}
+
+/* Description / richtext below title */
+.section-heading__desc {
+  margin-top: 1.2rem;
+  color: rgba(var(--color-foreground), 0.75);
+}

@@ -1,5 +1,6 @@
 {{- 'component-slider.css'    | asset_url | stylesheet_tag -}}
-{{- 'custom-slider-nav.css'  | asset_url | stylesheet_tag -}}
+{{- 'custom-slider-nav.css'   | asset_url | stylesheet_tag -}}
+{{- 'section-heading.css'     | asset_url | stylesheet_tag -}}
 
 {%- liquid
   assign col_desktop = 4
@@ -48,10 +49,9 @@
   }
 }
 
-/* ── Title ── */
-#IngredientSlider-{{ section.id }} .ig-title {
+/* ── Title (section-heading.css handles margin-bottom) ── */
+#IngredientSlider-{{ section.id }} .section-heading {
   text-align: {{ section.settings.title_align }};
-  margin: 0 0 4rem;
 }
 
 /* ════════════════════════════════════════════════
@@ -173,11 +173,10 @@
 >
   <div class="page-width">
 
-    {%- unless section.settings.title == blank -%}
-      <h2 class="ig-title inline-richtext {{ section.settings.heading_size }}">
-        {{- section.settings.title -}}
-      </h2>
-    {%- endunless -%}
+    {%- render 'section-heading',
+      heading:      section.settings.title,
+      heading_size: section.settings.heading_size
+    -%}
 
     <ul
       id="ig-track-{{ section.id }}"
