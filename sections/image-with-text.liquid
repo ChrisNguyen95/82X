@@ -19,6 +19,49 @@
     .section-{{ section.id }}-padding .image-with-text__text-item  { order: 1; }
   }
   {%- endif -%}
+
+  /* ── Rich-text list — custom bullet style ── */
+  .section-{{ section.id }}-padding .image-with-text__text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .section-{{ section.id }}-padding .image-with-text__text ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 0.5rem 0;
+    line-height: 1.6;
+  }
+  .section-{{ section.id }}-padding .image-with-text__text ul li::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: currentColor;
+    margin-top: 0.45em; /* align dot to first line of text */
+  }
+
+  /* ── Link-style button ── */
+  .section-{{ section.id }}-padding .iwt-link-btn {
+    display: inline-block;
+    color: var(--iwt-link-color, currentColor);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .section-{{ section.id }}-padding .iwt-link-btn:hover {
+    opacity: 0.7;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -93,17 +136,32 @@
                   </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
-                    <a
-                      {% if block.settings.button_link == blank %}
-                        role="link" aria-disabled="true"
-                      {% else %}
-                        href="{{ block.settings.button_link }}"
-                      {% endif %}
-                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ block.settings.button_label | escape }}
-                    </a>
+                    {%- if block.settings.button_style == 'link' -%}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
+                        class="iwt-link-btn"
+                        style="--iwt-link-color: {{ block.settings.button_link_color | default: 'currentColor' }};"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    {%- else -%}
+                      <a
+                        {% if block.settings.button_link == blank %}
+                          role="link" aria-disabled="true"
+                        {% else %}
+                          href="{{ block.settings.button_link }}"
+                        {% endif %}
+                        class="button{% if block.settings.button_style == 'secondary' %} button--secondary{% else %} button--primary{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    {%- endif -%}
                   {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
@@ -477,10 +535,22 @@
           "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "default": false,
-          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary",   "label": "Primary (solid)"  },
+            { "value": "secondary", "label": "Outline"          },
+            { "value": "link",      "label": "Link (text only)" }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "color",
+          "id": "button_link_color",
+          "label": "Link color",
+          "default": "#1C2B6B",
+          "info": "Only applies when style is set to Link."
         }
       ]
     }
