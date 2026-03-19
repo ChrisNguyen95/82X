@@ -340,24 +340,24 @@
         "heading_BVQiUU": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "82X Sakura Placenta - White & Contour",
             "heading_size": "h1"
           }
         },
         "text_QMU9yn": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
             "text_style": "body"
           }
         },
         "button_E9mbGP": {
           "type": "button",
           "settings": {
-            "button_label": "TRY RISK FREE",
+            "button_label": "Supplement Facts",
             "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
+            "button_style": "link",
+            "button_link_color": "#56baf7"
           }
         }
       },
