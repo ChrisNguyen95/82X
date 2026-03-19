@@ -1,47 +1,53 @@
 {
   "sections": {
-    "hero_split_cUK8ig": {
+    "hero_split_B6wwGe": {
       "type": "hero-split",
       "blocks": {
-        "subtext_4ignX6": {
+        "subtext_YD7YNq": {
           "type": "subtext",
           "settings": {
-            "subtext": "Start Your Premium Collagen Journey For",
+            "subtext": "Japanese Placenta & Collagen Beauty Drink",
             "subtext_style": "caption-with-letter-spacing"
           }
         },
-        "heading_9dprEC": {
+        "heading_W4eLAb": {
           "type": "heading",
           "settings": {
-            "heading": "Reveal Your Natural Glow - Just $5 Per Day",
+            "heading": "82X Sakura Placenta",
             "heading_size": "h0"
           }
         },
-        "text_kir7Ni": {
+        "text_4C77xy": {
           "type": "text",
           "settings": {
-            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.<\/p>",
+            "text": "<p>A premium Japanese beauty drink with placenta and collagen that helps brighten skin, improve elasticity, reduce signs of aging, and nourish the body from within.<\/p>",
             "text_style": "body"
           }
         },
-        "buttons_ym6jqB": {
+        "buttons_6p9GVj": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Take Quiz",
-            "button_link_2": "",
+            "button_label_2": "",
+            "button_link_2": "shopify:\/\/pages\/82x-quiz",
             "button_style_secondary_2": true
           }
         },
-        "icon_list_DPzUtW": {
+        "icon_list_U8wiDQ": {
           "type": "icon_list",
           "settings": {
+            "icon_label_color": "",
+            "icon_1": "shopify:\/\/shop_images\/Icon_Container.svg",
             "label_1": "Beauty Placenta",
+            "icon_2": "shopify:\/\/shop_images\/Icon_rContainer.svg",
             "label_2": "Fish Collagen",
+            "icon_3": "shopify:\/\/shop_images\/Icon_Corntainer.svg",
             "label_3": "Sakura Extract",
+            "icon_4": "shopify:\/\/shop_images\/Icon_Contairrner.svg",
             "label_4": "Natural Ingredients",
+            "icon_5": "shopify:\/\/shop_images\/logo_82XSS_2.png",
             "label_5": "Made In Japan",
             "label_6": "",
             "label_7": "",
@@ -50,15 +56,16 @@
         }
       },
       "block_order": [
-        "subtext_4ignX6",
-        "heading_9dprEC",
-        "text_kir7Ni",
-        "buttons_ym6jqB",
-        "icon_list_DPzUtW"
+        "subtext_YD7YNq",
+        "heading_W4eLAb",
+        "text_4C77xy",
+        "buttons_6p9GVj",
+        "icon_list_U8wiDQ"
       ],
       "name": "Hero Split",
       "settings": {
         "image": "shopify:\/\/shop_images\/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
+        "image_mobile": "shopify:\/\/shop_images\/image_18.jpg",
         "image_fit": "cover",
         "image_position": "center center",
         "overlay_opacity": 0,
@@ -69,7 +76,7 @@
         "desktop_horizontal": "left",
         "desktop_align": "left",
         "mobile_align": "left",
-        "content_max_width": 50,
+        "content_max_width": 55,
         "content_max_width_mobile": 100,
         "show_text_box": false,
         "color_scheme": "",
@@ -120,20 +127,143 @@
         "image_5": "shopify:\/\/shop_images\/Picture5.jpg",
         "image_6": "shopify:\/\/shop_images\/Picture6.jpg",
         "image_gap": 24,
-        "image_border_radius": 24,
+        "image_gap_mobile": 6,
+        "image_border_radius": 12,
         "image_aspect_ratio": "adapt",
         "layout": "image_first",
+        "mobile_layout": "text_first",
+        "gap_desktop": 80,
+        "gap_mobile": 32,
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "section_color_scheme": "scheme-3",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "testimonial_slider_7t8nhQ": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "review_nfEAET": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1111.jpg",
+            "star_rating": 5,
+            "author": "Lily Wang",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_jGnEXy": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/222.jpg",
+            "star_rating": 5,
+            "author": "Kaede",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_q4bPwc": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/33.jpg",
+            "star_rating": 5,
+            "author": "Mia Nguyen",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        }
+      },
+      "block_order": [
+        "review_nfEAET",
+        "review_jGnEXy",
+        "review_q4bPwc"
+      ],
+      "name": "Testimonial Grid (Photo)",
+      "settings": {
+        "heading": "Over 51,914 reviews",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "desktop_layout": "grid",
+        "desktop_cols": "3",
+        "card_bg": "#ffffff",
+        "card_border_color": "#e0e0e0",
+        "card_border_width": 0,
+        "card_radius": 16,
+        "card_padding": 8,
+        "card_text_align": "center",
+        "card_image_ratio": "natural",
+        "card_image_radius": 16,
+        "card_image_flush": true,
+        "author_color": "#070a13",
+        "review_text_color": "#3d3d3d",
+        "show_stars": false,
+        "star_color": "#f5a623",
+        "star_color_empty": "#d4d4d4",
+        "button_label": "Read all reviews",
+        "button_link": "shopify:\/\/pages\/all-review",
+        "button_secondary": false,
+        "footer_gap": 40,
+        "card_peek_mobile": 32,
+        "card_gap_mobile": 12,
+        "card_gap_desktop": 24,
+        "show_nav": false,
+        "loop_enabled": true,
+        "nav_color": "#1c2b6b",
+        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 104
+      }
+    },
+    "featured_collection_LKTG3X": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "gut-heart-health",
+        "products_to_show": 12,
+        "title": "Discover 82X’s premium collagen lineup",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "loop_enabled": true,
+        "nav_color": "#1c2b6b",
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "heading_align": "center",
+        "card_content_align": "center",
+        "card_title_lines": 2,
+        "card_desc_lines": 2,
+        "card_image_bg": "#eef3ff",
+        "card_image_radius": 16,
+        "price_color": "#234082",
+        "show_desc": true,
+        "show_view_btn": true,
+        "view_btn_label": "VIEW PRODUCT",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
-    "hero_split_cUK8ig",
-    "image_grid_with_text_HFJfaW"
+    "hero_split_B6wwGe",
+    "image_grid_with_text_HFJfaW",
+    "testimonial_slider_7t8nhQ",
+    "featured_collection_LKTG3X"
   ]
 }
