@@ -418,7 +418,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/ssss.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -468,7 +468,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/ssssddd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
