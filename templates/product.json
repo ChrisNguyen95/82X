@@ -510,8 +510,8 @@
         "button_link": "",
         "button_secondary": false,
         "content_max_width": 680,
-        "padding_top": 104,
-        "padding_bottom": 104
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
