@@ -39,3 +39,8 @@
   margin-top: 1.2rem;
   color: rgba(var(--color-foreground), 0.75);
 }
+
+/* Italic modifier */
+.section-heading--italic {
+  font-style: italic;
+}

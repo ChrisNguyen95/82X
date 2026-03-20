@@ -273,11 +273,12 @@
     {%- unless section.settings.heading == blank and section.settings.subtext == blank -%}
       <div class="cg-header">
         {%- render 'section-heading',
-          heading:      section.settings.heading,
-          heading_tag:  section.settings.heading_tag,
-          heading_size: section.settings.heading_size,
-          description:  section.settings.subtext,
-          heading_align: section.settings.text_align
+          heading:        section.settings.heading,
+          heading_tag:    section.settings.heading_tag,
+          heading_size:   section.settings.heading_size,
+          heading_align:  section.settings.text_align,
+          heading_italic: section.settings.heading_italic,
+          description:    section.settings.subtext
         -%}
       </div>
     {%- endunless -%}
@@ -541,6 +542,12 @@
         { "value": "p",  "label": "p"  }
       ],
       "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": false
     },
     {
       "type": "range",

@@ -198,11 +198,13 @@
         endif
       -%}
       {%- render 'section-heading',
-        heading:       section.settings.title,
-        heading_size:  section.settings.heading_size,
-        heading_align: section.settings.heading_align,
-        subheading:    section.settings.subheading,
-        description:   fc_desc
+        heading:        section.settings.title,
+        heading_tag:    section.settings.heading_tag,
+        heading_size:   section.settings.heading_size,
+        heading_align:  section.settings.heading_align,
+        heading_italic: section.settings.heading_italic,
+        subheading:     section.settings.subheading,
+        description:    fc_desc
       -%}
     </div>
 
@@ -386,6 +388,24 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": false
     },
     {
       "type": "richtext",

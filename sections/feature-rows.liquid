@@ -97,12 +97,22 @@
   flex: 1;
   min-width: 0;
 }
-/* Desktop: apply per-block text-align and max-width from CSS vars */
 @media screen and (min-width: 750px) {
   #FeatureRows-{{ section.id }} .fr-content {
-    text-align: var(--fr-text-align, left);
     max-width: var(--fr-content-max, none);
   }
+  /* Per-block text alignment — class-based for reliability */
+  #FeatureRows-{{ section.id }} .fr-content--left,
+  #FeatureRows-{{ section.id }} .fr-content--left .rte,
+  #FeatureRows-{{ section.id }} .fr-content--left .fr-title { text-align: left; }
+
+  #FeatureRows-{{ section.id }} .fr-content--center,
+  #FeatureRows-{{ section.id }} .fr-content--center .rte,
+  #FeatureRows-{{ section.id }} .fr-content--center .fr-title { text-align: center; }
+
+  #FeatureRows-{{ section.id }} .fr-content--right,
+  #FeatureRows-{{ section.id }} .fr-content--right .rte,
+  #FeatureRows-{{ section.id }} .fr-content--right .fr-title { text-align: right; }
 }
 
 /* ── Title ── */
@@ -139,9 +149,10 @@
 
     {%- comment -%}── Heading ──{%- endcomment -%}
     {%- render 'section-heading',
-      heading:      section.settings.heading,
-      heading_tag:  section.settings.heading_tag,
-      heading_size: section.settings.heading_size
+      heading:        section.settings.heading,
+      heading_tag:    section.settings.heading_tag,
+      heading_size:   section.settings.heading_size,
+      heading_italic: section.settings.heading_italic
     -%}
 
     {%- comment -%}── Rows ──{%- endcomment -%}
@@ -155,7 +166,6 @@
         {%- capture block_vars -%}
           --fr-w-desktop: {{ w_d }}px;
           --fr-w-mobile: {{ w_m }}px;
-          --fr-text-align: {{ block.settings.content_text_align }};
           {%- if block.settings.content_max_width > 0 -%}
           --fr-content-max: {{ block.settings.content_max_width }}px;
           {%- endif -%}
@@ -190,7 +200,7 @@
           {%- endif -%}
 
           {%- comment -%}── Content ──{%- endcomment -%}
-          <div class="fr-content">
+          <div class="fr-content fr-content--{{ block.settings.content_text_align | default: 'left' }}">
             {%- unless block.settings.title == blank -%}
               <p class="fr-title font-heading">{{- block.settings.title | escape -}}</p>
             {%- endunless -%}
@@ -250,6 +260,12 @@
         { "value": "p",  "label": "p"  }
       ],
       "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": false
     },
     {
       "type": "range",

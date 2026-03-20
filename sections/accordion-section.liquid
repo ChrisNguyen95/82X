@@ -11,8 +11,8 @@
 /* ── Section wrapper ── */
 #AccordionSection-{{ section.id }} {
   background-color: {{ section.settings.section_bg }};
-  padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
-  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  padding-top:    {{ section.settings.padding_top    | times: 0.54 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.54 | round: 0 }}px;
 }
 @media screen and (min-width: 750px) {
   #AccordionSection-{{ section.id }} {
@@ -206,10 +206,11 @@
 
         {%- if has_heading -%}
           {%- render 'section-heading',
-            heading:      section.settings.heading,
-            heading_tag:  section.settings.heading_tag,
-            heading_size: section.settings.heading_size,
-            heading_align: section.settings.text_align,
+            heading:        section.settings.heading,
+            heading_tag:    section.settings.heading_tag,
+            heading_size:   section.settings.heading_size,
+            heading_align:  section.settings.text_align,
+            heading_italic: section.settings.heading_italic
           -%}
         {%- endif -%}
 
@@ -302,6 +303,12 @@
         { "value": "p",  "label": "p"  }
       ],
       "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": false
     },
     {
       "type": "range",

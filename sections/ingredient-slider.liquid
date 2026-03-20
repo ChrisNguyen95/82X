@@ -174,8 +174,10 @@
   <div class="page-width">
 
     {%- render 'section-heading',
-      heading:      section.settings.title,
-      heading_size: section.settings.heading_size
+      heading:        section.settings.title,
+      heading_tag:    section.settings.heading_tag,
+      heading_size:   section.settings.heading_size,
+      heading_italic: section.settings.heading_italic
     -%}
 
     <ul
@@ -277,6 +279,24 @@
         { "value": "hxl", "label": "Extra large" }
       ],
       "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": false
     },
     {
       "type": "select",

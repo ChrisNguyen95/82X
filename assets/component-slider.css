@@ -252,18 +252,18 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link {
-  padding: 1rem;
+  padding: 0.4rem;
 }
 
 @media screen and (max-width: 749px) {
   .slider-counter__link {
-    padding: 0.7rem;
+    padding: 0.2rem;
   }
 }
 
 .slider-counter__link--dots .dot {
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   border: 0.1rem solid rgba(var(--color-foreground), 0.5);
   padding: 0;
@@ -271,6 +271,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
+  --color-foreground: 36, 64, 130;
   background-color: rgb(var(--color-foreground));
 }
 
@@ -348,7 +349,7 @@ slider-component.slider-component-full-width {
 .slider-button:not([disabled]):hover {
   color: rgb(var(--color-foreground));
 }
-
+/*
 .slider-button .icon {
   height: 0.6rem;
 }
@@ -357,7 +358,8 @@ slider-component.slider-component-full-width {
   color: rgba(var(--color-foreground), 0.3);
   cursor: not-allowed;
 }
-
+/*
+/*
 .slider-button--next .icon {
   transform: rotate(-90deg);
 }
@@ -373,3 +375,4 @@ slider-component.slider-component-full-width {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
 }
+*/

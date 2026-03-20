@@ -81,3 +81,42 @@
 .custom-slider-nav .slider-button .icon {
   transform: none !important;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Thumbnail slider — half-overlap button positioning
+   Nửa button nằm trên ảnh đầu/cuối, nửa còn lại ra ngoài
+   ══════════════════════════════════════════════════════════════ */
+
+.thumbnail-slider.custom-slider-nav {
+  position: relative;
+  overflow: visible;
+}
+
+/* Desktop + tablet (thumbnail_slider mode) */
+@media screen and (min-width: 750px) {
+  .thumbnail-slider.custom-slider-nav .slider-button {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    /* Solid bg so button is visible when overlapping images */
+    background: rgb(var(--color-background, 255 255 255));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .thumbnail-slider.custom-slider-nav .slider-button--prev {
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .thumbnail-slider.custom-slider-nav .slider-button--next {
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  /* Keep hover style working with solid bg */
+  .thumbnail-slider.custom-slider-nav .slider-button:hover:not([disabled]) {
+    background: var(--csn-color);
+    color: #fff;
+    box-shadow: none;
+  }
+}

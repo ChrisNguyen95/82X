@@ -93,7 +93,7 @@
 
 <div
   id="ReviewBadge-{{ section.id }}"
-  class="review-badge{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="review-badge color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   <div class="rb-inner">
 
@@ -113,7 +113,7 @@
     {%- comment -%} Counter number {%- endcomment -%}
     {%- if section.settings.counter_number != blank -%}
       <p
-        class="rb-counter"
+        class="rb-counter font-heading"
         data-rb-target="{{ section.settings.counter_number | replace: ',', '' | replace: '.', '' | strip }}"
         data-rb-suffix="{{ section.settings.counter_suffix }}"
         data-rb-prefix="{{ section.settings.counter_prefix }}"
@@ -126,7 +126,7 @@
 
     {%- comment -%} Title {%- endcomment -%}
     {%- if section.settings.title != blank -%}
-      <p class="rb-title">{{ section.settings.title | escape }}</p>
+      <p class="rb-title font-heading">{{ section.settings.title | escape }}</p>
     {%- endif -%}
 
     {%- comment -%} Text {%- endcomment -%}
@@ -160,15 +160,9 @@
     return 1 - Math.pow(1 - t, 3);
   }
 
-  /* ── Format number with locale-aware thousands separator ── */
-  function formatNumber(value, originalStr) {
-    /* Detect whether the original uses comma or period as thousands sep */
-    var useComma = originalStr.indexOf(',') !== -1 && originalStr.indexOf('.') === -1;
-    var rounded  = Math.round(value);
-    if (useComma) {
-      return rounded.toLocaleString('en-US');   /* 45,893 */
-    }
-    return rounded.toString();
+  /* ── Format number with comma thousands separator ── */
+  function formatNumber(value) {
+    return Math.round(value).toLocaleString('en-US');  /* e.g. 45,893 */
   }
 
   /* ── Core animate function ── */
@@ -180,7 +174,6 @@
     var duration  = parseInt(el.dataset.rbDuration, 10) || 1800;
     var prefix    = el.dataset.rbPrefix || '';
     var suffix    = el.dataset.rbSuffix || '';
-    var original  = el.dataset.rbTarget;    /* keep original string for format detection */
 
     var startTime = null;
 
@@ -191,12 +184,12 @@
       var eased    = easeOutCubic(progress);
       var current  = eased * target;
 
-      el.textContent = prefix + formatNumber(current, original) + suffix;
+      el.textContent = prefix + formatNumber(current) + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(step);
       } else {
-        el.textContent = prefix + formatNumber(target, original) + suffix;
+        el.textContent = prefix + formatNumber(target) + suffix;
       }
     }
 
@@ -245,6 +238,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
     {
       "type": "header",
       "content": "Colors"

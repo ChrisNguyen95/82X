@@ -125,7 +125,7 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
-    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+    <div class="slider-buttons custom-slider-nav quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -133,7 +133,7 @@
         aria-label="{{ 'general.slider.previous_slide' | t }}"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'arrow-left-long.svg' | inline_asset_content -}}
         </span>
       </button>
       <div class="slider-counter caption">
@@ -149,11 +149,59 @@
         aria-label="{{ 'general.slider.next_slide' | t }}"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'arrow-right-long.svg' | inline_asset_content -}}
         </span>
       </button>
     </div>
   </slider-component>
+
+  {%- comment -%} Mobile dots navigation — only on mobile, JS syncs active dot {%- endcomment -%}
+  {%- if media_count > 1 and single_media_visible != true -%}
+    <div
+      class="gallery-dots-nav quick-add-hidden"
+      id="GalleryDots-{{ section.id }}"
+      aria-hidden="true"
+    >
+      {%- for i in (1..media_count) -%}
+        <button
+          class="slider-counter__link slider-counter__link--dots{% if forloop.first %} slider-counter__link--active{% endif %} link"
+          data-index="{{ forloop.index0 }}"
+          aria-label="{{ forloop.index }} / {{ media_count }}"
+        ><span class="dot"></span></button>
+      {%- endfor -%}
+    </div>
+    <script>
+    (function () {
+      var slider   = document.getElementById('Slider-Gallery-{{ section.id }}');
+      var dotsWrap = document.getElementById('GalleryDots-{{ section.id }}');
+      if (!slider || !dotsWrap) return;
+      var dots = Array.from(dotsWrap.querySelectorAll('.slider-counter__link'));
+
+      function setActive(idx) {
+        dots.forEach(function (d, i) {
+          d.classList.toggle('slider-counter__link--active', i === idx);
+          d.setAttribute('aria-current', i === idx ? 'true' : 'false');
+        });
+      }
+
+      function onScroll() {
+        var w = slider.firstElementChild ? slider.firstElementChild.offsetWidth : 0;
+        if (!w) return;
+        setActive(Math.round(slider.scrollLeft / w));
+      }
+
+      slider.addEventListener('scroll', onScroll, { passive: true });
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          var w = slider.firstElementChild ? slider.firstElementChild.offsetWidth : 0;
+          if (w) slider.scrollTo({ left: i * w, behavior: 'smooth' });
+        });
+      });
+    })();
+    </script>
+  {%- endif -%}
+
   {%- if first_3d_model -%}
     <button
       class="button button--full-width product__xr-button"
@@ -183,7 +231,7 @@
   -%}
     <slider-component
       id="GalleryThumbnails-{{ section.id }}"
-      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
+      class="thumbnail-slider slider-mobile-gutter custom-slider-nav quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
       <button
         type="button"
@@ -194,7 +242,7 @@
         data-step="3"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'arrow-left-long.svg' | inline_asset_content -}}
         </span>
       </button>
       <ul
@@ -324,7 +372,7 @@
         data-step="3"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'arrow-right-long.svg' | inline_asset_content -}}
         </span>
       </button>
     </slider-component>
