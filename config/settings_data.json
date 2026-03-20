@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/logo_82X_1.png",
@@ -21,7 +12,7 @@
     "spacing_grid_horizontal": 24,
     "spacing_grid_vertical": 24,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "vertical-lift",
+    "animations_hover_elements": "default",
     "page_transition_enable": true,
     "page_transition_color": "#d9eeff",
     "page_transition_effect": "dots",
