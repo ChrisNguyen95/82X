@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════════════════
+   82X Theme — Global CSS Bundle
+   Loaded once in layout/theme.liquid for all pages.
+
+   Contents:
+     1. Section Heading  (replaces section-heading.css)
+     2. Custom Slider Nav (replaces custom-slider-nav.css)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────
+   1. SECTION HEADING
+   snippet: snippets/section-heading.liquid
+   ───────────────────────────────────────────────────────────────── */
+
+.section-heading {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .section-heading {
+    margin-bottom: 5rem;
+  }
+}
+
+.section-heading--left   { text-align: left; }
+.section-heading--center { text-align: center; }
+.section-heading--right  { text-align: right; }
+
+.section-heading__sub {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+  margin: 0 0 0.8rem;
+}
+
+.section-heading__title {
+  margin: 0;
+}
+
+.section-heading__desc {
+  margin-top: 1.2rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.section-heading--italic {
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   2. CUSTOM SLIDER NAV
+   Shared prev/next button styles for all slider sections.
+
+   Usage:
+     Add class "custom-slider-nav" to the slider-component wrapper.
+     Override color: #SectionID .custom-slider-nav { --csn-color: #hex; }
+   ───────────────────────────────────────────────────────────────── */
+
+.custom-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.custom-slider-nav .slider-button {
+  --csn-color: #1C2B6B;
+
+  display: flex !important;
+  visibility: visible !important;
+  flex-shrink: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 0.15rem solid var(--csn-color);
+  background: transparent;
+  color: var(--csn-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.custom-slider-nav .slider-button:hover:not([disabled]) {
+  background: var(--csn-color);
+  color: #fff;
+}
+
+.custom-slider-nav .slider-button[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.custom-slider-nav .slider-button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  pointer-events: none;
+}
+
+.custom-slider-nav .slider-button .svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dawn rotates .icon inside .slider-button expecting icon-caret.
+   Our arrow SVGs are already directional — reset the transform. */
+.custom-slider-nav .slider-button .icon {
+  transform: none !important;
+}
+
+/* ── Thumbnail slider: half-overlap button positioning ──────────
+   Half of button overlaps the first/last thumbnail image.
+   ─────────────────────────────────────────────────────────────── */
+
+.thumbnail-slider.custom-slider-nav {
+  position: relative;
+  overflow: visible;
+}
+
+@media screen and (min-width: 750px) {
+  .thumbnail-slider.custom-slider-nav .slider-button {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    background: rgb(var(--color-background, 255 255 255));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .thumbnail-slider.custom-slider-nav .slider-button--prev {
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .thumbnail-slider.custom-slider-nav .slider-button--next {
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  .thumbnail-slider.custom-slider-nav .slider-button:hover:not([disabled]) {
+    background: var(--csn-color);
+    color: #fff;
+    box-shadow: none;
+  }
+}

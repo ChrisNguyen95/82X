@@ -5,16 +5,10 @@
   data-product-id="{{ product.id }}"
   data-update-url="true"
   data-url="{{ product.url }}"
-  {% if section.settings.image_zoom == 'hover' %}
-    data-zoom-on-hover
-  {% endif %}
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-  {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-  {{- 'custom-slider-nav.css' | asset_url | stylesheet_tag -}}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -201,9 +195,6 @@
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
-  {% if section.settings.image_zoom == 'hover' %}
-    <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
-  {% endif %}
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
@@ -815,21 +806,16 @@
                                     offset: continue
                                   -%}
                                     <li>
-                                      {%- if block.settings.enable_quick_add -%}
-                                        {% assign quick_add = 'standard' %}
-                                      {%- else -%}
-                                        {% assign quick_add = 'none' %}
-                                      {%- endif -%}
-                                      {% render 'card-product',
+                                                        {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: block.settings.image_ratio,
                                         show_secondary_image: false,
                                         lazy_load: false,
                                         skip_styles: skip_card_product_styles,
-                                        quick_add: quick_add,
+                                        quick_add: 'none',
                                         section_id: section.id,
                                         horizontal_class: true,
-                                        horizontal_quick_add: true
+                                        horizontal_quick_add: false
                                       %}
                                     </li>
                                     {%- assign skip_card_product_styles = true -%}
@@ -893,12 +879,7 @@
                       </div>
                     </aside>
                   {%- endif -%}
-                  {{ 'component-card.css' | asset_url | stylesheet_tag }}
                   {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
-                  {%- if block.settings.enable_quick_add -%}
-                    {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-                    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-                  {%- endif -%}
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
@@ -2793,26 +2774,6 @@
       ],
       "default": "left",
       "label": "t:sections.main-product.settings.media_position.label"
-    },
-    {
-      "type": "select",
-      "id": "image_zoom",
-      "options": [
-        {
-          "value": "lightbox",
-          "label": "t:sections.main-product.settings.image_zoom.options__1.label"
-        },
-        {
-          "value": "hover",
-          "label": "t:sections.main-product.settings.image_zoom.options__2.label"
-        },
-        {
-          "value": "none",
-          "label": "t:sections.main-product.settings.image_zoom.options__3.label"
-        }
-      ],
-      "default": "lightbox",
-      "label": "t:sections.main-product.settings.image_zoom.label"
     },
     {
       "type": "checkbox",

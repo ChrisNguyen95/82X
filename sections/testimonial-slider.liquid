@@ -1,6 +1,4 @@
-{{- 'component-slider.css'   | asset_url | stylesheet_tag -}}
-{{- 'custom-slider-nav.css' | asset_url | stylesheet_tag -}}
-{{- 'section-heading.css'   | asset_url | stylesheet_tag -}}
+{{- 'component-slider.css' | asset_url | stylesheet_tag -}}
 
 {%- liquid
   assign is_grid      = false
@@ -134,7 +132,7 @@
   flex-direction: column;
   gap: 1.2rem;
   height: 100%;
-  padding: {{ section.settings.card_padding }}px;
+  padding: {{ section.settings.card_padding }}px 2.4rem;
   text-align: {{ section.settings.card_text_align }};
 
   border: var(--ts-border-w) solid var(--ts-border-color);
