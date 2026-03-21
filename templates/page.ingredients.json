@@ -2,13 +2,273 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_YAfUVm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pHxhrX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Potent components for robust assistance",
+            "heading_size": "h0"
+          }
+        },
+        "text_iKXCCg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>82X's products support beauty from within, brightening skin, reducing dark spots and signs of aging, while balancing hormones and boosting energy.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pHxhrX",
+        "text_iKXCCg"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 1200px) {.image-with-text__text-item {width: calc(100% * 5.5 \/ 12); } .image-with-text__media-item {width: calc(100% * 6.5 \/ 12); } .image-with-text__grid--reverse .image-with-text__content {padding: 14.5rem 0rem 14.5rem 0rem; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Collagen_image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "padding_top": 32,
+        "padding_bottom": 40
+      }
+    },
+    "product_tabs_fNRVj4": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_Dwh8nq": {
+          "type": "tab",
+          "settings": {
+            "label": "VIEW ALL",
+            "tab_id": "all"
+          }
+        },
+        "tab_Vz3WMV": {
+          "type": "tab",
+          "settings": {
+            "label": "82X COLLAGEN",
+            "tab_id": "collagen"
+          }
+        },
+        "tab_MFUYYw": {
+          "type": "tab",
+          "settings": {
+            "label": "82X PLACENTA",
+            "tab_id": "placenta"
+          }
+        },
+        "row_Byw99y": {
+          "type": "row",
+          "settings": {
+            "tab_ref": "collagen",
+            "color_scheme": "scheme-3",
+            "show_border": false,
+            "border_color": "#d9eeff",
+            "image": "shopify:\/\/shop_images\/Product_ixmage.jpg",
+            "icon_1_image": "shopify:\/\/shop_images\/badge_2453355_1.jpg",
+            "icon_1_label": "Made In Japan",
+            "icon_2_image": "shopify:\/\/shop_images\/Icon_Cosntainer.jpg",
+            "icon_2_label": "Natural Ingredients",
+            "icon_3_label": "",
+            "icon_4_label": "",
+            "heading": "82X Sakura Placenta - White & Contour",
+            "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
+            "faq_1_icon": "shopify:\/\/shop_images\/Icon1.png",
+            "faq_1_question": "Placenta Extract (450,000mg)",
+            "faq_1_subtitle": "Helps balance hormones and rejuvenate the skin from within",
+            "faq_1_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_1_open": true,
+            "faq_2_icon": "shopify:\/\/shop_images\/Icon2.png",
+            "faq_2_question": "Fish Collagen Peptide (15,000mg)",
+            "faq_2_subtitle": "Increase elasticity and slow down skin aging",
+            "faq_2_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_2_open": false,
+            "faq_3_icon": "shopify:\/\/shop_images\/Icon3.png",
+            "faq_3_question": "Sakura Extract (Cherry Blossom)",
+            "faq_3_subtitle": "Brighten and improve skin tone",
+            "faq_3_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_3_open": false,
+            "faq_4_icon": "shopify:\/\/shop_images\/Icon4.png",
+            "faq_4_question": "Vitamin Complex (B1, B2, B6, D, E)",
+            "faq_4_subtitle": "Enhance health & metabolism",
+            "faq_4_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_4_open": false,
+            "faq_5_icon": "shopify:\/\/shop_images\/Icon5.png",
+            "faq_5_question": "Other Ingredients",
+            "faq_5_subtitle": "",
+            "faq_5_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_5_open": false,
+            "faq_6_question": "",
+            "faq_6_subtitle": "",
+            "faq_6_answer": "<ul><li><\/li><\/ul>",
+            "faq_6_open": false,
+            "faq_7_question": "",
+            "faq_7_subtitle": "",
+            "faq_7_answer": "<ul><li><\/li><\/ul>",
+            "faq_7_open": false,
+            "faq_8_question": "",
+            "faq_8_subtitle": "",
+            "faq_8_answer": "",
+            "faq_8_open": false,
+            "button_label": "VIEW PRODUCT",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "row_8DEBKM": {
+          "type": "row",
+          "settings": {
+            "tab_ref": "placenta",
+            "color_scheme": "scheme-3",
+            "show_border": false,
+            "border_color": "#d9eeff",
+            "image": "shopify:\/\/shop_images\/Product_ixmage.jpg",
+            "icon_1_image": "shopify:\/\/shop_images\/badge_2453355_1.jpg",
+            "icon_1_label": "Made In Japan",
+            "icon_2_image": "shopify:\/\/shop_images\/Icon_Cosntainer.jpg",
+            "icon_2_label": "Natural Ingredients",
+            "icon_3_label": "",
+            "icon_4_label": "",
+            "heading": "82X Collagen Classic – Liquid Marine Collagen Drink",
+            "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
+            "faq_1_icon": "shopify:\/\/shop_images\/Icon1.png",
+            "faq_1_question": "Placenta Extract (450,000mg)",
+            "faq_1_subtitle": "Helps balance hormones and rejuvenate the skin from within",
+            "faq_1_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_1_open": false,
+            "faq_2_icon": "shopify:\/\/shop_images\/Icon2.png",
+            "faq_2_question": "Fish Collagen Peptide (15,000mg)",
+            "faq_2_subtitle": "Increase elasticity and slow down skin aging",
+            "faq_2_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_2_open": false,
+            "faq_3_icon": "shopify:\/\/shop_images\/Icon3.png",
+            "faq_3_question": "Sakura Extract (Cherry Blossom)",
+            "faq_3_subtitle": "Brighten and improve skin tone",
+            "faq_3_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_3_open": false,
+            "faq_4_icon": "shopify:\/\/shop_images\/Icon4.png",
+            "faq_4_question": "Vitamin Complex (B1, B2, B6, D, E)",
+            "faq_4_subtitle": "Enhance health & metabolism",
+            "faq_4_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_4_open": false,
+            "faq_5_icon": "shopify:\/\/shop_images\/Icon5.png",
+            "faq_5_question": "Other Ingredients",
+            "faq_5_subtitle": "",
+            "faq_5_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_5_open": false,
+            "faq_6_question": "",
+            "faq_6_subtitle": "",
+            "faq_6_answer": "<ul><li><\/li><\/ul>",
+            "faq_6_open": false,
+            "faq_7_question": "",
+            "faq_7_subtitle": "",
+            "faq_7_answer": "<ul><li><\/li><\/ul>",
+            "faq_7_open": false,
+            "faq_8_question": "",
+            "faq_8_subtitle": "",
+            "faq_8_answer": "",
+            "faq_8_open": false,
+            "button_label": "VIEW PRODUCT",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "row_WYFwen": {
+          "type": "row",
+          "settings": {
+            "tab_ref": "collagen",
+            "color_scheme": "scheme-3",
+            "show_border": false,
+            "border_color": "#d9eeff",
+            "image": "shopify:\/\/shop_images\/Product_ixmage.jpg",
+            "icon_1_image": "shopify:\/\/shop_images\/badge_2453355_1.jpg",
+            "icon_1_label": "Made In Japan",
+            "icon_2_image": "shopify:\/\/shop_images\/Icon_Cosntainer.jpg",
+            "icon_2_label": "Natural Ingredients",
+            "icon_3_label": "",
+            "icon_4_label": "",
+            "heading": "Koharu Collagen – Premium Japanese Marine Collagen Drink",
+            "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
+            "faq_1_icon": "shopify:\/\/shop_images\/Icon1.png",
+            "faq_1_question": "Placenta Extract (450,000mg)",
+            "faq_1_subtitle": "Helps balance hormones and rejuvenate the skin from within",
+            "faq_1_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_1_open": false,
+            "faq_2_icon": "shopify:\/\/shop_images\/Icon2.png",
+            "faq_2_question": "Fish Collagen Peptide (15,000mg)",
+            "faq_2_subtitle": "Increase elasticity and slow down skin aging",
+            "faq_2_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_2_open": false,
+            "faq_3_icon": "shopify:\/\/shop_images\/Icon3.png",
+            "faq_3_question": "Sakura Extract (Cherry Blossom)",
+            "faq_3_subtitle": "Brighten and improve skin tone",
+            "faq_3_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_3_open": false,
+            "faq_4_icon": "shopify:\/\/shop_images\/Icon4.png",
+            "faq_4_question": "Vitamin Complex (B1, B2, B6, D, E)",
+            "faq_4_subtitle": "Enhance health & metabolism",
+            "faq_4_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_4_open": false,
+            "faq_5_icon": "shopify:\/\/shop_images\/Icon5.png",
+            "faq_5_question": "Other Ingredients",
+            "faq_5_subtitle": "",
+            "faq_5_answer": "<ul><li>Inhibit melanin → reduce dark spots and freckles<\/li><li>Supports female hormones, reduces dryness<\/li><li>Increase energy & vitality of the body<\/li><\/ul>",
+            "faq_5_open": false,
+            "faq_6_question": "",
+            "faq_6_subtitle": "",
+            "faq_6_answer": "<ul><li><\/li><\/ul>",
+            "faq_6_open": false,
+            "faq_7_question": "",
+            "faq_7_subtitle": "",
+            "faq_7_answer": "<ul><li><\/li><\/ul>",
+            "faq_7_open": false,
+            "faq_8_question": "",
+            "faq_8_subtitle": "",
+            "faq_8_answer": "",
+            "faq_8_open": false,
+            "button_label": "VIEW PRODUCT",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "tab_Dwh8nq",
+        "tab_Vz3WMV",
+        "tab_MFUYYw",
+        "row_Byw99y",
+        "row_8DEBKM",
+        "row_WYFwen"
+      ],
+      "name": "Product Tabs",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_YAfUVm",
+    "product_tabs_fNRVj4"
   ]
 }
