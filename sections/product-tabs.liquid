@@ -1,0 +1,814 @@
+{%- style -%}
+  /* ── Section padding ── */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ── Tab nav — color from schema ── */
+  #ProductTabs-{{ section.id }} .pt-nav__btn {
+    border-color: {{ section.settings.nav_color }};
+    color: {{ section.settings.nav_color }};
+  }
+  #ProductTabs-{{ section.id }} .pt-nav__btn:hover,
+  #ProductTabs-{{ section.id }} .pt-nav__btn--active {
+    background-color: {{ section.settings.nav_color }} !important;
+    color: {{ section.settings.nav_active_text }}!important;
+  }
+
+  /* ── Row border per block ── */
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'row' -%}
+      {%- if block.settings.show_border -%}
+        #pt-row-{{ block.id }} {
+          border: 0.1rem solid {{ block.settings.border_color }};
+          border-radius: 1.6rem;
+          padding: 4rem;
+        }
+        @media screen and (max-width: 749px) {
+          #pt-row-{{ block.id }} { padding: 2.4rem 2rem; border-radius: 1.2rem; }
+        }
+      {%- else -%}
+        #pt-row-{{ block.id }} {
+          border: none;
+          border-radius: 0;
+          padding: 0;
+        }
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  /* ══════════════════════════════════════════════════════
+     STRUCTURAL CSS — all inline to guarantee load in Customize
+     ══════════════════════════════════════════════════════ */
+
+  /* Section wrapper */
+  #ProductTabs-{{ section.id }} {
+    max-width: var(--page-width, 1200px);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+
+  @media screen and (min-width: 750px) {
+    #ProductTabs-{{ section.id }} { padding-left: 5rem; padding-right: 5rem; }
+  }
+
+  /* ── Tab nav ── */
+  #ProductTabs-{{ section.id }} .pt-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 5rem;
+  }
+  #ProductTabs-{{ section.id }} .pt-nav__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2.2rem;
+    border-radius: 10rem;s
+    border-width: 0.15rem;
+    border-style: solid;
+    background: transparent;
+    font-family: var(--font-heading-family);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  /* ── Row body ── */
+  #ProductTabs-{{ section.id }} .pt-body { }
+  #ProductTabs-{{ section.id }} .pt-row { margin-bottom: 6.4rem; }
+  #ProductTabs-{{ section.id }} .pt-row:last-child { margin-bottom: 0; }
+
+  #ProductTabs-{{ section.id }} .pt-row__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.6rem;
+    align-items: start;
+  }
+  @media screen and (max-width: 989px) {
+    #ProductTabs-{{ section.id }} .pt-row__grid {
+      grid-template-columns: 1fr;
+      gap: 3.2rem;
+    }
+     #ProductTabs-{{ section.id }} .pt-row { margin-bottom: 4.4rem; }
+  }
+
+  /* ── Left column ── */
+  #ProductTabs-{{ section.id }} .pt-row__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+    align-items: center;
+  }
+  @media screen and (max-width: 989px) {
+    #ProductTabs-{{ section.id }} .pt-row__left {
+        gap: 2.4rem;
+      }
+  }
+  #ProductTabs-{{ section.id }} .pt-row__img-wrap {
+    width: 100%;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+  #ProductTabs-{{ section.id }} .pt-row__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Badge icons */
+  #ProductTabs-{{ section.id }} .pt-row__badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.4rem 3.2rem;
+  }
+  #ProductTabs-{{ section.id }} .pt-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
+  }
+  #ProductTabs-{{ section.id }} .pt-badge__img {
+    width: 5.2rem;
+    height: 5.2rem;
+    object-fit: contain;
+  }
+  #ProductTabs-{{ section.id }} .pt-badge__label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    lecter-spacing: 0.02em;
+    color: rgba(var(--color-foreground), 0.65);
+    line-height: 1.3;
+  }
+
+  /* ── Right column ── */
+  #ProductTabs-{{ section.id }} .pt-row__right {
+    display: flex;
+    flex-direction: column;
+  }
+  #ProductTabs-{{ section.id }} .pt-row__heading {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 2rem;
+  }
+  #ProductTabs-{{ section.id }} .pt-row__desc {
+    font-size: 1.4rem;
+    color: rgba(var(--color-foreground));
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+
+  /* ── Accordions ── */
+  #ProductTabs-{{ section.id }} .pt-accordions {
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    #ProductTabs-{{ section.id }} .pt-accordions {
+      border-top: 0.1rem solid var(--color-border);
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  #ProductTabs-{{ section.id }} .pt-faq {
+    border-bottom: 0.1rem solid var(--color-border);
+  }
+
+  /* Summary grid — WITH icon */
+  #ProductTabs-{{ section.id }} .pt-faq__summary {
+    display: grid;
+    grid-template-columns: 5.4rem 1fr 2.4rem;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 2rem 0;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  #ProductTabs-{{ section.id }} .pt-faq__summary::-webkit-details-marker,
+  #ProductTabs-{{ section.id }} .pt-faq__summary::marker { display: none; }
+
+  /* Summary grid — WITHOUT icon: collapse first column */
+  #ProductTabs-{{ section.id }} .pt-faq--no-icon .pt-faq__summary {
+    grid-template-columns: 1fr 2.4rem;
+  }
+  #ProductTabs-{{ section.id }} .pt-faq--no-icon .pt-faq__icon-circle {
+    display: none;
+  }
+
+  /* Icon circle */
+  #ProductTabs-{{ section.id }} .pt-faq__icon-circle {
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 50%;
+    background: rgba(var(--color-foreground), 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    min-width: 5.6rem;
+  }
+  #ProductTabs-{{ section.id }} .pt-faq__icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Title group */
+  #ProductTabs-{{ section.id }} .pt-faq__title-group { min-width: 0; }
+  #ProductTabs-{{ section.id }} .pt-faq__question {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0 0 1.2rem;
+    color: rgb(var(--color-foreground));
+  }
+  #ProductTabs-{{ section.id }} .pt-faq__subtitle {
+    font-size: 1.3rem;
+    color: rgba(var(--color-foreground));
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Toggle +/- */
+  #ProductTabs-{{ section.id }} .pt-faq__toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(var(--color-foreground));
+    flex-shrink: 0;
+  }
+  #ProductTabs-{{ section.id }} .pt-faq__ico-plus,
+  #ProductTabs-{{ section.id }} .pt-faq__ico-minus { width: 1.8rem; height: 1.8rem; }
+  #ProductTabs-{{ section.id }} .pt-faq[open] .pt-faq__ico-plus { display: none; }
+  #ProductTabs-{{ section.id }} .pt-faq:not([open]) .pt-faq__ico-minus { display: none; }
+
+  /* Answer body — indented to align with title */
+  #ProductTabs-{{ section.id }} .pt-faq__body {
+    padding: 0 0 1.6rem;
+    padding-left: calc(5.4rem + 1.2rem);
+    font-size: 1.4rem;
+    color: rgba(var(--color-foreground));
+  }
+    #ProductTabs-{{ section.id }} .pt-faq__body ul {
+     padding-left: 0;
+  }
+  #ProductTabs-{{ section.id }} .pt-faq--no-icon .pt-faq__body {
+    padding-left: 0;
+  }
+
+  /* ── Row footer / button ── */
+  #ProductTabs-{{ section.id }} .pt-row__footer { margin-top: auto; }
+  #ProductTabs-{{ section.id }} .pt-row__cta {
+    border-radius: 10rem !important;
+    padding: 1.2rem 3.2rem !important;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 749px) {
+     #ProductTabs-{{ section.id }} .pt-faq__body {
+      font-size: 1.4rem;
+    }
+    #ProductTabs-{{ section.id }} .pt-faq__question {
+      font-size: 1.6rem;
+      margin: 0 0 1.2rem
+    }
+    #ProductTabs-{{ section.id }} .pt-faq__subtitle {
+      font-size: 1.4rem;
+    }
+    #ProductTabs-{{ section.id }} .pt-faq__summary {
+      grid-template-columns: 4.4rem 1fr 2.4rem;
+      gap: 1rem;
+    }
+    #ProductTabs-{{ section.id }} .pt-faq--no-icon .pt-faq__summary {
+      grid-template-columns: 1fr 2.4rem;
+    }
+    #ProductTabs-{{ section.id }} .pt-faq__icon-circle {
+      width: 4.4rem;
+      height: 4.4rem;
+      min-width: 4.4rem;
+    }
+    #ProductTabs-{{ section.id }} .pt-faq__icon-img { width: 100%; height: 100%; }
+    #ProductTabs-{{ section.id }} .pt-faq__body { padding-left: calc(4.4rem + 1rem); }
+    #ProductTabs-{{ section.id }} .pt-faq--no-icon .pt-faq__body { padding-left: 0; }
+    #ProductTabs-{{ section.id }} .pt-row__heading { font-size: 2.2rem; }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign has_tabs = false
+  for block in section.blocks
+    if block.type == 'tab'
+      assign has_tabs = true
+      break
+    endif
+  endfor
+-%}
+
+<section
+  id="ProductTabs-{{ section.id }}"
+  class="product-tabs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+>
+
+  {%- comment -%}─────── Tab Navigation ───────{%- endcomment -%}
+  {%- if has_tabs -%}
+    <nav class="pt-nav" aria-label="Product categories">
+      {%- assign is_first_tab = true -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'tab' -%}
+          <button
+            class="pt-nav__btn{%- if is_first_tab %} pt-nav__btn--active{%- endif %}"
+            data-pt-tab="{{ block.settings.tab_id | escape }}"
+            aria-selected="{{ is_first_tab }}"
+            {{ block.shopify_attributes }}
+          >{{ block.settings.label | escape }}</button>
+          {%- assign is_first_tab = false -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+  {%- endif -%}
+
+  {%- comment -%}─────── Product Rows ───────{%- endcomment -%}
+  <div class="pt-body">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'row' -%}
+
+        <article
+          id="pt-row-{{ block.id }}"
+          class="pt-row color-{{ block.settings.color_scheme }} gradient"
+          data-pt-row
+          data-tab-member="{{ block.settings.tab_ref | escape }}"
+          style="--color-border: {{ block.settings.border_color }}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="pt-row__grid">
+
+            {%- comment -%}── Left: image + badge icons ──{%- endcomment -%}
+            <div class="pt-row__left">
+              {%- if block.settings.image != blank -%}
+                <div class="pt-row__img-wrap">
+                  {{- block.settings.image
+                      | image_url: width: 800
+                      | image_tag:
+                          loading: 'lazy',
+                          widths: '300, 450, 600, 800',
+                          sizes: '(min-width: 990px) 42vw, 90vw',
+                          class: 'pt-row__img'
+                  -}}
+                </div>
+              {%- endif -%}
+
+              {%- liquid
+                assign has_badge = false
+                for i in (1..4)
+                  assign icon_key = 'icon_' | append: i | append: '_image'
+                  if block.settings[icon_key] != blank
+                    assign has_badge = true
+                    break
+                  endif
+                endfor
+              -%}
+              {%- if has_badge -%}
+                <div class="pt-row__badges">
+                  {%- for i in (1..4) -%}
+                    {%- assign bi = 'icon_' | append: i | append: '_image' -%}
+                    {%- assign bl = 'icon_' | append: i | append: '_label' -%}
+                    {%- if block.settings[bi] != blank -%}
+                      <div class="pt-badge">
+                        {{- block.settings[bi]
+                            | image_url: width: 80
+                            | image_tag: loading: 'lazy', class: 'pt-badge__img', alt: block.settings[bl] | default: ''
+                        -}}
+                        {%- if block.settings[bl] != blank -%}
+                          <span class="pt-badge__label font-heading">{{ block.settings[bl] }}</span>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+
+            {%- comment -%}── Right: heading + desc + accordion + button ──{%- endcomment -%}
+            <div class="pt-row__right">
+              {%- if block.settings.heading != blank -%}
+                <h3 class="pt-row__heading">{{ block.settings.heading | escape }}</h3>
+              {%- endif -%}
+
+              {%- if block.settings.description != blank -%}
+                <div class="pt-row__desc rte">{{ block.settings.description }}</div>
+              {%- endif -%}
+
+              {%- comment -%}── Accordion items (up to 8, inline in block settings) ──{%- endcomment -%}
+              {%- liquid
+                assign has_faq = false
+                for i in (1..8)
+                  assign fq = 'faq_' | append: i | append: '_question'
+                  if block.settings[fq] != blank
+                    assign has_faq = true
+                    break
+                  endif
+                endfor
+              -%}
+              {%- if has_faq -%}
+                <div class="pt-accordions">
+                  {%- for i in (1..8) -%}
+                    {%- liquid
+                      assign fq = 'faq_' | append: i | append: '_question'
+                      assign fs = 'faq_' | append: i | append: '_subtitle'
+                      assign fa = 'faq_' | append: i | append: '_answer'
+                      assign fi = 'faq_' | append: i | append: '_icon'
+                      assign fo = 'faq_' | append: i | append: '_open'
+                    -%}
+                    {%- if block.settings[fq] != blank -%}
+                      {%- assign no_icon = true -%}
+                      {%- if block.settings[fi] != blank -%}{%- assign no_icon = false -%}{%- endif -%}
+                      <details class="pt-faq{%- if no_icon %} pt-faq--no-icon{%- endif -%}"{% if block.settings[fo] %} open{% endif %}>
+                        <summary class="pt-faq__summary">
+                          <div class="pt-faq__icon-circle">
+                            {%- unless no_icon -%}
+                              {{- block.settings[fi]
+                                  | image_url: width: 68
+                                  | image_tag: loading: 'lazy', class: 'pt-faq__icon-img', alt: '', width: 34, height: 34
+                              -}}
+                            {%- endunless -%}
+                          </div>
+                          <div class="pt-faq__title-group">
+                            <p class="pt-faq__question">{{ block.settings[fq] | escape }}</p>
+                            {%- if block.settings[fs] != blank -%}
+                              <p class="pt-faq__subtitle">{{ block.settings[fs] | escape }}</p>
+                            {%- endif -%}
+                          </div>
+                          <span class="pt-faq__toggle" aria-hidden="true">
+                            <svg class="pt-faq__ico-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            <svg class="pt-faq__ico-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                          </span>
+                        </summary>
+                        {%- if block.settings[fa] != blank -%}
+                          <div class="pt-faq__body rte">{{ block.settings[fa] }}</div>
+                        {%- endif -%}
+                      </details>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.button_label != blank -%}
+                <div class="pt-row__footer">
+                  <a
+                    href="{{ block.settings.button_link }}"
+                    class="button{%- if block.settings.button_style == 'secondary' %} button--secondary{%- else %} button--primary{%- endif %} pt-row__cta"
+                  >{{- block.settings.button_label | escape -}}</a>
+                </div>
+              {%- endif -%}
+            </div>
+
+          </div>
+        </article>
+
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+</section>
+
+<script>
+(function () {
+  var section = document.getElementById('ProductTabs-{{ section.id }}');
+  if (!section) return;
+
+  var btns = section.querySelectorAll('[data-pt-tab]');
+  var rows = section.querySelectorAll('[data-pt-row]');
+
+  if (!btns.length) return;
+
+  function activate(tabId) {
+    btns.forEach(function (btn) {
+      var active = btn.dataset.ptTab === tabId;
+      btn.classList.toggle('pt-nav__btn--active', active);
+      btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    rows.forEach(function (row) {
+      var member = (row.dataset.tabMember || '').trim();
+      var show   = tabId === 'all' || member === '' || member === tabId;
+      row.hidden = !show;
+    });
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () { activate(btn.dataset.ptTab); });
+  });
+
+  activate(btns[0].dataset.ptTab);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Product Tabs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Tab navigation"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Button color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "nav_active_text",
+      "label": "Active button text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0, "max": 120, "step": 4, "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0, "max": 120, "step": 4, "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab label",
+          "default": "VIEW ALL"
+        },
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab ID",
+          "info": "Unique key. Use 'all' to show every row. Must match the Row's Tab ID field exactly.",
+          "default": "all"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Product Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_ref",
+          "label": "Tab ID",
+          "info": "Match with Tab ID above (e.g. 'collagen'). Leave empty to always show."
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Color scheme",
+          "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "Card border"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_border",
+          "label": "Show border",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#E0E0E0"
+        },
+        {
+          "type": "header",
+          "content": "Product image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Badge icons (below image)"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1_image",
+          "label": "Badge 1 — icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_1_label",
+          "label": "Badge 1 — label",
+          "default": "Made In Japan"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2_image",
+          "label": "Badge 2 — icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_2_label",
+          "label": "Badge 2 — label",
+          "default": "Natural Ingredients"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3_image",
+          "label": "Badge 3 — icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_3_label",
+          "label": "Badge 3 — label"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4_image",
+          "label": "Badge 4 — icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_4_label",
+          "label": "Badge 4 — label"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Product Name"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Short description"
+        },
+        {
+          "type": "header",
+          "content": "Accordion item 1"
+        },
+        { "type": "image_picker", "id": "faq_1_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_1_question", "label": "Title" },
+        { "type": "text",         "id": "faq_1_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_1_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_1_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 2"
+        },
+        { "type": "image_picker", "id": "faq_2_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_2_question", "label": "Title" },
+        { "type": "text",         "id": "faq_2_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_2_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_2_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 3"
+        },
+        { "type": "image_picker", "id": "faq_3_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_3_question", "label": "Title" },
+        { "type": "text",         "id": "faq_3_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_3_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_3_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 4"
+        },
+        { "type": "image_picker", "id": "faq_4_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_4_question", "label": "Title" },
+        { "type": "text",         "id": "faq_4_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_4_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_4_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 5"
+        },
+        { "type": "image_picker", "id": "faq_5_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_5_question", "label": "Title" },
+        { "type": "text",         "id": "faq_5_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_5_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_5_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 6"
+        },
+        { "type": "image_picker", "id": "faq_6_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_6_question", "label": "Title" },
+        { "type": "text",         "id": "faq_6_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_6_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_6_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 7"
+        },
+        { "type": "image_picker", "id": "faq_7_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_7_question", "label": "Title" },
+        { "type": "text",         "id": "faq_7_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_7_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_7_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Accordion item 8"
+        },
+        { "type": "image_picker", "id": "faq_8_icon",     "label": "Icon" },
+        { "type": "text",         "id": "faq_8_question", "label": "Title" },
+        { "type": "text",         "id": "faq_8_subtitle", "label": "Short description" },
+        { "type": "richtext",     "id": "faq_8_answer",   "label": "Expanded content" },
+        { "type": "checkbox",     "id": "faq_8_open",     "label": "Open by default", "default": false },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "VIEW PRODUCT"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button URL"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary",   "label": "Primary (filled)" },
+            { "value": "secondary", "label": "Secondary (outline)" }
+          ],
+          "default": "primary"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Tabs",
+      "blocks": [
+        { "type": "tab", "settings": { "label": "VIEW ALL",     "tab_id": "all"      } },
+        { "type": "tab", "settings": { "label": "82X COLLAGEN", "tab_id": "collagen" } },
+        { "type": "tab", "settings": { "label": "82X PLACENTA", "tab_id": "placenta" } },
+        { "type": "row", "settings": { "heading": "82X Sakura Placenta",  "button_label": "VIEW PRODUCT", "faq_1_question": "Ingredient Name (000mg)", "faq_1_subtitle": "Short description" } },
+        { "type": "row", "settings": { "heading": "82X Collagen Classic", "button_label": "VIEW PRODUCT", "faq_1_question": "Ingredient Name (000mg)", "faq_1_subtitle": "Short description" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
