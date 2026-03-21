@@ -279,6 +279,17 @@ h5,
   word-break: break-word;
 }
 
+h1, h2, h3, h4, h5, h6, .font-heading, 
+.h1, .h2, .h3, .h4, .h5, .h6, .h0 {
+  font-style: italic;
+  text-transform: capitalize;
+}
+.image-with-text__text strong {
+  text-transform: capitalize;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+}
+
 .hxxl {
   font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
   line-height: 1.1;
@@ -999,6 +1010,7 @@ summary::-webkit-details-marker {
   .grid--2-col-tablet .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
+  
 }
 
 @media screen and (max-width: 989px) {
@@ -2887,7 +2899,7 @@ details[open] > .header__menu-item .icon-caret {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.5rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
@@ -3664,14 +3676,4 @@ details-disclosure > details {
 .slider-buttons button:disabled .svg-wrapper .icon {
   --color-foreground: 0 0 0;
   color: rgb(var(--color-foreground));
-}
-h1, h2, h3, h4, h5, h6, .font-heading, 
-.h1, .h2, .h3, .h4, .h5, .h6, .h0 {
-  font-style: italic;
-  text-transform: capitalize;
-}
-.image-with-text__text strong {
-  text-transform: capitalize;
-  font-family: var(--font-heading-family);
-  font-weight: 600;
 }
