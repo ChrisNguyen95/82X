@@ -355,7 +355,7 @@
         "btn_primary_bg": "#1c2b6b",
         "btn_primary_color": "#ffffff",
         "background_color": "#d6e8f8",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "padding_top": 64,
         "padding_bottom": 64
       }
@@ -477,7 +477,7 @@
         "btn_bg": "#1c2b6b",
         "btn_color": "#ffffff",
         "background_color": "#d6e8f8",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_h": 0
@@ -559,6 +559,9 @@
         "price_waXQUr",
         "variant_picker_xEiYnF",
         "buy_buttons_k7hGdP"
+      ],
+      "custom_css": [
+        ".product-form__submit {width: 100%; max-width: 100%}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
