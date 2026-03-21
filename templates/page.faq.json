@@ -2,13 +2,171 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "faq_page_DCJMTi": {
+      "type": "faq-page",
+      "blocks": {
+        "group_pmYajV": {
+          "type": "group",
+          "settings": {
+            "title": "Most Common FAQs"
+          }
+        },
+        "faq_item_YYDqD7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is the 82X product suitable for?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "faq_item_pRbrfX": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the main function of 82X Placenta Sakura?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_NqMCif": {
+          "type": "group",
+          "settings": {
+            "title": "Products"
+          }
+        },
+        "faq_item_jnpU6w": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the benefits of 82X Sakura Placenta?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "faq_item_QngrH3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I take 82X Sakura Placenta?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_p4EL6M": {
+          "type": "group",
+          "settings": {
+            "title": "General Questions"
+          }
+        },
+        "faq_item_7aD7bD": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is 82X a drug?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_x4MkRN": {
+          "type": "group",
+          "settings": {
+            "title": "Subscriptions"
+          }
+        },
+        "faq_item_QGmdVT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does 82X have a subscription program?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_9kGKxx": {
+          "type": "group",
+          "settings": {
+            "title": "Shipping And Returns"
+          }
+        },
+        "faq_item_qfHpWK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does 82X offer international shipping?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_pNBtHz": {
+          "type": "group",
+          "settings": {
+            "title": "Orders"
+          }
+        },
+        "faq_item_mDA6Bh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is this product suitable for?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        },
+        "group_e4kRQT": {
+          "type": "group",
+          "settings": {
+            "title": "Account"
+          }
+        },
+        "faq_item_jURft9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is this product suitable for?",
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "group_pmYajV",
+        "faq_item_YYDqD7",
+        "faq_item_pRbrfX",
+        "group_NqMCif",
+        "faq_item_jnpU6w",
+        "faq_item_QngrH3",
+        "group_p4EL6M",
+        "faq_item_7aD7bD",
+        "group_x4MkRN",
+        "faq_item_QGmdVT",
+        "group_9kGKxx",
+        "faq_item_qfHpWK",
+        "group_pNBtHz",
+        "faq_item_mDA6Bh",
+        "group_e4kRQT",
+        "faq_item_jURft9"
+      ],
+      "name": "FAQ Page",
+      "settings": {
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "subheading": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_tag": "h1",
+        "heading_italic": true,
+        "heading_align": "center",
+        "description": "",
+        "content_max_width": 1200,
+        "toc_width": 26,
+        "show_search": true,
+        "search_placeholder": "What can we help you find?",
+        "search_max_width": 44,
+        "no_results_text": "No results found. Try a different search.",
+        "show_toc": true,
+        "toc_heading": "",
+        "accent_color": "#234082",
+        "question_color": "#070a13",
+        "answer_color": "#070a13",
+        "toggle_color": "#070a13",
+        "toc_active_color": "#234082",
+        "border_color": "#d9eeff",
+        "search_bg": "#ffffff",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "faq_page_DCJMTi"
   ]
 }
