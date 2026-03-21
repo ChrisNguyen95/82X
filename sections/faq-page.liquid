@@ -1,0 +1,713 @@
+{%- style -%}
+  /* ── Section padding ── */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ── CSS variables from schema ── */
+  #FaqPage-{{ section.id }} {
+    --faq-accent:       {{ section.settings.accent_color }};
+    --faq-toc-active:   {{ section.settings.toc_active_color }};
+    --faq-border:       {{ section.settings.border_color }};
+    --faq-search-bg:    {{ section.settings.search_bg }};
+    --faq-question-clr: {{ section.settings.question_color }};
+    --faq-answer-clr:   {{ section.settings.answer_color }};
+    --faq-toggle-clr:   {{ section.settings.toggle_color }};
+    --faq-toc-width:    {{ section.settings.toc_width }}rem;
+  }
+
+  /* ════════════════════════════════════════════════════
+     WRAPPER
+     ════════════════════════════════════════════════════ */
+  #FaqPage-{{ section.id }} {
+    max-width: {{ section.settings.content_max_width }}px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media screen and (min-width: 750px) {
+    #FaqPage-{{ section.id }} {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  /* ── Section heading alignment override ── */
+  #FaqPage-{{ section.id }} .section-heading {
+    text-align: {{ section.settings.heading_align }};
+  }
+
+  /* ── Search ── */
+  #FaqPage-{{ section.id }} .faq-search {
+    max-width: {{ section.settings.search_max_width }}rem;
+    margin: 0 auto 5rem;
+    {%- if section.settings.heading_align == 'left' %}
+    margin-left: 0;
+    {%- elsif section.settings.heading_align == 'right' %}
+    margin-right: 0;
+    {%- endif %}
+  }
+  #FaqPage-{{ section.id }} .faq-search__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  #FaqPage-{{ section.id }} .faq-search__ico {
+    position: absolute;
+    left: 1.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    color: rgba(var(--color-foreground), 0.45);
+    pointer-events: none;
+    flex-shrink: 0;
+  }
+  #FaqPage-{{ section.id }} .faq-search__input {
+    width: 100%;
+    padding: 1.1rem 1.6rem 1.1rem 4.2rem;
+    --faq-border: #CBD5E180;
+    border: 0.1rem solid var(--faq-border);
+    border-radius: 0.8rem;
+    background: var(--faq-search-bg);
+    font-size: 1.4rem;
+    color: #556884;
+    outline: none;
+    transition: border-color 0.2s;
+    min-height: 4.4rem;
+    font-family: var(--font-body-family);
+  }
+  #FaqPage-{{ section.id }} .faq-search__input::placeholder {
+    color: rgba(var(--color-foreground), 0.45);
+  }
+  #FaqPage-{{ section.id }} .faq-search__input:focus {
+    border-color: var(--faq-accent);
+  }
+
+  /* ════════════════════════════════════════════════════
+     2-COL LAYOUT
+     ════════════════════════════════════════════════════ */
+  #FaqPage-{{ section.id }} .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5.6rem;
+    align-items: start;
+  }
+  @media screen and (min-width: 990px) {
+    #FaqPage-{{ section.id }} .faq-layout {
+      grid-template-columns: 1fr var(--faq-toc-width);
+    }
+  }
+
+  /* ════════════════════════════════════════════════════
+     FAQ GROUPS (left column)
+     ════════════════════════════════════════════════════ */
+  #FaqPage-{{ section.id }} .faq-group {
+    margin-bottom: 5rem;
+    scroll-margin-top: 10rem;
+  }
+  #FaqPage-{{ section.id }} .faq-group:last-child {
+    margin-bottom: 0;
+  }
+  #FaqPage-{{ section.id }} .faq-group__title {
+    display: block;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--faq-accent);
+    margin: 0 0rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid var(--faq-border);
+  }
+
+  @media screen and (max-width: 749px) {
+    #FaqPage-{{ section.id }} .faq-group__title {
+      font-size: 1.6rem;
+    }
+  }
+  /* ════════════════════════════════════════════════════
+     ACCORDION ITEMS
+     ════════════════════════════════════════════════════ */
+  #FaqPage-{{ section.id }} .faq-item {
+    border-bottom: 0.1rem solid var(--faq-border);
+  }
+  #FaqPage-{{ section.id }} .faq-item__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    padding: 2rem 0;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  #FaqPage-{{ section.id }} .faq-item__summary::-webkit-details-marker,
+  #FaqPage-{{ section.id }} .faq-item__summary::marker {
+    display: none;
+  }
+  #FaqPage-{{ section.id }} .faq-item__question {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--faq-question-clr);
+    flex: 1;
+  }
+  
+  #FaqPage-{{ section.id }} .faq-item__toggle {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--faq-toggle-clr);
+    flex-shrink: 0;
+  }
+
+   @media screen and (max-width: 749px) {
+    #FaqPage-{{ section.id }} .faq-item__question {
+      font-size: 1.8rem;
+    }
+  }
+
+  #FaqPage-{{ section.id }} .faq-item__toggle svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  #FaqPage-{{ section.id }} .faq-item[open] .ico-plus   { display: none; }
+  #FaqPage-{{ section.id }} .faq-item:not([open]) .ico-minus { display: none; }
+
+  #FaqPage-{{ section.id }} .faq-item__answer {
+    padding: 0 0 1.8rem;
+    font-size: 1.4rem;
+    color: var(--faq-answer-clr);
+    line-height: 1.7;
+  }
+
+  /* ════════════════════════════════════════════════════
+     TABLE OF CONTENTS (right, sticky, desktop only)
+     ════════════════════════════════════════════════════ */
+  #FaqPage-{{ section.id }} .faq-toc {
+    display: none;
+  }
+  @media screen and (min-width: 990px) {
+    #FaqPage-{{ section.id }} .faq-toc {
+      display: block;
+      position: sticky;
+      top: 10rem;
+    }
+  }
+  #FaqPage-{{ section.id }} .faq-toc__heading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--faq-toc-active);
+    margin: 0 0 2rem;
+  }
+  #FaqPage-{{ section.id }} .faq-toc__link {
+    display: block;
+    padding:2rem 0;
+    font-size: 1.6rem;
+    font-weight: 450;
+    color: rgba(var(--color-foreground));
+    text-decoration: none;
+    --faq-border: #556884;
+    border-bottom: 0.1rem solid var(--faq-border);
+    transition: color 0.2s;
+    font-family: var(--font-heading-family);
+    font-style: italic;
+  }
+  #FaqPage-{{ section.id }} .faq-toc__link:first-of-type {
+    --faq-border: #556884;
+    border-top: none;
+  }
+  #FaqPage-{{ section.id }} .faq-toc__link:hover,
+  #FaqPage-{{ section.id }} .faq-toc__link.is-active {
+    color: var(--faq-toc-active);
+    font-style: italic;
+  }
+  #FaqPage-{{ section.id }} .faq-toc__link[aria-hidden="true"] {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  /* ── No results ── */
+  #FaqPage-{{ section.id }} .faq-no-results {
+    display: none;
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 1.5rem;
+    color: rgba(var(--color-foreground), 0.5);
+  }
+  #FaqPage-{{ section.id }} .faq-no-results.is-visible {
+    display: block;
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign has_groups = false
+  for block in section.blocks
+    if block.type == 'group'
+      assign has_groups = true
+      break
+    endif
+  endfor
+-%}
+
+<section
+  id="FaqPage-{{ section.id }}"
+  class="faq-page section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+>
+
+  {%- comment -%}── Section heading (snippet) ──{%- endcomment -%}
+  {%- render 'section-heading',
+    heading:        section.settings.heading,
+    heading_tag:    section.settings.heading_tag,
+    heading_size:   section.settings.heading_size,
+    heading_align:  section.settings.heading_align,
+    heading_italic: section.settings.heading_italic,
+    subheading:     section.settings.subheading,
+    description:    section.settings.description
+  -%}
+
+  {%- comment -%}── Search bar ──{%- endcomment -%}
+  {%- if section.settings.show_search -%}
+    <div class="faq-search">
+      <div class="faq-search__wrap">
+        <svg class="faq-search__ico" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 20.9997L17.5096 17.5095M17.5096 17.5095C19.0471 15.9714 19.998 13.8468 19.998 11.5C19.998 6.80558 16.1929 3 11.499 3C6.80514 3 3 6.80558 3 11.5C3 16.1944 6.80514 20 11.499 20C13.8464 20 15.9715 19.0482 17.5096 17.5095Z" stroke="#070A13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <input
+          type="search"
+          class="faq-search__input"
+          placeholder="{{ section.settings.search_placeholder | escape }}"
+          aria-label="{{ section.settings.search_placeholder | escape }}"
+          autocomplete="off"
+          data-faq-search
+        >
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if has_groups -%}
+    <div class="faq-layout">
+
+      {%- comment -%}── Left: FAQ content ──{%- endcomment -%}
+      <div class="faq-content" data-faq-content>
+        <p class="faq-no-results" data-faq-no-results>
+          {{ section.settings.no_results_text }}
+        </p>
+
+        {%- assign open_group = nil -%}
+        {%- for block in section.blocks -%}
+
+          {%- if block.type == 'group' -%}
+            {%- if open_group != nil -%}
+              </div>{{- '' -}}<!-- /faq-group__list -->
+            </div>{{- '' -}}<!-- /faq-group -->
+            {%- endif -%}
+            {%- assign open_group = block -%}
+            {%- assign gid = 'faq-g-' | append: block.id -%}
+            <div class="faq-group" id="{{ gid }}" data-faq-group {{ block.shopify_attributes }}>
+              {%- if block.settings.title != blank -%}
+                <span class="faq-group__title" data-faq-group-title>{{ block.settings.title | escape }}</span>
+              {%- endif -%}
+              <div class="faq-group__list">
+
+          {%- elsif block.type == 'faq_item' and open_group != nil -%}
+            <details class="faq-item" data-faq-item {{ block.shopify_attributes }}>
+              <summary class="faq-item__summary">
+                <span class="faq-item__question" data-faq-question>{{ block.settings.question | escape }}</span>
+                <span class="faq-item__toggle" aria-hidden="true">
+                  <svg class="ico-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <svg class="ico-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </summary>
+              {%- if block.settings.answer != blank -%}
+                <div class="faq-item__answer rte" data-faq-answer>{{ block.settings.answer }}</div>
+              {%- endif -%}
+            </details>
+
+          {%- endif -%}
+
+          {%- if forloop.last and open_group != nil -%}
+              </div>{{- '' -}}<!-- /faq-group__list -->
+            </div>{{- '' -}}<!-- /faq-group -->
+          {%- endif -%}
+
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%}── Right: Table of Contents ──{%- endcomment -%}
+      {%- if section.settings.show_toc -%}
+        <nav class="faq-toc" aria-label="FAQ sections" data-faq-toc>
+          {%- if section.settings.toc_heading != blank -%}
+            <span class="faq-toc__heading font-heading">{{ section.settings.toc_heading | escape }}</span>
+          {%- endif -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'group' and block.settings.title != blank -%}
+              {%- assign gid = 'faq-g-' | append: block.id -%}
+              <a class="faq-toc__link" href="#{{ gid }}" data-faq-toc-link="{{ gid }}">
+                {{ block.settings.title | escape }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </nav>
+      {%- endif -%}
+
+    </div>
+  {%- endif -%}
+
+</section>
+
+<script>
+(function () {
+  var section = document.getElementById('FaqPage-{{ section.id }}');
+  if (!section) return;
+
+  var searchInput = section.querySelector('[data-faq-search]');
+  var groups      = section.querySelectorAll('[data-faq-group]');
+  var noResults   = section.querySelector('[data-faq-no-results]');
+  var tocLinks    = section.querySelectorAll('[data-faq-toc-link]');
+
+  /* ── Search ── */
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      var q = this.value.toLowerCase().trim();
+      var totalVisible = 0;
+
+      groups.forEach(function (group) {
+        var titleEl    = group.querySelector('[data-faq-group-title]');
+        var titleTxt   = titleEl ? titleEl.textContent.toLowerCase() : '';
+        var groupMatch = !q || titleTxt.includes(q);
+        var items      = group.querySelectorAll('[data-faq-item]');
+        var count      = 0;
+
+        items.forEach(function (item) {
+          var qTxt  = (item.querySelector('[data-faq-question]') || {}).textContent || '';
+          var aTxt  = (item.querySelector('[data-faq-answer]')   || {}).textContent || '';
+          var match = !q || groupMatch || qTxt.toLowerCase().includes(q) || aTxt.toLowerCase().includes(q);
+          item.hidden = !match;
+          if (match) count++;
+        });
+
+        var showGroup = !q || groupMatch || count > 0;
+        group.hidden  = !showGroup;
+        if (showGroup) totalVisible++;
+
+        var link = section.querySelector('[data-faq-toc-link="' + group.id + '"]');
+        if (link) link.setAttribute('aria-hidden', showGroup ? 'false' : 'true');
+      });
+
+      if (noResults) noResults.classList.toggle('is-visible', totalVisible === 0 && !!q);
+    });
+  }
+
+  /* ── TOC: smooth scroll ── */
+  tocLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.getElementById(this.getAttribute('href').slice(1));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  /* ── TOC: active highlight via IntersectionObserver ── */
+  if (tocLinks.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var activeLink = section.querySelector('[data-faq-toc-link="' + entry.target.id + '"]');
+        tocLinks.forEach(function (l) { l.classList.remove('is-active'); });
+        if (activeLink) activeLink.classList.add('is-active');
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+
+    groups.forEach(function (g) { observer.observe(g); });
+    if (tocLinks[0]) tocLinks[0].classList.add('is-active');
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Page",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2",  "label": "Small" },
+        { "value": "h1",  "label": "Medium" },
+        { "value": "h0",  "label": "Large" },
+        { "value": "hxl", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" },
+        { "value": "p",  "label": "p"  }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 40,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "toc_width",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "rem",
+      "label": "Sidebar (TOC) width",
+      "info": "Desktop only",
+      "default": 26
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show search bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search placeholder",
+      "default": "What can we help you find?"
+    },
+    {
+      "type": "range",
+      "id": "search_max_width",
+      "min": 32,
+      "max": 80,
+      "step": 4,
+      "unit": "rem",
+      "label": "Search bar max width",
+      "default": 56
+    },
+    {
+      "type": "text",
+      "id": "no_results_text",
+      "label": "No results text",
+      "default": "No results found. Try a different search."
+    },
+    {
+      "type": "header",
+      "content": "Table of contents"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_toc",
+      "label": "Show table of contents",
+      "info": "Visible on desktop only",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "toc_heading",
+      "label": "TOC label",
+      "default": "In this page"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Group title color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question text color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer text color",
+      "default": "#6B7280"
+    },
+    {
+      "type": "color",
+      "id": "toggle_color",
+      "label": "Toggle icon color",
+      "default": "#9CA3AF"
+    },
+    {
+      "type": "color",
+      "id": "toc_active_color",
+      "label": "TOC active color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border / divider color",
+      "default": "#E5E7EB"
+    },
+    {
+      "type": "color",
+      "id": "search_bg",
+      "label": "Search background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "FAQ Group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Group title",
+          "default": "Most Common FAQs"
+        }
+      ]
+    },
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Who is this product suitable for?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>This product is suitable for adults looking to support their health and wellness goals.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Page",
+      "blocks": [
+        { "type": "group",    "settings": { "title": "Most Common FAQs" } },
+        { "type": "faq_item", "settings": { "question": "Who is the 82X product suitable for?" } },
+        { "type": "faq_item", "settings": { "question": "What is the main function of 82X Placenta Sakura?" } },
+        { "type": "group",    "settings": { "title": "Products" } },
+        { "type": "faq_item", "settings": { "question": "What are the benefits of 82X Sakura Placenta?" } },
+        { "type": "faq_item", "settings": { "question": "How should I take 82X Sakura Placenta?" } },
+        { "type": "group",    "settings": { "title": "General Questions" } },
+        { "type": "faq_item", "settings": { "question": "Is 82X a drug?" } },
+        { "type": "group",    "settings": { "title": "Subscriptions" } },
+        { "type": "faq_item", "settings": { "question": "Does 82X have a subscription program?" } },
+        { "type": "group",    "settings": { "title": "Shipping And Returns" } },
+        { "type": "faq_item", "settings": { "question": "Does 82X offer international shipping?" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
