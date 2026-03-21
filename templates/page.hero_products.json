@@ -561,7 +561,7 @@
         "buy_buttons_k7hGdP"
       ],
       "custom_css": [
-        ".product-form__submit {width: 100%; max-width: 100%}"
+        ".product-form__submit {width: 100%; max-width: 100%;}"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
@@ -934,7 +934,7 @@
         "verified_color": "#3e9b67",
         "border_color": "#d9eeff",
         "show_more_color": "#56baf7",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "padding_top": 64,
         "padding_bottom": 64
       }
