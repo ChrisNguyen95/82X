@@ -3650,4 +3650,10 @@ details-disclosure > details {
 h1, h2, h3, h4, h5, h6, .font-heading, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-style: italic;
+  text-transform: capitalize;
+}
+.image-with-text__text strong {
+  text-transform: capitalize;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
 }

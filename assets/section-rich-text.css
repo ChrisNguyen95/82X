@@ -41,6 +41,12 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .rich-text__blocks {
+    max-width: 84.6rem;
+  }
+}
+
 .rich-text__blocks * {
   overflow-wrap: break-word;
 }
