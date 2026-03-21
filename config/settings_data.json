@@ -11,9 +11,9 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 24,
     "spacing_grid_vertical": 24,
-    "animations_reveal_on_scroll": true,
+    "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
-    "page_transition_enable": true,
+    "page_transition_enable": false,
     "page_transition_color": "#d9eeff",
     "page_transition_effect": "dots",
     "page_transition_logo": "shopify:\/\/shop_images\/logo_82X_1.png",
@@ -223,6 +223,17 @@
           "background_gradient": "",
           "text": "#070a13",
           "button": "#1c2b6b",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#070a13",
+          "shadow": "#070a13"
+        }
+      },
+      "scheme-2ebfe383-2eee-45f7-8fd8-7b5dc5d22d34": {
+        "settings": {
+          "background": "#d9eeff",
+          "background_gradient": "",
+          "text": "#070a13",
+          "button": "#070a13",
           "button_label": "#ffffff",
           "secondary_button_label": "#070a13",
           "shadow": "#070a13"
