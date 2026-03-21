@@ -86,6 +86,15 @@
         font-style: italic;
         font-display: swap;
       }
+
+      /* ── Almarose 450 — heading light weight ── */
+      @font-face {
+        font-family: 'Almarose';
+        src: url('{{ 'Almarose-Regular.otf' | asset_url }}') format('opentype');
+        font-weight: 450;
+        font-style: normal;
+        font-display: swap;
+      }
       @font-face {
         font-family: 'Montserrat';
         src: url('{{ 'Montserrat-SemiBold.ttf' | asset_url }}') format('truetype');
@@ -171,6 +180,10 @@
         --font-body-style: normal;
         --font-body-weight: 400;
         --font-body-weight-bold: 700;
+
+        /* ── Almarose heading light variant — weight 450 ── */
+        --font-heading-light-family: 'Almarose', sans-serif;
+        --font-heading-light-weight: 450;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};

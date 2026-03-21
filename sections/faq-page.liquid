@@ -116,8 +116,7 @@
   }
   #FaqPage-{{ section.id }} .faq-group__title {
     display: block;
-    font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2rem;
     color: var(--faq-accent);
     margin: 0 0rem;
@@ -318,7 +317,7 @@
             {%- assign gid = 'faq-g-' | append: block.id -%}
             <div class="faq-group" id="{{ gid }}" data-faq-group {{ block.shopify_attributes }}>
               {%- if block.settings.title != blank -%}
-                <span class="faq-group__title" data-faq-group-title>{{ block.settings.title | escape }}</span>
+                <span class="faq-group__title font-heading" data-faq-group-title>{{ block.settings.title | escape }}</span>
               {%- endif -%}
               <div class="faq-group__list">
 
