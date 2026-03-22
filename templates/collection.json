@@ -5,7 +5,9 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "padding_top": 100,
+        "padding_bottom": 28
       }
     },
     "product-grid": {
@@ -13,24 +15,84 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "columns_mobile": "2",
+        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "heading_align": "left",
+        "card_content_align": "center",
+        "card_title_lines": 2,
+        "card_desc_lines": 2,
+        "image_ratio": "square",
+        "card_image_bg": "#eef3ff",
+        "card_image_radius": 16,
+        "price_color": "#1C2B6B",
+        "show_desc": true,
+        "show_view_btn": true,
+        "view_btn_label": "VIEW PRODUCT",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
-        "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "enable_sorting": false,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_g7NfdM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mgc4Rn": {
+          "type": "heading",
+          "settings": {
+            "heading": "82X – Premium collagen & placenta drink from Japan",
+            "heading_size": "h1"
+          }
+        },
+        "text_kMrWH7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_g9EFM9": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style": "primary",
+            "button_link_color": "#1c2b6b"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mgc4Rn",
+        "text_kMrWH7",
+        "button_g9EFM9"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "image_with_text_g7NfdM"
   ]
 }
