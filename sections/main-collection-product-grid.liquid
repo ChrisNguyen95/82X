@@ -4,22 +4,123 @@
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* ── Card CSS variables ── */
+  #CollectionGrid-{{ section.id }} {
+    --card-title-lines: {{ section.settings.card_title_lines | default: 2 }};
+    --card-desc-lines:  {{ section.settings.card_desc_lines  | default: 2 }};
+  }
+
+  /* ── Equal height: flex column layout ── */
+  #CollectionGrid-{{ section.id }} .bottom .card-wrapper,
+  #CollectionGrid-{{ section.id }} .bottom .card__content,
+  #CollectionGrid-{{ section.id }} .bottom .card__information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+  #CollectionGrid-{{ section.id }} .card__inner {
+    flex-shrink: 0;
+  }
+  #CollectionGrid-{{ section.id }} .card-information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  #CollectionGrid-{{ section.id }} .card-product__cta-wrap {
+    margin-top: auto;
+  }
+
+  /* ── Title line clamp ── */
+  #CollectionGrid-{{ section.id }} .card__heading {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--card-title-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── Card image area ── */
+  #CollectionGrid-{{ section.id }} .card__inner {
+    background-color: {{ section.settings.card_image_bg }};
+    border-radius: {{ section.settings.card_image_radius }}px;
+    border: none;
+  }
+  #CollectionGrid-{{ section.id }} .card.card--standard,
+  #CollectionGrid-{{ section.id }} .card.card--card {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  /* ── Price color ── */
+  {%- if section.settings.price_color != blank -%}
+  #CollectionGrid-{{ section.id }} .price__regular .price-item--regular,
+  #CollectionGrid-{{ section.id }} .price .price-item--regular,
+  #CollectionGrid-{{ section.id }} .price .price-item--sale {
+    color: {{ section.settings.price_color }};
+  }
+  {%- endif -%}
+
+  /* ── Product description ── */
+  #CollectionGrid-{{ section.id }} .card-product__desc {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: rgba(var(--color-foreground), 0.65);
+    margin: 0.6rem 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--card-desc-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── VIEW PRODUCT button ── */
+  #CollectionGrid-{{ section.id }} .card-product__cta-wrap {
+    padding: 0 0 0.4rem;
+    margin-top: 1.2rem;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  #CollectionGrid-{{ section.id }} .card-product__cta {
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── Card content alignment ── */
+  #CollectionGrid-{{ section.id }} .card-align--center .card__information,
+  #CollectionGrid-{{ section.id }} .card-align--center .card-information {
+    text-align: center;
+  }
+  #CollectionGrid-{{ section.id }} .card-align--center .card__heading {
+    text-align: center;
+  }
+  #CollectionGrid-{{ section.id }} .card-align--center .card-product__desc {
+    text-align: center;
+  }
+  #CollectionGrid-{{ section.id }} .card-align--center .card-product__cta-wrap {
+    display: flex;
+    justify-content: center;
+  }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div id="CollectionGrid-{{ section.id }}" class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -157,7 +258,11 @@
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: 'none',
-                    section_id: section.id
+                    section_id: section.id,
+                    show_desc: section.settings.show_desc,
+                    show_view_btn: section.settings.show_view_btn,
+                    view_btn_label: section.settings.view_btn_label,
+                    card_align: section.settings.card_content_align
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
@@ -215,7 +320,7 @@
           "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
         }
       ]
-    },    
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
@@ -225,7 +330,50 @@
     },
     {
       "type": "header",
-      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+      "content": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right",  "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "card_content_align",
+      "label": "Card content alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "card_title_lines",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Title — max lines",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "card_desc_lines",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Description — max lines",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collection.settings.header.content"
     },
     {
       "type": "select",
@@ -246,6 +394,46 @@
       ],
       "default": "adapt",
       "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "color",
+      "id": "card_image_bg",
+      "label": "Card image background color",
+      "default": "#EEF3FF"
+    },
+    {
+      "type": "range",
+      "id": "card_image_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card image corner radius",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "info": "Leave blank to use theme default"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desc",
+      "label": "Show product description",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_btn",
+      "label": "Show \"View Product\" button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_btn_label",
+      "label": "Button label",
+      "default": "VIEW PRODUCT"
     },
     {
       "type": "select",
@@ -305,26 +493,6 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
-    },
-    {
-      "type": "select",
-      "id": "quick_add",
-      "default": "none",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
-        },
-        {
-          "value": "standard",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
-        },
-        {
-          "value": "bulk",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
-        }
-      ]
     },
     {
       "type": "header",
