@@ -136,9 +136,16 @@
 #AccordionSection-{{ section.id }} .ac-icon {
   flex-shrink: 0;
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   color: {{ section.settings.icon_color }};
+}
+
+@media screen and (min-width: 990px) {
+  #AccordionSection-{{ section.id }} .ac-icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 /* Horizontal bar — always visible */
 #AccordionSection-{{ section.id }} .ac-icon::before {
