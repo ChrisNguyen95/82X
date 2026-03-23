@@ -70,6 +70,7 @@
         "buttons_HxM6wr",
         "icon_list_NNfKgn"
       ],
+      "disabled": true,
       "name": "Hero Split",
       "settings": {
         "image": "shopify:\/\/shop_images\/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
@@ -94,6 +95,92 @@
         "padding_bottom": 64,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
+      }
+    },
+    "image_with_text_k3r8yg": {
+      "type": "image-with-text",
+      "blocks": {
+        "subtext_rBeQbk": {
+          "type": "subtext",
+          "settings": {
+            "subtext": "Premium Japanese Collagen Expert in Beauty Ritual",
+            "subtext_style": "subtitle"
+          }
+        },
+        "heading_AakAp4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Reveal Your Natural Glow - Just $5 per day",
+            "heading_size": "h0"
+          }
+        },
+        "text_mawtKP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "buttons_azBT8p": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/pages\/hero-products",
+            "button_style_secondary_1": false,
+            "button_label_2": "TAKE QUIZ",
+            "button_link_2": "shopify:\/\/pages\/82x-quiz",
+            "button_style_secondary_2": true
+          }
+        },
+        "icon_list_6bMG78": {
+          "type": "icon_list",
+          "settings": {
+            "icon_label_color": "#1c2b6b",
+            "icon_1": "shopify:\/\/shop_images\/Icon_Container.svg",
+            "label_1": "Beauty Placenta",
+            "icon_2": "shopify:\/\/shop_images\/Icon_rContainer.svg",
+            "label_2": "Fish Collagen",
+            "icon_3": "shopify:\/\/shop_images\/Icon_Corntainer.svg",
+            "label_3": "Sakura Extract",
+            "icon_4": "shopify:\/\/shop_images\/Icon_Contairrner.svg",
+            "label_4": "Natural Ingredients",
+            "icon_5": "shopify:\/\/shop_images\/logo_82XSS_2.png",
+            "label_5": "Made In Japan",
+            "label_6": "",
+            "label_7": "",
+            "label_8": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtext_rBeQbk",
+        "heading_AakAp4",
+        "text_mawtKP",
+        "buttons_azBT8p",
+        "icon_list_6bMG78"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 0rem; }}",
+        ".iwt-buttons .button--secondary {background: #fff;}",
+        ".iwt-subtext {color: #556884;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "icon_size": 44,
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "ingredient_slider_HAABeq": {
@@ -1001,6 +1088,7 @@
   "order": [
     "main",
     "hero_split_eib8jt",
+    "image_with_text_k3r8yg",
     "ingredient_slider_HAABeq",
     "testimonial_slider_GTmALH",
     "logo_content_banner_nGeBVL",
