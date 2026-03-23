@@ -1,0 +1,1114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "hero_split_eib8jt": {
+      "type": "hero-split",
+      "blocks": {
+        "subtext_qg7ekV": {
+          "type": "subtext",
+          "settings": {
+            "subtext": "Japanese Placenta & Collagen Beauty Drink",
+            "subtext_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading_Yg4xfT": {
+          "type": "heading",
+          "settings": {
+            "heading": "82X Sakura Placenta",
+            "heading_size": "h0"
+          }
+        },
+        "text_kbFUwe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A premium Japanese beauty drink with placenta and collagen that helps brighten skin, improve elasticity, reduce signs of aging, and nourish the body from within.</p>",
+            "text_style": "body"
+          }
+        },
+        "buttons_HxM6wr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/82x-quiz",
+            "button_style_secondary_2": true
+          }
+        },
+        "icon_list_NNfKgn": {
+          "type": "icon_list",
+          "settings": {
+            "icon_label_color": "",
+            "icon_1": "shopify://shop_images/Icon_Container.svg",
+            "label_1": "Beauty Placenta",
+            "icon_2": "shopify://shop_images/Icon_rContainer.svg",
+            "label_2": "Fish Collagen",
+            "icon_3": "shopify://shop_images/Icon_Corntainer.svg",
+            "label_3": "Sakura Extract",
+            "icon_4": "shopify://shop_images/Icon_Contairrner.svg",
+            "label_4": "Natural Ingredients",
+            "icon_5": "shopify://shop_images/logo_82XSS_2.png",
+            "label_5": "Made In Japan",
+            "label_6": "",
+            "label_7": "",
+            "label_8": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtext_qg7ekV",
+        "heading_Yg4xfT",
+        "text_kbFUwe",
+        "buttons_HxM6wr",
+        "icon_list_NNfKgn"
+      ],
+      "disabled": true,
+      "name": "Hero Split",
+      "settings": {
+        "image": "shopify://shop_images/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
+        "image_mobile": "shopify://shop_images/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
+        "image_fit": "cover",
+        "image_position": "center center",
+        "overlay_opacity": 0,
+        "desktop_height": "adapt",
+        "mobile_height": "large",
+        "desktop_vertical": "middle",
+        "mobile_vertical": "middle",
+        "desktop_horizontal": "left",
+        "desktop_align": "left",
+        "mobile_align": "left",
+        "content_max_width": 55,
+        "content_max_width_mobile": 100,
+        "section_color_scheme": "scheme-3",
+        "show_text_box": false,
+        "color_scheme": "",
+        "icon_size": 48,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "image_with_text_k3r8yg": {
+      "type": "image-with-text",
+      "blocks": {
+        "subtext_rBeQbk": {
+          "type": "subtext",
+          "settings": {
+            "subtext": "Japanese Placenta & Collagen Beauty Drink",
+            "subtext_style": "subtitle"
+          }
+        },
+        "heading_AakAp4": {
+          "type": "heading",
+          "settings": {
+            "heading": "82X Sakura Placenta",
+            "heading_size": "h0"
+          }
+        },
+        "text_mawtKP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A premium Japanese beauty drink with placenta and collagen that helps brighten skin, improve elasticity, reduce signs of aging, and nourish the body from within.</p>",
+            "text_style": "body"
+          }
+        },
+        "buttons_azBT8p": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://pages/hero-products",
+            "button_style_secondary_1": false,
+            "button_label_2": "TAKE QUIZ",
+            "button_link_2": "shopify://pages/82x-quiz",
+            "button_style_secondary_2": true
+          }
+        },
+        "icon_list_6bMG78": {
+          "type": "icon_list",
+          "settings": {
+            "icon_label_color": "#1c2b6b",
+            "icon_1": "shopify://shop_images/Icon_Container.svg",
+            "label_1": "Beauty Placenta",
+            "icon_2": "shopify://shop_images/Icon_rContainer.svg",
+            "label_2": "Fish Collagen",
+            "icon_3": "shopify://shop_images/Icon_Corntainer.svg",
+            "label_3": "Sakura Extract",
+            "icon_4": "shopify://shop_images/Icon_Contairrner.svg",
+            "label_4": "Natural Ingredients",
+            "icon_5": "shopify://shop_images/logo_82XSS_2.png",
+            "label_5": "Made In Japan",
+            "label_6": "",
+            "label_7": "",
+            "label_8": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtext_rBeQbk",
+        "heading_AakAp4",
+        "text_mawtKP",
+        "buttons_azBT8p",
+        "icon_list_6bMG78"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 0rem; }}",
+        ".iwt-buttons .button--secondary {background: #fff;}",
+        ".iwt-subtext {color: #556884;}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "text_first",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "icon_size": 44,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "ingredient_slider_HAABeq": {
+      "type": "ingredient-slider",
+      "blocks": {
+        "ingredient_CgmT4w": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_1321317051.jpg",
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_BkaTYd": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_1321317_051.jpg",
+            "title": "Grape Extract",
+            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+          }
+        },
+        "ingredient_9WjGkm": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_132131w7051.jpg",
+            "title": "Pineapple Extract",
+            "text": "<p>Improves skin elasticity and firmness.</p>"
+          }
+        },
+        "ingredient_8KAGQf": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_1s321317051.jpg",
+            "title": "Fermented Plant Extract",
+            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+          }
+        },
+        "ingredient_aPgET4": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_132131w7051.jpg",
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_Yjc8Gq": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_132131w7051.jpg",
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_7gTgUq": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/Group_132131w7051.jpg",
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_FTq7CV": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_CgmT4w",
+        "ingredient_BkaTYd",
+        "ingredient_9WjGkm",
+        "ingredient_8KAGQf",
+        "ingredient_aPgET4",
+        "ingredient_Yjc8Gq",
+        "ingredient_7gTgUq",
+        "ingredient_FTq7CV"
+      ],
+      "name": "Ingredient Slider",
+      "settings": {
+        "title": "Ingredients You Can Recognize",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "title_align": "center",
+        "image_ratio": "adapt",
+        "card_bg": "#d9e9f8",
+        "card_radius": 16,
+        "card_text_align": "center",
+        "card_gap_desktop": 24,
+        "card_gap_mobile": 12,
+        "loop_enabled": true,
+        "nav_color": "#1c2e5e",
+        "color_scheme": "scheme-2",
+        "background_color": "rgba(0,0,0,0)",
+        "padding_top": 64,
+        "padding_bottom": 120
+      }
+    },
+    "testimonial_slider_GTmALH": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "review_EPtDFH": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Anna Tran",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_dAY8pi": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Kevin Pham",
+            "location": "Washington, USA",
+            "text": "After using 2 boxes of Sakura Collagen, I see fewer wrinkles and a more even tone. Even my wife noticed and said I look younger!"
+          }
+        },
+        "review_pqrVaa": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Lisa Nguyen",
+            "location": "California, USA",
+            "text": "I started using 82X Sakura Collagen to improve my skin and balance my hormones, and I was really impressed after just one bottle."
+          }
+        },
+        "review_Pd3zp8": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Rachel Thompson",
+            "location": "New York, USA",
+            "text": "I've tried many collagen brands, but Sakura Collagen stands out. My skin feels smooth, and my nails are growing stronger too!"
+          }
+        },
+        "review_VGEhYC": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Anna Tran",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_VBRPbL": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Anna Tran",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        }
+      },
+      "block_order": [
+        "review_EPtDFH",
+        "review_dAY8pi",
+        "review_pqrVaa",
+        "review_Pd3zp8",
+        "review_VGEhYC",
+        "review_VBRPbL"
+      ],
+      "name": "Testimonial Slider",
+      "settings": {
+        "heading": "Quality Ingredients Lead To Happy Customers.",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_align": "center",
+        "desktop_layout": "slider",
+        "desktop_cols": "3",
+        "card_bg": "#ffffff",
+        "card_border_color": "#d9eeff",
+        "card_border_width": 1,
+        "card_radius": 16,
+        "card_padding": 40,
+        "card_text_align": "center",
+        "card_image_ratio": "3/4",
+        "card_image_radius": 12,
+        "card_image_flush": false,
+        "author_color": "#1c2b6b",
+        "review_text_color": "#3d3d3d",
+        "show_stars": true,
+        "star_color": "#f5a623",
+        "star_color_empty": "#d4d4d4",
+        "button_label": "",
+        "button_link": "",
+        "button_secondary": false,
+        "footer_gap": 40,
+        "card_peek_mobile": 32,
+        "card_gap_mobile": 12,
+        "card_gap_desktop": 24,
+        "show_nav": true,
+        "loop_enabled": true,
+        "nav_color": "#1c2b6b",
+        "color_scheme": "",
+        "background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "logo_content_banner_nGeBVL": {
+      "type": "logo-content-banner",
+      "blocks": {
+        "heading_JMPL7y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_tmLrXJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        },
+        "button_KGR44m": {
+          "type": "button",
+          "settings": {
+            "button_label": "CHECKOUT NOW",
+            "button_link": "",
+            "button_style": "primary",
+            "button_full_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JMPL7y",
+        "text_tmLrXJ",
+        "button_KGR44m"
+      ],
+      "name": "Logo Content Banner",
+      "settings": {
+        "logo": "shopify://shop_images/logo_82X_1.png",
+        "logo_width_desktop": 80,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "flex-start",
+        "mobile_align": "flex-start",
+        "gap_desktop": 28,
+        "gap_mobile": 16,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
+        "color_scheme": "scheme-3",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "logo_marquee_VXALpm": {
+      "type": "logo-marquee",
+      "blocks": {
+        "image_QBnaEi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brand1.png",
+            "link": ""
+          }
+        },
+        "image_Mtdj3r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brand2.png",
+            "link": ""
+          }
+        },
+        "image_UtwaeD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brand4.png",
+            "link": ""
+          }
+        },
+        "image_KAcFjV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brand4.png",
+            "link": ""
+          }
+        },
+        "image_QVHqcw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Brand5_a8de99cf-3d47-4530-873a-6e135be68db8.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QBnaEi",
+        "image_Mtdj3r",
+        "image_UtwaeD",
+        "image_KAcFjV",
+        "image_QVHqcw"
+      ],
+      "name": "Logo Marquee",
+      "settings": {
+        "subheading": "As Featured In",
+        "subheading_gap": 16,
+        "direction": "right",
+        "speed": 8,
+        "logo_height": 100,
+        "gap": 48,
+        "pause_on_hover": true,
+        "background_color": "#d6e8f8",
+        "text_color": "#111111",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_content_NGPjWY": {
+      "type": "image-content",
+      "blocks": {
+        "logo_TUmzed": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo_82X_1.png",
+            "logo_width_desktop": 80,
+            "logo_width_mobile": 80
+          }
+        },
+        "heading_mAQErD": {
+          "type": "heading",
+          "settings": {
+            "heading": "82X – Premium Collagen & Placenta Drink From Japan",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "button_MaLYbN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "primary",
+            "button_full_mobile": false,
+            "button_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "logo_TUmzed",
+        "heading_mAQErD",
+        "button_MaLYbN"
+      ],
+      "custom_css": [],
+      "name": "Image + Content",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_jkvrmujkvrmujkvr_2.jpg",
+        "mobile_image": "shopify://shop_images/image_18.jpg",
+        "image_position": "center center",
+        "desktop_height": "adapt",
+        "mobile_height": "adapt",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "h_align_desktop": "center",
+        "v_align_desktop": "center",
+        "h_align_mobile": "center",
+        "v_align_mobile": "top",
+        "content_max_width": 540,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_bg": "#1c2b6b",
+        "btn_color": "#ffffff",
+        "background_color": "#d6e8f8",
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_h": 0
+      }
+    },
+    "logo_grid_iDETbe": {
+      "type": "logo-grid",
+      "blocks": {
+        "logo_xNRCgh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
+            "logo_width_desktop": 168,
+            "logo_width_mobile": 112,
+            "link": ""
+          }
+        },
+        "logo_UWUwVz": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Social_Media_fIcon.png",
+            "logo_width_desktop": 168,
+            "logo_width_mobile": 112,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_xNRCgh",
+        "logo_UWUwVz"
+      ],
+      "name": "Logo Grid",
+      "settings": {
+        "subheading": "",
+        "subheading_gap": 32,
+        "cols_desktop": 2,
+        "cols_mobile": 2,
+        "gap_desktop": 40,
+        "gap_mobile": 20,
+        "background_color": "#ffffff",
+        "text_color": "#111111",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "featured_product_Uy8fFF": {
+      "type": "featured-product",
+      "blocks": {
+        "title_Q6jUPD": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_waXQUr": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker_xEiYnF": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons_k7hGdP": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title_Q6jUPD",
+        "price_waXQUr",
+        "variant_picker_xEiYnF",
+        "buy_buttons_k7hGdP"
+      ],
+      "custom_css": [
+        ".product-form__submit {width: 100%; max-width: 100%;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "82x-placenta",
+        "color_scheme": "scheme-2",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "accordion_section_NhKxVC": {
+      "type": "accordion-section",
+      "blocks": {
+        "tag_7hQ8Yr": {
+          "type": "tag",
+          "settings": {
+            "label": "Digestion"
+          }
+        },
+        "tag_Ekk3Kb": {
+          "type": "tag",
+          "settings": {
+            "label": "Gut Health"
+          }
+        },
+        "item_QhWce7": {
+          "type": "item",
+          "settings": {
+            "title": "Skin Cell Regeneration",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": true
+          }
+        },
+        "item_U9Dfby": {
+          "type": "item",
+          "settings": {
+            "title": "Hormone Balance",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_7bhjeR": {
+          "type": "item",
+          "settings": {
+            "title": "Brightens Skin",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QDhg4J": {
+          "type": "item",
+          "settings": {
+            "title": "Anti-Aging",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_9anaHX": {
+          "type": "item",
+          "settings": {
+            "title": "Boosts Natural Moisture",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_DiKQHE": {
+          "type": "item",
+          "settings": {
+            "title": "Supports Overall Health",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "tag_7hQ8Yr",
+        "tag_Ekk3Kb",
+        "item_QhWce7",
+        "item_U9Dfby",
+        "item_7bhjeR",
+        "item_QDhg4J",
+        "item_9anaHX",
+        "item_DiKQHE"
+      ],
+      "name": "Accordion — Benefits",
+      "settings": {
+        "heading": "82X Sakura Placenta has been used for centuries as a traditional remedy for",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 760,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": false,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "icon_badges_PLtmd9": {
+      "type": "icon-badges",
+      "blocks": {
+        "icon_FcU4QN": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container.svg",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Beauty Placenta",
+            "label_font_heading": false,
+            "link": ""
+          }
+        },
+        "icon_HWjtze": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Icon_rContainer.svg",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Fish Collage",
+            "label_font_heading": false,
+            "link": ""
+          }
+        },
+        "icon_B6CA69": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Corntainer.svg",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Sakura Extract",
+            "label_font_heading": false,
+            "link": ""
+          }
+        },
+        "icon_Q8GrDk": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Contairrner.svg",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Natural Ingredients",
+            "label_font_heading": false,
+            "link": ""
+          }
+        },
+        "icon_wQRKHD": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/logo_82XSS_2.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Made In Japan",
+            "label_font_heading": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_FcU4QN",
+        "icon_HWjtze",
+        "icon_B6CA69",
+        "icon_Q8GrDk",
+        "icon_wQRKHD"
+      ],
+      "name": "Icon Badges",
+      "settings": {
+        "heading": "Your Body And Taste Buds Will Thank You.",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 1200,
+        "heading_color": "#070a13",
+        "text_align": "center",
+        "grid_max_width": 880,
+        "cols_desktop": 5,
+        "cols_tablet": 5,
+        "cols_mobile": 3,
+        "col_gap_desktop": 48,
+        "row_gap_desktop": 32,
+        "col_gap_mobile": 16,
+        "row_gap_mobile": 24,
+        "button_label": "BUY NOW",
+        "button_link": "",
+        "button_style": "primary",
+        "background_color": "#d6e8f8",
+        "label_color": "#1c2b6b",
+        "color_scheme": "scheme-3",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "product_ingredients_KiqFW3": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_EUTyJ4": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Porcine Placenta Extract",
+            "amount": "9,000 mg"
+          }
+        },
+        "ingredient_row_Wzejbx": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "15,000 mg"
+          }
+        },
+        "ingredient_row_zHFNyH": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fermented Plant Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_AUF3gY": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "African Mango Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_cr8DfK": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Brewer's Yeast Peptide",
+            "amount": "4,160 mg"
+          }
+        },
+        "ingredient_row_GPfxGa": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Pineapple Fruit Extract",
+            "amount": "2,000 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_EUTyJ4",
+        "ingredient_row_Wzejbx",
+        "ingredient_row_zHFNyH",
+        "ingredient_row_AUF3gY",
+        "ingredient_row_cr8DfK",
+        "ingredient_row_GPfxGa"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.pi-content-col {padding-bottom: 5rem; }}"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image": "shopify://shop_images/Ingredient_Ismage.png",
+        "mobile_image": "shopify://shop_images/Rectangle_31.png",
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Each Bottle Contains",
+        "card_header_bg": "#ffffff",
+        "card_bg": "#d9eeff",
+        "card_radius": 16,
+        "row_divider_color": "#c8d8e8",
+        "divider_color": "#556884",
+        "full_list_heading": "Full List Of Ingredients:",
+        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1c2b6b",
+        "heading_color": "#ffffff",
+        "text_color": "#1c2b6b",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "clinician_grid_7xrRbe": {
+      "type": "clinician-grid",
+      "blocks": {
+        "clinician_tXnjm4": {
+          "type": "clinician",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_94.jpg",
+            "image_width": 144,
+            "image_ratio": "square",
+            "name": "Dr. Alyssa Dweck",
+            "verified": true,
+            "verified_label": "Verified Clinician",
+            "row1_label": "Specialty",
+            "row1_value": "Integrative Medicine",
+            "row2_label": "Years In Practice",
+            "row2_value": "18",
+            "row3_label": "",
+            "row3_value": "",
+            "review_title": "Nutrient-Rich Placenta Extract May Support Hormonal Balance And Metabolic Wellness",
+            "review_text": "<p>“Advanced beauty supplements increasingly combine collagen with placenta extract to address both skin health and internal wellness. Placenta-derived nutrients contain peptides, growth factors, and amino acids that may help support hormonal balance and metabolic function.</p>",
+            "text_clamp_lines": 3,
+            "highlights_label": "Highlights:",
+            "highlights": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
+          }
+        },
+        "clinician_RhTqw6": {
+          "type": "clinician",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_9_4.jpg",
+            "image_width": 144,
+            "image_ratio": "square",
+            "name": "Dr. Alyssa Dweck",
+            "verified": true,
+            "verified_label": "Verified Clinician",
+            "row1_label": "Specialty",
+            "row1_value": "Integrative Medicine",
+            "row2_label": "Years In Practice",
+            "row2_value": "18",
+            "row3_label": "",
+            "row3_value": "",
+            "review_title": "Placenta peptides and collagen support skin renewal and vitality",
+            "review_text": "<p>This formula combines high-concentration placenta extract with marine collagen peptides, which are widely used in aesthetic nutrition for improving skin hydration, elasticity, and overall skin vitality.Placenta extract contains bioactive peptides and amino acids that may support cellular regeneration and help maintain balanced hormone activity. Combined with collagen</p>",
+            "text_clamp_lines": 3,
+            "highlights_label": "Highlights:",
+            "highlights": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
+          }
+        }
+      },
+      "block_order": [
+        "clinician_tXnjm4",
+        "clinician_RhTqw6"
+      ],
+      "name": "Clinician Grid",
+      "settings": {
+        "heading": "Independent Clinician",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Clinicians receive product samples and are never compensated to submit evaluations",
+        "text_align": "center",
+        "initial_count": 2,
+        "left_col_width": 360,
+        "card_h_gap": 60,
+        "avatar_radius": 8,
+        "show_more_label": "Show more",
+        "show_less_label": "Show less",
+        "load_more_label": "Show More",
+        "button_label": "Show more",
+        "button_link": "",
+        "button_style": "solid",
+        "button_full_mobile": false,
+        "button_new_tab": false,
+        "verified_color": "#3e9b67",
+        "border_color": "#d9eeff",
+        "show_more_color": "#56baf7",
+        "color_scheme": "scheme-3",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "feature_rows_3hWfnG": {
+      "type": "feature-rows",
+      "blocks": {
+        "row_4qQVN7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container1.png",
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Radiant Skin And Anti-Aging",
+            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
+            "content_text_align": "left",
+            "content_max_width": 1020
+          }
+        },
+        "row_x9iUqb": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container2.png",
+            "icon_position": "right",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Hormonal Balance And Wellness",
+            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
+            "content_text_align": "right",
+            "content_max_width": 1020
+          }
+        },
+        "row_JBKmBm": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container3.png",
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "High-Quality Japanese Manufacturing Standards",
+            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
+            "content_text_align": "left",
+            "content_max_width": 1020
+          }
+        }
+      },
+      "block_order": [
+        "row_4qQVN7",
+        "row_x9iUqb",
+        "row_JBKmBm"
+      ],
+      "name": "Feature Rows",
+      "settings": {
+        "heading": "The Secret To Radiant Beauty With 82X",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "text_align": "center",
+        "col_gap_desktop": 16,
+        "row_gap_desktop": 24,
+        "row_gap_mobile": 24,
+        "heading_color": "#070a13",
+        "text_color": "#070a13",
+        "background_color": "#ffffff",
+        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_split_eib8jt",
+    "image_with_text_k3r8yg",
+    "ingredient_slider_HAABeq",
+    "testimonial_slider_GTmALH",
+    "logo_content_banner_nGeBVL",
+    "logo_marquee_VXALpm",
+    "image_content_NGPjWY",
+    "logo_grid_iDETbe",
+    "featured_product_Uy8fFF",
+    "accordion_section_NhKxVC",
+    "icon_badges_PLtmd9",
+    "product_ingredients_KiqFW3",
+    "clinician_grid_7xrRbe",
+    "feature_rows_3hWfnG"
+  ]
+}
