@@ -40,6 +40,10 @@
             "swatch_shape": "circle"
           }
         },
+        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "settings": {}
+        },
         "trust_badges_MXEzeQ": {
           "type": "trust_badges",
           "settings": {
@@ -79,6 +83,7 @@
         "title_BYxPjh",
         "description",
         "variant_picker",
+        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "trust_badges_MXEzeQ",
         "buy_buttons"
       ],
