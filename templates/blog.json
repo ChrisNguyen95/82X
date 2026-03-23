@@ -6,62 +6,129 @@
         "link-featured": {
           "type": "nav_link",
           "settings": {
-            "label": "Featured"
-          }
-        },
-        "link-skin": {
-          "type": "nav_link",
-          "settings": {
-            "label": "Skin & Anti-Aging"
+            "label": "Featured",
+            "link": "shopify:\/\/pages\/blogs"
           }
         },
         "link-ingredient": {
           "type": "nav_link",
           "settings": {
-            "label": "Ingredient-Focused Content"
+            "label": "ACNE Skin",
+            "link": "shopify:\/\/blogs\/acne-skin"
+          }
+        },
+        "link-skin": {
+          "type": "nav_link",
+          "settings": {
+            "label": "News",
+            "link": "shopify:\/\/blogs\/news"
           }
         }
       },
-      "block_order": ["link-featured", "link-skin", "link-ingredient"],
+      "block_order": [
+        "link-featured",
+        "link-ingredient",
+        "link-skin"
+      ],
       "settings": {
+        "color_scheme": "",
+        "subheading": "",
         "heading": "Learning Center",
-        "heading_tag": "h1",
         "heading_size": "h0",
+        "heading_tag": "h1",
         "heading_italic": true,
         "heading_align": "center",
+        "heading_max_width": 720,
+        "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
         "show_search": true,
         "search_placeholder": "Search learning center",
+        "active_color": "#1c2b6b",
+        "border_color": "#e5e7eb",
         "padding_top": 48,
         "padding_bottom": 0
       }
     },
-    "featured-articles": {
-      "type": "82x-blog-posts",
-      "settings": {
-        "heading": "Featured",
-        "heading_size": "h2",
-        "post_limit": 6,
-        "columns_desktop": 3,
-        "show_view_all": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "blog-content": {
+    "82x_blog_content_PiRrk9": {
       "type": "82x-blog-content",
+      "blocks": {
+        "product_iJKR7m": {
+          "type": "product",
+          "settings": {
+            "product": "82x-collagen-classic"
+          }
+        },
+        "product_YcDMnG": {
+          "type": "product",
+          "settings": {
+            "product": "82x-placenta"
+          }
+        },
+        "product_X7t8cP": {
+          "type": "product",
+          "settings": {
+            "product": "koharu-collagen"
+          }
+        },
+        "product_AbwzRT": {
+          "type": "product",
+          "settings": {
+            "product": "82x-collagen-sakura"
+          }
+        },
+        "product_mx33bC": {
+          "type": "product",
+          "settings": {
+            "product": "82x-placenta-sakura"
+          }
+        },
+        "product_4EywrG": {
+          "type": "product",
+          "settings": {
+            "product": "82x-the-pink-collagen"
+          }
+        },
+        "product_dareY6": {
+          "type": "product",
+          "settings": {
+            "product": "82x-stem-cell-collagen-premium"
+          }
+        }
+      },
+      "block_order": [
+        "product_iJKR7m",
+        "product_YcDMnG",
+        "product_X7t8cP",
+        "product_AbwzRT",
+        "product_mx33bC",
+        "product_4EywrG",
+        "product_dareY6"
+      ],
       "settings": {
+        "blog": "",
+        "color_scheme": "",
         "articles_per_page": 9,
         "columns_desktop": 3,
         "columns_mobile": "1",
-        "image_ratio": "16/9",
+        "grid_gap_col": 14,
+        "grid_gap_row": 32,
+        "image_ratio": "1\/1",
         "card_radius": 12,
+        "card_img_bg": "#eef3ff",
         "title_lines": 3,
+        "title_color": "#111827",
+        "date_color": "#9ca3af",
+        "excerpt_color": "#6b7280",
         "show_image": true,
         "show_date": true,
         "show_excerpt": true,
         "excerpt_lines": 3,
         "sidebar_title": "Shop 82X Favorites",
         "sidebar_width": 20,
+        "sidebar_gap_desktop": 80,
+        "sidebar_gap_tablet": 4,
+        "sidebar_img_radius": 8,
+        "sidebar_img_bg": "#eef3ff",
+        "sidebar_border_color": "#e5e7eb",
         "padding_top": 48,
         "padding_bottom": 60
       }
@@ -69,7 +136,6 @@
   },
   "order": [
     "blog-header",
-    "featured-articles",
-    "blog-content"
+    "82x_blog_content_PiRrk9"
   ]
 }

@@ -6,31 +6,44 @@
         "link-featured": {
           "type": "nav_link",
           "settings": {
-            "label": "Featured"
+            "label": "Featured",
+            "link": "shopify:\/\/pages\/blogs"
+          }
+        },
+        "nav_link_78AnpY": {
+          "type": "nav_link",
+          "settings": {
+            "label": "ACNE Skin",
+            "link": "shopify:\/\/blogs\/acne-skin"
           }
         },
         "link-skin": {
           "type": "nav_link",
           "settings": {
-            "label": "Skin & Anti-Aging"
-          }
-        },
-        "link-ingredient": {
-          "type": "nav_link",
-          "settings": {
-            "label": "Ingredient-Focused Content"
+            "label": "News",
+            "link": "shopify:\/\/blogs\/news"
           }
         }
       },
-      "block_order": ["link-featured", "link-skin", "link-ingredient"],
+      "block_order": [
+        "link-featured",
+        "nav_link_78AnpY",
+        "link-skin"
+      ],
       "settings": {
+        "color_scheme": "",
+        "subheading": "",
         "heading": "Learning Center",
-        "heading_tag": "h1",
         "heading_size": "h0",
+        "heading_tag": "h1",
         "heading_italic": true,
         "heading_align": "center",
+        "heading_max_width": 720,
+        "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
         "show_search": true,
         "search_placeholder": "Search learning center",
+        "active_color": "#1c2b6b",
+        "border_color": "#e5e7eb",
         "padding_top": 48,
         "padding_bottom": 0
       }
@@ -38,31 +51,133 @@
     "featured-articles": {
       "type": "82x-blog-posts",
       "settings": {
-        "heading": "Featured",
+        "blog": "news",
+        "posts_to_show": 6,
+        "columns_desktop": 3,
+        "card_gap": 14,
+        "loop_enabled": true,
+        "color_scheme": "",
+        "subheading": "",
+        "heading": "",
         "heading_size": "h2",
-        "post_limit": 6,
-        "columns_desktop": 3,
-        "show_view_all": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "blog-content": {
-      "type": "82x-blog-content",
-      "settings": {
-        "articles_per_page": 9,
-        "columns_desktop": 3,
-        "columns_mobile": "1",
-        "image_ratio": "16/9",
+        "heading_tag": "h2",
+        "heading_italic": true,
+        "heading_align": "center",
+        "image_ratio": "1\/1",
         "card_radius": 12,
+        "card_img_bg": "#eef3ff",
         "title_lines": 3,
+        "title_color": "#111827",
+        "date_color": "#9ca3af",
         "show_image": true,
         "show_date": true,
         "show_excerpt": true,
         "excerpt_lines": 3,
+        "excerpt_color": "#6b7280",
+        "nav_color": "#1c2b6b",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "82x_blog_rows_Vjt4BV": {
+      "type": "82x-blog-rows",
+      "blocks": {
+        "product_X3xdFy": {
+          "type": "product",
+          "settings": {
+            "product": "82x-collagen-classic"
+          }
+        },
+        "product_xJGGLk": {
+          "type": "product",
+          "settings": {
+            "product": "82x-placenta"
+          }
+        },
+        "product_DGTdcT": {
+          "type": "product",
+          "settings": {
+            "product": "koharu-collagen"
+          }
+        },
+        "product_metFkg": {
+          "type": "product",
+          "settings": {
+            "product": "82x-the-pink-collagen"
+          }
+        },
+        "product_iakeKh": {
+          "type": "product",
+          "settings": {
+            "product": "82x-collagen-sakura"
+          }
+        },
+        "blog_row_CGEiXR": {
+          "type": "blog_row",
+          "settings": {
+            "blog": "news",
+            "heading": "Skin & Anti-Aging",
+            "heading_tag": "h2",
+            "posts_to_show": 3,
+            "columns_desktop": 3,
+            "show_view_all": true,
+            "view_all_label": "View All",
+            "title_lines": 3,
+            "show_excerpt": false,
+            "excerpt_lines": 3
+          }
+        },
+        "blog_row_cyUfmK": {
+          "type": "blog_row",
+          "settings": {
+            "blog": "news",
+            "heading": "Ingredient-Focused Content",
+            "heading_tag": "h2",
+            "posts_to_show": 3,
+            "columns_desktop": 3,
+            "show_view_all": true,
+            "view_all_label": "View All",
+            "title_lines": 3,
+            "show_excerpt": false,
+            "excerpt_lines": 3
+          }
+        }
+      },
+      "block_order": [
+        "product_X3xdFy",
+        "product_xJGGLk",
+        "product_DGTdcT",
+        "product_metFkg",
+        "product_iakeKh",
+        "blog_row_CGEiXR",
+        "blog_row_cyUfmK"
+      ],
+      "name": "Blog Rows",
+      "settings": {
+        "color_scheme": "",
+        "row_gap": 80,
+        "border_color": "#e5e7eb",
+        "view_all_color": "#56baf7",
+        "columns_mobile": "2",
+        "grid_gap_col": 14,
+        "grid_gap_row": 32,
+        "image_ratio": "1\/1",
+        "card_radius": 12,
+        "card_img_bg": "#eef3ff",
+        "title_lines": 3,
+        "title_color": "#111827",
+        "date_color": "#9ca3af",
+        "show_image": true,
+        "show_date": true,
+        "show_excerpt": false,
+        "excerpt_lines": 2,
+        "excerpt_color": "#6b7280",
         "sidebar_title": "Shop 82X Favorites",
-        "sidebar_width": 20,
-        "padding_top": 48,
+        "sidebar_gap_desktop": 80,
+        "sidebar_gap_tablet": 4,
+        "sidebar_img_radius": 8,
+        "sidebar_img_bg": "#eef3ff",
+        "padding_top": 60,
         "padding_bottom": 60
       }
     }
@@ -70,6 +185,6 @@
   "order": [
     "blog-header",
     "featured-articles",
-    "blog-content"
+    "82x_blog_rows_Vjt4BV"
   ]
 }
