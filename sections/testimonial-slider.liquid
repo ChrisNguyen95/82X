@@ -236,13 +236,16 @@
 /* ── Nav ── */
 #TestimonialSlider-{{ section.id }} .custom-slider-nav {
   --csn-color: {{ section.settings.nav_color }};
-  margin-top: 4rem;
+  margin-top: 3.2rem;
 }
 /* Hide nav on desktop in grid mode — keep in DOM for loop JS */
 @media screen and (min-width: 990px) {
   #TestimonialSlider-{{ section.id }} .ts-nav--grid-hidden {
     display: none;
   }
+  #TestimonialSlider-{{ section.id }} .custom-slider-nav {
+  margin-top: 4rem;
+}
 }
 /* Hide nav when show_nav setting is off — keep in DOM for loop JS */
 #TestimonialSlider-{{ section.id }} .ts-nav--hidden {
