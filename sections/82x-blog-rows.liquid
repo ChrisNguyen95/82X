@@ -1,0 +1,665 @@
+{%- style -%}
+  /* ── Padding ── */
+  .section-{{ section.id }}-padding {
+    padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top:    {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ══════════════════════════════════════════════
+     STRUCTURAL CSS — all inline for Customize reliability
+     ══════════════════════════════════════════════ */
+
+  /* ── 2-column layout: sidebar 3fr (min 302px) + content 9fr ── */
+  #BlogRows-{{ section.id }} .blr-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media screen and (min-width: 750px) and (max-width: 1199px) {
+    #BlogRows-{{ section.id }} .blr-layout {
+      grid-template-columns: minmax(30.2rem, 3fr) 9fr;
+      gap: {{ section.settings.sidebar_gap_tablet }}rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    #BlogRows-{{ section.id }} .blr-layout {
+      grid-template-columns: minmax(30.2rem, 3fr) 9fr;
+      gap: {{ section.settings.sidebar_gap_desktop }}px;
+    }
+  }
+
+  /* ════════════════════════════════════════
+     SIDEBAR
+     ════════════════════════════════════════ */
+  #BlogRows-{{ section.id }} .blc-sidebar {
+    display: none;
+  }
+  @media screen and (min-width: 990px) {
+    #BlogRows-{{ section.id }} .blc-sidebar {
+      display: block;
+      position: sticky;
+      top: 10rem;
+    }
+  }
+  #BlogRows-{{ section.id }} .blc-sidebar__title {
+    display: block;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: rgba(var(--color-foreground), 0.9);
+    margin: 0 0 3.2rem;
+  }
+  #BlogRows-{{ section.id }} .blc-sidebar-product {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  #BlogRows-{{ section.id }} .blc-sidebar-product:last-child { margin-bottom: 0; }
+  #BlogRows-{{ section.id }} .blc-sidebar-product:hover { opacity: 0.7; }
+  #BlogRows-{{ section.id }} .blc-sidebar-product__img-wrap {
+    width: 8rem;
+    height: 8rem;
+    flex-shrink: 0;
+    border-radius: {{ section.settings.sidebar_img_radius }}px;
+    overflow: hidden;
+    background: {{ section.settings.sidebar_img_bg }};
+  }
+  #BlogRows-{{ section.id }} .blc-sidebar-product__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #BlogRows-{{ section.id }} .blc-sidebar-product__title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: rgba(var(--color-foreground), 0.8);
+    line-height: 1.4;
+  }
+
+  /* ════════════════════════════════════════
+     BLOG ROWS (right column)
+     ════════════════════════════════════════ */
+  #BlogRows-{{ section.id }} .blr-content {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.row_gap }}px;
+  }
+
+  /* ── Each row ── */
+  #BlogRows-{{ section.id }} .blr-row {
+    padding-bottom: {{ section.settings.row_gap }}px;
+    border-bottom: 0.1rem solid {{ section.settings.border_color }};
+  }
+  #BlogRows-{{ section.id }} .blr-row:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* ── Row header: title left, View All right ── */
+  #BlogRows-{{ section.id }} .blr-row__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+  }
+  #BlogRows-{{ section.id }} .blr-row__title {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1.2;
+    color: rgba(var(--color-foreground), 1);
+    margin: 0;
+  }
+  @media screen and (max-width: 749px) {
+    #BlogRows-{{ section.id }} .blr-row__title {
+      font-size: 2.4rem;
+    }
+  }
+  #BlogRows-{{ section.id }} .blr-row__view-all {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: {{ section.settings.view_all_color }};
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+  }
+  #BlogRows-{{ section.id }} .blr-row__view-all:hover { opacity: 0.7; }
+
+  /* ── Article grid per row ── */
+  #BlogRows-{{ section.id }} .blr-grid {
+    display: grid;
+    column-gap: {{ section.settings.grid_gap_col }}px;
+    row-gap:    {{ section.settings.grid_gap_row }}px;
+  }
+
+  /* Per-block column override via inline style on .blr-grid */
+
+  @media screen and (max-width: 749px) {
+    #BlogRows-{{ section.id }} .blr-grid {
+      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr) !important;
+    }
+  }
+
+  /* ════════════════════════════════════════
+     ARTICLE CARD (shared .blc-card classes)
+     ════════════════════════════════════════ */
+  #BlogRows-{{ section.id }} .blc-card {
+    display: flex;
+    flex-direction: column;
+  }
+  #BlogRows-{{ section.id }} .blc-card__img-wrap {
+    width: 100%;
+    aspect-ratio: {{ section.settings.image_ratio }};
+    overflow: hidden;
+    border-radius: {{ section.settings.card_radius }}px;
+    background: {{ section.settings.card_img_bg }};
+    margin-bottom: 2.4rem;
+    flex-shrink: 0;
+  }
+  #BlogRows-{{ section.id }} .blc-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  #BlogRows-{{ section.id }} .blc-card:hover .blc-card__img-wrap img { transform: scale(1.04); }
+  #BlogRows-{{ section.id }} .blc-card__title {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.35;
+    color: {{ section.settings.title_color }};
+    margin: 0 0 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: {{ section.settings.title_lines }};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  #BlogRows-{{ section.id }} .blc-card__title:hover { text-decoration: underline; }
+  #BlogRows-{{ section.id }} .blc-card__meta {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: {{ section.settings.date_color }};
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.8rem;
+  }
+  #BlogRows-{{ section.id }} .blc-card__excerpt {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: {{ section.settings.excerpt_color }};
+    margin: 0.8rem 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: {{ section.settings.excerpt_lines }};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+{%- endstyle -%}
+
+<section
+  id="BlogRows-{{ section.id }}"
+  class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+>
+  <div class="page-width">
+    <div class="blr-layout">
+
+      {%- comment -%}── Left: Sidebar ──{%- endcomment -%}
+      <aside class="blc-sidebar" aria-label="{{ section.settings.sidebar_title | escape }}">
+        {%- if section.settings.sidebar_title != blank -%}
+          <span class="blc-sidebar__title font-heading">{{ section.settings.sidebar_title | escape }}</span>
+        {%- endif -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'product' and block.settings.product != blank -%}
+            {%- assign sp = block.settings.product -%}
+            <a href="{{ sp.url }}" class="blc-sidebar-product" {{ block.shopify_attributes }}>
+              <div class="blc-sidebar-product__img-wrap">
+                {%- if sp.featured_image != blank -%}
+                  {{
+                    sp.featured_image
+                    | image_url: width: 160
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '80, 120, 160',
+                      alt: sp.title | escape
+                  }}
+                {%- endif -%}
+              </div>
+              <span class="blc-sidebar-product__title font-heading">{{ sp.title | escape }}</span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </aside>
+
+      {%- comment -%}── Right: Blog rows ──{%- endcomment -%}
+      <div class="blr-content">
+
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'blog_row' and block.settings.blog != blank -%}
+
+            {%- assign row_blog    = block.settings.blog -%}
+            {%- assign row_cols    = block.settings.columns_desktop -%}
+            {%- assign row_heading = block.settings.heading | default: row_blog.title -%}
+
+            <div class="blr-row" {{ block.shopify_attributes }}>
+
+              {%- comment -%}── Row header ──{%- endcomment -%}
+              <div class="blr-row__header">
+                {%- assign _htag = block.settings.heading_tag | default: 'h2' -%}
+                {%- if _htag == 'h3' -%}
+                  <h3 class="blr-row__title">{{ row_heading | escape }}</h3>
+                {%- elsif _htag == 'h1' -%}
+                  <h1 class="blr-row__title">{{ row_heading | escape }}</h1>
+                {%- else -%}
+                  <h2 class="blr-row__title">{{ row_heading | escape }}</h2>
+                {%- endif -%}
+                {%- if block.settings.show_view_all -%}
+                  <a href="{{ row_blog.url }}" class="blr-row__view-all link">
+                    {{ block.settings.view_all_label | default: 'View All' }}
+                  </a>
+                {%- endif -%}
+              </div>
+
+              {%- comment -%}── Article grid ──{%- endcomment -%}
+              <div
+                class="blr-grid"
+                style="grid-template-columns: repeat({{ row_cols }}, 1fr);"
+              >
+                {%- for article in row_blog.articles limit: block.settings.posts_to_show -%}
+                  {%- assign _loading = 'lazy' -%}
+                  {%- if forloop.index <= row_cols -%}{%- assign _loading = 'eager' -%}{%- endif -%}
+                  {%- render 'card-article-82x',
+                    card_article:  article,
+                    show_image:    section.settings.show_image,
+                    show_date:     section.settings.show_date,
+                    show_excerpt:  block.settings.show_excerpt,
+                    title_lines:   block.settings.title_lines,
+                    excerpt_lines: block.settings.excerpt_lines,
+                    img_loading:   _loading,
+                    img_sizes:     '(min-width: 990px) 25vw, (min-width: 750px) 40vw, 50vw'
+                  -%}
+                {%- endfor -%}
+              </div>
+
+            </div>
+
+          {%- endif -%}
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Blog Rows",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Row layout"
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "min": 40,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap between rows",
+      "default": 80
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Row border color",
+      "default": "#E5E7EB"
+    },
+    {
+      "type": "color",
+      "id": "view_all_color",
+      "label": "\"View All\" link color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "header",
+      "content": "Article grid"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns (mobile)",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_col",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_row",
+      "min": 16,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Row gap",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "16/9", "label": "Landscape 16:9" },
+        { "value": "4/3",  "label": "Landscape 4:3" },
+        { "value": "1/1",  "label": "Square 1:1" },
+        { "value": "3/4",  "label": "Portrait 3:4" }
+      ],
+      "default": "4/3"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "card_img_bg",
+      "label": "Image background",
+      "default": "#EEF3FF"
+    },
+    {
+      "type": "range",
+      "id": "title_lines",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Title — max lines",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#111827"
+    },
+    {
+      "type": "color",
+      "id": "date_color",
+      "label": "Date color",
+      "default": "#9CA3AF"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "excerpt_lines",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Excerpt — max lines",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "excerpt_color",
+      "label": "Excerpt color",
+      "default": "#6B7280"
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_title",
+      "label": "Sidebar title",
+      "default": "Shop 82X Favorites"
+    },
+    {
+      "type": "range",
+      "id": "sidebar_gap_desktop",
+      "min": 40,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Gap sidebar ↔ content (≥1200px)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "sidebar_gap_tablet",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "rem",
+      "label": "Gap sidebar ↔ content (750–1199px)",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "sidebar_img_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Product image corner radius",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "sidebar_img_bg",
+      "label": "Product image background",
+      "default": "#EEF3FF"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog_row",
+      "name": "Blog row",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Row title",
+          "info": "Leave blank to use blog name"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading HTML tag",
+          "options": [
+            { "value": "h2", "label": "h2" },
+            { "value": "h3", "label": "h3" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "range",
+          "id": "posts_to_show",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "label": "Number of articles",
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "columns_desktop",
+          "min": 2,
+          "max": 4,
+          "step": 1,
+          "label": "Columns per row (desktop)",
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "show_view_all",
+          "label": "Show \"View All\" link",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "view_all_label",
+          "label": "\"View All\" label",
+          "default": "View All"
+        },
+        {
+          "type": "header",
+          "content": "Card content"
+        },
+        {
+          "type": "range",
+          "id": "title_lines",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Title — max lines",
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "show_excerpt",
+          "label": "Show description",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "excerpt_lines",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Description — max lines",
+          "default": 3
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Sidebar product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Rows",
+      "blocks": [
+        {
+          "type": "blog_row",
+          "settings": {
+            "heading": "Skin & Anti-Aging",
+            "posts_to_show": 3,
+            "columns_desktop": 3,
+            "show_view_all": true
+          }
+        },
+        {
+          "type": "blog_row",
+          "settings": {
+            "heading": "Ingredient-Focused Content",
+            "posts_to_show": 3,
+            "columns_desktop": 3,
+            "show_view_all": true
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

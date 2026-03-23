@@ -1,0 +1,75 @@
+{%- comment -%}
+  ── card-article-82x.liquid ────────────────────────────────────
+  Reusable article card for 82X blog sections.
+
+  Parameters:
+    card_article   {Object}   required — the article object
+    show_image     {Boolean}  show featured image              (default: true)
+    show_date      {Boolean}  show publish date                (default: true)
+    show_excerpt   {Boolean}  show excerpt / description       (default: false)
+    title_lines    {Number}   max lines for title (line-clamp) (default: 3)
+    excerpt_lines  {Number}   max lines for excerpt            (default: 3)
+    img_loading    {String}   'eager' or 'lazy'                (default: 'lazy')
+    img_sizes      {String}   <img> sizes attribute
+
+  CSS classes (styled by parent section via {%- style -%}):
+    .blc-card  .blc-card__img-wrap  .blc-card__title
+    .blc-card__meta  .blc-card__excerpt
+  ──────────────────────────────────────────────────────────────
+{%- endcomment -%}
+
+{%- liquid
+  assign _show_img    = show_image    | default: true
+  assign _show_date   = show_date     | default: true
+  assign _show_exc    = show_excerpt  | default: false
+  assign _title_lines = title_lines   | default: 3
+  assign _exc_lines   = excerpt_lines | default: 3
+  assign _loading     = img_loading   | default: 'lazy'
+  assign _sizes       = img_sizes     | default: '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 100vw'
+-%}
+
+<article class="blc-card">
+
+  {%- if _show_img and card_article.image != blank -%}
+    <a href="{{ card_article.url }}" class="blc-card__img-wrap" tabindex="-1" aria-hidden="true">
+      {{
+        card_article.image
+        | image_url: width: 800
+        | image_tag:
+          loading: _loading,
+          widths: '300, 450, 600, 800',
+          sizes: _sizes,
+          alt: card_article.title | escape
+      }}
+    </a>
+  {%- endif -%}
+
+  <a
+    href="{{ card_article.url }}"
+    class="blc-card__title"
+    style="-webkit-line-clamp: {{ _title_lines }};"
+  >
+    {{ card_article.title | escape }}
+  </a>
+
+  {%- if _show_date -%}
+    <p class="blc-card__meta">
+      <time datetime="{{ card_article.published_at | date: '%Y-%m-%d' }}">
+        {{ card_article.published_at | date: '%B %d, %Y' }}
+      </time>
+    </p>
+  {%- endif -%}
+
+  {%- if _show_exc -%}
+    {%- assign _exc_text = card_article.excerpt | default: card_article.content -%}
+    {%- if _exc_text != blank -%}
+      <p
+        class="blc-card__excerpt"
+        style="-webkit-line-clamp: {{ _exc_lines }};"
+      >
+        {{ _exc_text | strip_html | truncatewords: 40 }}
+      </p>
+    {%- endif -%}
+  {%- endif -%}
+
+</article>

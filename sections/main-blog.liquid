@@ -30,15 +30,16 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
+          {%- render 'card-article-82x',
+              card_article:  article,
+              show_image:    section.settings.show_image,
+              show_date:     section.settings.show_date,
+              show_excerpt:  section.settings.show_excerpt,
+              title_lines:   section.settings.title_lines,
+              excerpt_lines: section.settings.excerpt_lines,
+              img_loading:   _card_loading,
+              img_sizes:     '(min-width: 990px) 30vw, (min-width: 750px) 45vw, 100vw'
+            -%}
         </div>
       {%- endfor -%}
     </div>

@@ -1,0 +1,446 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign posts_count    = section.settings.blog.articles_count | default: 0
+  assign posts_to_show  = section.settings.posts_to_show
+  if posts_count > posts_to_show
+    assign posts_count = posts_to_show
+  endif
+  assign cols_desktop = section.settings.columns_desktop | plus: 0
+  assign cols_mobile  = 2
+-%}
+
+{%- style -%}
+  /* ── Padding ── */
+  .section-{{ section.id }}-padding {
+    padding-top:    {{ section.settings.padding_top    | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top:    {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════
+     CSS inline — guaranteed load in Customize
+     ══════════════════════════════════════════════════ */
+
+  /* ── Nav button color ── */
+  #BlogPosts-{{ section.id }} .custom-slider-nav {
+    --csn-color: {{ section.settings.nav_color }};
+    margin-top: 3.2rem;
+  }
+
+  /* ── Slider track ── */
+  #BlogPosts-{{ section.id }} .blp-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: {{ section.settings.card_gap }}px;
+    padding-bottom: 0.4rem; /* prevent shadow clipping */
+  }
+  #BlogPosts-{{ section.id }} .blp-track::-webkit-scrollbar { display: none; }
+
+  /* ── Slide item — desktop N cols ── */
+  #BlogPosts-{{ section.id }} .blp-item {
+    flex: 0 0 calc((100% - ({{ cols_desktop }} - 1) * {{ section.settings.card_gap }}px) / {{ cols_desktop }});
+    scroll-snap-align: start;
+  }
+
+  /* ── Mobile: 2 per row peek ── */
+  @media screen and (max-width: 749px) {
+    #BlogPosts-{{ section.id }} .blp-item {
+      flex: 0 0 calc((100% - {{ section.settings.card_gap }}px) / {{ cols_mobile }});
+    }
+  }
+
+  /* ── Card image ── */
+  #BlogPosts-{{ section.id }} .blc-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #BlogPosts-{{ section.id }} .blc-card__img-wrap {
+    width: 100%;
+    aspect-ratio: {{ section.settings.image_ratio }};
+    overflow: hidden;
+    border-radius: {{ section.settings.card_radius }}px;
+    background: {{ section.settings.card_img_bg }};
+    margin-bottom: 2.4rem;
+    flex-shrink: 0;
+  }
+  #BlogPosts-{{ section.id }} .blc-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  #BlogPosts-{{ section.id }} .blc-card:hover .blc-card__img-wrap img {
+    transform: scale(1.04);
+  }
+
+  /* ── Card title ── */
+  #BlogPosts-{{ section.id }} .blc-card__title {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.35;
+    color: {{ section.settings.title_color }};
+    margin: 0 0 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: {{ section.settings.title_lines }};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  #BlogPosts-{{ section.id }} .blc-card__title:hover { text-decoration: underline; }
+
+  /* ── Date ── */
+  #BlogPosts-{{ section.id }} .blc-card__meta {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: {{ section.settings.date_color }};
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.8rem;
+  }
+
+  /* ── Excerpt ── */
+  #BlogPosts-{{ section.id }} .blc-card__excerpt {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: {{ section.settings.excerpt_color }};
+    margin: 0.8rem 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: {{ section.settings.excerpt_lines }};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+{%- endstyle -%}
+
+<div
+  id="BlogPosts-{{ section.id }}"
+  class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+>
+  <div class="page-width">
+
+    {%- comment -%}── Section heading ──{%- endcomment -%}
+    {%- render 'section-heading',
+      heading:        section.settings.heading,
+      heading_tag:    section.settings.heading_tag,
+      heading_size:   section.settings.heading_size,
+      heading_align:  section.settings.heading_align,
+      heading_italic: section.settings.heading_italic,
+      subheading:     section.settings.subheading
+    -%}
+
+    {%- comment -%}── Slider track ──{%- endcomment -%}
+    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
+      <div
+        id="blp-track-{{ section.id }}"
+        class="blp-track"
+      >
+        {%- for article in section.settings.blog.articles limit: section.settings.posts_to_show -%}
+          {%- assign _loading = 'lazy' -%}
+          {%- if forloop.index <= cols_desktop -%}{%- assign _loading = 'eager' -%}{%- endif -%}
+          <div class="blp-item">
+            {%- render 'card-article-82x',
+              card_article:  article,
+              show_image:    section.settings.show_image,
+              show_date:     section.settings.show_date,
+              show_excerpt:  section.settings.show_excerpt,
+              title_lines:   section.settings.title_lines,
+              excerpt_lines: section.settings.excerpt_lines,
+              img_loading:   _loading,
+              img_sizes:     '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 50vw'
+            -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%}── Nav buttons ──{%- endcomment -%}
+      {%- render 'slider-nav-buttons',
+        section_id: section.id,
+        id_prefix:  'blp'
+      -%}
+
+    {%- else -%}
+      {%- comment -%}── Placeholder (Customize preview) ──{%- endcomment -%}
+      <div class="blp-track">
+        {%- for i in (1..cols_desktop) -%}
+          <div class="blp-item">
+            <article class="blc-card">
+              <div class="blc-card__img-wrap" style="background:#EEF3FF;"></div>
+              <a class="blc-card__title">{{ 'sections.onboarding.blog_title' | t }}</a>
+              <p class="blc-card__meta">{{ 'now' | date: '%B %d, %Y' }}</p>
+            </article>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- assign _blp_track = 'blp-track-' | append: section.id -%}
+{%- assign _blp_prev  = 'blp-prev-'  | append: section.id -%}
+{%- assign _blp_next  = 'blp-next-'  | append: section.id -%}
+{%- render 'slider-loop-js',
+  track_id:      _blp_track,
+  prev_id:       _blp_prev,
+  next_id:       _blp_next,
+  loop_enabled:  section.settings.loop_enabled,
+  snap_center:   false,
+  item_selector: '.blp-item',
+  clone_class:   'blp-item--clone'
+-%}
+
+{% schema %}
+{
+  "name": "Blog Posts Slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "posts_to_show",
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": "Number of articles",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Articles per row (desktop)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 14
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_enabled",
+      "label": "Enable infinite loop",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Latest Articles"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2",  "label": "Small" },
+        { "value": "h1",  "label": "Medium" },
+        { "value": "h0",  "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading HTML tag",
+      "options": [
+        { "value": "h1", "label": "h1" },
+        { "value": "h2", "label": "h2" },
+        { "value": "h3", "label": "h3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_italic",
+      "label": "Italic heading",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left",   "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "16/9", "label": "Landscape 16:9" },
+        { "value": "4/3",  "label": "Landscape 4:3" },
+        { "value": "1/1",  "label": "Square 1:1" },
+        { "value": "3/4",  "label": "Portrait 3:4" }
+      ],
+      "default": "16/9"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "card_img_bg",
+      "label": "Image background",
+      "default": "#EEF3FF"
+    },
+    {
+      "type": "range",
+      "id": "title_lines",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Title — max lines",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#111827"
+    },
+    {
+      "type": "color",
+      "id": "date_color",
+      "label": "Date color",
+      "default": "#9CA3AF"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "excerpt_lines",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Excerpt — max lines",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "excerpt_color",
+      "label": "Excerpt color",
+      "default": "#6B7280"
+    },
+    {
+      "type": "header",
+      "content": "Nav buttons"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Nav button color",
+      "default": "#1C2B6B"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Posts Slider",
+      "settings": {
+        "heading": "Featured Articles",
+        "posts_to_show": 6,
+        "columns_desktop": 3
+      }
+    }
+  ]
+}
+{% endschema %}
