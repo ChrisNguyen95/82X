@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "blog-header": {
@@ -7,21 +16,21 @@
           "type": "nav_link",
           "settings": {
             "label": "Featured",
-            "link": "shopify:\/\/pages\/blogs"
+            "link": "shopify://pages/blogs"
           }
         },
         "link-ingredient": {
           "type": "nav_link",
           "settings": {
             "label": "ACNE Skin",
-            "link": "shopify:\/\/blogs\/acne-skin"
+            "link": "shopify://blogs/acne-skin"
           }
         },
         "link-skin": {
           "type": "nav_link",
           "settings": {
             "label": "News",
-            "link": "shopify:\/\/blogs\/news"
+            "link": "shopify://blogs/news"
           }
         }
       },
@@ -39,7 +48,7 @@
         "heading_italic": true,
         "heading_align": "center",
         "heading_max_width": 720,
-        "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.<\/p>",
+        "description": "<p>The formula combines 450,000mg of Placenta, Collagen, and plant extracts to enhance skin beauty, balance hormones, and improve overall health.</p>",
         "show_search": true,
         "search_placeholder": "Search learning center",
         "active_color": "#1c2b6b",
@@ -111,7 +120,7 @@
         "columns_mobile": "1",
         "grid_gap_col": 14,
         "grid_gap_row": 32,
-        "image_ratio": "1\/1",
+        "image_ratio": "1/1",
         "card_radius": 12,
         "card_img_bg": "#eef3ff",
         "title_lines": 3,
@@ -120,7 +129,7 @@
         "excerpt_color": "#6b7280",
         "show_image": true,
         "show_date": true,
-        "show_excerpt": true,
+        "show_excerpt": false,
         "excerpt_lines": 3,
         "sidebar_title": "Shop 82X Favorites",
         "sidebar_width": 20,
