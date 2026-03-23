@@ -198,8 +198,8 @@
         "mobile_layout": "text_first",
         "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
         "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "image_with_text_GkqWwX": {
@@ -248,8 +248,8 @@
         "mobile_layout": "text_first",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 52,
+        "padding_bottom": 56
       }
     },
     "accordion_section_LXcTpy": {
@@ -320,7 +320,7 @@
         "section_bg": "#ffffff",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 120
+        "padding_bottom": 64
       }
     },
     "multicolumn_Y8AfLg": {
