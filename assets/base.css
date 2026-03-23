@@ -911,10 +911,15 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
+}
+@media screen and (min-width: 750px) {
+  .subtitle {
+    font-size: 1.4rem;
+  }
 }
 
 .subtitle--small {
@@ -3696,5 +3701,5 @@ span.appstle_dot {
 }
 #appstle_subscription_widget0 .appstle_subscription_amount {
   font-family: var(--font-body-family);
-  font-weight: 700;
+  font-weight: 600;
 }
