@@ -3677,3 +3677,20 @@ details-disclosure > details {
   --color-foreground: 0 0 0;
   color: rgb(var(--color-foreground));
 }
+/* Appstle widget */
+.appstle_widget_title {
+    font-size: 1.6rem;
+    font-family: var(--font-heading-family);
+    font-weight: 600;
+    font-style: italic;
+}
+span.appstle_dot {
+  background-color:#234082 !important
+}
+#appstle_subscription_widget0 .appstle_circle {
+  border-color: #234082 !important
+}
+.appstle_subscribe_save_text, 
+.appstle_one_time_text {
+  font-size: 1.6rem !important
+}

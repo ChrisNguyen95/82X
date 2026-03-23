@@ -185,6 +185,7 @@ product-info {
   padding-left: 0;
   color: rgba(var(--color-foreground));
   text-transform: capitalize;
+  font-weight: 600;
 }
 
 .product-form__input .select {
