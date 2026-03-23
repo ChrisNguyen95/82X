@@ -3694,3 +3694,7 @@ span.appstle_dot {
 .appstle_one_time_text {
   font-size: 1.6rem !important
 }
+#appstle_subscription_widget0 .appstle_subscription_amount {
+  font-family: var(--font-body-family);
+  font-weight: 700;
+}
