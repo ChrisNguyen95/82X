@@ -369,7 +369,7 @@
         "card_border_color": "#d9eeff",
         "card_border_width": 1,
         "card_radius": 16,
-        "card_padding": 24,
+        "card_padding": 40,
         "card_text_align": "center",
         "card_image_ratio": "3/4",
         "card_image_radius": 12,
