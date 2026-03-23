@@ -1,5 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "breadcrumb_EPNhWB": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {
+        "home_label": "Home",
+        "separator": "/",
+        "show_home_icon": false,
+        "font_size": 13,
+        "link_color": "#6b7280",
+        "sep_color": "#9ca3af",
+        "current_color": "#111827",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "image_banner_custom_j7EHR4": {
+      "type": "image-banner-custom",
+      "name": "Banner (Custom)",
+      "settings": {
+        "image": "{{ article.image }}",
+        "image_overlay_opacity": 0,
+        "full_width": false,
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "mobile_content_alignment": "center",
+        "show_text_below": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -30,6 +73,8 @@
     }
   },
   "order": [
+    "breadcrumb_EPNhWB",
+    "image_banner_custom_j7EHR4",
     "main"
   ]
 }
