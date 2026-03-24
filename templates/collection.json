@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -24,14 +33,14 @@
         "image_ratio": "square",
         "card_image_bg": "#eef3ff",
         "card_image_radius": 16,
-        "price_color": "#1C2B6B",
+        "price_color": "#1c2b6b",
         "show_desc": true,
         "show_view_btn": true,
         "view_btn_label": "VIEW PRODUCT",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
@@ -52,7 +61,7 @@
         "text_kMrWH7": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
             "text_style": "body"
           }
         },
@@ -60,7 +69,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -73,7 +82,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -85,6 +94,7 @@
         "mobile_layout": "text_first",
         "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
         "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
       }
