@@ -112,6 +112,7 @@
   #BlogContent-{{ section.id }} .blc-card {
     display: flex;
     flex-direction: column;
+    min-width: 0; /* prevent grid blowout from image intrinsic width */
   }
 
   /* Image — cách content 24px */
@@ -345,8 +346,7 @@
       "label": "Columns (mobile)",
       "options": [
         { "value": "1", "label": "1" },
-        { "value": "2", "label": "2" },
-        { "value": "3", "label": "3" }
+        { "value": "2", "label": "2" }
       ],
       "default": "1"
     },

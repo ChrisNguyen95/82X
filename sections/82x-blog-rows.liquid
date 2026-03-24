@@ -139,10 +139,9 @@
   }
   #BlogRows-{{ section.id }} .blr-row__view-all:hover { opacity: 0.7; }
 
-  /* ── Article grid per row ── */
+  /* ── Article grid per row (columns set per-block via ID, see below) ── */
   #BlogRows-{{ section.id }} .blr-grid {
     display: grid;
-    grid-template-columns: repeat(var(--blr-cols, 3), 1fr);
     column-gap: {{ section.settings.grid_gap_col }}px;
     row-gap:    {{ section.settings.grid_gap_row }}px;
   }
@@ -151,10 +150,6 @@
      MOBILE OVERRIDES (≤749px)
      ══════════════════════════════════════════════ */
   @media screen and (max-width: 749px) {
-    /* Grid columns override via CSS variable */
-    #BlogRows-{{ section.id }} .blr-grid {
-      --blr-cols: {{ section.settings.columns_mobile }};
-    }
     /* Row header: wrap so View All drops below title on narrow screens */
     #BlogRows-{{ section.id }} .blr-row__header {
       flex-wrap: wrap;
@@ -182,6 +177,7 @@
   #BlogRows-{{ section.id }} .blc-card {
     display: flex;
     flex-direction: column;
+    min-width: 0; /* prevent grid blowout from image intrinsic width */
   }
   #BlogRows-{{ section.id }} .blc-card__img-wrap {
     width: 100%;
@@ -281,6 +277,18 @@
             {%- assign row_cols    = block.settings.columns_desktop -%}
             {%- assign row_heading = block.settings.heading | default: row_blog.title -%}
 
+            {%- comment -%}── Per-block grid columns (desktop + mobile) ──{%- endcomment -%}
+            {%- style -%}
+              #blr-grid-{{ block.id }} {
+                grid-template-columns: repeat({{ row_cols }}, 1fr);
+              }
+              @media screen and (max-width: 749px) {
+                #blr-grid-{{ block.id }} {
+                  grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+                }
+              }
+            {%- endstyle -%}
+
             <div class="blr-row" {{ block.shopify_attributes }}>
 
               {%- comment -%}── Row header ──{%- endcomment -%}
@@ -302,8 +310,8 @@
 
               {%- comment -%}── Article grid ──{%- endcomment -%}
               <div
+                id="blr-grid-{{ block.id }}"
                 class="blr-grid"
-                style="--blr-cols: {{ row_cols }};"
               >
                 {%- for article in row_blog.articles limit: block.settings.posts_to_show -%}
                   {%- assign _loading = 'lazy' -%}
