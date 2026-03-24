@@ -125,6 +125,25 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* ══════════════════════════════════════════════
+     MOBILE OVERRIDES (≤749px)
+     ══════════════════════════════════════════════ */
+  @media screen and (max-width: 749px) {
+    /* Card title: scale down — 2 cards per row on mobile */
+    #BlogPosts-{{ section.id }} .blc-card__title {
+      font-size: 1.5rem;
+      letter-spacing: 0.05rem;
+    }
+    /* Image → content gap: reduce from 2.4rem */
+    #BlogPosts-{{ section.id }} .blc-card__img-wrap {
+      margin-bottom: 1.2rem;
+    }
+    /* Date meta: tighter gap */
+    #BlogPosts-{{ section.id }} .blc-card__meta {
+      margin-top: 0.4rem;
+    }
+  }
 {%- endstyle -%}
 
 <div
@@ -180,7 +199,7 @@
           <div class="blp-item">
             <article class="blc-card">
               <div class="blc-card__img-wrap" style="background:#EEF3FF;"></div>
-              <a class="blc-card__title">{{ 'sections.onboarding.blog_title' | t }}</a>
+              <a class="blc-card__title">{{ 'onboarding.onboarding_title' | t }}</a>
               <p class="blc-card__meta">{{ 'now' | date: '%B %d, %Y' }}</p>
             </article>
           </div>

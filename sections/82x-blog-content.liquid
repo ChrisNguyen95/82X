@@ -22,7 +22,7 @@
     gap: 4rem;
     align-items: start;
   }
-  @media screen and (min-width: 750px) and (max-width: 1199px) {
+  @media screen and (min-width: 990px) and (max-width: 1199px) {
     #BlogContent-{{ section.id }} .blc-layout {
       grid-template-columns: minmax(30.2rem, 3fr) 9fr;
       gap: {{ section.settings.sidebar_gap_tablet }}rem;
@@ -197,8 +197,28 @@
       display: none;
     }
   }
+
+  /* ══════════════════════════════════════════════
+     MOBILE OVERRIDES (≤749px)
+     ══════════════════════════════════════════════ */
+  @media screen and (max-width: 749px) {
+    /* Card title: scale down for 2-column narrow cards */
+    #BlogContent-{{ section.id }} .blc-card__title {
+      font-size: 1.5rem;
+      letter-spacing: 0.05rem;
+    }
+    /* Image → content gap: reduce from 2.4rem */
+    #BlogContent-{{ section.id }} .blc-card__img-wrap {
+      margin-bottom: 1.2rem;
+    }
+    /* Date meta: slightly smaller gap */
+    #BlogContent-{{ section.id }} .blc-card__meta {
+      margin-top: 0.4rem;
+    }
+  }
 {%- endstyle -%}
 {%- assign blog = section.settings.blog | default: blog -%}
+{%- if blog != nil -%}
 {%- paginate blog.articles by section.settings.articles_per_page -%}
 
 <section
@@ -275,6 +295,7 @@
 </section>
 
 {%- endpaginate -%}
+{%- endif -%}
 
 {% schema %}
 {
@@ -324,7 +345,8 @@
       "label": "Columns (mobile)",
       "options": [
         { "value": "1", "label": "1" },
-        { "value": "2", "label": "2" }
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" }
       ],
       "default": "1"
     },

@@ -22,7 +22,7 @@
     gap: 4rem;
     align-items: start;
   }
-  @media screen and (min-width: 750px) and (max-width: 1199px) {
+  @media screen and (min-width: 990px) and (max-width: 1199px) {
     #BlogRows-{{ section.id }} .blr-layout {
       grid-template-columns: minmax(30.2rem, 3fr) 9fr;
       gap: {{ section.settings.sidebar_gap_tablet }}rem;
@@ -142,15 +142,37 @@
   /* ── Article grid per row ── */
   #BlogRows-{{ section.id }} .blr-grid {
     display: grid;
+    grid-template-columns: repeat(var(--blr-cols, 3), 1fr);
     column-gap: {{ section.settings.grid_gap_col }}px;
     row-gap:    {{ section.settings.grid_gap_row }}px;
   }
 
-  /* Per-block column override via inline style on .blr-grid */
-
+  /* ══════════════════════════════════════════════
+     MOBILE OVERRIDES (≤749px)
+     ══════════════════════════════════════════════ */
   @media screen and (max-width: 749px) {
+    /* Grid columns override via CSS variable */
     #BlogRows-{{ section.id }} .blr-grid {
-      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr) !important;
+      --blr-cols: {{ section.settings.columns_mobile }};
+    }
+    /* Row header: wrap so View All drops below title on narrow screens */
+    #BlogRows-{{ section.id }} .blr-row__header {
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    /* Card title: scale down for 2-column narrow cards */
+    #BlogRows-{{ section.id }} .blc-card__title {
+      font-size: 1.5rem;
+      letter-spacing: 0.05rem;
+    }
+    /* Image → content gap: reduce from 2.4rem */
+    #BlogRows-{{ section.id }} .blc-card__img-wrap {
+      margin-bottom: 1.2rem;
+    }
+    /* Date meta: tighter gap */
+    #BlogRows-{{ section.id }} .blc-card__meta {
+      margin-top: 0.4rem;
     }
   }
 
@@ -281,7 +303,7 @@
               {%- comment -%}── Article grid ──{%- endcomment -%}
               <div
                 class="blr-grid"
-                style="grid-template-columns: repeat({{ row_cols }}, 1fr);"
+                style="--blr-cols: {{ row_cols }};"
               >
                 {%- for article in row_blog.articles limit: block.settings.posts_to_show -%}
                   {%- assign _loading = 'lazy' -%}
@@ -357,7 +379,8 @@
       "label": "Columns (mobile)",
       "options": [
         { "value": "1", "label": "1" },
-        { "value": "2", "label": "2" }
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" }
       ],
       "default": "2"
     },
