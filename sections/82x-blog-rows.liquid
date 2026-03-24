@@ -36,56 +36,11 @@
   }
 
   /* ════════════════════════════════════════
-     SIDEBAR
+     SIDEBAR — dynamic values only (structure in 82x-blog.css)
      ════════════════════════════════════════ */
-  #BlogRows-{{ section.id }} .blc-sidebar {
-    display: none;
-  }
-  @media screen and (min-width: 990px) {
-    #BlogRows-{{ section.id }} .blc-sidebar {
-      display: block;
-      position: sticky;
-      top: 10rem;
-    }
-  }
-  #BlogRows-{{ section.id }} .blc-sidebar__title {
-    display: block;
-    font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    color: rgba(var(--color-foreground), 0.9);
-    margin: 0 0 3.2rem;
-  }
-  #BlogRows-{{ section.id }} .blc-sidebar-product {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 2.4rem;
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
-  #BlogRows-{{ section.id }} .blc-sidebar-product:last-child { margin-bottom: 0; }
-  #BlogRows-{{ section.id }} .blc-sidebar-product:hover { opacity: 0.7; }
   #BlogRows-{{ section.id }} .blc-sidebar-product__img-wrap {
-    width: 8rem;
-    height: 8rem;
-    flex-shrink: 0;
     border-radius: {{ section.settings.sidebar_img_radius }}px;
-    overflow: hidden;
     background: {{ section.settings.sidebar_img_bg }};
-  }
-  #BlogRows-{{ section.id }} .blc-sidebar-product__img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  #BlogRows-{{ section.id }} .blc-sidebar-product__title {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: rgba(var(--color-foreground), 0.8);
-    line-height: 1.4;
   }
 
   /* ════════════════════════════════════════
@@ -172,64 +127,40 @@
   }
 
   /* ════════════════════════════════════════
-     ARTICLE CARD (shared .blc-card classes)
+     ARTICLE CARD — dynamic values only (structure in 82x-blog.css)
      ════════════════════════════════════════ */
-  #BlogRows-{{ section.id }} .blc-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0; /* prevent grid blowout from image intrinsic width */
-  }
   #BlogRows-{{ section.id }} .blc-card__img-wrap {
-    width: 100%;
     aspect-ratio: {{ section.settings.image_ratio }};
-    overflow: hidden;
     border-radius: {{ section.settings.card_radius }}px;
     background: {{ section.settings.card_img_bg }};
-    margin-bottom: 2.4rem;
-    flex-shrink: 0;
   }
-  #BlogRows-{{ section.id }} .blc-card__img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-  #BlogRows-{{ section.id }} .blc-card:hover .blc-card__img-wrap img { transform: scale(1.04); }
   #BlogRows-{{ section.id }} .blc-card__title {
-    font-family: var(--font-heading-family);
-    font-style: italic;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-    line-height: 1.35;
     color: {{ section.settings.title_color }};
-    margin: 0 0 0.8rem;
-    display: -webkit-box;
     -webkit-line-clamp: {{ section.settings.title_lines }};
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-decoration: none;
   }
   #BlogRows-{{ section.id }} .blc-card__meta {
-    font-size: 1rem;
-    line-height: 1.4;
     color: {{ section.settings.date_color }};
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-top: 0.8rem;
   }
   #BlogRows-{{ section.id }} .blc-card__excerpt {
-    font-size: 1.35rem;
-    line-height: 1.65;
     color: {{ section.settings.excerpt_color }};
-    margin: 0.8rem 0 0;
-    display: -webkit-box;
     -webkit-line-clamp: {{ section.settings.excerpt_lines }};
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
+{%- endstyle -%}
+
+{%- comment -%}── Per-block grid columns — single style tag (one per section, not one per block) ──{%- endcomment -%}
+{%- style -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'blog_row' -%}
+      #blr-grid-{{ block.id }} {
+        grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+      }
+      @media screen and (max-width: 749px) {
+        #blr-grid-{{ block.id }} {
+          grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+        }
+      }
+    {%- endif -%}
+  {%- endfor -%}
 {%- endstyle -%}
 
 <section
@@ -275,18 +206,6 @@
             {%- assign row_blog    = block.settings.blog -%}
             {%- assign row_cols    = block.settings.columns_desktop -%}
             {%- assign row_heading = block.settings.heading | default: row_blog.title -%}
-
-            {%- comment -%}── Per-block grid columns (desktop + mobile) ──{%- endcomment -%}
-            {%- style -%}
-              #blr-grid-{{ block.id }} {
-                grid-template-columns: repeat({{ row_cols }}, 1fr);
-              }
-              @media screen and (max-width: 749px) {
-                #blr-grid-{{ block.id }} {
-                  grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
-                }
-              }
-            {%- endstyle -%}
 
             <div class="blr-row" {{ block.shopify_attributes }}>
 

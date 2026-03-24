@@ -21,8 +21,12 @@
 
     <!-- Preload critical brand fonts -->
     <link rel="preload" as="font" href="{{ 'Almarose-Semibold.otf' | asset_url }}" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ 'Almarose-Regular.otf' | asset_url }}" type="font/otf" crossorigin="anonymous">
     <link rel="preload" as="font" href="{{ 'Montserrat-Regular.ttf' | asset_url }}" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" as="font" href="{{ 'Montserrat-SemiBold.ttf' | asset_url }}" type="font/ttf" crossorigin="anonymous">
+
+    <!-- 82X shared blog styles (load once, covers all blog sections) -->
+    {{ '82x-blog.css' | asset_url | stylesheet_tag }}
 
     <title>
       {{ page_title }}

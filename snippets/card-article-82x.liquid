@@ -31,6 +31,7 @@
 <article class="blc-card">
 
   {%- if _show_img and card_article.image != blank -%}
+    {%- assign _img_alt = card_article.title | escape -%}
     <a href="{{ card_article.url }}" class="blc-card__img-wrap" tabindex="-1" aria-hidden="true">
       {{
         card_article.image
@@ -39,7 +40,9 @@
           loading: _loading,
           widths: '300, 450, 600, 800',
           sizes: _sizes,
-          alt: card_article.title | escape
+          alt: _img_alt,
+          width: card_article.image.width,
+          height: card_article.image.height
       }}
     </a>
   {%- endif -%}

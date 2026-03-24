@@ -1,0 +1,115 @@
+/* ════════════════════════════════════════════════════════
+   82X Blog — Shared structural styles
+   Loaded once via theme.liquid. Contains no Liquid variables.
+   Dynamic values (colors, radii, gaps) remain inline in sections.
+   ════════════════════════════════════════════════════════ */
+
+/* ══ Sidebar: visibility + sticky ══ */
+.blc-sidebar { display: none; }
+@media screen and (min-width: 990px) {
+  .blc-sidebar {
+    display: block;
+    position: sticky;
+    top: 10rem;
+  }
+}
+.blc-sidebar__title {
+  display: block;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: rgba(var(--color-foreground), 0.9);
+  margin: 0 0 3.2rem;
+}
+
+/* ── Sidebar product row ── */
+.blc-sidebar-product {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.blc-sidebar-product:last-child { margin-bottom: 0; }
+.blc-sidebar-product:hover { opacity: 0.7; }
+.blc-sidebar-product__img-wrap {
+  /* size + overflow: structural. border-radius + bg: set inline per section */
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.blc-sidebar-product__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.blc-sidebar-product__title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(var(--color-foreground), 0.8);
+  line-height: 1.4;
+}
+
+/* ══ Article card ══ */
+.blc-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* prevent grid/flex blowout from image intrinsic width */
+}
+.blc-card__img-wrap {
+  /* structural only — aspect-ratio, border-radius, bg set inline per section */
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 2.4rem;
+}
+.blc-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.blc-card:hover .blc-card__img-wrap img { transform: scale(1.04); }
+
+/* ── Card title ── */
+.blc-card__title {
+  font-family: var(--font-heading-family);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.35;
+  margin: 0 0 0.8rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
+  /* color + -webkit-line-clamp set inline per section */
+}
+
+/* ── Card date ── */
+.blc-card__meta {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.8rem;
+  /* color set inline per section */
+}
+
+/* ── Card excerpt ── */
+.blc-card__excerpt {
+  font-size: 1.35rem;
+  line-height: 1.65;
+  margin: 0.8rem 0 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* color + -webkit-line-clamp set inline per section */
+}
