@@ -136,32 +136,40 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "How soon will I see results?",
+            "content": "<p>Most customers notice better sleep within a few days and visible skin improvements within 2–4 weeks of consistent use.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Is this just a collagen supplement?",
+            "content": "<p>No — this is a multi-functional wellness formula designed to improve skin, sleep, stress levels, and overall health.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Will it make me sleepy during the day?",
+            "content": "<p>No. It helps regulate your natural sleep cycle, so you feel more refreshed and energized during the day.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Who is this best for?",
+            "content": "<p>Anyone experiencing early signs of aging, poor sleep, stress, or looking for a complete inside-out wellness solution.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_kE69jB": {
+          "type": "item",
+          "settings": {
+            "title": "Is it safe for daily use?",
+            "content": "<p>Yes. The formula is designed for daily consumption with carefully selected ingredients used in premium Japanese health products.</p>",
             "open_by_default": false
           }
         }
@@ -170,7 +178,8 @@
         "item_WaPpKd",
         "item_wGGX4D",
         "item_QUdkMG",
-        "item_FwXRPR"
+        "item_FwXRPR",
+        "item_kE69jB"
       ],
       "name": "Accordion — FAQ",
       "settings": {
