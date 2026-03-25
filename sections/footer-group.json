@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -8,12 +17,12 @@
         "brand_rcYEAY": {
           "type": "brand",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/logo_82X_1.png",
+            "logo": "shopify://shop_images/logo_82X_1.png",
             "logo_width": 76,
-            "tagline": "<p>To create high quality, plant-based products that are safe for people and the planet.<\/p>",
+            "tagline": "<p>To create high quality, plant-based products that are safe for people and the planet.</p>",
             "show_social": true,
             "social_heading": "Follow Us On Social",
-            "disclaimer": "<p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>",
+            "disclaimer": "<p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>",
             "col_size": "1.5",
             "heading_color": "#070a13"
           }
@@ -22,7 +31,7 @@
           "type": "text",
           "settings": {
             "heading": "Headquarters",
-            "subtext": "<p>Address 1: 16192 Coastal Highway, Lewes, Delaware 19958, County of sussex, US<\/p><p>Address 2: 2453-1 Minamiusa Usa, Oita, JAPAN<\/p>",
+            "subtext": "<p>Address 1: 16192 Coastal Highway, Lewes, Delaware 19958, County of sussex, US</p><p>Address 2: 2453-1 Minamiusa Usa, Oita, JAPAN</p>",
             "col_size": "1.5",
             "heading_color": "#070a13"
           }
@@ -51,7 +60,6 @@
             "heading": "Join Us On The Path To Better Health.",
             "subtext": "Be the first to know about our biggest and best sales.",
             "button_label": "SUBSCRIBE",
-            "badge_image": "shopify:\/\/shop_images\/Frame_2611170.png",
             "badge_image_width": 300,
             "col_size": "2",
             "heading_color": "#070a13"
