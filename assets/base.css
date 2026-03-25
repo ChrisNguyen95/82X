@@ -3708,3 +3708,8 @@ span.appstle_dot {
   font-family: var(--font-body-family);
   font-weight: 600;
 }
+@media screen and (max-width: 1200px) {
+  inbox-online-store-chat {
+    bottom: 6.5rem !important
+  }
+}

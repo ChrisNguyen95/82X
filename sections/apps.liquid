@@ -24,19 +24,37 @@
   }
   {%- endif %}
 
-   @media screen and (min-width: 750px) {
+  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding .title {
-        margin-bottom: 5rem
-      }
+      margin-bottom: 5rem;
     }
+  }
+
+  /* ── Description text ── */
+  {%- if section.settings.text != blank -%}
+    .section-{{ section.id }}-padding .apps-text {
+      margin-top: -2rem;
+      margin-bottom: 3.2rem;
+      text-align: {{ section.settings.heading_align | default: 'center' }};
+      {%- if section.settings.text_max_width > 0 -%}
+        max-width: {{ section.settings.text_max_width }}px;
+        margin-left: {% if section.settings.heading_align == 'center' %}auto{% else %}0{% endif %};
+        margin-right: {% if section.settings.heading_align == 'center' %}auto{% else %}0{% endif %};
+      {%- endif -%}
+    }
+  {%- endif -%}
 {%- endstyle -%}
 <div class="color-{{ section.settings.color_scheme }} gradient">
     
   <div class="{% if section.settings.include_margins %}page-width{% endif %} section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {%- unless section.settings.title == blank -%}
-        <h2 class="title {{ section.settings.heading_size }}">
-          {{ section.settings.title }}
-        </h2>
+      <h2 class="title {{ section.settings.heading_size }}">
+        {{ section.settings.title }}
+      </h2>
+    {%- endunless -%}
+
+    {%- unless section.settings.text == blank -%}
+      <div class="apps-text rte">{{ section.settings.text }}</div>
     {%- endunless -%}
 
     {%- for block in section.blocks -%}
@@ -108,6 +126,26 @@
       "step": 40,
       "unit": "px",
       "label": "Heading max width",
+      "default": 0,
+      "info": "Set to 0 for no limit."
+    },
+    {
+      "type": "header",
+      "content": "Description text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "min": 0,
+      "max": 1200,
+      "step": 40,
+      "unit": "px",
+      "label": "Text max width",
       "default": 0,
       "info": "Set to 0 for no limit."
     },
