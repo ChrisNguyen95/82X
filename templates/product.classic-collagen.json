@@ -507,7 +507,7 @@
         "heading_DC4VwY": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
+            "heading": "<em>Koharu Collagen</em>",
             "heading_size": "h1"
           }
         },
@@ -558,6 +558,7 @@
     },
     "review_badge_MHhxiE": {
       "type": "review-badge",
+      "disabled": true,
       "name": "Review Badge",
       "settings": {
         "color_scheme": "scheme-3",
