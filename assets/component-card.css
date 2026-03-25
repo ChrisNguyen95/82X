@@ -326,16 +326,14 @@
   box-shadow: none;
 }
 [data-oke-star-rating] {
-    padding-bottom: 1.2rem
+    padding-bottom: 0rem
   }
+
 @media only screen and (min-width: 750px) {
   .card--horizontal .card__heading,
   .card--horizontal .price__container .price-item,
   .card--horizontal__quick-add {
     font-size: calc(var(--font-heading-scale) * 1.3rem);
-  }
-  [data-oke-star-rating] {
-    padding-bottom: 1.6rem
   }
 }
 

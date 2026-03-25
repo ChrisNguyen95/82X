@@ -63,6 +63,19 @@
     opacity: 0.7;
   }
 
+  /* ── Logo block ── */
+  #ImageWithText--{{ section.id }} .iwt-logo {
+    margin-bottom: 2.4rem;
+  }
+  #ImageWithText--{{ section.id }} .iwt-logo img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+  #ImageWithText--{{ section.id }} .iwt-logo--left   { text-align: left; }
+  #ImageWithText--{{ section.id }} .iwt-logo--center { text-align: center; }
+  #ImageWithText--{{ section.id }} .iwt-logo--right  { text-align: right; }
+
   /* ── Subtext block ── */
   #ImageWithText--{{ section.id }} .iwt-subtext {
     margin: 0;
@@ -188,7 +201,7 @@
 -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
+  {%- unless section.settings.full_width -%}<div class="page-width">{%- endunless -%}
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="image-with-text__grid grid grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% else %} image-with-text__grid--noreverse{% endif %}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
@@ -229,6 +242,24 @@
           >
             {%- for block in section.blocks -%}
               {% case block.type %}
+                {%- when 'logo' -%}
+                  {%- if block.settings.logo != blank -%}
+                    {%- liquid
+                      assign logo_w   = block.settings.logo_width
+                      assign logo_alt = block.settings.logo.alt | default: shop.name | escape
+                      assign logo_h   = block.settings.logo.height | times: logo_w | divided_by: block.settings.logo.width
+                    -%}
+                    <div class="iwt-logo iwt-logo--{{ block.settings.logo_align }}" {{ block.shopify_attributes }}>
+                      <img
+                        src="{{ block.settings.logo | image_url: width: logo_w }}"
+                        alt="{{ logo_alt }}"
+                        width="{{ logo_w }}"
+                        height="{{ logo_h }}"
+                        loading="lazy"
+                      >
+                    </div>
+                  {%- endif -%}
+
                 {%- when 'subtext' -%}
                   {%- if block.settings.subtext != blank -%}
                     <p
@@ -356,7 +387,7 @@
         </div>
       </div>
     </div>
-  </div>
+  {%- unless section.settings.full_width -%}</div>{%- endunless -%}
 </div>
 
 {% schema %}
@@ -367,6 +398,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -620,6 +657,39 @@
             { "value": "caption-with-letter-spacing", "label": "Caption" }
           ],
           "default": "caption-with-letter-spacing"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "label": "Logo width",
+          "min": 40,
+          "max": 300,
+          "step": 4,
+          "default": 140,
+          "unit": "px"
+        },
+        {
+          "type": "select",
+          "id": "logo_align",
+          "label": "Logo alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
         }
       ]
     },

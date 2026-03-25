@@ -1,0 +1,579 @@
+{%- liquid
+  assign block_count = section.blocks | size
+-%}
+
+{%- style -%}
+  /* ── Section padding ── */
+  .section-{{ section.id }}-padding {
+    padding-top:    {{ section.settings.padding_top | times: 0.54 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.54 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top:    {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* ── Section margin (outside background) ── */
+  #TwoCols-{{ section.id }} {
+    margin-top:    {{ section.settings.margin_top | times: 0.54 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.54 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #TwoCols-{{ section.id }} {
+      margin-top:    {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+
+  /* ── Grid ── */
+  #TwoCols-{{ section.id }} .twocols-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: 750px) {
+    #TwoCols-{{ section.id }} .twocols-grid {
+      grid-template-columns: repeat({{ block_count | at_most: 4 }}, 1fr);
+      gap: {{ section.settings.columns_gap }}px;
+    }
+  }
+
+  /* ── Logo ── */
+  #TwoCols-{{ section.id }} .twocols-logo {
+    margin-bottom: 2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-logo img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+  #TwoCols-{{ section.id }} .twocols-logo--left   { text-align: left; }
+  #TwoCols-{{ section.id }} .twocols-logo--center { text-align: center; }
+  #TwoCols-{{ section.id }} .twocols-logo--right  { text-align: right; }
+
+  /* ── Intro text ── */
+  #TwoCols-{{ section.id }} .twocols-intro {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 3.2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-intro p { margin: 0; }
+
+  /* ── Headings ── */
+  #TwoCols-{{ section.id }} .twocols-heading {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin: 0 0 2rem;
+  }
+
+  /* ── Icon list ── */
+  #TwoCols-{{ section.id }} .twocols-icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-icon-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-icon-wrap {
+    width: 6.4rem;
+    height: 6.4rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #TwoCols-{{ section.id }} .twocols-icon-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #TwoCols-{{ section.id }} .twocols-icon-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── Body section ── */
+  #TwoCols-{{ section.id }} .twocols-body-wrap {
+    margin-top: 3.2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-body {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 1.2rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-body p { margin: 0; }
+
+  /* ── Button ── */
+  #TwoCols-{{ section.id }} .twocols-btn-wrap {
+    margin-top: 4rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-btn {
+    border-radius: 10rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1.4rem 3.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: opacity 0.2s;
+    min-width: 16rem;
+  }
+  #TwoCols-{{ section.id }} .twocols-btn:hover { opacity: 0.85; }
+{%- endstyle -%}
+
+{%- unless section.settings.full_width -%}
+  <div class="page-width">
+{%- endunless -%}
+
+<div id="TwoCols-{{ section.id }}" class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+  {%- if block_count == 0 -%}
+    {%- if request.design_mode -%}
+      <p style="padding:2rem;text-align:center;opacity:0.5;">Add <strong>Column</strong> blocks to get started.</p>
+    {%- endif -%}
+  {%- else -%}
+    <div class="twocols-grid">
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'column' -%}
+          {%- liquid
+            assign pv        = block.settings.padding_v
+            assign ph        = block.settings.padding_h
+            assign pv_mobile = pv | times: 0.6 | round: 0
+            assign ph_mobile = ph | times: 0.45 | round: 0
+            assign htag      = block.settings.heading_tag | default: 'h3'
+          -%}
+
+          {%- style -%}
+            #twocols-block-{{ block.id }} {
+              padding: {{ pv }}px {{ ph }}px;
+            }
+            
+            @media screen and (max-width: 990px) {
+              #twocols-block-{{ block.id }} {
+                padding: {{ pv_mobile }}px {{ ph_mobile }}px;
+              }
+            }
+          {%- endstyle -%}
+
+          <div id="twocols-block-{{ block.id }}" class="twocols-col color-{{ block.settings.color_scheme }}" {{ block.shopify_attributes }}>
+
+            {%- comment -%}── Logo ──{%- endcomment -%}
+            {%- if block.settings.logo != blank -%}
+              {%- liquid
+                assign logo_w   = block.settings.logo_width
+                assign logo_alt = block.settings.logo.alt | default: shop.name | escape
+                assign logo_h   = block.settings.logo.height | times: logo_w | divided_by: block.settings.logo.width
+              -%}
+              <div class="twocols-logo twocols-logo--{{ block.settings.logo_align }}">
+                <img
+                  src="{{ block.settings.logo | image_url: width: logo_w }}"
+                  alt="{{ logo_alt }}"
+                  width="{{ logo_w }}"
+                  height="{{ logo_h }}"
+                  loading="lazy"
+                >
+              </div>
+            {%- endif -%}
+
+            {%- comment -%}── Intro text ──{%- endcomment -%}
+            {%- if block.settings.intro_text != blank -%}
+              <div class="twocols-intro">{{ block.settings.intro_text }}</div>
+            {%- endif -%}
+
+            {%- comment -%}── Heading 1 ──{%- endcomment -%}
+            {%- if block.settings.heading_1 != blank -%}
+              {%- if htag == 'h2' -%}
+                <h2 class="twocols-heading">{{ block.settings.heading_1 }}</h2>
+              {%- elsif htag == 'h4' -%}
+                <h4 class="twocols-heading">{{ block.settings.heading_1 }}</h4>
+              {%- else -%}
+                <h3 class="twocols-heading">{{ block.settings.heading_1 }}</h3>
+              {%- endif -%}
+            {%- endif -%}
+
+            {%- comment -%}── Icon rows ──{%- endcomment -%}
+            {%- liquid
+              assign has_icons = false
+              if block.settings.icon_1 != blank or block.settings.icon_1_text != blank
+                assign has_icons = true
+              elsif block.settings.icon_2 != blank or block.settings.icon_2_text != blank
+                assign has_icons = true
+              elsif block.settings.icon_3 != blank or block.settings.icon_3_text != blank
+                assign has_icons = true
+              elsif block.settings.icon_4 != blank or block.settings.icon_4_text != blank
+                assign has_icons = true
+              elsif block.settings.icon_5 != blank or block.settings.icon_5_text != blank
+                assign has_icons = true
+              endif
+            -%}
+            {%- if has_icons -%}
+              <div class="twocols-icon-list">
+                {%- for n in (1..5) -%}
+                  {%- liquid
+                    assign _icon_key = 'icon_' | append: n
+                    assign _text_key = 'icon_' | append: n | append: '_text'
+                    assign _icon     = block.settings[_icon_key]
+                    assign _text     = block.settings[_text_key]
+                  -%}
+                  {%- if _icon != blank or _text != blank -%}
+                    <div class="twocols-icon-row">
+                      {%- if _icon != blank -%}
+                        {%- assign _icon_alt = _icon.alt | default: '' -%}
+                        <div class="twocols-icon-wrap">
+                          <img
+                            src="{{ _icon | image_url: width: 128 }}"
+                            alt="{{ _icon_alt }}"
+                            width="64"
+                            height="64"
+                            loading="lazy"
+                          >
+                        </div>
+                      {%- endif -%}
+                      {%- if _text != blank -%}
+                        <p class="twocols-icon-text">{{ _text }}</p>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            {%- comment -%}── Heading 2 + body text ──{%- endcomment -%}
+            {%- if block.settings.heading_2 != blank or block.settings.body_text != blank -%}
+              <div class="twocols-body-wrap">
+                {%- if block.settings.heading_2 != blank -%}
+                  {%- if htag == 'h2' -%}
+                    <h2 class="twocols-heading">{{ block.settings.heading_2 }}</h2>
+                  {%- elsif htag == 'h4' -%}
+                    <h4 class="twocols-heading">{{ block.settings.heading_2 }}</h4>
+                  {%- else -%}
+                    <h3 class="twocols-heading">{{ block.settings.heading_2 }}</h3>
+                  {%- endif -%}
+                {%- endif -%}
+                {%- if block.settings.body_text != blank -%}
+                  <div class="twocols-body">{{ block.settings.body_text }}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- comment -%}── Button ──{%- endcomment -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="twocols-btn-wrap">
+                <a
+                  href="{{ block.settings.button_link | default: '#' }}"
+                  class="button button--{{ block.settings.button_style }} twocols-btn"
+                >
+                  {{- block.settings.button_label -}}
+                </a>
+              </div>
+            {%- endif -%}
+
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+
+    </div>
+  {%- endif -%}
+</div>
+
+{%- unless section.settings.full_width -%}
+  </div>
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Two Columns",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "Gap between columns",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Margin (outside background)"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Padding (inside background)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Color scheme",
+          "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "Logo"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "label": "Logo width",
+          "min": 40,
+          "max": 300,
+          "step": 4,
+          "default": 140,
+          "unit": "px"
+        },
+        {
+          "type": "select",
+          "id": "logo_align",
+          "label": "Logo alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "header",
+          "content": "Intro text"
+        },
+        {
+          "type": "richtext",
+          "id": "intro_text",
+          "label": "Intro text"
+        },
+        {
+          "type": "header",
+          "content": "Heading 1 & icon rows"
+        },
+        {
+          "type": "text",
+          "id": "heading_1",
+          "label": "Heading 1",
+          "info": "Displayed italic bold above the icon list"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "icon_1_text",
+          "label": "Icon 1 text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "icon_2_text",
+          "label": "Icon 2 text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "icon_3_text",
+          "label": "Icon 3 text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon 4"
+        },
+        {
+          "type": "text",
+          "id": "icon_4_text",
+          "label": "Icon 4 text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_5",
+          "label": "Icon 5"
+        },
+        {
+          "type": "text",
+          "id": "icon_5_text",
+          "label": "Icon 5 text"
+        },
+        {
+          "type": "header",
+          "content": "Heading 2 & body text"
+        },
+        {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading 2",
+          "info": "Displayed italic bold below the icon list"
+        },
+        {
+          "type": "richtext",
+          "id": "body_text",
+          "label": "Body text"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "primary", "label": "Primary" },
+            { "value": "secondary", "label": "Secondary" },
+            { "value": "tertiary", "label": "Outline" }
+          ],
+          "default": "primary"
+        },
+        {
+          "type": "header",
+          "content": "Column padding"
+        },
+        {
+          "type": "range",
+          "id": "padding_v",
+          "label": "Vertical padding",
+          "min": 0,
+          "max": 200,
+          "step": 2,
+          "default": 92,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "padding_h",
+          "label": "Horizontal padding",
+          "min": 0,
+          "max": 300,
+          "step": 3,
+          "default": 195,
+          "unit": "px"
+        },
+        {
+          "type": "header",
+          "content": "Advanced"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading HTML tag",
+          "options": [
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" }
+          ],
+          "default": "h3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Columns",
+      "blocks": [
+        { "type": "column" },
+        { "type": "column" }
+      ]
+    }
+  ],
+  "max_blocks": 4
+}
+{% endschema %}
