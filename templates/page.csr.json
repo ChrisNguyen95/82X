@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,7 +30,7 @@
         "text_BkmYwA": {
           "type": "text",
           "settings": {
-            "text": "<p>We are committed to creating positive impact through sustainable practices, community support, and responsible innovation—because true beauty begins with caring for people and the planet.<\/p>",
+            "text": "<p>We are committed to creating positive impact through sustainable practices, community support, and responsible innovation—because true beauty begins with caring for people and the planet.</p>",
             "text_style": "body"
           }
         }
@@ -32,8 +41,8 @@
       ],
       "name": "Hero Split",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Hero_62951b19-05bd-4e13-a034-f7288768c980.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Thi_t_k_ch_a_co_ten_bee01e40-9d40-49c1-b0aa-611802d55b41.png",
+        "image": "shopify://shop_images/Hero_62951b19-05bd-4e13-a034-f7288768c980.jpg",
+        "image_mobile": "shopify://shop_images/Thi_t_k_ch_a_co_ten_bee01e40-9d40-49c1-b0aa-611802d55b41.png",
         "image_fit": "cover",
         "image_position": "center center",
         "overlay_opacity": 0,
@@ -69,7 +78,7 @@
         "text_V3BkJT": {
           "type": "text",
           "settings": {
-            "text": "<p>At 82X, we believe that true beauty comes not only from the outside but also from the positive values we bring to the community and the planet.<\/p><p>We are committed to sustainable development through corporate social responsibility (CSR) activities, focusing on three main pillars: People - Environment - Transparency.<\/p>",
+            "text": "<p>At 82X, we believe that true beauty comes not only from the outside but also from the positive values we bring to the community and the planet.</p><p>We are committed to sustainable development through corporate social responsibility (CSR) activities, focusing on three main pillars: People - Environment - Transparency.</p>",
             "text_style": "body"
           }
         }
@@ -81,7 +90,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify:\/\/shop_images\/Product_image_container.jpg",
+        "image": "shopify://shop_images/Product_image_container.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -104,7 +113,7 @@
         "logo_jrNFxQ": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
+            "image": "shopify://shop_images/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
             "logo_width_desktop": 168,
             "logo_width_mobile": 112,
             "link": ""
@@ -113,7 +122,7 @@
         "logo_DarJPY": {
           "type": "logo",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Social_Media_fIcon.png",
+            "image": "shopify://shop_images/Social_Media_fIcon.png",
             "logo_width_desktop": 168,
             "logo_width_mobile": 112,
             "link": ""
@@ -145,7 +154,7 @@
         "image_nrMtkz": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Feature_image_left.jpg",
+            "image": "shopify://shop_images/Feature_image_left.jpg",
             "alt": "",
             "link": "",
             "caption": ""
@@ -154,7 +163,7 @@
         "image_FKMNUi": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Feature_image_rcight.jpg",
+            "image": "shopify://shop_images/Feature_image_rcight.jpg",
             "alt": "",
             "link": "",
             "caption": ""
@@ -198,7 +207,7 @@
         "text_YHEGQk": {
           "type": "text",
           "settings": {
-            "text": "<p>We prioritize transparency and business ethics.<\/p><ul><li>Clearly disclose product origins.<\/li><li>Comply with international regulations.<\/li><li>Certified by reputable organizations.<\/li><li>No harmful testing.<\/li><\/ul>",
+            "text": "<p>We prioritize transparency and business ethics.</p><ul><li>Clearly disclose product origins.</li><li>Comply with international regulations.</li><li>Certified by reputable organizations.</li><li>No harmful testing.</li></ul>",
             "text_style": "body"
           }
         }
@@ -210,7 +219,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify:\/\/shop_images\/Hero_image.png",
+        "image": "shopify://shop_images/Hero_image.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -233,21 +242,21 @@
         "heading_jHNnUR": {
           "type": "heading",
           "settings": {
-            "heading": "Together, let's ,<\/br>Make a difference.",
+            "heading": "Together, let's ,</br>Make a difference.",
             "heading_size": "h1"
           }
         },
         "text_B3TJyE": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
         "logo_ngzQap": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/logo-82x.jpg",
+            "logo": "shopify://shop_images/logo-82x.jpg",
             "logo_width": 140,
             "logo_align": "center"
           }
@@ -265,7 +274,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": true,
-        "image": "shopify:\/\/shop_images\/Frame_1610068241.png",
+        "image": "shopify://shop_images/Frame_1610068241.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -289,23 +298,23 @@
           "type": "column",
           "settings": {
             "color_scheme": "scheme-083f8f91-ac8b-4b36-be8b-b52716e98919",
-            "logo": "shopify:\/\/shop_images\/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
+            "logo": "shopify://shop_images/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
             "logo_width": 168,
             "logo_align": "center",
-            "intro_text": "<p>We are proud to partner with Vitamin Angels – a global nutrition organization – to provide essential micronutrients to women and children in difficult circumstances.<\/p>",
+            "intro_text": "<p>We are proud to partner with Vitamin Angels – a global nutrition organization – to provide essential micronutrients to women and children in difficult circumstances.</p>",
             "heading_1": "Our impact",
-            "icon_1": "shopify:\/\/shop_images\/About_text_image.png",
+            "icon_1": "shopify://shop_images/About_text_image.png",
             "icon_1_text": "Over 70 million women and children supported each year",
-            "icon_2": "shopify:\/\/shop_images\/2.png",
+            "icon_2": "shopify://shop_images/2.png",
             "icon_2_text": "Operating in more than 65 countries",
-            "icon_3": "shopify:\/\/shop_images\/sssss.png",
+            "icon_3": "shopify://shop_images/sssss.png",
             "icon_3_text": "Contributing to the improvement of nutrition and health for future generations",
             "icon_4_text": "",
             "icon_5_text": "",
             "heading_2": "Commitment",
-            "body_text": "<p>We continue to expand our contributions to ensure that everyone has access to basic nutrition.<\/p>",
+            "body_text": "<p>We continue to expand our contributions to ensure that everyone has access to basic nutrition.</p>",
             "button_label": "Learn more",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "padding_v": 92,
             "padding_h": 114,
@@ -316,23 +325,23 @@
           "type": "column",
           "settings": {
             "color_scheme": "scheme-fdde575a-7961-48d3-abd2-4b82487dacf7",
-            "logo": "shopify:\/\/shop_images\/Social_Media_fIcon.png",
+            "logo": "shopify://shop_images/Social_Media_fIcon.png",
             "logo_width": 168,
             "logo_align": "center",
-            "intro_text": "<p>82X hợp tác với Eden Reforestation Projects nhằm phục hồi rừng và giảm thiểu biến đổi khí hậu.<\/p>",
+            "intro_text": "<p>82X hợp tác với Eden Reforestation Projects nhằm phục hồi rừng và giảm thiểu biến đổi khí hậu.</p>",
             "heading_1": "Outstanding results",
-            "icon_1": "shopify:\/\/shop_images\/1_7f603bdc-791f-4af5-b1d0-4ac793914537.png",
+            "icon_1": "shopify://shop_images/1_7f603bdc-791f-4af5-b1d0-4ac793914537.png",
             "icon_1_text": "Over 1 billion trees have been planted and protected",
-            "icon_2": "shopify:\/\/shop_images\/2.png",
+            "icon_2": "shopify://shop_images/2.png",
             "icon_2_text": "229 projects in 9 countries",
-            "icon_3": "shopify:\/\/shop_images\/3.png",
+            "icon_3": "shopify://shop_images/3.png",
             "icon_3_text": "Creating sustainable jobs for over 50,000 local workers",
             "icon_4_text": "",
             "icon_5_text": "",
             "heading_2": "Impact",
-            "body_text": "<p>We contribute to reducing deforestation, increasing CO₂ absorption, and restoring ecosystems, aiming for a more sustainable environment.<\/p>",
+            "body_text": "<p>We contribute to reducing deforestation, increasing CO₂ absorption, and restoring ecosystems, aiming for a more sustainable environment.</p>",
             "button_label": "Learn more",
-            "button_link": "shopify:\/\/pages\/brand-story",
+            "button_link": "shopify://pages/brand-story",
             "button_style": "primary",
             "padding_v": 92,
             "padding_h": 114,
