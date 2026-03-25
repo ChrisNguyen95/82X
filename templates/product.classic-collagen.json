@@ -224,6 +224,67 @@
         "padding_bottom": 0
       }
     },
+    "logo_grid_R6MfVa": {
+      "type": "logo-grid",
+      "blocks": {
+        "logo_ABDqyK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/made-in-japan_7703f208-f0b3-4495-99c4-8a9909b18e25.png",
+            "logo_width_desktop": 120,
+            "logo_width_mobile": 80,
+            "link": ""
+          }
+        },
+        "logo_M8KYEr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/cert_gmp.png",
+            "logo_width_desktop": 120,
+            "logo_width_mobile": 80,
+            "link": ""
+          }
+        },
+        "logo_awF3pC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/award_gold.png",
+            "logo_width_desktop": 120,
+            "logo_width_mobile": 80,
+            "link": ""
+          }
+        },
+        "logo_VJwjr3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/FDA-Approved.jpg",
+            "logo_width_desktop": 120,
+            "logo_width_mobile": 80,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_ABDqyK",
+        "logo_M8KYEr",
+        "logo_awF3pC",
+        "logo_VJwjr3"
+      ],
+      "name": "Logo Grid",
+      "settings": {
+        "subheading": "",
+        "subheading_gap": 32,
+        "cols_desktop": 4,
+        "cols_mobile": 4,
+        "gap_desktop": 40,
+        "gap_mobile": 8,
+        "background_color": "#FFFFFF",
+        "text_color": "#111111",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -643,6 +704,7 @@
     "main",
     "related-products",
     "accordion_section_cmYxRz",
+    "logo_grid_R6MfVa",
     "image_with_text_9pQ8im",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
