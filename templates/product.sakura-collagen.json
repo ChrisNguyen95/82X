@@ -242,9 +242,10 @@
         },
         "button_6qGJwe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
