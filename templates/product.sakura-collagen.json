@@ -229,14 +229,14 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
-            "heading_size": "h1"
+            "heading": "Complete solution · Just 1 bottle a day",
+            "heading_size": "h2"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p>Sakura — the only supplement line that combines intensive skin recovery with body contouringNot your average collagen drink. Our exclusive formula works across 5 parallel mechanisms — rebuilding skin structure, burning visceral fat, and restoring hormonal balance simultaneously.</p><ul><li>120,000mg deep-sea tuna collagen with 99% absorption rate</li><li>Inhibits lipase enzyme — blocks new fat from being stored</li><li>82 fermented plant extracts — detox and gut health support</li></ul>",
             "text_style": "body"
           }
         },
