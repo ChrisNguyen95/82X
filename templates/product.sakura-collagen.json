@@ -306,6 +306,7 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Artboard_1_364070b3-3c8d-42a5-8e30-9ed2504edda9.png",
@@ -573,6 +574,7 @@
     },
     "review_badge_MHhxiE": {
       "type": "review-badge",
+      "disabled": true,
       "name": "Review Badge",
       "settings": {
         "color_scheme": "scheme-3",
