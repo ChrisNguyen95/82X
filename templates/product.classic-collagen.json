@@ -50,8 +50,21 @@
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
+        "icon_with_text_V96kzb": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "return",
+            "heading_1": "30 Day Money Back",
+            "icon_2": "truck",
+            "heading_2": "Free Shipping in the US",
+            "icon_3": "star",
+            "heading_3": "Made in Japan"
+          }
+        },
         "trust_badges_MXEzeQ": {
           "type": "trust_badges",
+          "disabled": true,
           "settings": {
             "show_border": false,
             "border_color": "#e0e0e0",
@@ -91,6 +104,7 @@
         "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
+        "icon_with_text_V96kzb",
         "trust_badges_MXEzeQ",
         "buy_buttons"
       ],
