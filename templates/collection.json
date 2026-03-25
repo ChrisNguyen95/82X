@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "banner": {
@@ -61,7 +52,7 @@
         "text_kMrWH7": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
             "text_style": "body"
           }
         },
@@ -69,7 +60,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -82,7 +73,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",

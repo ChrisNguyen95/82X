@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -24,7 +15,7 @@
           "settings": {}
         },
         "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -51,7 +42,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "price_tag",
-            "heading_1": "Use code <strong>SPRINGSALE26</strong> to enjoy <strong>15% off</strong>",
+            "heading_1": "Use code <strong>SPRINGSALE26<\/strong> to enjoy <strong>15% off<\/strong>",
             "icon_2": "return",
             "heading_2": "",
             "icon_3": "truck",
@@ -59,7 +50,7 @@
           }
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify:\/\/apps\/appstle-subscription\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "trust_badges_MXEzeQ": {
@@ -72,9 +63,9 @@
             "icon_size": 26,
             "margin_top": 24,
             "margin_bottom": 0,
-            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
+            "badge_1_icon": "shopify:\/\/shop_images\/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
             "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify://shop_images/sack-money.png",
+            "badge_2_icon": "shopify:\/\/shop_images\/sack-money.png",
             "badge_2_text": "60 Day Money Back",
             "badge_3_text": "",
             "badge_4_text": ""
@@ -87,7 +78,7 @@
             "show_gift_card_recipient": false,
             "url": "{{ product.metafields.custom.link_to_amazon.value }}",
             "text": "Buy on Amazon",
-            "icon": "shopify://shop_images/image_5.png",
+            "icon": "shopify:\/\/shop_images\/image_5.png",
             "show_amazon_icon": true,
             "btn_style": "custom",
             "btn_bg_color": "#000000",
@@ -150,7 +141,7 @@
           "type": "item",
           "settings": {
             "title": "Can this product help me lose weight and improve my skin at the same time?",
-            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea tuna collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
+            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea tuna collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.<\/p>",
             "open_by_default": true
           }
         },
@@ -158,7 +149,7 @@
           "type": "item",
           "settings": {
             "title": "How is this collagen different from regular collagen drinks on the market?",
-            "content": "<p>Most collagen drinks use standard fish collagen that your body absorbs poorly. Ours uses deep-sea tuna collagen with Kosoteki peptides under 500 Daltons — small enough to penetrate the skin's deepest layers. These peptides are also encased in Liposomes, giving them a 99% absorption rate. You're not just consuming collagen; your body is actually using it.</p>",
+            "content": "<p>Most collagen drinks use standard fish collagen that your body absorbs poorly. Ours uses deep-sea tuna collagen with Kosoteki peptides under 500 Daltons — small enough to penetrate the skin's deepest layers. These peptides are also encased in Liposomes, giving them a 99% absorption rate. You're not just consuming collagen; your body is actually using it.<\/p>",
             "open_by_default": false
           }
         },
@@ -166,7 +157,7 @@
           "type": "item",
           "settings": {
             "title": "I'm over 35 and dealing with deep wrinkles and skin sagging. Will this actually work for me?",
-            "content": "<p>This line was specifically formulated for women 30 and above whose skin has begun losing structural density. The ultra-micro peptide complex works to fill deep wrinkles, restore firmness, and lift sagging areas — addressing the root cause of visible aging rather than masking it on the surface.</p>",
+            "content": "<p>This line was specifically formulated for women 30 and above whose skin has begun losing structural density. The ultra-micro peptide complex works to fill deep wrinkles, restore firmness, and lift sagging areas — addressing the root cause of visible aging rather than masking it on the surface.<\/p>",
             "open_by_default": false
           }
         },
@@ -174,7 +165,7 @@
           "type": "item",
           "settings": {
             "title": "Is this safe for long-term use? Are there any side effects I should know about?",
-            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.</p>",
+            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.<\/p>",
             "open_by_default": false
           }
         },
@@ -182,7 +173,7 @@
           "type": "item",
           "settings": {
             "title": "I often feel bloated, constipated, or get breakouts from \"internal heat.\" Can this help?",
-            "content": "<p>Yes. The blend of 82 Fermented Plant Extracts is a comprehensive gut-health and detox system containing vitamins, minerals, and dietary fibers that promote healthy digestion, flush toxins, and reduce internal inflammation — what many describe as \"internal heat.\" A healthier gut also directly improves skin clarity since many breakouts originate from digestive imbalance.</p>",
+            "content": "<p>Yes. The blend of 82 Fermented Plant Extracts is a comprehensive gut-health and detox system containing vitamins, minerals, and dietary fibers that promote healthy digestion, flush toxins, and reduce internal inflammation — what many describe as \"internal heat.\" A healthier gut also directly improves skin clarity since many breakouts originate from digestive imbalance.<\/p>",
             "open_by_default": false
           }
         }
@@ -236,7 +227,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Standard collagen molecules are too large to penetrate the skin barrier. Sakura uses Kosoteki peptides under 500 Daltons — encased in Liposomes — to achieve 99% absorption, delivering active peptides directly to the dermal layer.</p><ul><li>&lt; 500 Daltons — small enough to pass through the dermal cell wall</li><li>Liposome encapsulation — protects peptides until they reach the target</li><li>African Mango activates adiponectin — specifically targets visceral fat</li><li>Sakura Extract inhibits Tyrosinase — shuts off melanin at the source</li></ul>",
+            "text": "<p>Standard collagen molecules are too large to penetrate the skin barrier. Sakura uses Kosoteki peptides under 500 Daltons — encased in Liposomes — to achieve 99% absorption, delivering active peptides directly to the dermal layer.<\/p><ul><li>&lt; 500 Daltons — small enough to pass through the dermal cell wall<\/li><li>Liposome encapsulation — protects peptides until they reach the target<\/li><li>African Mango activates adiponectin — specifically targets visceral fat<\/li><li>Sakura Extract inhibits Tyrosinase — shuts off melanin at the source<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -258,7 +249,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Review_image.jpg",
+        "image": "shopify:\/\/shop_images\/Review_image.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -288,7 +279,7 @@
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Every ingredient has one job — nothing is in here \"just for show\"</strong></p><ul><li>African Mango Seed Extract — inhibits lipase, activates adiponectin to burn belly fat</li><li>Yeast Peptide — naturally suppresses cravings for sweets and refined carbs</li><li>Sakura Extract — inhibits Tyrosinase, tightens pores for smoother texture</li><li>Deep-Sea Tuna Collagen 120,000mg — Kosoteki peptides &lt;500Da, 99% absorption</li><li>Japanese Orange — Flavonoids + Vitamin C for collagen synthesis and UV defense</li><li>82 Fermented Plant Extracts — detox, gut microbiome balance, immune support</li></ul>",
+            "text": "<p><strong>Every ingredient has one job — nothing is in here \"just for show\"<\/strong><\/p><ul><li>African Mango Seed Extract — inhibits lipase, activates adiponectin to burn belly fat<\/li><li>Yeast Peptide — naturally suppresses cravings for sweets and refined carbs<\/li><li>Sakura Extract — inhibits Tyrosinase, tightens pores for smoother texture<\/li><li>Deep-Sea Tuna Collagen 120,000mg — Kosoteki peptides &lt;500Da, 99% absorption<\/li><li>Japanese Orange — Flavonoids + Vitamin C for collagen synthesis and UV defense<\/li><li>82 Fermented Plant Extracts — detox, gut microbiome balance, immune support<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -297,7 +288,7 @@
           "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -310,7 +301,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Sakura_cola.png",
+        "image": "shopify:\/\/shop_images\/Sakura_cola.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -333,9 +324,9 @@
         "column_qGDqjL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -343,9 +334,9 @@
         "column_NG6rbL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -353,9 +344,9 @@
         "column_8J8ytE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
-            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
+            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -376,7 +367,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify://pages/hero-products",
+        "button_link": "shopify:\/\/pages\/hero-products",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -417,14 +408,14 @@
         "heading_BVQiUU": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
+            "heading": "<em>82X Sakura Placenta - White & Contour<\/em>",
             "heading_size": "h1"
           }
         },
         "text_QMU9yn": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -432,7 +423,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -448,7 +439,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify:\/\/shop_images\/Pictures_container.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -471,14 +462,14 @@
         "heading_UzaWGg": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
+            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink<\/em>",
             "heading_size": "h1"
           }
         },
         "text_DkJYtW": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -486,7 +477,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -502,7 +493,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ssss.jpg",
+        "image": "shopify:\/\/shop_images\/ssss.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -525,14 +516,14 @@
         "heading_DC4VwY": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
+            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink<\/em>",
             "heading_size": "h1"
           }
         },
         "text_Mrn3mk": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -540,7 +531,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -556,7 +547,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ssssddd.jpg",
+        "image": "shopify:\/\/shop_images\/ssssddd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -609,7 +600,7 @@
       "type": "apps",
       "blocks": {
         "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"

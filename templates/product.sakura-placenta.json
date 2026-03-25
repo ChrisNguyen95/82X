@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -24,7 +15,7 @@
           "settings": {}
         },
         "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
@@ -47,7 +38,7 @@
           }
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify:\/\/apps\/appstle-subscription\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "trust_badges_MXEzeQ": {
@@ -60,9 +51,9 @@
             "icon_size": 26,
             "margin_top": 24,
             "margin_bottom": 0,
-            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
+            "badge_1_icon": "shopify:\/\/shop_images\/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
             "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify://shop_images/sack-money.png",
+            "badge_2_icon": "shopify:\/\/shop_images\/sack-money.png",
             "badge_2_text": "60 Day Money Back",
             "badge_3_text": "",
             "badge_4_text": ""
@@ -75,7 +66,7 @@
             "show_gift_card_recipient": false,
             "url": "{{ product.metafields.custom.link_to_amazon.value }}",
             "text": "Buy on Amazon",
-            "icon": "shopify://shop_images/image_5.png",
+            "icon": "shopify:\/\/shop_images\/image_5.png",
             "show_amazon_icon": true,
             "btn_style": "custom",
             "btn_bg_color": "#000000",
@@ -137,7 +128,7 @@
           "type": "item",
           "settings": {
             "title": "Who should use the Placenta Sakura product?",
-            "content": "<p>This product is ideal for customers over 30 who are experiencing signs of aging such as wrinkles, sagging skin, dryness, and dullness. It is also suitable for those facing hormonal imbalances or disorders during stages like postpartum, pre-menopause, or menopause. Additionally, it is a good choice for individuals who often feel fatigued, stressed, physically heavy, or are looking to achieve a slimmer, more balanced body shape.</p>",
+            "content": "<p>This product is ideal for customers over 30 who are experiencing signs of aging such as wrinkles, sagging skin, dryness, and dullness. It is also suitable for those facing hormonal imbalances or disorders during stages like postpartum, pre-menopause, or menopause. Additionally, it is a good choice for individuals who often feel fatigued, stressed, physically heavy, or are looking to achieve a slimmer, more balanced body shape.<\/p>",
             "open_by_default": true
           }
         },
@@ -145,7 +136,7 @@
           "type": "item",
           "settings": {
             "title": "I’m over 30, my skin looks dull and dry, and I have hormonal imbalances. Can I use the Sakura Placenta product?",
-            "content": "<p>Yes, you can use the Sakura Placenta product. For best results, combine it with a balanced diet and a healthy lifestyle, including regular exercise, to improve your health both internally and externally.</p>",
+            "content": "<p>Yes, you can use the Sakura Placenta product. For best results, combine it with a balanced diet and a healthy lifestyle, including regular exercise, to improve your health both internally and externally.<\/p>",
             "open_by_default": false
           }
         },
@@ -153,7 +144,7 @@
           "type": "item",
           "settings": {
             "title": "Will taking this product cause weight gain?",
-            "content": "<p>Whether you gain weight largely depends on your individual metabolism and how your body absorbs nutrients. 82X products do not contain fat, so they do not cause weight gain.</p>",
+            "content": "<p>Whether you gain weight largely depends on your individual metabolism and how your body absorbs nutrients. 82X products do not contain fat, so they do not cause weight gain.<\/p>",
             "open_by_default": false
           }
         },
@@ -161,7 +152,7 @@
           "type": "item",
           "settings": {
             "title": "Can I take the Collagen line in the morning and the Placenta line in the afternoon?",
-            "content": "<p>To ensure optimal effectiveness, it is recommended to finish one product (such as Collagen) before starting the Placenta line, rather than taking them alternately or splitting them between morning and afternoon. Using both in this way may lead to excess nutrient intake and may not ensure optimal product quality during storage</p>",
+            "content": "<p>To ensure optimal effectiveness, it is recommended to finish one product (such as Collagen) before starting the Placenta line, rather than taking them alternately or splitting them between morning and afternoon. Using both in this way may lead to excess nutrient intake and may not ensure optimal product quality during storage<\/p>",
             "open_by_default": false
           }
         },
@@ -169,7 +160,7 @@
           "type": "item",
           "settings": {
             "title": "What time of day is best to use this product for optimal results?",
-            "content": "<p>Experts recommend using the product in the morning between 9-10 am after breakfast or in the evening one hour before bedtime.</p>",
+            "content": "<p>Experts recommend using the product in the morning between 9-10 am after breakfast or in the evening one hour before bedtime.<\/p>",
             "open_by_default": false
           }
         }
@@ -223,7 +214,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p> 82X Sakura Placenta is formulated with premium Shizuoka porcine placenta extract, delivering 450,000mg of nutrient-rich essence to support youthful, glowing skin. Combined with collagen peptides and sakura extract, it helps:</p><ul><li> Slow down aging, reduce wrinkles</li><li> Inhibit melanin formation for a brighter, smoother complexion. </li><li>Supports hormonal balance, making it especially suitable for women over 25, postpartum, or during pre-menopause.</li></ul>",
+            "text": "<p> 82X Sakura Placenta is formulated with premium Shizuoka porcine placenta extract, delivering 450,000mg of nutrient-rich essence to support youthful, glowing skin. Combined with collagen peptides and sakura extract, it helps:<\/p><ul><li> Slow down aging, reduce wrinkles<\/li><li> Inhibit melanin formation for a brighter, smoother complexion. <\/li><li>Supports hormonal balance, making it especially suitable for women over 25, postpartum, or during pre-menopause.<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -232,7 +223,7 @@
           "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -245,7 +236,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/4_c7246d7d-0a29-4cb0-9527-b79ddd812a6f.jpg",
+        "image": "shopify:\/\/shop_images\/4_c7246d7d-0a29-4cb0-9527-b79ddd812a6f.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -275,7 +266,7 @@
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p> Enriched with 82 fermented plant extracts and bioactive peptides, the formula deeply nourishes the skin, restores moisture, and improves overall skin texture. It strengthens the skin’s natural defense against environmental stressors while boosting immunity from within. With consistent daily use (15ml per day), Sakura Placenta helps you achieve firmer, healthier, and more radiant skin over time.</p>",
+            "text": "<p> Enriched with 82 fermented plant extracts and bioactive peptides, the formula deeply nourishes the skin, restores moisture, and improves overall skin texture. It strengthens the skin’s natural defense against environmental stressors while boosting immunity from within. With consistent daily use (15ml per day), Sakura Placenta helps you achieve firmer, healthier, and more radiant skin over time.<\/p>",
             "text_style": "body"
           }
         },
@@ -284,7 +275,7 @@
           "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -297,7 +288,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Post_288.png",
+        "image": "shopify:\/\/shop_images\/Post_288.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -321,9 +312,9 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -332,9 +323,9 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -343,9 +334,9 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
-            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
+            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
+            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -366,7 +357,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify://pages/hero-products",
+        "button_link": "shopify:\/\/pages\/hero-products",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -407,14 +398,14 @@
         "heading_BVQiUU": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
+            "heading": "<em>82X Sakura Placenta - White & Contour<\/em>",
             "heading_size": "h1"
           }
         },
         "text_QMU9yn": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -422,7 +413,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -438,7 +429,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify:\/\/shop_images\/Pictures_container.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -461,14 +452,14 @@
         "heading_UzaWGg": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
+            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink<\/em>",
             "heading_size": "h1"
           }
         },
         "text_DkJYtW": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -476,7 +467,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -492,7 +483,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ssss.jpg",
+        "image": "shopify:\/\/shop_images\/ssss.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -515,14 +506,14 @@
         "heading_DC4VwY": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
+            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink<\/em>",
             "heading_size": "h1"
           }
         },
         "text_Mrn3mk": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
             "text_style": "body"
           }
         },
@@ -530,7 +521,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
+            "button_link": "shopify:\/\/pages\/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -546,7 +537,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ssssddd.jpg",
+        "image": "shopify:\/\/shop_images\/ssssddd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -598,7 +589,7 @@
       "type": "apps",
       "blocks": {
         "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"
