@@ -451,6 +451,7 @@
         "column_LKjqwM",
         "column_aU8Egq"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Meet the doctors and scientists helping 82x make a difference",
@@ -505,7 +506,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Guarantee_image_81515e70-efaf-4d7b-af5a-462556be2e03.jpg",
+        "image": "shopify://shop_images/27.10.2020_Vu_Qu_nh-topaz-enhance-3.8x-faceai.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
