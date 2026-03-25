@@ -257,7 +257,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/Review_image.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -308,7 +308,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/Artboard_1_364070b3-3c8d-42a5-8e30-9ed2504edda9.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
