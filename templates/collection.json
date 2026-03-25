@@ -61,7 +61,7 @@
         "text_kMrWH7": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
             "text_style": "body"
           }
         },
@@ -69,7 +69,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -82,7 +82,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "full_width": false,
+        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -98,11 +99,39 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "apps_awYBMC": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_TnYjjb": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "82x-stem-cell-collagen-premium",
+            "widget_type": "combined_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_TnYjjb"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "Continue scrolling to discover the thoughts of our community.",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 880,
+        "text": "<p>Here’s a space for our customers to share their experiences. We don’t interfere! These reviews are raw and unedited. You can find them by clicking 'reviews' in the menu.</p><p>82X's dietary supplements are not designed to diagnose, treat, cure, or prevent any diseases. Individual results may differ.</p>",
+        "text_max_width": 960,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "image_with_text_g7NfdM"
+    "image_with_text_g7NfdM",
+    "apps_awYBMC"
   ]
 }
