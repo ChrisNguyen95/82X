@@ -281,19 +281,20 @@
         "heading_EChdjh": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
-            "heading_size": "h1"
+            "heading": "How is Sakura different from regular collagen?",
+            "heading_size": "h2"
           }
         },
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p><strong>3 reasons Sakura can't be compared to anything else in this category</strong></p><ul><li>The only supplement combining intensive skin recovery and weight management support in a single product — no other line does both</li><li>Liposome technology delivers 99% absorption — standard collagen is mostly lost in digestion before it reaches the skin</li><li>Formulated specifically for women 30+ experiencing hormonal shifts — not a one-size-fits-all supplement</li></ul>",
             "text_style": "body"
           }
         },
         "button_Wp8GHa": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
             "button_link": "shopify://pages/hero-products",
@@ -307,10 +308,9 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Artboard_1_364070b3-3c8d-42a5-8e30-9ed2504edda9.png",
+        "image": "shopify://shop_images/Sakura_cola.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
