@@ -346,6 +346,7 @@
         "column_NG6rbL",
         "column_8J8ytE"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Meet the doctors and scientists helping 82x make a difference",
@@ -451,7 +452,7 @@
         "heading_UzaWGg": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
+            "heading": "<em>82X Collagen Classic</em>",
             "heading_size": "h1"
           }
         },
