@@ -136,32 +136,40 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Who should use the Placenta Sakura product?",
+            "content": "<p>This product is ideal for customers over 30 who are experiencing signs of aging such as wrinkles, sagging skin, dryness, and dullness. It is also suitable for those facing hormonal imbalances or disorders during stages like postpartum, pre-menopause, or menopause. Additionally, it is a good choice for individuals who often feel fatigued, stressed, physically heavy, or are looking to achieve a slimmer, more balanced body shape.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "I’m over 30, my skin looks dull and dry, and I have hormonal imbalances. Can I use the Sakura Placenta product?",
+            "content": "<p>Yes, you can use the Sakura Placenta product. For best results, combine it with a balanced diet and a healthy lifestyle, including regular exercise, to improve your health both internally and externally.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Will taking this product cause weight gain?",
+            "content": "<p>Whether you gain weight largely depends on your individual metabolism and how your body absorbs nutrients. 82X products do not contain fat, so they do not cause weight gain.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Can I take the Collagen line in the morning and the Placenta line in the afternoon?",
+            "content": "<p>To ensure optimal effectiveness, it is recommended to finish one product (such as Collagen) before starting the Placenta line, rather than taking them alternately or splitting them between morning and afternoon. Using both in this way may lead to excess nutrient intake and may not ensure optimal product quality during storage</p>",
+            "open_by_default": false
+          }
+        },
+        "item_8mizyR": {
+          "type": "item",
+          "settings": {
+            "title": "What time of day is best to use this product for optimal results?",
+            "content": "<p>Experts recommend using the product in the morning between 9-10 am after breakfast or in the evening one hour before bedtime.</p>",
             "open_by_default": false
           }
         }
@@ -170,7 +178,8 @@
         "item_WaPpKd",
         "item_wGGX4D",
         "item_QUdkMG",
-        "item_FwXRPR"
+        "item_FwXRPR",
+        "item_8mizyR"
       ],
       "name": "Accordion — FAQ",
       "settings": {
@@ -207,19 +216,20 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "Radiant Skin & Hormonal Balance From Within",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p> 82X Sakura Placenta is formulated with premium Shizuoka porcine placenta extract, delivering 450,000mg of nutrient-rich essence to support youthful, glowing skin. Combined with collagen peptides and sakura extract, it helps:</p><ul><li> Slow down aging, reduce wrinkles</li><li> Inhibit melanin formation for a brighter, smoother complexion. </li><li>Supports hormonal balance, making it especially suitable for women over 25, postpartum, or during pre-menopause.</li></ul>",
             "text_style": "body"
           }
         },
         "button_6qGJwe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
             "button_link": "shopify://pages/hero-products",
@@ -235,7 +245,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/4_c7246d7d-0a29-4cb0-9527-b79ddd812a6f.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -258,19 +268,20 @@
         "heading_EChdjh": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "15ml Per Day For Deep Nourishment, Hydration & Total Skin Defense",
             "heading_size": "h1"
           }
         },
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p> Enriched with 82 fermented plant extracts and bioactive peptides, the formula deeply nourishes the skin, restores moisture, and improves overall skin texture. It strengthens the skin’s natural defense against environmental stressors while boosting immunity from within. With consistent daily use (15ml per day), Sakura Placenta helps you achieve firmer, healthier, and more radiant skin over time.</p>",
             "text_style": "body"
           }
         },
         "button_Wp8GHa": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
             "button_link": "shopify://pages/hero-products",
@@ -286,7 +297,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/Post_288.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -308,6 +319,7 @@
       "blocks": {
         "column_qGDqjL": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Rectangle_38.jpg",
             "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
@@ -318,6 +330,7 @@
         },
         "column_NG6rbL": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Rectangdle_38.jpg",
             "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
@@ -328,6 +341,7 @@
         },
         "column_8J8ytE": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Rectangled38.jpg",
             "title": "<em><strong>Dr. Katherine Klos</strong></em>",
@@ -342,6 +356,7 @@
         "column_NG6rbL",
         "column_8J8ytE"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Meet the doctors and scientists helping 82x make a difference",
