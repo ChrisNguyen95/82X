@@ -1,14 +1,378 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "hero_split_RyTrHE": {
+      "type": "hero-split",
+      "blocks": {
+        "heading_8yGjGg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Together for a Better Future",
+            "heading_size": "h0"
+          }
+        },
+        "text_BkmYwA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are committed to creating positive impact through sustainable practices, community support, and responsible innovation—because true beauty begins with caring for people and the planet.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8yGjGg",
+        "text_BkmYwA"
+      ],
+      "name": "Hero Split",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hero_62951b19-05bd-4e13-a034-f7288768c980.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Thi_t_k_ch_a_co_ten_bee01e40-9d40-49c1-b0aa-611802d55b41.png",
+        "image_fit": "cover",
+        "image_position": "center center",
+        "overlay_opacity": 0,
+        "desktop_height": "adapt",
+        "mobile_height": "large",
+        "desktop_vertical": "middle",
+        "mobile_vertical": "top",
+        "desktop_horizontal": "left",
+        "desktop_align": "left",
+        "mobile_align": "left",
+        "content_max_width": 50,
+        "content_max_width_mobile": 100,
+        "section_color_scheme": "",
+        "show_text_box": false,
+        "color_scheme": "",
+        "icon_size": 48,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 100
+      }
+    },
+    "image_with_text_ywKxFm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jGrGfn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our commitment to People, Planet & Purpose",
+            "heading_size": "h1"
+          }
+        },
+        "text_V3BkJT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At 82X, we believe that true beauty comes not only from the outside but also from the positive values we bring to the community and the planet.<\/p><p>We are committed to sustainable development through corporate social responsibility (CSR) activities, focusing on three main pillars: People - Environment - Transparency.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jGrGfn",
+        "text_V3BkJT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "full_width": false,
+        "image": "shopify:\/\/shop_images\/Product_image_container.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "icon_size": 40,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "logo_grid_trPBzy": {
+      "type": "logo-grid",
+      "blocks": {
+        "logo_jrNFxQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
+            "logo_width_desktop": 168,
+            "logo_width_mobile": 112,
+            "link": ""
+          }
+        },
+        "logo_DarJPY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Social_Media_fIcon.png",
+            "logo_width_desktop": 168,
+            "logo_width_mobile": 112,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_jrNFxQ",
+        "logo_DarJPY"
+      ],
+      "name": "Logo Grid",
+      "settings": {
+        "subheading": "",
+        "subheading_gap": 32,
+        "cols_desktop": 2,
+        "cols_mobile": 2,
+        "gap_desktop": 40,
+        "gap_mobile": 20,
+        "background_color": "#ffffff",
+        "text_color": "#111111",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "82x_images_tHFT6W": {
+      "type": "82x-images",
+      "blocks": {
+        "image_nrMtkz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Feature_image_left.jpg",
+            "alt": "",
+            "link": "",
+            "caption": ""
+          }
+        },
+        "image_FKMNUi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Feature_image_rcight.jpg",
+            "alt": "",
+            "link": "",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nrMtkz",
+        "image_FKMNUi"
+      ],
+      "name": "Images",
+      "settings": {
+        "full_width": true,
+        "image_ratio": "adapt",
+        "border_radius": 0,
+        "equal_width": true,
+        "col1_ratio": 1,
+        "col2_ratio": 1,
+        "gap": 0,
+        "gap_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "caption_color": "#ffffff",
+        "caption_size": 12,
+        "caption_weight": "600",
+        "color_scheme": ""
+      }
+    },
+    "image_with_text_qkzRmN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nTGq3F": {
+          "type": "heading",
+          "settings": {
+            "heading": "Integrity, Transparency & Ethical Standards",
+            "heading_size": "h1"
+          }
+        },
+        "text_YHEGQk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We prioritize transparency and business ethics.<\/p><ul><li>Clearly disclose product origins.<\/li><li>Comply with international regulations.<\/li><li>Certified by reputable organizations.<\/li><li>No harmful testing.<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nTGq3F",
+        "text_YHEGQk"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "full_width": false,
+        "image": "shopify:\/\/shop_images\/Hero_image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "icon_size": 40,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_Pre3pM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jHNnUR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Together, let's ,<\/br>Make a difference.",
+            "heading_size": "h1"
+          }
+        },
+        "text_B3TJyE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "logo_ngzQap": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo-82x.jpg",
+            "logo_width": 140,
+            "logo_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jHNnUR",
+        "text_B3TJyE",
+        "logo_ngzQap"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
+        "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 14rem; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/Frame_1610068241.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "icon_size": 40,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "82x_two_columns_ajt4Ex": {
+      "type": "82x-two-columns",
+      "blocks": {
+        "column_XnrCnR": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "scheme-083f8f91-ac8b-4b36-be8b-b52716e98919",
+            "logo": "shopify:\/\/shop_images\/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
+            "logo_width": 168,
+            "logo_align": "center",
+            "intro_text": "<p>We are proud to partner with Vitamin Angels – a global nutrition organization – to provide essential micronutrients to women and children in difficult circumstances.<\/p>",
+            "heading_1": "Our impact",
+            "icon_1": "shopify:\/\/shop_images\/About_text_image.png",
+            "icon_1_text": "Over 70 million women and children supported each year",
+            "icon_2": "shopify:\/\/shop_images\/2.png",
+            "icon_2_text": "Operating in more than 65 countries",
+            "icon_3": "shopify:\/\/shop_images\/sssss.png",
+            "icon_3_text": "Contributing to the improvement of nutrition and health for future generations",
+            "icon_4_text": "",
+            "icon_5_text": "",
+            "heading_2": "Commitment",
+            "body_text": "<p>We continue to expand our contributions to ensure that everyone has access to basic nutrition.<\/p>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_style": "primary",
+            "padding_v": 92,
+            "padding_h": 114,
+            "heading_tag": "h3"
+          }
+        },
+        "column_jmQ8yq": {
+          "type": "column",
+          "settings": {
+            "color_scheme": "scheme-fdde575a-7961-48d3-abd2-4b82487dacf7",
+            "logo": "shopify:\/\/shop_images\/Social_Media_fIcon.png",
+            "logo_width": 168,
+            "logo_align": "center",
+            "intro_text": "<p>82X hợp tác với Eden Reforestation Projects nhằm phục hồi rừng và giảm thiểu biến đổi khí hậu.<\/p>",
+            "heading_1": "Outstanding results",
+            "icon_1": "shopify:\/\/shop_images\/1_7f603bdc-791f-4af5-b1d0-4ac793914537.png",
+            "icon_1_text": "Over 1 billion trees have been planted and protected",
+            "icon_2": "shopify:\/\/shop_images\/2.png",
+            "icon_2_text": "229 projects in 9 countries",
+            "icon_3": "shopify:\/\/shop_images\/3.png",
+            "icon_3_text": "Creating sustainable jobs for over 50,000 local workers",
+            "icon_4_text": "",
+            "icon_5_text": "",
+            "heading_2": "Impact",
+            "body_text": "<p>We contribute to reducing deforestation, increasing CO₂ absorption, and restoring ecosystems, aiming for a more sustainable environment.<\/p>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/pages\/brand-story",
+            "button_style": "primary",
+            "padding_v": 92,
+            "padding_h": 114,
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "column_XnrCnR",
+        "column_jmQ8yq"
+      ],
+      "name": "Two Columns",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "columns_gap": 0,
+        "margin_top": 0,
+        "margin_bottom": 100,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "hero_split_RyTrHE",
+    "image_with_text_ywKxFm",
+    "logo_grid_trPBzy",
+    "82x_images_tHFT6W",
+    "image_with_text_qkzRmN",
+    "image_with_text_Pre3pM",
+    "82x_two_columns_ajt4Ex"
   ]
 }
