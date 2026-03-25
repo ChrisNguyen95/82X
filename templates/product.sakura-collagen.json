@@ -33,7 +33,7 @@
           "type": "description",
           "settings": {
             "show_more_enable": true,
-            "max_lines": 9,
+            "max_lines": 5,
             "show_more_label": "See More",
             "show_less_label": "Show less",
             "show_more_color": "#56baf7"
