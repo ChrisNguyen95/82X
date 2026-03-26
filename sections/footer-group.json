@@ -17,7 +17,7 @@
         "brand_rcYEAY": {
           "type": "brand",
           "settings": {
-            "logo": "shopify://shop_images/logo_82X_1.png",
+            "logo": "shopify://shop_images/new-logo.png",
             "logo_width": 76,
             "tagline": "<p>To create high quality, plant-based products that are safe for people and the planet.</p>",
             "show_social": true,
