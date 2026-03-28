@@ -1,10 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_6D7Vjm": {
+      "type": "rich-text",
+      "blocks": {
+        "text_apJh7P": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>We’d love to hear from you.</strong><br/>Whether you have a question about our products, your order, or anything else — our team is here to help.<br/><br/><strong>Plumee Global Trading LLC</strong><br/>Email: support@82xbeauty.com<br/>Mobile: +84 906 206 351<br/>Business Hours: Monday - Friday, 9:00 AM - 6:00 PM (EST)</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_apJh7P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "form": {
@@ -20,6 +52,7 @@
   },
   "order": [
     "main",
+    "rich_text_6D7Vjm",
     "form"
   ]
 }
