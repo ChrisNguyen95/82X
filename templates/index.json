@@ -185,6 +185,90 @@
         "padding_bottom_mobile": 40
       }
     },
+    "icon_badges_ajkPPR": {
+      "type": "icon-badges",
+      "blocks": {
+        "icon_TVjUy3": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Benefit_icon_group.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Japanese Standard Collagen & Placenta",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_4eeNUQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Benefit_icon_group_ecc063e8-3c6a-447a-af09-79c746f98a94.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "Over 500,000 customers have trusted us",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_y8CHhV": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/eqq.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "The component has been thoroughly researched",
+            "label_font_heading": true,
+            "link": ""
+          }
+        },
+        "icon_iqQt6x": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/e.png",
+            "image_width_desktop": 64,
+            "image_width_mobile": 64,
+            "label": "60-Day Satisfaction Guarantee",
+            "label_font_heading": true,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_TVjUy3",
+        "icon_4eeNUQ",
+        "icon_y8CHhV",
+        "icon_iqQt6x"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.ib-label {font-size: 1.6rem; }}"
+      ],
+      "name": "Icon Badges",
+      "settings": {
+        "heading": "Discover the standout benefits of the 82X product",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 600,
+        "heading_color": "#1c2b6b",
+        "text_align": "center",
+        "grid_max_width": 1120,
+        "cols_desktop": 4,
+        "cols_tablet": 4,
+        "cols_mobile": 2,
+        "col_gap_desktop": 48,
+        "row_gap_desktop": 32,
+        "col_gap_mobile": 16,
+        "row_gap_mobile": 24,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "background_color": "#d9eeff",
+        "label_color": "#1c2b6b",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "image_grid_with_text_a3Lyam": {
       "type": "image-grid-with-text",
       "blocks": {
@@ -685,90 +769,6 @@
         "padding_bottom": 100
       }
     },
-    "icon_badges_ajkPPR": {
-      "type": "icon-badges",
-      "blocks": {
-        "icon_TVjUy3": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Benefit_icon_group.png",
-            "image_width_desktop": 64,
-            "image_width_mobile": 64,
-            "label": "Japanese Standard Collagen & Placenta",
-            "label_font_heading": true,
-            "link": ""
-          }
-        },
-        "icon_4eeNUQ": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Benefit_icon_group_ecc063e8-3c6a-447a-af09-79c746f98a94.png",
-            "image_width_desktop": 64,
-            "image_width_mobile": 64,
-            "label": "Over 500,000 customers have trusted us",
-            "label_font_heading": true,
-            "link": ""
-          }
-        },
-        "icon_y8CHhV": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/eqq.png",
-            "image_width_desktop": 64,
-            "image_width_mobile": 64,
-            "label": "The component has been thoroughly researched",
-            "label_font_heading": true,
-            "link": ""
-          }
-        },
-        "icon_iqQt6x": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/e.png",
-            "image_width_desktop": 64,
-            "image_width_mobile": 64,
-            "label": "60-Day Satisfaction Guarantee",
-            "label_font_heading": true,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "icon_TVjUy3",
-        "icon_4eeNUQ",
-        "icon_y8CHhV",
-        "icon_iqQt6x"
-      ],
-      "custom_css": [
-        "@media screen and (min-width: 990px) {.ib-label {font-size: 1.6rem; }}"
-      ],
-      "name": "Icon Badges",
-      "settings": {
-        "heading": "Discover the standout benefits of the 82X product",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_max_width": 600,
-        "heading_color": "#1c2b6b",
-        "text_align": "center",
-        "grid_max_width": 1120,
-        "cols_desktop": 4,
-        "cols_tablet": 4,
-        "cols_mobile": 2,
-        "col_gap_desktop": 48,
-        "row_gap_desktop": 32,
-        "col_gap_mobile": 16,
-        "row_gap_mobile": 24,
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "background_color": "#d9eeff",
-        "label_color": "#1c2b6b",
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "featured_collection_LKTG3X": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -816,6 +816,8 @@
   "order": [
     "image_with_text_XkgVPx",
     "hero_split_B6wwGe",
+    "icon_badges_ajkPPR",
+    "featured_collection_LKTG3X",
     "image_grid_with_text_a3Lyam",
     "image_with_text_tapRrw",
     "image_with_text_GkqWwX",
@@ -824,8 +826,6 @@
     "image_with_text_bQNCQa",
     "rich_text_mbAnL8",
     "testimonial_slider_7t8nhQ",
-    "1774448626dae4d65e",
-    "icon_badges_ajkPPR",
-    "featured_collection_LKTG3X"
+    "1774448626dae4d65e"
   ]
 }
