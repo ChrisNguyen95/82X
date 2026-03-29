@@ -22,14 +22,14 @@
         "heading_gJXVpA": {
           "type": "heading",
           "settings": {
-            "heading": "Reveal Your Natural Glow",
+            "heading": "<strong>Nourish your skin, hair, nails, and inner beauty every day</strong>",
             "heading_size": "h1"
           }
         },
         "text_iti9gR": {
           "type": "text",
           "settings": {
-            "text": "<p>A powerful blend of placenta extract, collagen peptides, and essential nutrients to help support smoother, firmer, and healthier-looking skin.</p>",
+            "text": "<p>More than 10,000 happy customers have trusted and used 82X Collagen to support their skin and overall health — powered by premium quality and advanced technology from Japan.<br/></p>",
             "text_style": "body"
           }
         },
@@ -39,7 +39,7 @@
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://pages/hero-products",
             "button_style_secondary_1": false,
-            "button_label_2": "TAKE QUIZ",
+            "button_label_2": "",
             "button_link_2": "shopify://pages/82x-quiz",
             "button_style_secondary_2": true
           }
@@ -191,21 +191,21 @@
         "heading_iXHixr": {
           "type": "heading",
           "settings": {
-            "heading": "You’ve tried everything Else, now try something that works",
+            "heading": "Advanced technology from Japan",
             "heading_size": "h1"
           }
         },
         "text_mDfYea": {
           "type": "text",
           "settings": {
-            "text": "<p>You're not alone. We're helping over 800,000 people of all ages healthy with our practive urinary tract products.</p>",
+            "text": "<p>82X applied  advanced liposome technology, utilizing small molecule collagen for enhanced absorption and effectiveness in skincare products.</p>",
             "text_style": "body"
           }
         },
         "button_p8FMbQ": {
           "type": "button",
           "settings": {
-            "button_label": "READ REVIEWS",
+            "button_label": "shop now",
             "button_link": "shopify://pages/all-review",
             "button_style_secondary": false
           }
@@ -246,21 +246,21 @@
         "heading_U7BQex": {
           "type": "heading",
           "settings": {
-            "heading": "82X – Premium collagen & placenta drink from Japan",
+            "heading": "<strong>Our comprehensive and personalized support</strong>",
             "heading_size": "h1"
           }
         },
         "text_EXmR3B": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
+            "text": "<p>Based on your skin condition and age, we will recommend the most suitable options and tailored regimen for you. </p>",
             "text_style": "body"
           }
         },
         "button_HEGULY": {
           "type": "button",
           "settings": {
-            "button_label": "SHOP NOW",
+            "button_label": "Discover your  plan",
             "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
@@ -324,6 +324,7 @@
         "text_gAg4tt",
         "button_rTbc9J"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -350,32 +351,40 @@
         "item_cBMGT4": {
           "type": "item",
           "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "What is Collagen?",
+            "content": "<p>Collagen is the most plentiful - and often considered one of the most essential - proteins in the human body. It serves as a key structural component of tissues such as skin, hair, nails, joints, and bones, contributing to strength, elasticity, and flexibility. As the body’s natural collagen production decreases with age, supplementing collagen through your diet can help support and maintain healthy collagen levels over time.</p>",
             "open_by_default": true
           }
         },
         "item_Jy86pY": {
           "type": "item",
           "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "What are the signs of collagen deficiency?",
+            "content": "<p>When your body lacks collagen, noticeable changes begin to appear. Your skin may become dry, lose firmness, and develop wrinkles. Hair can become weak, dull, and prone to breakage, while nails may turn fragile and easily crack. In addition, low collagen levels can affect your joints, causing stiffness or discomfort and increasing the risk of joint issues over time. That’s why daily collagen supplementation is essential to help maintain beauty and overall health from within.</p>",
             "open_by_default": false
           }
         },
         "item_m6crw9": {
           "type": "item",
           "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Why is it necessary to take collagen daily?",
+            "content": "<p>Collagen levels begin to decline after the age of 25, decreasing by about 1–1.5% each year. From the age of 35 onward, this loss accelerates, and without proper supplementation, the body starts to age more rapidly, leading to wrinkles, dry skin, and loss of firmness. Therefore, taking collagen daily is essential to help replenish what’s lost, maintain youthful skin, and support overall beauty from within.</p>",
             "open_by_default": false
           }
         },
         "item_Xd6RzC": {
           "type": "item",
           "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Where does the Collagen 82X come from?",
+            "content": "<p>The 82X Collagen (500ml) contains 120,000mg of collagen peptides extracted from deep-sea fish. It is also enriched with a blend of 82 naturally fermented plant extracts that are packed with essential nutrients like minerals, vitamins, amino acids, and flavonoids. These ingredients help support overall health.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_jhq4AQ": {
+          "type": "item",
+          "settings": {
+            "title": "Does it really work?",
+            "content": "<p>More than 10,000 customers have been satisfied with the product. Daily collagen intake helps hydrate the skin, reduce wrinkles, and improve digestive health, while also supporting a healthier, slimmer body when combined with a balanced diet, healthy lifestyle, and regular exercise.</p>",
             "open_by_default": false
           }
         }
@@ -384,7 +393,8 @@
         "item_cBMGT4",
         "item_Jy86pY",
         "item_m6crw9",
-        "item_Xd6RzC"
+        "item_Xd6RzC",
+        "item_jhq4AQ"
       ],
       "name": "Accordion — FAQ",
       "settings": {
@@ -393,7 +403,7 @@
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
-        "subtext": "",
+        "subtext": "You asked, we answered",
         "text_align": "center",
         "list_max_width": 860,
         "tag_bg": "#d6e8f8",
@@ -481,14 +491,14 @@
         "heading_YFLnJJ": {
           "type": "heading",
           "settings": {
-            "heading": "Premium Liquid Collagen from Japan",
+            "heading": "<strong>Masaru Eshima — the founder devoted to the philosophy of “becoming the most trusted brand in the world.” </strong>",
             "heading_size": "h1"
           }
         },
         "text_fRTthn": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by the delicate beauty philosophy of Japan and the fragile yet resilient charm of Sakura, 82X was born with the mission to nurture skin from within. Combining advanced liquid collagen technology with the spirit of a \"beauty ritual,\" 82X is not just a skincare product but a lifestyle habit — where beauty is awakened through balance, health, and naturalness every day.</p><p>82X Liquid Collagen Japanese Beauty Secret. Healthy inside. Radiant outside.</p>",
+            "text": "<p>Inspired by the Japanese philosophy of Oubaitori — “each person is a unique individual with their own beauty” — 82X believes that true beauty is the most authentic form, achieved when one finds harmony between appearance, health, and inner strength.   <br/><br/></p>",
             "text_style": "body"
           }
         },
@@ -611,7 +621,7 @@
       ],
       "name": "Testimonial Grid (Photo)",
       "settings": {
-        "heading": "Over 51,914 reviews",
+        "heading": "reviews",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_italic": false,
