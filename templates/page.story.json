@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,14 +23,14 @@
         "heading_WBAGyh": {
           "type": "heading",
           "settings": {
-            "heading": "A Note from Our Founder",
+            "heading": "<strong>We are a premium collagen brand from Japan, dedicated to enhancing women’s health and beauty.      </strong>",
             "heading_size": "h1"
           }
         },
         "text_44tTYM": {
           "type": "text",
           "settings": {
-            "text": "<p>“I have always believed that true beauty is not something you apply — it is something you cultivate.”<\/p><p>During his years of research in Japan, Mashiro realized that modern women rely too heavily on external solutions, while the body itself is often left unnourished.<\/p><p>Inspired by Sakura — a symbol of renewal and delicate yet resilient beauty — he set out to create something more than skincare.<\/p><p>A product that transforms not only the skin, but the way women feel about themselves.<\/p><p><em><strong>82X was born from that belief.<\/strong><\/em><\/p>",
+            "text": "<p>82X is a premium Collagen & Placenta drink brand from Japan, developed by Mashiro Co., Ltd. under the leadership of Masaru Eshima — a dedicated founder in the field of women’s beauty and health. Guided by the philosophy of becoming “the most trusted brand in the world,” Mashiro continuously invests in research and innovation to deliver high-quality, safe, and effective products, embodying the Japanese spirit of self-care. </p><p>In the U.S market, we understand women’s growing interest in improving their health and beauty safely from within. Through 82X, we aim to bring customers the best possible experience along with visible, meaningful results. <br/><br/></p>",
             "text_style": "body"
           }
         }
@@ -32,7 +41,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Guarantee_image_81515e70-efaf-4d7b-af5a-462556be2e03.jpg",
+        "full_width": false,
+        "image": "shopify://shop_images/Artboard_2_e4b4f6b9-e09f-4cb3-a3ba-ebd8da42895b.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -44,6 +54,7 @@
         "mobile_layout": "image_first",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -61,7 +72,7 @@
         "text_6gcinX": {
           "type": "text",
           "settings": {
-            "text": "<p>To redefine beauty as a daily ritual from within — not a surface solution. We are committed to bringing the essence of Japanese beauty philosophy to the world through advanced liquid collagen, inspired by the spirit of Sakura.<\/p><p>Our mission is to help women nourish their bodies, restore skin vitality, and awaken a natural, lasting radiance — empowering them to feel confident, balanced, and beautiful from the inside out.<\/p>"
+            "text": "<p>Inspired by the Japanese philosophy of Oubaitori — “each person is a unique individual with their own beauty” — 82X believes that true beauty comes from the balance between appearance, health, and inner strength. This philosophy aligns with the growing wellness movement in the U.S, where consumers increasingly prioritize holistic, inside-out beauty solutions.</p><p>To meet these expectations, 82X invests in advanced R&D with a dedicated laboratory in Japan, led by experts with over 20 years of experience in beauty and health. By combining premium natural ingredients with cutting-edge Japanese technology, 82X enhances absorption and effectiveness - delivering visible results.</p><p> More than just a supplement, 82X Collagen & Placenta offers a comprehensive beauty solution designed for modern women in the U.S who seek safe, effective, and long-term wellness from within. Beyond skincare, 82X represents a lifestyle, empowering women to feel confident, radiant, and in control of their beauty journey, while redefining premium Japanese standards in the global wellness market.<br/><br/></p>"
           }
         }
       },
@@ -73,7 +84,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-2ebfe383-2eee-45f7-8fd8-7b5dc5d22d34",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 80,
         "padding_bottom": 80
@@ -85,9 +96,9 @@
         "column_RYPEBB": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
+            "image": "shopify://shop_images/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -95,9 +106,9 @@
         "column_hLqMbd": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
+            "image": "shopify://shop_images/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -105,9 +116,9 @@
         "column_FWLFq9": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
-            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
+            "image": "shopify://shop_images/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
+            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -118,6 +129,7 @@
         "column_hLqMbd",
         "column_FWLFq9"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Meet the doctors and scientists helping 82x make a difference",
@@ -127,7 +139,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify:\/\/pages\/hero-products",
+        "button_link": "shopify://pages/hero-products",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -151,7 +163,7 @@
         "text_aetYDU": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.<\/p>",
+            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
             "text_style": "body"
           }
         },
@@ -159,7 +171,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -172,7 +184,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "full_width": false,
+        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -182,8 +195,9 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "mobile_layout": "text_first",
-        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
-        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -201,7 +215,7 @@
         "text_mcm8nx": {
           "type": "text",
           "settings": {
-            "text": "<p>82X was built on a shared belief: true beauty starts from within.<\/p><p>Behind the brand are individuals driven by purpose — combining science, philosophy, and a deep understanding of modern women’s needs.<\/p>",
+            "text": "<p>82X was built on a shared belief: true beauty starts from within.</p><p>Behind the brand are individuals driven by purpose — combining science, philosophy, and a deep understanding of modern women’s needs.</p>",
             "text_style": "body"
           }
         }
@@ -210,9 +224,11 @@
         "heading_8K8npt",
         "text_mcm8nx"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Guarantee_image_f03d5cbb-c03f-485b-aac8-59aa07b5b266.jpg",
+        "full_width": false,
+        "image": "shopify://shop_images/Guarantee_image_f03d5cbb-c03f-485b-aac8-59aa07b5b266.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -224,6 +240,7 @@
         "mobile_layout": "image_first",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
+        "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
       }
