@@ -14,7 +14,7 @@
       "name": "Breadcrumb",
       "settings": {
         "home_label": "Home",
-        "separator": "\/",
+        "separator": "/",
         "show_home_icon": false,
         "font_size": 13,
         "link_color": "#556884",
@@ -39,8 +39,8 @@
         "color_scheme": "",
         "mobile_content_alignment": "center",
         "show_text_below": false,
-        "padding_top": 100,
-        "padding_bottom": 80
+        "padding_top": 60,
+        "padding_bottom": 40
       }
     },
     "main": {
