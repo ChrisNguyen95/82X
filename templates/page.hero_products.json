@@ -687,7 +687,7 @@
         "icon_FcU4QN": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Icon_Container.svg",
+            "image": "shopify://shop_images/1.svg",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Beauty Placenta",
@@ -698,7 +698,7 @@
         "icon_HWjtze": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Icon_rContainer.svg",
+            "image": "shopify://shop_images/2.svg",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Fish Collage",
@@ -709,7 +709,7 @@
         "icon_B6CA69": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Icon_Corntainer.svg",
+            "image": "shopify://shop_images/3.svg",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Sakura Extract",
@@ -720,7 +720,7 @@
         "icon_Q8GrDk": {
           "type": "icon",
           "settings": {
-            "image": "shopify://shop_images/Icon_Contairrner.svg",
+            "image": "shopify://shop_images/4.svg",
             "image_width_desktop": 64,
             "image_width_mobile": 64,
             "label": "Natural Ingredients",
