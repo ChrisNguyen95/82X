@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,14 +30,21 @@
           "type": "faq_item",
           "settings": {
             "question": "Who is the 82X product suitable for?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.</p>"
           }
         },
         "faq_item_pRbrfX": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the main function of 82X Placenta Sakura?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "How long does it take to see results?",
+            "answer": "<p>The effectiveness depends on individual body type and compatibility with the product. In some cases, positive results are seen after one month of use, while in others, noticeable effects may be seen after completing the first course of treatment (3 bottles).<br/><br/></p>"
+          }
+        },
+        "faq_item_CDyY7y": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What type of collagen does this product contain?",
+            "answer": "<p>82X products contain type 1 collagen (which supports the improvement of hair, nails, and skin, and enhances beauty...).<br/></p>"
           }
         },
         "group_NqMCif": {
@@ -40,15 +56,29 @@
         "faq_item_jnpU6w": {
           "type": "faq_item",
           "settings": {
-            "question": "What are the benefits of 82X Sakura Placenta?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "At what temperature should the product be stored?",
+            "answer": "<p>Unopened products should be stored at room temperature. Once opened, products should be refrigerated for the duration of use until finished (please keep away from raw food).</p>"
           }
         },
         "faq_item_QngrH3": {
           "type": "faq_item",
           "settings": {
-            "question": "How should I take 82X Sakura Placenta?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "Does the product contain sugar, artificial sweeteners, or flavorings?",
+            "answer": "<p>The product contains no artificial flavors, sugar, or artificial sweeteners that are harmful to the user's health.</p>"
+          }
+        },
+        "faq_item_UVk8cn": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need to mix the product with water?",
+            "answer": "<p>This versatile product can be consumed directly or mixed with warm water, fruit juice, or yogurt...</p>"
+          }
+        },
+        "faq_item_EVRtcg": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What time of day is best to use this product for optimal results?",
+            "answer": "<p>Experts recommend using the product in the morning between 9-10 am after breakfast or in the evening one hour before bedtime.</p>"
           }
         },
         "group_p4EL6M": {
@@ -60,12 +90,13 @@
         "faq_item_7aD7bD": {
           "type": "faq_item",
           "settings": {
-            "question": "Is 82X a drug?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "What is the recommended daily dose?",
+            "answer": "<p>For collagen products, it is recommended not to exceed 25ml per day; a minimum of 10, 15, or 20ml should be maintained. For placenta products, it is recommended not to exceed 15ml per day.<br/></p>"
           }
         },
         "group_x4MkRN": {
           "type": "group",
+          "disabled": true,
           "settings": {
             "title": "Subscriptions"
           }
@@ -73,8 +104,22 @@
         "faq_item_QGmdVT": {
           "type": "faq_item",
           "settings": {
-            "question": "Does 82X have a subscription program?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "Are there any common side effects when using this product?",
+            "answer": "<p>Some customers with a tendency towards internal heat may experience mild acne or constipation, but experts offer solutions tailored to each individual's condition to ensure customers can use the product gently and achieve the best results.</p>"
+          }
+        },
+        "faq_item_XYQHVr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why is this product more expensive than some other products?",
+            "answer": "<p>The product uses standard raw materials with many advantages (ocean tuna skin with small molecular structure, increased absorption, pure and free of impurities, fat-free to limit weight gain). Secondly, advanced second-generation Japanese technology helps preserve nutrients and deliver them to their intended destination, increasing absorption, and ensuring the breakdown of active ingredients occurs correctly, allowing the body to absorb them gently, reducing internal heat and maintaining longer-lasting effects even after discontinuing use.Thirdly, the rich ingredient list has a comprehensive impact on the appearance of skin and hair, to overall health, enhancing detoxification and improving mental well-being and sleep quality.<br/><br/></p>"
+          }
+        },
+        "faq_item_wg6BTB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Should I consult a doctor before using this?",
+            "answer": "<p>For individuals with specific health conditions such as pregnancy, breastfeeding, or those requiring long-term medication as prescribed by a doctor, or with a history of seafood allergies, it is advisable to consult a doctor.<br/></p>"
           }
         },
         "group_9kGKxx": {
@@ -85,9 +130,24 @@
         },
         "faq_item_qfHpWK": {
           "type": "faq_item",
+          "disabled": true,
           "settings": {
             "question": "Does 82X offer international shipping?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.</p>"
+          }
+        },
+        "faq_item_mXXFxi": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>If 82x doesn't satisfy your needs, we’ll issue you a refund within 30 days of your first order date (no need to return the product to us). </p>"
+          }
+        },
+        "faq_item_gDUAxF": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are shipping fees included?",
+            "answer": "<p>If you are in the United States, shipping is free! Let's order your products now!!!<br/><br/></p>"
           }
         },
         "group_pNBtHz": {
@@ -99,21 +159,23 @@
         "faq_item_mDA6Bh": {
           "type": "faq_item",
           "settings": {
-            "question": "Who is this product suitable for?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "question": "Can I buy this product in bulk to save money?",
+            "answer": "<p>You can purchase 82X products in bulk to take advantage of special offers from the brand.</p>"
           }
         },
         "group_e4kRQT": {
           "type": "group",
+          "disabled": true,
           "settings": {
             "title": "Account"
           }
         },
         "faq_item_jURft9": {
           "type": "faq_item",
+          "disabled": true,
           "settings": {
             "question": "Who is this product suitable for?",
-            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.<\/p>"
+            "answer": "<p>This product is suitable for adults looking to support their health and wellness goals.</p>"
           }
         }
       },
@@ -121,15 +183,22 @@
         "group_pmYajV",
         "faq_item_YYDqD7",
         "faq_item_pRbrfX",
+        "faq_item_CDyY7y",
         "group_NqMCif",
         "faq_item_jnpU6w",
         "faq_item_QngrH3",
+        "faq_item_UVk8cn",
+        "faq_item_EVRtcg",
         "group_p4EL6M",
         "faq_item_7aD7bD",
         "group_x4MkRN",
         "faq_item_QGmdVT",
+        "faq_item_XYQHVr",
+        "faq_item_wg6BTB",
         "group_9kGKxx",
         "faq_item_qfHpWK",
+        "faq_item_mXXFxi",
+        "faq_item_gDUAxF",
         "group_pNBtHz",
         "faq_item_mDA6Bh",
         "group_e4kRQT",
