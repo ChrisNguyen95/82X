@@ -42,7 +42,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/Artboard_2_e4b4f6b9-e09f-4cb3-a3ba-ebd8da42895b.png",
+        "image": "shopify://shop_images/Sakura_cola.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -156,14 +156,14 @@
         "heading_44CfCA": {
           "type": "heading",
           "settings": {
-            "heading": "82X – Premium collagen & placenta drink from Japan",
+            "heading": "82X is exclusively distributed and directly imported from Japan",
             "heading_size": "h1"
           }
         },
         "text_aetYDU": {
           "type": "text",
           "settings": {
-            "text": "<p>82X is a beauty drink with collagen for skin elasticity. Liposome technology boosts nutrient absorption for youthful skin.</p>",
+            "text": "<p><br/>82X beauty drinks were manufactured using advanced technology under strict Japanese quality standards.</p>",
             "text_style": "body"
           }
         },
