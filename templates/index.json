@@ -402,7 +402,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/Image_422464da-e1fc-47e7-aa5f-56cf54a5eb97.png",
+        "image": "shopify://shop_images/home1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
