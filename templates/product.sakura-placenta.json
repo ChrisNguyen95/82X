@@ -175,15 +175,23 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Radiant Skin & Hormonal Balance From Within",
+            "heading": "The Only Formula That Whitens, Slims & Balances",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p> 82X Sakura Placenta is formulated with premium Shizuoka porcine placenta extract, delivering 450,000mg of nutrient-rich essence to support youthful, glowing skin. Combined with collagen peptides and sakura extract, it helps:</p><ul><li> Slow down aging, reduce wrinkles</li><li> Inhibit melanin formation for a brighter, smoother complexion. </li><li>Supports hormonal balance, making it especially suitable for women over 25, postpartum, or during pre-menopause.</li></ul>",
+            "text": "<p>Other supplements pick one goal. Sakura Placenta targets three.</p><p>450,000mg Shizuoka Placenta fades dark spots and repairs skin at the cellular level. African Mango Seed blocks fat absorption and curbs cravings. EGF & FGF growth factors rebalance estrogen — easing mood swings, hot flashes, and irregular cycles.</p><p>One 500ml bottle. Three transformations. Daily.</p>",
             "text_style": "body"
+          }
+        },
+        "caption_MLBT43": {
+          "type": "caption",
+          "settings": {
+            "caption": "Formulated for women 25+ who are done compromising.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         },
         "button_6qGJwe": {
@@ -200,6 +208,7 @@
       "block_order": [
         "heading_RjpcJM",
         "text_BctwwL",
+        "caption_MLBT43",
         "button_6qGJwe"
       ],
       "name": "t:sections.image-with-text.presets.name",
