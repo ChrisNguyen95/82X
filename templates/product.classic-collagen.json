@@ -28,7 +28,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "fire",
-            "heading_1": "Highly rated by customers for: Skin",
+            "heading_1": "Highly rated by customers for: Collagen Quality, Skin Firmness, Joint Support, Immunity Boost, Better Sleep",
             "icon_2": "return",
             "heading_2": "",
             "icon_3": "truck",
@@ -44,6 +44,13 @@
         "price_9UgXc9": {
           "type": "price",
           "settings": {}
+        },
+        "text_eFc6pH": {
+          "type": "text",
+          "settings": {
+            "text": "A premium daily supplement drink formulated with 120,000 mg deep-sea tuna collagen peptides, magnesium chloride, royal jelly, glucosamine, hyaluronic acid, elastin, and a blend of 82 fermented plant extracts. Designed for adults aged 25–40 seeking comprehensive nutritional support for skin hydration, joint function, sleep quality, and gut wellness — in one convenient liquid format.",
+            "text_style": "body"
+          }
         },
         "description": {
           "type": "description",
@@ -120,6 +127,7 @@
         "icon_with_text_pNFDrM",
         "okendo_star_rating_HG7A6w",
         "price_9UgXc9",
+        "text_eFc6pH",
         "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
