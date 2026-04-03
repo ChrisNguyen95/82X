@@ -778,6 +778,73 @@
         "padding_top": 24,
         "padding_bottom": 60
       }
+    },
+    "logo_marquee_bm3BCd": {
+      "type": "logo-marquee",
+      "blocks": {
+        "text_L3apDb": {
+          "type": "text",
+          "settings": {
+            "text": "Women Friendly",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_C3VfmK": {
+          "type": "text",
+          "settings": {
+            "text": "Science Backed",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_DyYJPp": {
+          "type": "text",
+          "settings": {
+            "text": "Natural + Organic",
+            "font_size": 2,
+            "link": ""
+          }
+        },
+        "text_dbC98t": {
+          "type": "text",
+          "settings": {
+            "text": "Easy & Delicious",
+            "font_size": 2.4,
+            "link": ""
+          }
+        },
+        "text_yeddHz": {
+          "type": "text",
+          "settings": {
+            "text": "Japanese Made",
+            "font_size": 2,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_L3apDb",
+        "text_C3VfmK",
+        "text_DyYJPp",
+        "text_dbC98t",
+        "text_yeddHz"
+      ],
+      "name": "Logo Marquee",
+      "settings": {
+        "subheading": "As Featured In",
+        "subheading_gap": 24,
+        "direction": "left",
+        "speed": 32,
+        "logo_height": 44,
+        "gap": 80,
+        "pause_on_hover": true,
+        "background_color": "#1C2B6B",
+        "text_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
@@ -793,6 +860,7 @@
     "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
     "17742594372d116b7c",
-    "accordion_section_cmYxRz"
+    "accordion_section_cmYxRz",
+    "logo_marquee_bm3BCd"
   ]
 }
