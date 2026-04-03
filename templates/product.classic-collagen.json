@@ -230,85 +230,6 @@
         "padding_bottom": 100
       }
     },
-    "product_ingredients_hATdfY": {
-      "type": "product-ingredients",
-      "blocks": {
-        "ingredient_row_wXqzkm": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "Porcine Placenta Extract",
-            "amount": "9,000 mg"
-          }
-        },
-        "ingredient_row_XegJJb": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "Fish Collagen Peptide",
-            "amount": "15,000 mg"
-          }
-        },
-        "ingredient_row_BxhKGN": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "Fermented Plant Extract",
-            "amount": "5,000 mg"
-          }
-        },
-        "ingredient_row_yefDL4": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "African Mango Extract",
-            "amount": "5,000 mg"
-          }
-        },
-        "ingredient_row_aH6hyL": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "Brewer's Yeast Peptide",
-            "amount": "4,160 mg"
-          }
-        },
-        "ingredient_row_Yr4pEx": {
-          "type": "ingredient_row",
-          "settings": {
-            "name": "Pineapple Fruit Extract",
-            "amount": "2,000 mg"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_row_wXqzkm",
-        "ingredient_row_XegJJb",
-        "ingredient_row_BxhKGN",
-        "ingredient_row_yefDL4",
-        "ingredient_row_aH6hyL",
-        "ingredient_row_Yr4pEx"
-      ],
-      "name": "Product Ingredients",
-      "settings": {
-        "image": "shopify://shop_images/82X-Classic-Placenta_e1a4da92-c7ef-42c5-8df3-91249bb3fe22.png",
-        "image_col_width": 50,
-        "col_gap": 64,
-        "table_dosage_gap": 32,
-        "table_heading": "Each Bottle Contains",
-        "card_header_bg": "#FFFFFF",
-        "card_bg": "#E8F2FB",
-        "card_radius": 16,
-        "row_divider_color": "#C8D8E8",
-        "divider_color": "#A0B8CC",
-        "full_list_heading": "Full List Of Ingredients:",
-        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
-        "dosage_heading": "Recommended Dosage",
-        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
-        "dosage_align": "center",
-        "background_color": "#1C2B6B",
-        "heading_color": "#FFFFFF",
-        "text_color": "#1C2B6B",
-        "color_scheme": "",
-        "padding_top": 28,
-        "padding_bottom": 60
-      }
-    },
     "image_with_text_nrjQxn": {
       "type": "image-with-text",
       "blocks": {
@@ -360,6 +281,109 @@
         "icon_size": 40,
         "padding_top": 20,
         "padding_bottom": 28
+      }
+    },
+    "product_ingredients_hATdfY": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_wXqzkm": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "120,000  mg"
+          }
+        },
+        "ingredient_row_XegJJb": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Royal Jelly",
+            "amount": "200 mg"
+          }
+        },
+        "ingredient_row_BxhKGN": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Hyaluronic Acid",
+            "amount": "100 mg"
+          }
+        },
+        "ingredient_row_yefDL4": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B2",
+            "amount": "34,5 mg"
+          }
+        },
+        "ingredient_row_aH6hyL": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B6",
+            "amount": "23,4 mg"
+          }
+        },
+        "ingredient_row_Yr4pEx": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B1",
+            "amount": "21,6 mg"
+          }
+        },
+        "ingredient_row_7BgrVz": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin E",
+            "amount": "20 mg"
+          }
+        },
+        "ingredient_row_MxU9N4": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Elastin",
+            "amount": "10 mg"
+          }
+        },
+        "ingredient_row_FGTXeY": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin D",
+            "amount": "55 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_wXqzkm",
+        "ingredient_row_XegJJb",
+        "ingredient_row_BxhKGN",
+        "ingredient_row_yefDL4",
+        "ingredient_row_aH6hyL",
+        "ingredient_row_Yr4pEx",
+        "ingredient_row_7BgrVz",
+        "ingredient_row_MxU9N4",
+        "ingredient_row_FGTXeY"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image": "shopify://shop_images/82X-Classic-Placenta_e1a4da92-c7ef-42c5-8df3-91249bb3fe22.png",
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Each Bottle Contains",
+        "card_header_bg": "#FFFFFF",
+        "card_bg": "#E8F2FB",
+        "card_radius": 16,
+        "row_divider_color": "#C8D8E8",
+        "divider_color": "#A0B8CC",
+        "full_list_heading": "Other Ingredients:",
+        "full_list_text": "<p>Fermented vegetable extract, Cherry blossom extract powder, Glucosamine, Magnesium chloride, Hydrolyzed silk, Acidifier (citric acid, fermented lactic acid), Flavor (Mango flavor, Passion fruit flavor), Sweetener ( stevia, sucralose, acesulfame potassion), Preservative (Sodium benzoate), Water</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1C2B6B",
+        "heading_color": "#FFFFFF",
+        "text_color": "#1C2B6B",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 60
       }
     },
     "multicolumn_zHFXty": {
@@ -759,8 +783,8 @@
     "main",
     "related-products",
     "image_with_text_9pQ8im",
-    "product_ingredients_hATdfY",
     "image_with_text_nrjQxn",
+    "product_ingredients_hATdfY",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
     "image_with_text_MPF6Qp",
