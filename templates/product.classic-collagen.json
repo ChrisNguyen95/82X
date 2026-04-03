@@ -23,6 +23,13 @@
           "type": "title",
           "settings": {}
         },
+        "text_D4wp8p": {
+          "type": "text",
+          "settings": {
+            "text": "One daily drink. Four pillars of wellness — skin, sleep, joints, and gut.",
+            "text_style": "subtitle"
+          }
+        },
         "icon_with_text_pNFDrM": {
           "type": "icon-with-text",
           "settings": {
@@ -121,6 +128,7 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "text_D4wp8p",
         "icon_with_text_pNFDrM",
         "okendo_star_rating_HG7A6w",
         "price_9UgXc9",
