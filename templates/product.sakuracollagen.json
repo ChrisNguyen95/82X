@@ -328,7 +328,8 @@
       ],
       "name": "Product Ingredients",
       "settings": {
-        "image": "shopify://shop_images/82X-Sakura-Collagen.png",
+        "image": "shopify://shop_images/1_60551b19-1724-44ea-a811-713b19e155a4.png",
+        "mobile_image": "shopify://shop_images/1_60551b19-1724-44ea-a811-713b19e155a4.png",
         "image_col_width": 50,
         "col_gap": 64,
         "table_dosage_gap": 32,
