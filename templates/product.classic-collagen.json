@@ -297,6 +297,7 @@
         "logo_awF3pC",
         "logo_VJwjr3"
       ],
+      "disabled": true,
       "name": "Logo Grid",
       "settings": {
         "subheading": "",
@@ -318,14 +319,14 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Beauty That Works While You Sleep",
+            "heading": "Skin hydration & firmness",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>A premium Japanese collagen drink designed to restore your skin, calm your mind, and support deep, restorative sleep — so you wake up refreshed, radiant, and energized every day.</p>",
+            "text": "<p>Collagen peptides + hyaluronic acid + elastin help maintain skin moisture, elasticity, and smoothness with regular use.</p>",
             "text_style": "body"
           }
         },
@@ -492,6 +493,7 @@
       "block_order": [
         "heading_rC4VFK"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -534,6 +536,7 @@
         "text_QMU9yn",
         "button_E9mbGP"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -589,6 +592,7 @@
         "text_DkJYtW",
         "button_w7Wpqp"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -644,6 +648,7 @@
         "text_Mrn3mk",
         "button_f9M46P"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
