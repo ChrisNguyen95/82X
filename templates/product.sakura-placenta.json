@@ -814,7 +814,7 @@
         "text_w468c4": {
           "type": "text",
           "settings": {
-            "text": "Men'sHealth",
+            "text": "Women Friendly",
             "font_size": 2.2,
             "link": ""
           }
@@ -822,7 +822,7 @@
         "text_rKy6Cg": {
           "type": "text",
           "settings": {
-            "text": "Women'sHealth",
+            "text": "Natural + Organic",
             "font_size": 2.2,
             "link": ""
           }
@@ -830,7 +830,7 @@
         "text_dHygCw": {
           "type": "text",
           "settings": {
-            "text": "BYRDIE",
+            "text": "Easy & Delicious",
             "font_size": 2,
             "link": ""
           }
@@ -838,7 +838,7 @@
         "text_7W9TCc": {
           "type": "text",
           "settings": {
-            "text": "essence",
+            "text": "Japanese Made",
             "font_size": 2.4,
             "link": ""
           }
@@ -846,7 +846,7 @@
         "text_D6J4zR": {
           "type": "text",
           "settings": {
-            "text": "Us Weekly",
+            "text": "Scienced Backed",
             "font_size": 2,
             "link": ""
           }
@@ -868,8 +868,8 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#d6e8f8",
-        "text_color": "#111111",
+        "background_color": "#1C2B6B",
+        "text_color": "#ffffff",
         "color_scheme": "",
         "padding_top": 32,
         "padding_bottom": 32
