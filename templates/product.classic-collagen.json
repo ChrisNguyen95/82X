@@ -23,6 +23,18 @@
           "type": "title",
           "settings": {}
         },
+        "icon_with_text_pNFDrM": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "Highly rated by customers for: Skin",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
         "okendo_star_rating_HG7A6w": {
           "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
@@ -31,6 +43,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "show_more_enable": true,
             "max_lines": 9,
@@ -100,6 +113,7 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "icon_with_text_pNFDrM",
         "okendo_star_rating_HG7A6w",
         "description",
         "variant_picker",
@@ -278,7 +292,7 @@
         "cols_mobile": 4,
         "gap_desktop": 40,
         "gap_mobile": 8,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#111111",
         "color_scheme": "",
         "padding_top": 40,
