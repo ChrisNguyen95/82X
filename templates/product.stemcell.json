@@ -177,86 +177,6 @@
         "padding_bottom": 28
       }
     },
-    "accordion_section_cmYxRz": {
-      "type": "accordion-section",
-      "blocks": {
-        "item_WaPpKd": {
-          "type": "item",
-          "settings": {
-            "title": "What benefits does adding rose stem cells to the 82X Stemcell product provide?",
-            "content": "<p>Rose stem cells create a highly biocompatible environment, delivering essential nutrients to the body’s stem cells, helping them stay healthy and rejuvenating biological age. In addition, 82X Stemcell helps slow down the aging process, strongly supports the synthesis of collagen and elastin, enhances the body’s immune system, and protects cells from harmful external factors.</p>",
-            "open_by_default": true
-          }
-        },
-        "item_wGGX4D": {
-          "type": "item",
-          "settings": {
-            "title": "What makes the 82X Stemcell different from other 82X product lines?",
-            "content": "<p>82X Stemcell delivers triple-action support in slimming the body, aiding weight management, and promoting effective detoxification. Rose stem cells also help repair and regenerate cells, significantly extending cellular longevity. With the addition of rose stem cells combined with collagen, the product further enhances the body’s ability to rejuvenate the skin.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_QUdkMG": {
-          "type": "item",
-          "settings": {
-            "title": "What are the negative signs when the body experiences a decline in stem cells?",
-            "content": "<p>When stem cell levels decrease, the body may experience fatigue, weakness, and a higher susceptibility to illness. Memory can decline, and the skin may become wrinkled, aged, and prone to pigmentation issues. Additionally, the functions of internal organs and overall physiological health may deteriorate.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_FwXRPR": {
-          "type": "item",
-          "settings": {
-            "title": "Is this product suitable for long-term daily use, and are there any safety considerations I should be aware of?",
-            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition. </p>",
-            "open_by_default": false
-          }
-        },
-        "item_WdrcNm": {
-          "type": "item",
-          "settings": {
-            "title": "I’m nearly 45 years old, and my mental well-being feels weak. My skin looks dull and lacks vitality. Can I use this product?",
-            "content": "<p>Yes, with rose stem cell extract, the product helps nourish and effectively restore the skin. For your current condition, you can follow a regimen of 2 bottles of Placenta Stemcell combined with 1 Collagen Stemcell to improve your skin and your overall wellness from within.</p>",
-            "open_by_default": false
-          }
-        }
-      },
-      "block_order": [
-        "item_WaPpKd",
-        "item_wGGX4D",
-        "item_QUdkMG",
-        "item_FwXRPR",
-        "item_WdrcNm"
-      ],
-      "name": "Accordion — FAQ",
-      "settings": {
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_max_width": 800,
-        "subtext": "Rejuvenate and Protect Your Natural Beauty",
-        "text_align": "center",
-        "list_max_width": 860,
-        "tag_bg": "#d6e8f8",
-        "tag_color": "#1c2b6b",
-        "divider_color": "#e0e0e0",
-        "title_color": "#111111",
-        "body_color": "#555555",
-        "icon_color": "#111111",
-        "card_style": true,
-        "card_bg": "#d6e8f8",
-        "card_radius": 20,
-        "card_padding_v": 64,
-        "card_padding_h": 48,
-        "heading_color": "#111111",
-        "subtext_color": "#555555",
-        "section_bg": "#ffffff",
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -310,6 +230,85 @@
         "padding_bottom": 100
       }
     },
+    "product_ingredients_XtHimA": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_CWKXKy": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Rosa Damascena Extract Powder",
+            "amount": "108 mg"
+          }
+        },
+        "ingredient_row_zEBadQ": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "15,000 mg"
+          }
+        },
+        "ingredient_row_XzFiWz": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Cherry Blossom Flower Extract",
+            "amount": "75 mg"
+          }
+        },
+        "ingredient_row_ya9adb": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Pineapple Fruit Extract",
+            "amount": "60 mg"
+          }
+        },
+        "ingredient_row_AkdRbt": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Brewer's Yeast Peptide",
+            "amount": "4,160 mg"
+          }
+        },
+        "ingredient_row_TKxCDF": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Pineapple Fruit Extract",
+            "amount": "2,000 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_CWKXKy",
+        "ingredient_row_zEBadQ",
+        "ingredient_row_XzFiWz",
+        "ingredient_row_ya9adb",
+        "ingredient_row_AkdRbt",
+        "ingredient_row_TKxCDF"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image": "shopify://shop_images/82X-Sakura-Collagen-Stemcell.png",
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Each Bottle Contains",
+        "card_header_bg": "#FFFFFF",
+        "card_bg": "#E8F2FB",
+        "card_radius": 16,
+        "row_divider_color": "#C8D8E8",
+        "divider_color": "#A0B8CC",
+        "full_list_heading": "Other Ingredients:",
+        "full_list_text": "<p>Fermented Plant Extract, Yeast Peptide <em>(Saccharomyces cerevisiae)</em>, Turmeric Extract, Camellia Seed Extract, Coconut Water Powder, Kiwi Seed Extract, Royal Jelly Extract, Citrus Unshu Extract, White Jelly Fungus Extract, Glucosamine, Vitamin A, Vitamin D, Vitamin E.</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1C2B6B",
+        "heading_color": "#FFFFFF",
+        "text_color": "#1C2B6B",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
     "image_with_text_nrjQxn": {
       "type": "image-with-text",
       "blocks": {
@@ -359,7 +358,7 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "icon_size": 40,
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 100
       }
     },
@@ -437,6 +436,7 @@
       "block_order": [
         "heading_rC4VFK"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -479,6 +479,7 @@
         "text_QMU9yn",
         "button_E9mbGP"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -534,6 +535,7 @@
         "text_DkJYtW",
         "button_w7Wpqp"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -589,6 +591,7 @@
         "text_Mrn3mk",
         "button_f9M46P"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -614,6 +617,7 @@
     },
     "review_badge_MHhxiE": {
       "type": "review-badge",
+      "disabled": true,
       "name": "Review Badge",
       "settings": {
         "color_scheme": "scheme-3",
@@ -669,13 +673,160 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "accordion_section_cmYxRz": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_WaPpKd": {
+          "type": "item",
+          "settings": {
+            "title": "What benefits does adding rose stem cells to the 82X Stemcell product provide?",
+            "content": "<p>Rose stem cells create a highly biocompatible environment, delivering essential nutrients to the body’s stem cells, helping them stay healthy and rejuvenating biological age. In addition, 82X Stemcell helps slow down the aging process, strongly supports the synthesis of collagen and elastin, enhances the body’s immune system, and protects cells from harmful external factors.</p>",
+            "open_by_default": true
+          }
+        },
+        "item_wGGX4D": {
+          "type": "item",
+          "settings": {
+            "title": "What makes the 82X Stemcell different from other 82X product lines?",
+            "content": "<p>82X Stemcell delivers triple-action support in slimming the body, aiding weight management, and promoting effective detoxification. Rose stem cells also help repair and regenerate cells, significantly extending cellular longevity. With the addition of rose stem cells combined with collagen, the product further enhances the body’s ability to rejuvenate the skin.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QUdkMG": {
+          "type": "item",
+          "settings": {
+            "title": "What are the negative signs when the body experiences a decline in stem cells?",
+            "content": "<p>When stem cell levels decrease, the body may experience fatigue, weakness, and a higher susceptibility to illness. Memory can decline, and the skin may become wrinkled, aged, and prone to pigmentation issues. Additionally, the functions of internal organs and overall physiological health may deteriorate.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_FwXRPR": {
+          "type": "item",
+          "settings": {
+            "title": "Is this product suitable for long-term daily use, and are there any safety considerations I should be aware of?",
+            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition. </p>",
+            "open_by_default": false
+          }
+        },
+        "item_WdrcNm": {
+          "type": "item",
+          "settings": {
+            "title": "I’m nearly 45 years old, and my mental well-being feels weak. My skin looks dull and lacks vitality. Can I use this product?",
+            "content": "<p>Yes, with rose stem cell extract, the product helps nourish and effectively restore the skin. For your current condition, you can follow a regimen of 2 bottles of Placenta Stemcell combined with 1 Collagen Stemcell to improve your skin and your overall wellness from within.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_WaPpKd",
+        "item_wGGX4D",
+        "item_QUdkMG",
+        "item_FwXRPR",
+        "item_WdrcNm"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 64
+      }
+    },
+    "logo_marquee_DpGpLG": {
+      "type": "logo-marquee",
+      "blocks": {
+        "text_6PYt6M": {
+          "type": "text",
+          "settings": {
+            "text": "Men'sHealth",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_Ai78ix": {
+          "type": "text",
+          "settings": {
+            "text": "Women'sHealth",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_F8mKPq": {
+          "type": "text",
+          "settings": {
+            "text": "BYRDIE",
+            "font_size": 2,
+            "link": ""
+          }
+        },
+        "text_fYrRm9": {
+          "type": "text",
+          "settings": {
+            "text": "essence",
+            "font_size": 2.4,
+            "link": ""
+          }
+        },
+        "text_iknEy9": {
+          "type": "text",
+          "settings": {
+            "text": "Us Weekly",
+            "font_size": 2,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_6PYt6M",
+        "text_Ai78ix",
+        "text_F8mKPq",
+        "text_fYrRm9",
+        "text_iknEy9"
+      ],
+      "name": "Logo Marquee",
+      "settings": {
+        "subheading": "As Featured In",
+        "subheading_gap": 24,
+        "direction": "left",
+        "speed": 32,
+        "logo_height": 44,
+        "gap": 80,
+        "pause_on_hover": true,
+        "background_color": "#D6E8F8",
+        "text_color": "#111111",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "accordion_section_cmYxRz",
     "image_with_text_9pQ8im",
+    "product_ingredients_XtHimA",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
@@ -683,6 +834,8 @@
     "image_with_text_A96TqF",
     "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
-    "17742594372d116b7c"
+    "17742594372d116b7c",
+    "accordion_section_cmYxRz",
+    "logo_marquee_DpGpLG"
   ]
 }
