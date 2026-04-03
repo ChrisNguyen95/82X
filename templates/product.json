@@ -169,77 +169,6 @@
         "padding_bottom": 28
       }
     },
-    "accordion_section_cmYxRz": {
-      "type": "accordion-section",
-      "blocks": {
-        "item_WaPpKd": {
-          "type": "item",
-          "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": true
-          }
-        },
-        "item_wGGX4D": {
-          "type": "item",
-          "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_QUdkMG": {
-          "type": "item",
-          "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_FwXRPR": {
-          "type": "item",
-          "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        }
-      },
-      "block_order": [
-        "item_WaPpKd",
-        "item_wGGX4D",
-        "item_QUdkMG",
-        "item_FwXRPR"
-      ],
-      "name": "Accordion — FAQ",
-      "settings": {
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_max_width": 800,
-        "subtext": "Rejuvenate and Protect Your Natural Beauty",
-        "text_align": "center",
-        "list_max_width": 860,
-        "tag_bg": "#d6e8f8",
-        "tag_color": "#1c2b6b",
-        "divider_color": "#e0e0e0",
-        "title_color": "#111111",
-        "body_color": "#555555",
-        "icon_color": "#111111",
-        "card_style": true,
-        "card_bg": "#d6e8f8",
-        "card_radius": 20,
-        "card_padding_v": 64,
-        "card_padding_h": 48,
-        "heading_color": "#111111",
-        "subtext_color": "#555555",
-        "section_bg": "#ffffff",
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -383,6 +312,7 @@
         "column_NG6rbL",
         "column_8J8ytE"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Meet the doctors and scientists helping 82x make a difference",
@@ -417,6 +347,7 @@
       "block_order": [
         "heading_rC4VFK"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -459,6 +390,7 @@
         "text_QMU9yn",
         "button_E9mbGP"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -514,6 +446,7 @@
         "text_DkJYtW",
         "button_w7Wpqp"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -569,6 +502,7 @@
         "text_Mrn3mk",
         "button_f9M46P"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
       ],
@@ -594,6 +528,7 @@
     },
     "review_badge_MHhxiE": {
       "type": "review-badge",
+      "disabled": true,
       "name": "Review Badge",
       "settings": {
         "color_scheme": "scheme-3",
@@ -649,12 +584,82 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "accordion_section_cmYxRz": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_WaPpKd": {
+          "type": "item",
+          "settings": {
+            "title": "What Are The Benefits Of 82X Sakura Placenta?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": true
+          }
+        },
+        "item_wGGX4D": {
+          "type": "item",
+          "settings": {
+            "title": "How Should I Take 82X Sakura Placenta?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QUdkMG": {
+          "type": "item",
+          "settings": {
+            "title": "How Long Does It Take To See Results?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_FwXRPR": {
+          "type": "item",
+          "settings": {
+            "title": "Who Should Use This Product?",
+            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_WaPpKd",
+        "item_wGGX4D",
+        "item_QUdkMG",
+        "item_FwXRPR"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "accordion_section_cmYxRz",
     "image_with_text_9pQ8im",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
@@ -663,6 +668,7 @@
     "image_with_text_A96TqF",
     "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
-    "17742594372d116b7c"
+    "17742594372d116b7c",
+    "accordion_section_cmYxRz"
   ]
 }
