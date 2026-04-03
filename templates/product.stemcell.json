@@ -264,15 +264,29 @@
         "ingredient_row_AkdRbt": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Brewer's Yeast Peptide",
-            "amount": "4,160 mg"
+            "name": "Zinc Gluconate (8.8 mg Zinc)",
+            "amount": "70,4 mg"
           }
         },
         "ingredient_row_TKxCDF": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Pineapple Fruit Extract",
-            "amount": "2,000 mg"
+            "name": "Magnesium Chloride",
+            "amount": "45.5 mg"
+          }
+        },
+        "ingredient_row_47jxyr": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Hyaluronic Acid",
+            "amount": "5 mg"
+          }
+        },
+        "ingredient_row_djPc6y": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Hydrolyzed Elastin",
+            "amount": "500 mg"
           }
         }
       },
@@ -282,7 +296,9 @@
         "ingredient_row_XzFiWz",
         "ingredient_row_ya9adb",
         "ingredient_row_AkdRbt",
-        "ingredient_row_TKxCDF"
+        "ingredient_row_TKxCDF",
+        "ingredient_row_47jxyr",
+        "ingredient_row_djPc6y"
       ],
       "name": "Product Ingredients",
       "settings": {
@@ -305,7 +321,7 @@
         "heading_color": "#FFFFFF",
         "text_color": "#1C2B6B",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 24,
         "padding_bottom": 60
       }
     },
