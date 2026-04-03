@@ -52,17 +52,6 @@
             "text_style": "body"
           }
         },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "show_more_enable": true,
-            "max_lines": 9,
-            "show_more_label": "See More",
-            "show_less_label": "Show less",
-            "show_more_color": "#56baf7"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -86,25 +75,6 @@
             "heading_3": "Made in Japan"
           }
         },
-        "trust_badges_MXEzeQ": {
-          "type": "trust_badges",
-          "disabled": true,
-          "settings": {
-            "show_border": false,
-            "border_color": "#e0e0e0",
-            "bg_color": "#ffffff",
-            "text_color": "#070a13",
-            "icon_size": 26,
-            "margin_top": 24,
-            "margin_bottom": 0,
-            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
-            "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify://shop_images/sack-money.png",
-            "badge_2_text": "60 Day Money Back",
-            "badge_3_text": "",
-            "badge_4_text": ""
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -119,6 +89,33 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
+        },
+        "collapsible_tab_WFk6Bz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits",
+            "icon": "star",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_zTWhXa": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_iNVEBB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "bottle",
+            "content": "<ul><li>120,000 mg Deep-Sea Tuna Collagen (Kosoteki technology, &lt;500 Daltons)</li><li>Magnesium Chloride</li><li>Royal Jelly</li><li>Glucosamine</li><li>82 Fermented Plant Extracts</li><li>Hyaluronic Acid (HA) & Elastin</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -128,12 +125,13 @@
         "okendo_star_rating_HG7A6w",
         "price_9UgXc9",
         "text_eFc6pH",
-        "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "icon_with_text_V96kzb",
-        "trust_badges_MXEzeQ",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_WFk6Bz",
+        "collapsible_tab_zTWhXa",
+        "collapsible_tab_iNVEBB"
       ],
       "settings": {
         "enable_sticky_info": true,
