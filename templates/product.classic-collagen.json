@@ -41,6 +41,10 @@
             "product": "{{product}}"
           }
         },
+        "price_9UgXc9": {
+          "type": "price",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -115,6 +119,7 @@
         "title_BYxPjh",
         "icon_with_text_pNFDrM",
         "okendo_star_rating_HG7A6w",
+        "price_9UgXc9",
         "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
