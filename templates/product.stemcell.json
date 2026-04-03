@@ -23,6 +23,13 @@
           "type": "title",
           "settings": {}
         },
+        "text_kPTJY4": {
+          "type": "text",
+          "settings": {
+            "text": "Cellular-level skin repair — rebuilt, restored, and radiant from within.",
+            "text_style": "subtitle"
+          }
+        },
         "icon_with_text_KnBhzC": {
           "type": "icon-with-text",
           "settings": {
@@ -89,11 +96,39 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
+        },
+        "collapsible_tab_4RUtKb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits",
+            "icon": "check_mark",
+            "content": "<ul><li>Reverses cellular aging, restores skin from the deepest layer with powerful antioxidant protection</li><li>Fills deep wrinkles, restores volume and firmness — zero fat, 99% biocompatible</li><li>HA + Elastin + White Jelly Fungus deliver intense moisture, leaving skin plump, soft, and naturally glowing</li><li>Strengthens skin barrier and body immunity, soothes inflammation and redness</li><li>Detoxifies, supports healthy digestion and gut balance with vitamins, minerals & natural enzymes</li><li>Reduces stress, improves sleep quality, and maintains smooth, supple skin overnight</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MbcfPG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "check_mark",
+            "content": "<p>Usually, drink about<strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PV4eT9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "bottle",
+            "content": "<ul><li>Fish Collagen Peptide</li><li>Rosa Damascena Extract Powder</li><li>Cherry Blossom Flower Extract <em>(Standardized)</em></li><li>Pineapple Fruit Extract <em>(600 μg Ceramide)</em></li><li>Zinc Gluconate <em>(8.8 mg Zinc)</em></li><li>Magnesium Chloride <em>(5.4 mg Magnesium)</em></li><li>Hyaluronic Acid + Hydrolyzed Elastin</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "text_kPTJY4",
         "icon_with_text_KnBhzC",
         "okendo_star_rating_HG7A6w",
         "price_XqcrzV",
@@ -101,7 +136,10 @@
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "icon_with_text_wFEcbx",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_4RUtKb",
+        "collapsible_tab_MbcfPG",
+        "collapsible_tab_PV4eT9"
       ],
       "settings": {
         "enable_sticky_info": true,
