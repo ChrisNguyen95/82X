@@ -23,10 +23,33 @@
           "type": "title",
           "settings": {}
         },
+        "icon_with_text_KnBhzC": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "<strong>Highly rated by customers for:Skin Firmness, Deep Hydration, Brightening Effect, Anti-Aging Recovery, Immunity Support</strong>",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
         "okendo_star_rating_HG7A6w": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
+          }
+        },
+        "price_XqcrzV": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_grw7Vf": {
+          "type": "text",
+          "settings": {
+            "text": "120,000mg deep-sea collagen + Damask Rose Stem Cells — rebuilds skin from the cellular level. Firmer, brighter, deeply hydrated skin in one daily 500ml drink.",
+            "text_style": "body"
           }
         },
         "description": {
@@ -47,7 +70,7 @@
           }
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify:\/\/apps\/appstle-subscription\/blocks\/appstle-subscription-product-page-widget\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
         "trust_badges_MXEzeQ": {
@@ -60,9 +83,9 @@
             "icon_size": 26,
             "margin_top": 24,
             "margin_bottom": 0,
-            "badge_1_icon": "shopify:\/\/shop_images\/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
+            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
             "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify:\/\/shop_images\/sack-money.png",
+            "badge_2_icon": "shopify://shop_images/sack-money.png",
             "badge_2_text": "60 Day Money Back",
             "badge_3_text": "",
             "badge_4_text": ""
@@ -75,7 +98,7 @@
             "show_gift_card_recipient": false,
             "url": "{{ product.metafields.custom.link_to_amazon.value }}",
             "text": "Buy on Amazon",
-            "icon": "shopify:\/\/shop_images\/image_5.png",
+            "icon": "shopify://shop_images/image_5.png",
             "show_amazon_icon": true,
             "btn_style": "custom",
             "btn_bg_color": "#000000",
@@ -87,7 +110,10 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "icon_with_text_KnBhzC",
         "okendo_star_rating_HG7A6w",
+        "price_XqcrzV",
+        "text_grw7Vf",
         "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
@@ -137,7 +163,7 @@
           "type": "item",
           "settings": {
             "title": "What benefits does adding rose stem cells to the 82X Stemcell product provide?",
-            "content": "<p>Rose stem cells create a highly biocompatible environment, delivering essential nutrients to the body’s stem cells, helping them stay healthy and rejuvenating biological age. In addition, 82X Stemcell helps slow down the aging process, strongly supports the synthesis of collagen and elastin, enhances the body’s immune system, and protects cells from harmful external factors.<\/p>",
+            "content": "<p>Rose stem cells create a highly biocompatible environment, delivering essential nutrients to the body’s stem cells, helping them stay healthy and rejuvenating biological age. In addition, 82X Stemcell helps slow down the aging process, strongly supports the synthesis of collagen and elastin, enhances the body’s immune system, and protects cells from harmful external factors.</p>",
             "open_by_default": true
           }
         },
@@ -145,7 +171,7 @@
           "type": "item",
           "settings": {
             "title": "What makes the 82X Stemcell different from other 82X product lines?",
-            "content": "<p>82X Stemcell delivers triple-action support in slimming the body, aiding weight management, and promoting effective detoxification. Rose stem cells also help repair and regenerate cells, significantly extending cellular longevity. With the addition of rose stem cells combined with collagen, the product further enhances the body’s ability to rejuvenate the skin.<\/p>",
+            "content": "<p>82X Stemcell delivers triple-action support in slimming the body, aiding weight management, and promoting effective detoxification. Rose stem cells also help repair and regenerate cells, significantly extending cellular longevity. With the addition of rose stem cells combined with collagen, the product further enhances the body’s ability to rejuvenate the skin.</p>",
             "open_by_default": false
           }
         },
@@ -153,7 +179,7 @@
           "type": "item",
           "settings": {
             "title": "What are the negative signs when the body experiences a decline in stem cells?",
-            "content": "<p>When stem cell levels decrease, the body may experience fatigue, weakness, and a higher susceptibility to illness. Memory can decline, and the skin may become wrinkled, aged, and prone to pigmentation issues. Additionally, the functions of internal organs and overall physiological health may deteriorate.<\/p>",
+            "content": "<p>When stem cell levels decrease, the body may experience fatigue, weakness, and a higher susceptibility to illness. Memory can decline, and the skin may become wrinkled, aged, and prone to pigmentation issues. Additionally, the functions of internal organs and overall physiological health may deteriorate.</p>",
             "open_by_default": false
           }
         },
@@ -161,7 +187,7 @@
           "type": "item",
           "settings": {
             "title": "Is this product suitable for long-term daily use, and are there any safety considerations I should be aware of?",
-            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition. <\/p>",
+            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition. </p>",
             "open_by_default": false
           }
         },
@@ -169,7 +195,7 @@
           "type": "item",
           "settings": {
             "title": "I’m nearly 45 years old, and my mental well-being feels weak. My skin looks dull and lacks vitality. Can I use this product?",
-            "content": "<p>Yes, with rose stem cell extract, the product helps nourish and effectively restore the skin. For your current condition, you can follow a regimen of 2 bottles of Placenta Stemcell combined with 1 Collagen Stemcell to improve your skin and your overall wellness from within.<\/p>",
+            "content": "<p>Yes, with rose stem cell extract, the product helps nourish and effectively restore the skin. For your current condition, you can follow a regimen of 2 bottles of Placenta Stemcell combined with 1 Collagen Stemcell to improve your skin and your overall wellness from within.</p>",
             "open_by_default": false
           }
         }
@@ -223,7 +249,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Enriched with Bulgarian Damascena rose stem cells, 82 fermented plant extracts, and bioactive peptides, the formula: <\/p><ul><li>Enhances cellular regeneration, detoxification, and metabolic function.<\/li><li>Helps reduce fat accumulation, boost immunity, balance overall health<\/li><li>Support a slimmer, more energized body while protecting cells from aging and environmental damage.<\/li><\/ul>",
+            "text": "<p>Enriched with Bulgarian Damascena rose stem cells, 82 fermented plant extracts, and bioactive peptides, the formula: </p><ul><li>Enhances cellular regeneration, detoxification, and metabolic function.</li><li>Helps reduce fat accumulation, boost immunity, balance overall health</li><li>Support a slimmer, more energized body while protecting cells from aging and environmental damage.</li></ul>",
             "text_style": "body"
           }
         },
@@ -232,7 +258,7 @@
           "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -245,7 +271,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Artboard_1_80e102ba-f3ec-49a4-a45c-e9169e848d30.png",
+        "full_width": false,
+        "image": "shopify://shop_images/Artboard_1_80e102ba-f3ec-49a4-a45c-e9169e848d30.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -275,7 +302,7 @@
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p>Unlike other 82X lines, it delivers a powerful triple-action effect: supporting a slimmer body, assisting in weight management, and promoting deep detoxification. This means you’re not only improving your appearance, but also optimizing your body from within.<\/p><p>At the core of its difference is the fusion of rose stem cells and collagen - a combination that actively repairs, regenerates, and extends the lifespan of your cells. The result? Stronger internal health, visibly younger skin, and a body that feels lighter, healthier, and more balanced over time.<\/p>",
+            "text": "<p>Unlike other 82X lines, it delivers a powerful triple-action effect: supporting a slimmer body, assisting in weight management, and promoting deep detoxification. This means you’re not only improving your appearance, but also optimizing your body from within.</p><p>At the core of its difference is the fusion of rose stem cells and collagen - a combination that actively repairs, regenerates, and extends the lifespan of your cells. The result? Stronger internal health, visibly younger skin, and a body that feels lighter, healthier, and more balanced over time.</p>",
             "text_style": "body"
           }
         },
@@ -284,7 +311,7 @@
           "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
@@ -297,7 +324,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Artboard_2_da5419ca-ff3b-4521-97cd-643a7741ce90.png",
+        "full_width": false,
+        "image": "shopify://shop_images/Artboard_2_da5419ca-ff3b-4521-97cd-643a7741ce90.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -320,9 +348,9 @@
         "column_qGDqjL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck<\/strong><\/em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC<\/strong><\/p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”<\/p>",
+            "image": "shopify://shop_images/Rectangle_38.jpg",
+            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
+            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -330,9 +358,9 @@
         "column_NG6rbL": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari<\/strong><\/em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician<\/strong><\/p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”<\/p>",
+            "image": "shopify://shop_images/Rectangdle_38.jpg",
+            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
+            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -340,9 +368,9 @@
         "column_8J8ytE": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos<\/strong><\/em>",
-            "text": "<p><strong>Dermatologist<\/strong><\/p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”<\/p>",
+            "image": "shopify://shop_images/Rectangled38.jpg",
+            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
+            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
             "link_label": "",
             "link": ""
           }
@@ -363,7 +391,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify:\/\/pages\/hero-products",
+        "button_link": "shopify://pages/hero-products",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
@@ -404,14 +432,14 @@
         "heading_BVQiUU": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour<\/em>",
+            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
             "heading_size": "h1"
           }
         },
         "text_QMU9yn": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
             "text_style": "body"
           }
         },
@@ -419,7 +447,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -435,7 +463,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Pictures_container.jpg",
+        "full_width": false,
+        "image": "shopify://shop_images/Pictures_container.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -458,14 +487,14 @@
         "heading_UzaWGg": {
           "type": "heading",
           "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink<\/em>",
+            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
             "heading_size": "h1"
           }
         },
         "text_DkJYtW": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
             "text_style": "body"
           }
         },
@@ -473,7 +502,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -489,7 +518,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/ssss.jpg",
+        "full_width": false,
+        "image": "shopify://shop_images/ssss.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -512,14 +542,14 @@
         "heading_DC4VwY": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink<\/em>",
+            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
             "heading_size": "h1"
           }
         },
         "text_Mrn3mk": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.<\/li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.<\/li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness<\/li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.<\/li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.<\/li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness<\/li><\/ul>",
+            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
             "text_style": "body"
           }
         },
@@ -527,7 +557,7 @@
           "type": "button",
           "settings": {
             "button_label": "Supplement Facts",
-            "button_link": "shopify:\/\/pages\/hero-products",
+            "button_link": "shopify://pages/hero-products",
             "button_style": "link",
             "button_link_color": "#56baf7"
           }
@@ -543,7 +573,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify:\/\/shop_images\/ssssddd.jpg",
+        "full_width": false,
+        "image": "shopify://shop_images/ssssddd.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -595,7 +626,7 @@
       "type": "apps",
       "blocks": {
         "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"
@@ -611,6 +642,8 @@
         "heading_size": "h1",
         "heading_align": "center",
         "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
