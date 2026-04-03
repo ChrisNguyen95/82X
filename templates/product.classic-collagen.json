@@ -177,86 +177,6 @@
         "padding_bottom": 28
       }
     },
-    "accordion_section_cmYxRz": {
-      "type": "accordion-section",
-      "blocks": {
-        "item_WaPpKd": {
-          "type": "item",
-          "settings": {
-            "title": "How soon will I see results?",
-            "content": "<p>Most customers notice better sleep within a few days and visible skin improvements within 2–4 weeks of consistent use.</p>",
-            "open_by_default": true
-          }
-        },
-        "item_wGGX4D": {
-          "type": "item",
-          "settings": {
-            "title": "Is this just a collagen supplement?",
-            "content": "<p>No — this is a multi-functional wellness formula designed to improve skin, sleep, stress levels, and overall health.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_QUdkMG": {
-          "type": "item",
-          "settings": {
-            "title": "Will it make me sleepy during the day?",
-            "content": "<p>No. It helps regulate your natural sleep cycle, so you feel more refreshed and energized during the day.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_FwXRPR": {
-          "type": "item",
-          "settings": {
-            "title": "Who is this best for?",
-            "content": "<p>Anyone experiencing early signs of aging, poor sleep, stress, or looking for a complete inside-out wellness solution.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_kE69jB": {
-          "type": "item",
-          "settings": {
-            "title": "Is it safe for daily use?",
-            "content": "<p>Yes. The formula is designed for daily consumption with carefully selected ingredients used in premium Japanese health products.</p>",
-            "open_by_default": false
-          }
-        }
-      },
-      "block_order": [
-        "item_WaPpKd",
-        "item_wGGX4D",
-        "item_QUdkMG",
-        "item_FwXRPR",
-        "item_kE69jB"
-      ],
-      "name": "Accordion — FAQ",
-      "settings": {
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_max_width": 800,
-        "subtext": "Rejuvenate and Protect Your Natural Beauty",
-        "text_align": "center",
-        "list_max_width": 860,
-        "tag_bg": "#d6e8f8",
-        "tag_color": "#1c2b6b",
-        "divider_color": "#e0e0e0",
-        "title_color": "#111111",
-        "body_color": "#555555",
-        "icon_color": "#111111",
-        "card_style": true,
-        "card_bg": "#d6e8f8",
-        "card_radius": 20,
-        "card_padding_v": 64,
-        "card_padding_h": 48,
-        "heading_color": "#111111",
-        "subtext_color": "#555555",
-        "section_bg": "#ffffff",
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -753,12 +673,91 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "accordion_section_cmYxRz": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_WaPpKd": {
+          "type": "item",
+          "settings": {
+            "title": "How soon will I see results?",
+            "content": "<p>Most customers notice better sleep within a few days and visible skin improvements within 2–4 weeks of consistent use.</p>",
+            "open_by_default": true
+          }
+        },
+        "item_wGGX4D": {
+          "type": "item",
+          "settings": {
+            "title": "Is this just a collagen supplement?",
+            "content": "<p>No — this is a multi-functional wellness formula designed to improve skin, sleep, stress levels, and overall health.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QUdkMG": {
+          "type": "item",
+          "settings": {
+            "title": "Will it make me sleepy during the day?",
+            "content": "<p>No. It helps regulate your natural sleep cycle, so you feel more refreshed and energized during the day.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_FwXRPR": {
+          "type": "item",
+          "settings": {
+            "title": "Who is this best for?",
+            "content": "<p>Anyone experiencing early signs of aging, poor sleep, stress, or looking for a complete inside-out wellness solution.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_kE69jB": {
+          "type": "item",
+          "settings": {
+            "title": "Is it safe for daily use?",
+            "content": "<p>Yes. The formula is designed for daily consumption with carefully selected ingredients used in premium Japanese health products.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_WaPpKd",
+        "item_wGGX4D",
+        "item_QUdkMG",
+        "item_FwXRPR",
+        "item_kE69jB"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "accordion_section_cmYxRz",
     "image_with_text_9pQ8im",
     "product_ingredients_hATdfY",
     "image_with_text_nrjQxn",
@@ -768,6 +767,7 @@
     "image_with_text_A96TqF",
     "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
-    "17742594372d116b7c"
+    "17742594372d116b7c",
+    "accordion_section_cmYxRz"
   ]
 }
