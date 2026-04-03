@@ -284,6 +284,58 @@
         "padding_bottom": 56
       }
     },
+    "logo_content_banner_6rVcED": {
+      "type": "logo-content-banner",
+      "blocks": {
+        "heading_qyq6xN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_WRja8L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        },
+        "button_7HfDTw": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "CHECKOUT NOW",
+            "button_link": "",
+            "button_style": "primary",
+            "button_full_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qyq6xN",
+        "text_WRja8L",
+        "button_7HfDTw"
+      ],
+      "name": "Logo Content Banner",
+      "settings": {
+        "logo_width_desktop": 120,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "center",
+        "mobile_align": "flex-start",
+        "gap_desktop": 48,
+        "gap_mobile": 24,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1C2B6B",
+        "btn_primary_color": "#FFFFFF",
+        "background_color": "#D6E8F8",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
     "product_ingredients_hATdfY": {
       "type": "product-ingredients",
       "blocks": {
@@ -852,6 +904,7 @@
     "related-products",
     "image_with_text_9pQ8im",
     "image_with_text_nrjQxn",
+    "logo_content_banner_6rVcED",
     "product_ingredients_hATdfY",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
