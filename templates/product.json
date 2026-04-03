@@ -116,6 +116,24 @@
             "content": "<ul><li>Deeply rejuvenates skin, restores firmness and elasticity</li><li>Brightens skin tone, boosts antioxidant protection</li><li>Detoxifies, strengthens immunity, improves gut health</li><li>Supports joint flexibility and bone strength</li><li>Reduces stress, relieves fatigue, deepens sleep quality</li><li>Helps regulate body composition and metabolic balance</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_tab_zCAaTq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use",
+            "icon": "check_mark",
+            "content": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_G3g7xm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "bottle",
+            "content": "<p><strong>120,000mg Deep-Sea Tuna Collagen</strong><br/><em>Kosoteki Technology — &lt;500 Daltons, Liposome Encapsulated</em><br/>Ultra-small peptides engineered for deep cellular absorption. Restores skin elasticity, firmness, and hydration from within.</p><p><strong>Sakura (Cherry Blossom) Extract</strong><em>Tyrosinase Inhibitor</em><br/>Targets dark spots, hormonal melasma, and acne scars at the source. Visibly refines pore texture and evens skin tone over time.</p><p><strong>Japanese Orange + Kiwi Seed Extract</strong><em>Vitamin C & Flavonoid Complex</em><br/>Stimulates natural collagen synthesis, strengthens UV defense, and nourishes the skin barrier with polyphenols and healthy fatty acids.</p><p><strong>Coconut Water Powder</strong><em>Deep Skin Hydration</em><br/>Replenishes electrolytes and delivers essential minerals to maintain a healthy, supple skin barrier from the inside out.</p><p><strong>African Mango Seed Extract</strong><em>Irvingia Gabonensis</em><br/>Supports healthy metabolic function by targeting lipase activity and stimulating adiponectin — a key hormone in body composition regulation.</p><p><strong>Yeast Peptide</strong><em>Appetite & Craving Regulation</em><br/>Naturally manages appetite signals and helps reduce cravings for sweets and refined carbohydrates to support healthy weight balance.</p><p><strong>82 Fermented Plant Extracts</strong><br/><em>Broad-Spectrum Botanical Blend</em><br/>Vitamins, minerals, prebiotics, and dietary fiber working together to support gut health, immunity, digestion, and hormonal wellness.</p><p><strong>Hyaluronic Acid + Elastin</strong><em>Hydration & Resilience Duo</em><br/>Locks in moisture and maintains skin's natural bounce — keeping skin plump, smooth, and visibly youthful with daily use.</p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E</strong><em>Stress & Sleep Support Complex</em><br/>Calms the nervous system, eases muscle tension, and supports deeper, more restorative sleep — essential for overnight skin repair.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -131,7 +149,9 @@
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "icon_with_text_nrh9MX",
         "buy_buttons",
-        "collapsible_tab_dHEQRC"
+        "collapsible_tab_dHEQRC",
+        "collapsible_tab_zCAaTq",
+        "collapsible_tab_G3g7xm"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -366,174 +386,6 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_MPF6Qp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_BVQiUU": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_QMU9yn": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_E9mbGP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_BVQiUU",
-        "text_QMU9yn",
-        "button_E9mbGP"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 52,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_A96TqF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UzaWGg": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_DkJYtW": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_w7Wpqp": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UzaWGg",
-        "text_DkJYtW",
-        "button_w7Wpqp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssss.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_b9wzDz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DC4VwY": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Mrn3mk": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_f9M46P": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DC4VwY",
-        "text_Mrn3mk",
-        "button_f9M46P"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssssddd.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
     "review_badge_MHhxiE": {
       "type": "review-badge",
       "disabled": true,
@@ -663,6 +515,84 @@
         "padding_top": 100,
         "padding_bottom": 48
       }
+    },
+    "product_ingredients_7RjUJx": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_8EMgQA": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Porcine Placenta Extract",
+            "amount": "9,000 mg"
+          }
+        },
+        "ingredient_row_7b68Dy": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "15,000 mg"
+          }
+        },
+        "ingredient_row_nk4HzP": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fermented Plant Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_h3DqkR": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "African Mango Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_gWw3qh": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Brewer's Yeast Peptide",
+            "amount": "4,160 mg"
+          }
+        },
+        "ingredient_row_yqQLfJ": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Pineapple Fruit Extract",
+            "amount": "2,000 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_8EMgQA",
+        "ingredient_row_7b68Dy",
+        "ingredient_row_nk4HzP",
+        "ingredient_row_h3DqkR",
+        "ingredient_row_gWw3qh",
+        "ingredient_row_yqQLfJ"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Each Bottle Contains",
+        "card_header_bg": "#ffffff",
+        "card_bg": "#e8f2fb",
+        "card_radius": 16,
+        "row_divider_color": "#c8d8e8",
+        "divider_color": "#a0b8cc",
+        "full_list_heading": "Full List Of Ingredients:",
+        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1c2b6b",
+        "heading_color": "#ffffff",
+        "text_color": "#1c2b6b",
+        "color_scheme": "",
+        "padding_top": 44,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -672,11 +602,9 @@
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
-    "image_with_text_MPF6Qp",
-    "image_with_text_A96TqF",
-    "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
     "17742594372d116b7c",
-    "accordion_section_cmYxRz"
+    "accordion_section_cmYxRz",
+    "product_ingredients_7RjUJx"
   ]
 }
