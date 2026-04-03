@@ -175,36 +175,26 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "Why This Formula Works",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p><strong>Science-Backed Absorption</strong><br/>120,000mg deep-sea tuna collagen peptides — under 500 Daltons — encapsulated in liposomes for maximum bioavailability. Smaller molecules, deeper delivery, faster results.</p><p><strong>Targeted Skin Recovery</strong><br/>Sakura extract inhibits tyrosinase to visibly fade dark spots, melasma, and acne scars. Japanese Orange flavonoids + Vitamin C actively support your skin's own collagen synthesis and UV defense.</p><p><strong>Clinically Recognized Ingredients</strong><br/>African Mango Seed (Irvingia gabonensis) is studied for its role in metabolic support — targeting lipase activity and stimulating adiponectin, a key hormone in fat regulation.</p><p><strong>82 Fermented Plant Extracts</strong><br/>A broad-spectrum botanical blend delivering prebiotics, vitamins, minerals, and dietary fiber — supporting gut flora, digestion, immunity, and hormonal balance in one daily bottle.</p>",
             "text_style": "body"
-          }
-        },
-        "button_6qGJwe": {
-          "type": "button",
-          "settings": {
-            "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
           }
         }
       },
       "block_order": [
         "heading_RjpcJM",
-        "text_BctwwL",
-        "button_6qGJwe"
+        "text_BctwwL"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/Review_image.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -253,6 +243,7 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
