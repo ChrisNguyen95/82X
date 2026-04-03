@@ -69,10 +69,10 @@
             "layout": "vertical",
             "icon_1": "return",
             "heading_1": "<strong>30 Days Money Back</strong>",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading"
+            "icon_2": "truck",
+            "heading_2": "<strong>Free Shipping in the US</strong>",
+            "icon_3": "star",
+            "heading_3": "<strong>Japanese Made</strong>"
           }
         },
         "buy_buttons": {
@@ -89,6 +89,33 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
+        },
+        "collapsible_tab_wGfVKx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits",
+            "icon": "check_mark",
+            "content": "<ul><li>Repairs cells at the deepest level, balances estrogen, and reverses hormonal skin aging</li><li>Sakura + Japanese Orange fade dark spots, melasma, and pigmentation for a porcelain-like, even complexion</li><li>Blocks fat absorption, suppresses appetite, and actively supports body contouring and weight management</li><li>Regulates estrogen levels to reduce mood swings, hot flashes, and menstrual irregularities</li><li>Flushes toxins, strengthens natural defenses, and supports a cleaner, healthier body from within</li><li>Boosts cellular energy, fights fatigue, and keeps skin looking vibrant and youthful</li><li>Delivers deep hydration and antioxidants to maintain smooth, supple, and resilient skin</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_e7MetA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use",
+            "icon": "check_mark",
+            "content": "<p>Usually, drink about<strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_aHcqkU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "check_mark",
+            "content": "<ul><li>450,000mg Shizuoka \"Happy Pig\" Placenta</li><li>African Mango Seed Extract</li><li>Yeast Peptide</li><li>Japanese Orange 5,000mg</li><li>Sakura (Cherry Blossom) Extract</li><li>Coconut Water Powder + Kiwi Seed Extract</li><li>Coenzyme Q10</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -101,7 +128,10 @@
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "icon_with_text_e76dQM",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_wGfVKx",
+        "collapsible_tab_e7MetA",
+        "collapsible_tab_aHcqkU"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -175,7 +205,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/4_c7246d7d-0a29-4cb0-9527-b79ddd812a6f.jpg",
+        "image": "shopify://shop_images/Product_image.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
