@@ -280,8 +280,8 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "icon_size": 40,
-        "padding_top": 20,
-        "padding_bottom": 28
+        "padding_top": 72,
+        "padding_bottom": 56
       }
     },
     "product_ingredients_hATdfY": {
@@ -776,7 +776,7 @@
         "section_bg": "#ffffff",
         "color_scheme": "",
         "padding_top": 24,
-        "padding_bottom": 24
+        "padding_bottom": 60
       }
     }
   },
