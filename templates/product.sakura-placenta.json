@@ -23,21 +23,34 @@
           "type": "title",
           "settings": {}
         },
+        "icon_with_text_8XtXVE": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "<strong>Highly rated by customers for:Skin Whitening, Body Contouring, Hormonal Balance, Dark Spot Fading, Detox & Immunity</strong>",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
         "okendo_star_rating_HG7A6w": {
           "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}"
           }
         },
-        "description": {
-          "type": "description",
+        "text_dAxeyX": {
+          "type": "text",
           "settings": {
-            "show_more_enable": true,
-            "max_lines": 9,
-            "show_more_label": "See More",
-            "show_less_label": "Show less",
-            "show_more_color": "#56baf7"
+            "text": "450,000mg Placenta + African Mango — whitens, slims, and balances hormones in one daily drink. Japan's most advanced formula for a brighter body and leaner figure.",
+            "text_style": "body"
           }
+        },
+        "price_gqgrfi": {
+          "type": "price",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -50,22 +63,16 @@
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
         },
-        "trust_badges_MXEzeQ": {
-          "type": "trust_badges",
+        "icon_with_text_e76dQM": {
+          "type": "icon-with-text",
           "settings": {
-            "show_border": false,
-            "border_color": "#e0e0e0",
-            "bg_color": "#ffffff",
-            "text_color": "#070a13",
-            "icon_size": 26,
-            "margin_top": 24,
-            "margin_bottom": 0,
-            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
-            "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify://shop_images/sack-money.png",
-            "badge_2_text": "60 Day Money Back",
-            "badge_3_text": "",
-            "badge_4_text": ""
+            "layout": "vertical",
+            "icon_1": "return",
+            "heading_1": "<strong>30 Days Money Back</strong>",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
           }
         },
         "buy_buttons": {
@@ -87,11 +94,13 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "icon_with_text_8XtXVE",
         "okendo_star_rating_HG7A6w",
-        "description",
+        "text_dAxeyX",
+        "price_gqgrfi",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
-        "trust_badges_MXEzeQ",
+        "icon_with_text_e76dQM",
         "buy_buttons"
       ],
       "settings": {
