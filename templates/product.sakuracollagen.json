@@ -554,32 +554,32 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Can this product help me lose weight and improve my skin at the same time?",
+            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea tuna collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "How is this collagen different from regular collagen drinks on the market?",
+            "content": "<p>Most collagen drinks use standard fish collagen that your body absorbs poorly. Ours uses deep-sea tuna collagen with Kosoteki peptides under 500 Daltons — small enough to penetrate the skin's deepest layers. These peptides are also encased in Liposomes, giving them a 99% absorption rate. You're not just consuming collagen; your body is actually using it.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "I'm over 35 and dealing with deep wrinkles and skin sagging. Will this actually work for me?",
+            "content": "<p>This line was specifically formulated for women 30 and above whose skin has begun losing structural density. The ultra-micro peptide complex works to fill deep wrinkles, restore firmness, and lift sagging areas — addressing the root cause of visible aging rather than masking it on the surface.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Is this safe for long-term use? Are there any side effects I should know about?",
+            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.</p>",
             "open_by_default": false
           }
         }
@@ -679,7 +679,7 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#1C2B6B",
+        "background_color": "#1c2b6b",
         "text_color": "#ffffff",
         "color_scheme": "",
         "padding_top": 32,
