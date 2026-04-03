@@ -55,7 +55,7 @@
         "text_grw7Vf": {
           "type": "text",
           "settings": {
-            "text": "120,000mg deep-sea collagen + Damask Rose Stem Cells — rebuilds skin from the cellular level. Firmer, brighter, deeply hydrated skin in one daily 500ml drink.",
+            "text": "120,000mg deep-sea collagen + Damask Rose Stem Cells — rebuilds skin from the cellular level. Firmer, brighter, deeply hydrated skin in one daily 500ml drink. Daily use recommended · Suitable for women 25+",
             "text_style": "body"
           }
         },
@@ -244,7 +244,7 @@
           "type": "ingredient_row",
           "settings": {
             "name": "Fish Collagen Peptide",
-            "amount": "15,000 mg"
+            "amount": "6000 mg"
           }
         },
         "ingredient_row_XzFiWz": {
@@ -313,7 +313,7 @@
         "row_divider_color": "#C8D8E8",
         "divider_color": "#A0B8CC",
         "full_list_heading": "Other Ingredients:",
-        "full_list_text": "<p>Fermented Plant Extract, Yeast Peptide <em>(Saccharomyces cerevisiae)</em>, Turmeric Extract, Camellia Seed Extract, Coconut Water Powder, Kiwi Seed Extract, Royal Jelly Extract, Citrus Unshu Extract, White Jelly Fungus Extract, Glucosamine, Vitamin A, Vitamin D, Vitamin E.</p>",
+        "full_list_text": "<p>Fermented Plant Extract, Yeast Peptide <em>(Saccharomyces cerevisiae)</em>, Turmeric Extract, Camellia Seed Extract, Coconut Water Powder, Kiwi Seed Extract, Royal Jelly Extract, Citrus Unshu Extract, White Jelly Fungus Extract, Glucosamine, Vitamin A, Vitamin D, Vitamin E, Water, Acidity Regulator (Citric Acid, Lactic Acid), Natural Sweetener (Erythritol, Stevia), Synthetic Flavor (Mango, Passion Fruit), Cyclic Oligosaccharide, Artificial Sweeteners (Sucralose), Preservatives (Sodium Benzoate)</p>",
         "dosage_heading": "Recommended Dosage",
         "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
         "dosage_align": "center",
