@@ -251,68 +251,6 @@
         "padding_bottom": 0
       }
     },
-    "logo_grid_R6MfVa": {
-      "type": "logo-grid",
-      "blocks": {
-        "logo_ABDqyK": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/made-in-japan_7703f208-f0b3-4495-99c4-8a9909b18e25.png",
-            "logo_width_desktop": 120,
-            "logo_width_mobile": 80,
-            "link": ""
-          }
-        },
-        "logo_M8KYEr": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/cert_gmp.png",
-            "logo_width_desktop": 120,
-            "logo_width_mobile": 80,
-            "link": ""
-          }
-        },
-        "logo_awF3pC": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/award_gold.png",
-            "logo_width_desktop": 120,
-            "logo_width_mobile": 80,
-            "link": ""
-          }
-        },
-        "logo_VJwjr3": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/FDA-Approved.jpg",
-            "logo_width_desktop": 120,
-            "logo_width_mobile": 80,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_ABDqyK",
-        "logo_M8KYEr",
-        "logo_awF3pC",
-        "logo_VJwjr3"
-      ],
-      "disabled": true,
-      "name": "Logo Grid",
-      "settings": {
-        "subheading": "",
-        "subheading_gap": 32,
-        "cols_desktop": 4,
-        "cols_mobile": 4,
-        "gap_desktop": 40,
-        "gap_mobile": 8,
-        "background_color": "#ffffff",
-        "text_color": "#111111",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -366,6 +304,85 @@
         "padding_bottom": 100
       }
     },
+    "product_ingredients_hATdfY": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_wXqzkm": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Porcine Placenta Extract",
+            "amount": "9,000 mg"
+          }
+        },
+        "ingredient_row_XegJJb": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "15,000 mg"
+          }
+        },
+        "ingredient_row_BxhKGN": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fermented Plant Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_yefDL4": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "African Mango Extract",
+            "amount": "5,000 mg"
+          }
+        },
+        "ingredient_row_aH6hyL": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Brewer's Yeast Peptide",
+            "amount": "4,160 mg"
+          }
+        },
+        "ingredient_row_Yr4pEx": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Pineapple Fruit Extract",
+            "amount": "2,000 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_wXqzkm",
+        "ingredient_row_XegJJb",
+        "ingredient_row_BxhKGN",
+        "ingredient_row_yefDL4",
+        "ingredient_row_aH6hyL",
+        "ingredient_row_Yr4pEx"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image": "shopify://shop_images/82X-Classic-Placenta_e1a4da92-c7ef-42c5-8df3-91249bb3fe22.png",
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Each Bottle Contains",
+        "card_header_bg": "#FFFFFF",
+        "card_bg": "#E8F2FB",
+        "card_radius": 16,
+        "row_divider_color": "#C8D8E8",
+        "divider_color": "#A0B8CC",
+        "full_list_heading": "Full List Of Ingredients:",
+        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1C2B6B",
+        "heading_color": "#FFFFFF",
+        "text_color": "#1C2B6B",
+        "color_scheme": "",
+        "padding_top": 28,
+        "padding_bottom": 60
+      }
+    },
     "image_with_text_nrjQxn": {
       "type": "image-with-text",
       "blocks": {
@@ -415,7 +432,7 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
         "icon_size": 40,
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 28
       }
     },
@@ -736,8 +753,8 @@
     "main",
     "related-products",
     "accordion_section_cmYxRz",
-    "logo_grid_R6MfVa",
     "image_with_text_9pQ8im",
+    "product_ingredients_hATdfY",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
