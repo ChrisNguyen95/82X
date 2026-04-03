@@ -12,6 +12,18 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "icon_with_text_ayKM4e": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "<strong>Highly rated by customers for:Anti-Aging Results, Skin Rejuvenation, Detox & Body Reset, Joint Support, Stress Relief</strong>",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
         "breadcrumb_Cnkeg9": {
           "type": "breadcrumb",
           "settings": {
@@ -98,6 +110,7 @@
         }
       },
       "block_order": [
+        "icon_with_text_ayKM4e",
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
         "okendo_star_rating_HG7A6w",
