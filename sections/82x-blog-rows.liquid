@@ -193,7 +193,7 @@
               </div>
               <div>
                 <span class="blc-sidebar-product__title font-heading">{{ sp.title | escape }}</span>
-                
+                 {% render 'okendo-reviews-product-rating-summary', product: sp %}
               </div>
             </a>
           {%- endif -%}
