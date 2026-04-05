@@ -156,7 +156,6 @@
 
 .pt-row__heading {
   font-size: clamp(2.2rem, 3vw, 3.2rem);
-  font-style: italic;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 2rem;
