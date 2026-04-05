@@ -211,7 +211,7 @@
         "heading": "Frequently Asked Questions",
         "heading_size": "h0",
         "heading_tag": "h1",
-        "heading_italic": true,
+        "heading_italic": false,
         "heading_align": "center",
         "description": "",
         "content_max_width": 1200,
