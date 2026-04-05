@@ -193,7 +193,8 @@
               </div>
               <div>
                 <span class="blc-sidebar-product__title font-heading">{{ sp.title | escape }}</span>
-                 {% render 'okendo-reviews-product-rating-summary', product: sp %}
+                {% render 'okendo-reviews-product-rating-summary', product: sp %}
+                {% render 'price', product: sp, price_class: '', show_compare_at_price: true %}
               </div>
             </a>
           {%- endif -%}
