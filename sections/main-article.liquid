@@ -1,12 +1,174 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  /* ══════════════════════════════════════════════
+     ARTICLE ENHANCEMENTS — scoped to article-template
+     ══════════════════════════════════════════════ */
+
+  /* ── Meta row (date · author · reading time) ── */
+  .article-template__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0;
+    margin-top: 1.6rem;
+    font-size: 1.3rem;
+    color: rgba(var(--color-foreground), 0.55);
+  }
+  .article-template__meta .circle-divider + .circle-divider::before,
+  .article-template__meta .art-meta-item + .art-meta-item::before {
+    content: '';
+    display: inline-block;
+    width: 0.1rem;
+    height: 1.1em;
+    background: currentColor;
+    opacity: 0.25;
+    margin: 0 1.2rem;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+  /* ── Author in meta row ── */
+  .art-meta-author {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .art-meta-author__avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .art-reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .art-reading-time svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  /* ── About the Author card ── */
+  .art-author-wrap {
+    padding: 4rem 0 2rem;
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    margin-top: 4rem;
+  }
+  .art-author-wrap__label {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: rgba(var(--color-foreground), 0.4);
+    margin: 0 0 1.6rem;
+  }
+  .art-author-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2.4rem;
+    background: rgba(var(--color-foreground), 0.04);
+    border-radius: 1.2rem;
+    border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  }
+  .art-author-card__avatar {
+    flex-shrink: 0;
+    width: 7.2rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    background: rgba(var(--color-foreground), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .art-author-card__initials {
+    font-family: var(--font-heading-family);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: rgba(var(--color-foreground), 0.5);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .art-author-card__body { flex: 1; min-width: 0; }
+  .art-author-card__name {
+    font-family: var(--font-heading-family);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0 0 0.8rem;
+    color: rgba(var(--color-foreground), 0.9);
+  }
+  .art-author-card__bio {
+    font-size: 1.4rem;
+    line-height: 1.65;
+    color: rgba(var(--color-foreground), 0.6);
+    margin: 0;
+  }
+  .art-author-card__bio p { margin: 0; }
+
+  @media screen and (max-width: 749px) {
+    .art-author-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.6rem;
+    }
+    .art-author-card__body { text-align: left; }
+  }
+
+  /* ── Comment section ── */
+  .art-comment-section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+  }
+  .art-comment-section-title h2 { margin: 0; }
+  .art-comment-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    padding: 0 0.6rem;
+    border-radius: 10rem;
+    background: rgba(var(--color-foreground), 0.08);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(var(--color-foreground), 0.6);
+  }
+  .art-comment-form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 2.4rem;
+    padding-top: 4rem;
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  }
+{%- endstyle -%}
+
 <article class="article-template">
+  {%- comment -%}
+    ── Resolve Author metaobject ──
+    Metafield: article.metafields.[namespace].[key]
+    Namespace & key are configurable in section settings.
+    Expected metaobject fields: name (text), avatar (file_reference), about (richtext/text)
+  {%- endcomment -%}
+  {%- assign _art_author = article.metafields[section.settings.author_metafield_namespace][section.settings.author_metafield_key].value -%}
+  {%- assign _author_name = _art_author.name | default: article.author -%}
+
   {%- for block in section.blocks -%}
     {%- case block.type -%}
+
       {%- when '@app' -%}
         <div class="page-width page-width--narrow">
           {% render block %}
         </div>
+
       {%- when 'featured_image' -%}
         {%- if article.image -%}
           <div
@@ -42,25 +204,49 @@
         {%- endif -%}
 
       {%- when 'title' -%}
+        {%- comment -%}── Calculate reading time (200 wpm average) ──{%- endcomment -%}
+        {%- assign _words = article.content | strip_html | split: ' ' | size -%}
+        {%- assign _reading_time = _words | divided_by: 200 | at_least: 1 -%}
+
         <header
           class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
-          <h1
-            class="article-template__title"
-          >
-            {{ article.title | escape }}
-          </h1>
-          {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing">
-              {{- article.published_at | time_tag: format: 'date' -}}
-            </span>
-          {%- endif -%}
-          {%- if block.settings.blog_show_author -%}
-            <span class="caption-with-letter-spacing">
-              <span>{{ article.author }}</span>
-            </span>
-          {%- endif -%}
+          <h1 class="article-template__title">{{ article.title | escape }}</h1>
+
+          {%- comment -%}── Meta row: date · author · reading time ──{%- endcomment -%}
+          <div class="article-template__meta">
+            {%- if block.settings.blog_show_date -%}
+              <span class="art-meta-item caption-with-letter-spacing">
+                {{- article.published_at | time_tag: format: 'date' -}}
+              </span>
+            {%- endif -%}
+
+            {%- if block.settings.blog_show_author -%}
+              <span class="art-meta-item art-meta-author caption-with-letter-spacing">
+                {%- if _art_author != blank and _art_author.avatar != blank -%}
+                  <img
+                    class="art-meta-author__avatar"
+                    src="{{ _art_author.avatar | image_url: width: 40 }}"
+                    width="20"
+                    height="20"
+                    alt="{{ _author_name | escape }}"
+                    loading="lazy"
+                  >
+                {%- endif -%}
+                {{ _author_name }}
+              </span>
+            {%- endif -%}
+
+            {%- if block.settings.show_reading_time -%}
+              <span class="art-meta-item art-reading-time caption-with-letter-spacing">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                {{ _reading_time }} {{ block.settings.reading_time_label }}
+              </span>
+            {%- endif -%}
+          </div>
         </header>
 
       {%- when 'content' -%}
@@ -79,22 +265,60 @@
           {% assign share_url = request.origin | append: article.url %}
           {% render 'share-button', block: block, share_link: share_url %}
         </div>
+
     {%- endcase -%}
   {%- endfor -%}
 
+  {%- comment -%}
+    ── About the Author card ──
+    Shown before the comment section. Bio is set in section settings.
+  {%- endcomment -%}
+  {%- if section.settings.show_author_card -%}
+    <div class="page-width page-width--narrow art-author-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <p class="art-author-wrap__label">{{ section.settings.author_card_label }}</p>
+      <div class="art-author-card">
+        <div class="art-author-card__avatar">
+          {%- if _art_author != blank and _art_author.avatar != blank -%}
+            <img
+              src="{{ _art_author.avatar | image_url: width: 144 }}"
+              width="72"
+              height="72"
+              alt="{{ _author_name | escape }}"
+              loading="lazy"
+            >
+          {%- else -%}
+            <span class="art-author-card__initials">{{ _author_name | slice: 0, 1 | upcase }}</span>
+          {%- endif -%}
+        </div>
+        <div class="art-author-card__body">
+          <h3 class="art-author-card__name">{{ _author_name }}</h3>
+          {%- if _art_author != blank and _art_author.about != blank -%}
+            <div class="art-author-card__bio rte">{{ _art_author.about }}</div>
+          {%- elsif section.settings.author_bio != blank -%}
+            <div class="art-author-card__bio rte">{{ section.settings.author_bio }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
 
+  {%- comment -%}── Comments section (existing logic preserved) ──{%- endcomment -%}
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div
         id="comments"
         class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
+
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
+          <div class="art-comment-section-title">
+            <h2 id="Comments-{{ article.id }}" tabindex="-1">
+              {{ 'blogs.article.comments' | t: count: article.comments_count }}
+            </h2>
+            <span class="art-comment-count-badge">{{ article.comments_count }}</span>
+          </div>
 
-          <h2 id="Comments-{{ article.id }}" tabindex="-1">
-            {{ 'blogs.article.comments' | t: count: article.comments_count }}
-          </h2>
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
@@ -121,6 +345,8 @@
             </div>
           {% endpaginate %}
         {%- endif -%}
+
+        {%- comment -%}── Leave a comment form ──{%- endcomment -%}
         {% form 'new_comment', article %}
           {%- liquid
             assign post_message = 'blogs.article.success'
@@ -128,7 +354,9 @@
               assign post_message = 'blogs.article.success_moderated'
             endif
           -%}
-          <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
+
+          <h2 class="art-comment-form-title">{{ 'blogs.article.comment_form_title' | t }}</h2>
+
           {%- if form.errors -%}
             <div class="form__message" role="alert">
               <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
@@ -194,11 +422,8 @@
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
                     <span class="form__message">
-                      <span class="svg-wrapper">
-                        {{- 'icon-error.svg' | inline_asset_content -}}
-                      </span>
-                      {{- 'blogs.article.name' | t }}
-                      {{ form.errors.messages.author }}.</span
+                      <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                      {{- 'blogs.article.name' | t }} {{ form.errors.messages.author }}.</span
                     >
                   </small>
                 {%- endif -%}
@@ -228,16 +453,14 @@
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
                     <span class="form__message">
-                      <span class="svg-wrapper">
-                        {{- 'icon-error.svg' | inline_asset_content -}}
-                      </span>
-                      {{- 'blogs.article.email' | t }}
-                      {{ form.errors.messages.email }}.</span
+                      <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                      {{- 'blogs.article.email' | t }} {{ form.errors.messages.email }}.</span
                     >
                   </small>
                 {%- endif -%}
               </div>
             </div>
+
             <div class="field field--with-error">
               <textarea
                 rows="5"
@@ -257,26 +480,27 @@
                 <span aria-hidden="true">*</span></label
               >
             </div>
+
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
                 <span class="form__message">
-                  <span class="svg-wrapper">
-                    {{- 'icon-error.svg' | inline_asset_content -}}
-                  </span>
-                  {{- 'blogs.article.message' | t }}
-                  {{ form.errors.messages.body }}.</span
+                  <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+                  {{- 'blogs.article.message' | t }} {{ form.errors.messages.body }}.</span
                 >
               </small>
             {%- endif -%}
           </div>
+
           {%- if blog.moderated? -%}
             <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
           {%- endif -%}
           <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
         {% endform %}
+
       </div>
     </div>
   {%- endif -%}
+
 </article>
 
 <script type="application/ld+json">
@@ -288,6 +512,48 @@
   "name": "t:sections.main-article.name",
   "tag": "section",
   "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Author metaobject"
+    },
+    {
+      "type": "text",
+      "id": "author_metafield_namespace",
+      "label": "Metafield namespace",
+      "default": "custom",
+      "info": "Namespace of the article metafield referencing the Author metaobject."
+    },
+    {
+      "type": "text",
+      "id": "author_metafield_key",
+      "label": "Metafield key",
+      "default": "author",
+      "info": "Key of the article metafield. Expected metaobject fields: name, avatar, about."
+    },
+    {
+      "type": "header",
+      "content": "About the Author card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author_card",
+      "label": "Show author card",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "author_card_label",
+      "label": "Author card label",
+      "default": "About the author"
+    },
+    {
+      "type": "richtext",
+      "id": "author_bio",
+      "label": "Author bio (fallback)",
+      "info": "Shown only when no metaobject author is linked to the article."
+    }
+  ],
   "blocks": [
     {
       "type": "@app"
@@ -337,8 +603,20 @@
         {
           "type": "checkbox",
           "id": "blog_show_author",
-          "default": false,
+          "default": true,
           "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_reading_time",
+          "default": true,
+          "label": "Show reading time"
+        },
+        {
+          "type": "text",
+          "id": "reading_time_label",
+          "label": "Reading time label",
+          "default": "min read"
         }
       ]
     },
