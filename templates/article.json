@@ -50,7 +50,9 @@
           "type": "title",
           "settings": {
             "blog_show_date": true,
-            "blog_show_author": false
+            "blog_show_author": true,
+            "show_reading_time": true,
+            "reading_time_label": "min read"
           }
         },
         "share": {
@@ -69,7 +71,13 @@
         "share",
         "content"
       ],
-      "settings": {}
+      "settings": {
+        "author_metafield_namespace": "custom",
+        "author_metafield_key": "author",
+        "show_author_card": true,
+        "author_card_label": "About the author",
+        "author_bio": ""
+      }
     }
   },
   "order": [
