@@ -3688,7 +3688,6 @@ details-disclosure > details {
     font-size: 1.6rem;
     font-family: var(--font-heading-family);
     font-weight: 600;
-    font-style: italic;
 }
 span.appstle_dot {
   background-color:#234082 !important
