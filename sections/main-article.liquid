@@ -54,10 +54,18 @@
   }
 
   /* ── About the Author card ── */
-  .art-author-wrap {
-    padding: 4rem 0 2rem;
-    border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  .art-author-color-wrap {
     margin-top: 4rem;
+  }
+  .art-author-wrap {
+    padding-top: {{ section.settings.author_padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.author_padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .art-author-wrap {
+      padding-top: {{ section.settings.author_padding_top }}px;
+      padding-bottom: {{ section.settings.author_padding_bottom }}px;
+    }
   }
   .art-author-wrap__label {
     font-size: 1.1rem;
@@ -274,29 +282,31 @@
     Shown before the comment section. Bio is set in section settings.
   {%- endcomment -%}
   {%- if section.settings.show_author_card -%}
-    <div class="page-width page-width--narrow art-author-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <p class="art-author-wrap__label">{{ section.settings.author_card_label }}</p>
-      <div class="art-author-card">
-        <div class="art-author-card__avatar">
-          {%- if _art_author != blank and _art_author.avatar != blank -%}
-            <img
-              src="{{ _art_author.avatar | image_url: width: 144 }}"
-              width="72"
-              height="72"
-              alt="{{ _author_name | escape }}"
-              loading="lazy"
-            >
-          {%- else -%}
-            <span class="art-author-card__initials">{{ _author_name | slice: 0, 1 | upcase }}</span>
-          {%- endif -%}
-        </div>
-        <div class="art-author-card__body">
-          <h3 class="art-author-card__name">{{ _author_name }}</h3>
-          {%- if _art_author != blank and _art_author.about != blank -%}
-            <div class="art-author-card__bio rte">{{ _art_author.about }}</div>
-          {%- elsif section.settings.author_bio != blank -%}
-            <div class="art-author-card__bio rte">{{ section.settings.author_bio }}</div>
-          {%- endif -%}
+    <div class="art-author-color-wrap color-{{ section.settings.author_color_scheme }} gradient">
+      <div class="page-width page-width--narrow art-author-wrap{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <p class="art-author-wrap__label">{{ section.settings.author_card_label }}</p>
+        <div class="art-author-card">
+          <div class="art-author-card__avatar">
+            {%- if _art_author != blank and _art_author.avatar != blank -%}
+              <img
+                src="{{ _art_author.avatar | image_url: width: 144 }}"
+                width="72"
+                height="72"
+                alt="{{ _author_name | escape }}"
+                loading="lazy"
+              >
+            {%- else -%}
+              <span class="art-author-card__initials">{{ _author_name | slice: 0, 1 | upcase }}</span>
+            {%- endif -%}
+          </div>
+          <div class="art-author-card__body">
+            <h3 class="art-author-card__name">{{ _author_name }}</h3>
+            {%- if _art_author != blank and _art_author.about != blank -%}
+              <div class="art-author-card__bio rte">{{ _art_author.about }}</div>
+            {%- elsif section.settings.author_bio != blank -%}
+              <div class="art-author-card__bio rte">{{ section.settings.author_bio }}</div>
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
@@ -534,6 +544,32 @@
     {
       "type": "header",
       "content": "About the Author card"
+    },
+    {
+      "type": "color_scheme",
+      "id": "author_color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "author_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "author_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
     },
     {
       "type": "checkbox",
