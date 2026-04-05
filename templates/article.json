@@ -23,7 +23,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_bottom": 0
       }
     },
     "image_banner_custom_j7EHR4": {
@@ -74,6 +74,9 @@
       "settings": {
         "author_metafield_namespace": "custom",
         "author_metafield_key": "author",
+        "author_color_scheme": "",
+        "author_padding_top": 40,
+        "author_padding_bottom": 40,
         "show_author_card": true,
         "author_card_label": "About the author",
         "author_bio": ""
