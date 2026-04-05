@@ -191,7 +191,10 @@
                   }}
                 {%- endif -%}
               </div>
-              <span class="blc-sidebar-product__title font-heading">{{ sp.title | escape }}</span>
+              <div>
+                <span class="blc-sidebar-product__title font-heading">{{ sp.title | escape }}</span>
+                
+              </div>
             </a>
           {%- endif -%}
         {%- endfor -%}
