@@ -58,6 +58,9 @@
 .blc-sidebar .blc-sidebar-product .price span {
   font-size: 1.4rem
 }
+.blc-sidebar .blc-sidebar-product .oke-sr-count {
+      color: initial;
+}
 
 /* ══ Article card ══ */
 .blc-card {
