@@ -48,7 +48,7 @@
   display: block;
 }
 .blc-sidebar-product__title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: rgba(var(--color-foreground), 0.8);
