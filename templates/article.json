@@ -75,8 +75,8 @@
         "author_metafield_namespace": "custom",
         "author_metafield_key": "author",
         "author_color_scheme": "scheme-1",
-        "author_padding_top": 40,
-        "author_padding_bottom": 40,
+        "author_padding_top": 0,
+        "author_padding_bottom": 0,
         "show_author_card": true,
         "author_card_label": "About the author",
         "author_bio": ""
