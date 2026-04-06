@@ -317,7 +317,7 @@
 
   {%- comment -%}── Comments section (existing logic preserved) ──{%- endcomment -%}
   {%- if blog.comments_enabled? -%}
-    <div class="article-template__comment-wrapper background-secondary">
+    <div class="article-template__comment-wrapper">
       <div
         id="comments"
         class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
