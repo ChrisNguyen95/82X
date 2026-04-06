@@ -228,13 +228,13 @@
           {%- comment -%}── Meta row: date · author · reading time ──{%- endcomment -%}
           <div class="article-template__meta">
             {%- if block.settings.blog_show_date -%}
-              <span class="art-meta-item caption-with-letter-spacing">
+              <span class="art-meta-item">
                 {{- article.published_at | time_tag: format: 'date' -}}
               </span>
             {%- endif -%}
 
             {%- if block.settings.blog_show_author -%}
-              <span class="art-meta-item art-meta-author caption-with-letter-spacing">
+              <span class="art-meta-item art-meta-author">
                 {%- if _art_author != blank and _art_author.avatar != blank -%}
                   <img
                     class="art-meta-author__avatar"
@@ -250,7 +250,7 @@
             {%- endif -%}
 
             {%- if block.settings.show_reading_time -%}
-              <span class="art-meta-item art-reading-time caption-with-letter-spacing">
+              <span class="art-meta-item art-reading-time">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
