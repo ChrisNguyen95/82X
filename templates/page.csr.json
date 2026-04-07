@@ -279,7 +279,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
-        "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 14rem; }}"
+        "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 14rem; max-width: 60.7rem }}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
