@@ -142,7 +142,7 @@
         "certified_NdU6y3"
       ],
       "custom_css": [
-        ".iwtf-certified__score-sub{color: #234082}"
+        ".iwtf-certified__score-sub {color: #234082;}"
       ],
       "name": "82X Image + Features",
       "settings": {
@@ -368,8 +368,9 @@
         "button_kkm4W8"
       ],
       "custom_css": [
+        "{margin-bottom: 5.2rem}",
         "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
-        "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 7rem 7rem 14rem; max-width: 62.7rem; }}",
+        "@media screen and (min-width: 1400px) {{margin-bottom: 10rem} .image-with-text__grid--reverse .image-with-text__content {padding: 6rem 7rem 7rem 14rem; max-width: 62.7rem; }}",
         ".image-with-text__heading {color: #234082;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
