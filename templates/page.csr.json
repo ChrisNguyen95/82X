@@ -368,8 +368,9 @@
         "button_kkm4W8"
       ],
       "custom_css": [
-        "{margin-bottom: 5.2rem}",
-        "@media screen and (min-width: 990px) {{margin-bottom: 10rem} .image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
+        "{margin-bottom: 5.2rem;}",
+        "@media screen and (max-width: 739px) {.image-with-text__text-item {padding-bottom: 4rem; }}",
+        "@media screen and (min-width: 990px) {{margin-bottom: 10rem; } .image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
         "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 7rem 7rem 14rem; max-width: 68.7rem; }}",
         ".image-with-text__heading {color: #234082; max-width: 40rem;}"
       ],
