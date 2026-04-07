@@ -451,10 +451,26 @@
     "logo_marquee_VXALpm": {
       "type": "logo-marquee",
       "blocks": {
+        "text_Aekyxn": {
+          "type": "text",
+          "settings": {
+            "text": "Japanese Made",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_t4fGfd": {
+          "type": "text",
+          "settings": {
+            "text": "Science Backed",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
         "text_PqkTjD": {
           "type": "text",
           "settings": {
-            "text": "Easy & Natural",
+            "text": "Easy & Delicious",
             "font_size": 2.2,
             "link": ""
           }
@@ -469,12 +485,14 @@
         }
       },
       "block_order": [
+        "text_Aekyxn",
+        "text_t4fGfd",
         "text_PqkTjD",
         "text_KW6exL"
       ],
       "name": "Logo Marquee",
       "settings": {
-        "subheading": "As Featured In",
+        "subheading": "",
         "subheading_gap": 16,
         "direction": "right",
         "speed": 8,
