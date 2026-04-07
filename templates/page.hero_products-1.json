@@ -715,13 +715,13 @@
         "tag_7hQ8Yr": {
           "type": "tag",
           "settings": {
-            "label": "Digestion"
+            "label": "Anti-Aging Results"
           }
         },
         "tag_Ekk3Kb": {
           "type": "tag",
           "settings": {
-            "label": "Gut Health"
+            "label": "Skin Rejuvenation"
           }
         },
         "item_QhWce7": {
@@ -896,7 +896,7 @@
         "col_gap_mobile": 16,
         "row_gap_mobile": 24,
         "button_label": "BUY NOW",
-        "button_link": "",
+        "button_link": "shopify://products/82x-collagen-sakura",
         "button_style": "primary",
         "background_color": "#d6e8f8",
         "label_color": "#1c2b6b",
