@@ -280,7 +280,7 @@
       "custom_css": [
         "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
         "@media screen and (min-width: 1400px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 7rem 7rem 14rem; max-width: 62.7rem; }}",
-        ".image-with-text__heading {color: #234082}"
+        ".image-with-text__heading {color: #234082;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -299,7 +299,7 @@
         "color_scheme": "scheme-931f9ce4-ad46-474c-ab3e-41dc5a85ea05",
         "icon_size": 40,
         "padding_top": 32,
-        "padding_bottom": 0
+        "padding_bottom": 32
       }
     },
     "82x_two_columns_ajt4Ex": {
