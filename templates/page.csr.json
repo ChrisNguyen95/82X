@@ -57,7 +57,7 @@
         "image_mobile": "shopify://shop_images/c361720de9583cca20623194d1962c1dbc6738bf.jpg",
         "image_fit": "cover",
         "image_position": "center center",
-        "overlay_opacity": 0,
+        "overlay_opacity": 20,
         "desktop_height": "large",
         "mobile_height": "large",
         "desktop_vertical": "middle",
