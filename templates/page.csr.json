@@ -242,14 +242,14 @@
         "heading_jHNnUR": {
           "type": "heading",
           "settings": {
-            "heading": "Together, let's ,</br>Make a difference.",
+            "heading": "Small Choices. Lasting Impact.",
             "heading_size": "h1"
           }
         },
         "text_B3TJyE": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Every bottle of 82X is a choice — for your health, and for the future of our planet. Together, we are building a more responsible approach to beauty and wellness.</p>",
             "text_style": "body"
           }
         },
@@ -260,12 +260,22 @@
             "logo_width": 140,
             "logo_align": "center"
           }
+        },
+        "button_kkm4W8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Make an Impact With Every Bottle",
+            "button_link": "shopify://collections/all-products",
+            "button_style": "primary",
+            "button_link_color": "#1c2b6b"
+          }
         }
       },
       "block_order": [
         "heading_jHNnUR",
         "text_B3TJyE",
-        "logo_ngzQap"
+        "logo_ngzQap",
+        "button_kkm4W8"
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.image-with-text__grid--reverse .image-with-text__content {padding: 6rem 0rem 7rem 7rem; }}",
