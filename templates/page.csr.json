@@ -200,14 +200,14 @@
         "heading_nTGq3F": {
           "type": "heading",
           "settings": {
-            "heading": "Integrity, Transparency & Ethical Standards",
+            "heading": "Integrity in Every Detail",
             "heading_size": "h1"
           }
         },
         "text_YHEGQk": {
           "type": "text",
           "settings": {
-            "text": "<p>We prioritize transparency and business ethics.</p><ul><li>Clearly disclose product origins.</li><li>Comply with international regulations.</li><li>Certified by reputable organizations.</li><li>No harmful testing.</li></ul>",
+            "text": "<p>Our commitment to sustainability extends beyond the surface.It’s embedded in how we source ingredients, develop formulations, and manufacture every product.</p><ul><li>Responsibly sourced ingredients with traceability</li><li>No harmful additives impacting marine ecosystems</li><li>Clean, controlled, and ethical production standards</li><li>Continuous third-party verification and reporting</li></ul>",
             "text_style": "body"
           }
         }
@@ -216,7 +216,6 @@
         "heading_nTGq3F",
         "text_YHEGQk"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -230,8 +229,8 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
         "icon_size": 40,
         "padding_top": 40,
         "padding_bottom": 40
