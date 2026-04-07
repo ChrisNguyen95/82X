@@ -451,48 +451,26 @@
     "logo_marquee_VXALpm": {
       "type": "logo-marquee",
       "blocks": {
-        "image_QBnaEi": {
-          "type": "image",
+        "text_PqkTjD": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Brand1.png",
+            "text": "Easy & Natural",
+            "font_size": 2.2,
             "link": ""
           }
         },
-        "image_Mtdj3r": {
-          "type": "image",
+        "text_KW6exL": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/Brand2.png",
-            "link": ""
-          }
-        },
-        "image_UtwaeD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Brand4.png",
-            "link": ""
-          }
-        },
-        "image_KAcFjV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Brand4.png",
-            "link": ""
-          }
-        },
-        "image_QVHqcw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Brand5_a8de99cf-3d47-4530-873a-6e135be68db8.png",
+            "text": "Women Friendly",
+            "font_size": 2.2,
             "link": ""
           }
         }
       },
       "block_order": [
-        "image_QBnaEi",
-        "image_Mtdj3r",
-        "image_UtwaeD",
-        "image_KAcFjV",
-        "image_QVHqcw"
+        "text_PqkTjD",
+        "text_KW6exL"
       ],
       "name": "Logo Marquee",
       "settings": {
