@@ -615,14 +615,12 @@
       "blocks": {
         "title_Q6jUPD": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "heading_size": "h1"
           }
         },
         "price_waXQUr": {
           "type": "price",
-          "disabled": true,
           "settings": {}
         },
         "variant_picker_xEiYnF": {
@@ -632,11 +630,27 @@
             "swatch_shape": "circle"
           }
         },
+        "quantity_selector_bnWHx7": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "buy_buttons_k7hGdP": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
+          }
+        },
+        "icon_with_text_gxpdtK": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "return",
+            "heading_1": "<strong>30 Day Money Back</strong>",
+            "icon_2": "truck",
+            "heading_2": "<strong>Free Shipping in the US</strong>",
+            "icon_3": "star",
+            "heading_3": "<strong>Japanese Made</strong>"
           }
         }
       },
@@ -644,7 +658,9 @@
         "title_Q6jUPD",
         "price_waXQUr",
         "variant_picker_xEiYnF",
-        "buy_buttons_k7hGdP"
+        "quantity_selector_bnWHx7",
+        "buy_buttons_k7hGdP",
+        "icon_with_text_gxpdtK"
       ],
       "custom_css": [
         ".product-form__submit {width: 100%; max-width: 100%;}"
@@ -1020,6 +1036,7 @@
         "clinician_tXnjm4",
         "clinician_RhTqw6"
       ],
+      "disabled": true,
       "name": "Clinician Grid",
       "settings": {
         "heading": "Independent Clinician",
