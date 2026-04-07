@@ -216,6 +216,7 @@
         "heading_nTGq3F",
         "text_YHEGQk"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -284,8 +285,8 @@
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "mobile_layout": "image_first",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
+        "color_scheme": "scheme-2",
         "icon_size": 40,
         "padding_top": 32,
         "padding_bottom": 0
@@ -353,6 +354,7 @@
         "column_XnrCnR",
         "column_jmQ8yq"
       ],
+      "disabled": true,
       "name": "Two Columns",
       "settings": {
         "color_scheme": "",
