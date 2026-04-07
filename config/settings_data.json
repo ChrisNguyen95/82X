@@ -351,8 +351,19 @@
           "background": "#d9eeff",
           "background_gradient": "",
           "text": "#070a13",
-          "button": "#1C2B6B",
+          "button": "#1c2b6b",
           "button_label": "#ffffff",
+          "secondary_button_label": "#070a13",
+          "shadow": "#070a13"
+        }
+      },
+      "scheme-ed46943e-304e-4ba3-a3fc-293a693fc6b6": {
+        "settings": {
+          "background": "#111111",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#234082",
           "secondary_button_label": "#070a13",
           "shadow": "#070a13"
         }
