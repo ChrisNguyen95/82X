@@ -619,6 +619,31 @@
             "heading_size": "h1"
           }
         },
+        "text_w4egHi": {
+          "type": "text",
+          "settings": {
+            "text": "Advanced Japanese anti-aging formula — rebuilt from within, radiant from outside.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_Kt6AKb": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "Highly rated by customers for:Anti-Aging Results, Skin Rejuvenation, Detox & Body Reset, Joint Support, Stress Relief",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "okendo_star_rating_iELYD6": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{section.settings.product}}"
+          }
+        },
         "price_waXQUr": {
           "type": "price",
           "settings": {}
@@ -656,6 +681,9 @@
       },
       "block_order": [
         "title_Q6jUPD",
+        "text_w4egHi",
+        "icon_with_text_Kt6AKb",
+        "okendo_star_rating_iELYD6",
         "price_waXQUr",
         "variant_picker_xEiYnF",
         "quantity_selector_bnWHx7",
