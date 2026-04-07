@@ -154,7 +154,7 @@
         "image_nrMtkz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Feature_image_left.jpg",
+            "image": "shopify://shop_images/2_a14543a1-2c4d-4f68-9a62-920e66f2b883.jpg",
             "alt": "",
             "link": "",
             "caption": ""
@@ -163,7 +163,7 @@
         "image_FKMNUi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Feature_image_rcight.jpg",
+            "image": "shopify://shop_images/3_13c9ea94-1ade-4f74-b262-30fa4aa51feb.jpg",
             "alt": "",
             "link": "",
             "caption": ""
@@ -233,7 +233,7 @@
         "color_scheme": "scheme-1",
         "icon_size": 40,
         "padding_top": 100,
-        "padding_bottom": 40
+        "padding_bottom": 100
       }
     },
     "image_with_text_Pre3pM": {
