@@ -541,6 +541,7 @@
         "heading_mAQErD",
         "button_MaLYbN"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Image + Content",
       "settings": {
@@ -593,6 +594,7 @@
         "logo_xNRCgh",
         "logo_UWUwVz"
       ],
+      "disabled": true,
       "name": "Logo Grid",
       "settings": {
         "subheading": "",
@@ -649,8 +651,8 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "82x-placenta",
-        "color_scheme": "scheme-2",
+        "product": "82x-collagen-sakura",
+        "color_scheme": "scheme-3",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
