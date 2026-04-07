@@ -99,6 +99,7 @@
         "heading_jGrGfn",
         "text_V3BkJT"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
