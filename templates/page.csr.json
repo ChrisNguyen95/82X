@@ -23,36 +23,48 @@
         "heading_8yGjGg": {
           "type": "heading",
           "settings": {
-            "heading": "Together for a Better Future",
+            "heading": "A healthy ocean and a thriving planet for everyone.",
             "heading_size": "h0"
           }
         },
         "text_BkmYwA": {
           "type": "text",
           "settings": {
-            "text": "<p>We are committed to creating positive impact through sustainable practices, community support, and responsible innovation—because true beauty begins with caring for people and the planet.</p>",
+            "text": "<p>Over 11 million tons of plastic enter our oceans every year — we are committed to reducing our part of that impact.</p>",
             "text_style": "body"
+          }
+        },
+        "buttons_UyCchy": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join us now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
           }
         }
       },
       "block_order": [
         "heading_8yGjGg",
-        "text_BkmYwA"
+        "text_BkmYwA",
+        "buttons_UyCchy"
       ],
       "name": "Hero Split",
       "settings": {
-        "image": "shopify://shop_images/Hero_6f3459c3-8fde-418b-be8d-41ade95ce916.jpg",
-        "image_mobile": "shopify://shop_images/Screenshot_2026-03-31_at_6.36.11_PM.png",
+        "image": "shopify://shop_images/c361720de9583cca20623194d1962c1dbc6738bf.jpg",
+        "image_mobile": "shopify://shop_images/c361720de9583cca20623194d1962c1dbc6738bf.jpg",
         "image_fit": "cover",
         "image_position": "center center",
         "overlay_opacity": 0,
-        "desktop_height": "adapt",
-        "mobile_height": "adapt",
+        "desktop_height": "large",
+        "mobile_height": "large",
         "desktop_vertical": "middle",
-        "mobile_vertical": "top",
-        "desktop_horizontal": "left",
-        "desktop_align": "left",
-        "mobile_align": "left",
+        "mobile_vertical": "middle",
+        "desktop_horizontal": "center",
+        "desktop_align": "center",
+        "mobile_align": "center",
         "content_max_width": 50,
         "content_max_width_mobile": 100,
         "section_color_scheme": "",
