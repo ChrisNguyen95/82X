@@ -131,9 +131,15 @@
   #IWTFeatures-{{ section.id }} .iwtf-certified {
     display: flex;
     align-items: center;
-    gap: 3.6rem;
+    gap: 2rem;
     border-top: 0.1rem solid rgba(var(--color-foreground), 0.12);
     padding: 1.2rem 0;
+  }
+  
+  @media screen and (min-width: 990px) {
+      #IWTFeatures-{{ section.id }} .iwtf-certified {
+        gap: 3.6rem;
+      }
   }
   #IWTFeatures-{{ section.id }} .iwtf-certified__left {
     display: flex;
