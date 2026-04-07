@@ -97,7 +97,7 @@
           "type": "content_row",
           "settings": {
             "icon": "shopify://shop_images/Icon1.svg",
-            "icon_bg_color": "#EBF3FF",
+            "icon_bg_color": "#ebf3ff",
             "row_heading": "89% Plastic Reduction Since 2022",
             "row_text": "We’ve eliminated 420,000 lbs of single-use plastic through refillable systems and ocean-safe packaging innovation."
           }
@@ -106,7 +106,7 @@
           "type": "content_row",
           "settings": {
             "icon": "shopify://shop_images/Icon2_26a7defc-50c0-43ce-8852-c6f05d1a580a.svg",
-            "icon_bg_color": "#EBF3FF",
+            "icon_bg_color": "#ebf3ff",
             "row_heading": "Carbon Neutral by Design",
             "row_text": "From ingredient sourcing to final delivery, we offset 100% of emissions and invest in blue carbon marine ecosystems."
           }
@@ -115,7 +115,7 @@
           "type": "content_row",
           "settings": {
             "icon": "shopify://shop_images/Icon3_860ef41f-b26c-4225-90b4-c746b7cb3e88.svg",
-            "icon_bg_color": "#EBF3FF",
+            "icon_bg_color": "#ebf3ff",
             "row_heading": "Supporting 12 Coastal Communities",
             "row_text": "We partner with coastal economies, funding education and sustainable livelihoods for over 3,200 people."
           }
@@ -126,7 +126,7 @@
             "logo": "shopify://shop_images/Container.png",
             "title": "Proud to Be a Certified B Corporation",
             "description": "<p>Since 2023, we've been part of a global movement of businesses using profit as a force for good.</p>",
-            "score_bg_color": "#EBF3FF",
+            "score_bg_color": "#ebf3ff",
             "score_label": "B Impact Score",
             "score_value": "85.4",
             "score_subtitle": "Above Average"
@@ -140,6 +140,9 @@
         "content_row_rY4UXQ",
         "content_row_wnnqMB",
         "certified_NdU6y3"
+      ],
+      "custom_css": [
+        ".iwtf-certified__score-sub{color: #234082}"
       ],
       "name": "82X Image + Features",
       "settings": {
