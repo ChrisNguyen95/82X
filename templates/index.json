@@ -813,6 +813,37 @@
         "padding_bottom": 100
       }
     },
+    "rich_text_cHyYie": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xQLmPV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Continue scrolling to discover the thoughts of our community.",
+            "heading_size": "h1"
+          }
+        },
+        "text_LccU3G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here’s a space for our customers to share their experiences. We don’t interfere! These reviews are raw and unedited. You can find them by clicking 'reviews' in the menu.</p><p>82X's dietary supplements are not designed to diagnose, treat, cure, or prevent any diseases. Individual results may differ.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xQLmPV",
+        "text_LccU3G"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_HMKTYQ": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -838,6 +869,7 @@
     "rich_text_mbAnL8",
     "testimonial_slider_7t8nhQ",
     "1774448626dae4d65e",
+    "rich_text_cHyYie",
     "custom_liquid_HMKTYQ"
   ]
 }
