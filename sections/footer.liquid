@@ -349,6 +349,9 @@
 
               {%- if block.settings.badge_image != blank -%}
                 <div class="footer-block__badge">
+                  {% if block.settings.button_link != blank %}
+                    <a href="{{  block.settings.button_link }}">
+                  {%  endif %}
                   {{
                     block.settings.badge_image
                     | image_url: width: 200
@@ -357,6 +360,9 @@
                         width: block.settings.badge_image_width,
                         alt: block.settings.badge_text | default: ''
                   }}
+                  {% if block.settings.button_link != blank %}
+                  </a>
+                     {%  endif %}
                 </div>
               {%- endif -%}
 
