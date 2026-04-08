@@ -644,6 +644,7 @@
         "text_fRTthn",
         "button_r6Tj8K"
       ],
+      "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
