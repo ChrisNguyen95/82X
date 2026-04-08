@@ -350,7 +350,7 @@
               {%- if block.settings.badge_image != blank -%}
                 <div class="footer-block__badge">
                   {% if block.settings.button_link != blank %}
-                    <a href="{{  block.settings.button_link }}">
+                    <a class="footer-block__badge-link" href="{{  block.settings.button_link }}">
                   {%  endif %}
                   {{
                     block.settings.badge_image
