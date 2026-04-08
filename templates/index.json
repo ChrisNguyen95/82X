@@ -799,6 +799,7 @@
       "block_order": [
         "okendo_reviews_widget_eyjarP"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "title": "Continue scrolling to discover the thoughts of our community.",
@@ -810,6 +811,16 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 100
+      }
+    },
+    "custom_liquid_HMKTYQ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div data-oke-widget=\"\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -826,6 +837,7 @@
     "image_with_text_bQNCQa",
     "rich_text_mbAnL8",
     "testimonial_slider_7t8nhQ",
-    "1774448626dae4d65e"
+    "1774448626dae4d65e",
+    "custom_liquid_HMKTYQ"
   ]
 }
