@@ -463,10 +463,12 @@
                               <p class="pt-faq__subtitle">{{ block.settings[fs] | escape }}</p>
                             {%- endif -%}
                           </div>
+                            {%- if block.settings[fa] != blank -%}
                           <span class="pt-faq__toggle" aria-hidden="true">
                             <svg class="pt-faq__ico-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                             <svg class="pt-faq__ico-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>
                           </span>
+                           {%- endif -%}
                         </summary>
                         {%- if block.settings[fa] != blank -%}
                           <div class="pt-faq__body rte">{{ block.settings[fa] }}</div>
