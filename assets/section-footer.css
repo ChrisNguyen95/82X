@@ -1,9 +1,8 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
-#trustpilot-widget-trustbox-0-wrapper {
-  display: none
-}
+
+
 .footer:not(.color-scheme-1) {
   border-top: none;
 }
