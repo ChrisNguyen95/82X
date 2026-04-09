@@ -117,19 +117,20 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "<strong>Why The Pink Formula Works</strong>",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p><strong>Dual-Action Collagen Support</strong></p><p>A powerful blend of collagen, Vitamin C, and citric acid helps strengthen the skin’s collagen structure from multiple layers — supporting smoother texture, reduced wrinkles, and a brighter, more refined complexion.</p><p><strong>Deep Hydration & Skin Barrier Defense</strong></p><p>With Hyaluronic Acid (HA) and Ceramide, the formula helps lock in moisture, calm inflammation, and reinforce the skin’s natural barrier — leaving skin softer, clearer, and more resilient against breakouts.</p><p><strong>Inside-Out Wellness Support</strong></p><p>Infused with 82 fermented plant extracts, The Pink supports digestion, gut health, and immunity — helping your body function better so your skin can reflect that healthy balance.</p><p><strong>Lean Beauty & Body Support</strong></p><p>Combining collagen and Vitamin C, the formula also supports firmer skin and a more toned appearance. With <strong>no sugar, no fat, and no acne-triggering ingredients</strong>, it’s designed for a clean, confident glow without compromise.</p><p><br/>EVERY INGREDIENT HAS A PURPOSE. EVERY BOTTLE IS A COMPLETE SYSTEM — NOT JUST A COLLAGEN DRINK.<br/><br/><br/><br/><br/><br/></p>",
             "text_style": "body"
           }
         },
         "button_6qGJwe": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "TRY RISK FREE",
             "button_link": "shopify://pages/hero-products",
@@ -146,7 +147,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
+        "image": "shopify://shop_images/Gemini_Generated_Image_ff9rgjff9rgjff9r.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -169,43 +170,43 @@
         "ingredient_row_FYVV7z": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Porcine Placenta Extract",
-            "amount": "9,000 mg"
+            "name": "Collagen peptide",
+            "amount": "1000 mg"
           }
         },
         "ingredient_row_MegqQb": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Fish Collagen Peptide",
-            "amount": "15,000 mg"
+            "name": "L-Ascorbic Acid (Vitamin C)",
+            "amount": "300 mg"
           }
         },
         "ingredient_row_LeWfyF": {
           "type": "ingredient_row",
           "settings": {
             "name": "Fermented Plant Extract",
-            "amount": "5,000 mg"
+            "amount": "10 mg"
           }
         },
         "ingredient_row_6fep7r": {
           "type": "ingredient_row",
           "settings": {
-            "name": "African Mango Extract",
-            "amount": "5,000 mg"
+            "name": "Hyaluronic Acid",
+            "amount": "5 mg"
           }
         },
         "ingredient_row_QJNrtL": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Brewer's Yeast Peptide",
-            "amount": "4,160 mg"
+            "name": "Pyridoxine Hydrochloride (Vitamin B6)",
+            "amount": "2 mg"
           }
         },
         "ingredient_row_hqWnFN": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Pineapple Fruit Extract",
-            "amount": "2,000 mg"
+            "name": "Pineapple extracts liquid",
+            "amount": "20 mg"
           }
         }
       },
@@ -219,6 +220,7 @@
       ],
       "name": "Product Ingredients",
       "settings": {
+        "image": "shopify://shop_images/82X-The-Pink.png",
         "image_col_width": 50,
         "col_gap": 64,
         "table_dosage_gap": 32,
@@ -229,9 +231,9 @@
         "row_divider_color": "#C8D8E8",
         "divider_color": "#A0B8CC",
         "full_list_heading": "Full List Of Ingredients:",
-        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
+        "full_list_text": "<p>Hyaluronic Acid, Sodium citrate, Sweetener, Caramel, Flavor, Citric Acid, Water, Pineapple extracts liquid, Fermented plant extracts, etc.,</p>",
         "dosage_heading": "Recommended Dosage",
-        "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_text": "<p>Usually, drink about  <strong>1 - 2 bottles per day. </strong><br/>Shake well before use. Best served chilled or drunk directly.<br/><br/></p>",
         "dosage_align": "center",
         "background_color": "#1C2B6B",
         "heading_color": "#FFFFFF",
@@ -258,77 +260,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "accordion_section_cmYxRz": {
-      "type": "accordion-section",
-      "blocks": {
-        "item_WaPpKd": {
-          "type": "item",
-          "settings": {
-            "title": "What Are The Benefits Of 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": true
-          }
-        },
-        "item_wGGX4D": {
-          "type": "item",
-          "settings": {
-            "title": "How Should I Take 82X Sakura Placenta?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_QUdkMG": {
-          "type": "item",
-          "settings": {
-            "title": "How Long Does It Take To See Results?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_FwXRPR": {
-          "type": "item",
-          "settings": {
-            "title": "Who Should Use This Product?",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        }
-      },
-      "block_order": [
-        "item_WaPpKd",
-        "item_wGGX4D",
-        "item_QUdkMG",
-        "item_FwXRPR"
-      ],
-      "name": "Accordion — FAQ",
-      "settings": {
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_max_width": 800,
-        "subtext": "Rejuvenate and Protect Your Natural Beauty",
-        "text_align": "center",
-        "list_max_width": 860,
-        "tag_bg": "#d6e8f8",
-        "tag_color": "#1c2b6b",
-        "divider_color": "#e0e0e0",
-        "title_color": "#111111",
-        "body_color": "#555555",
-        "icon_color": "#111111",
-        "card_style": true,
-        "card_bg": "#d6e8f8",
-        "card_radius": 20,
-        "card_padding_v": 64,
-        "card_padding_h": 48,
-        "heading_color": "#111111",
-        "subtext_color": "#555555",
-        "section_bg": "#ffffff",
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 0
       }
     },
     "image_with_text_nrjQxn": {
@@ -363,6 +294,7 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -694,6 +626,144 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "accordion_section_cmYxRz": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_WaPpKd": {
+          "type": "item",
+          "settings": {
+            "title": "What are the benefits of the 82 fermented plant extracts in The Pink product?",
+            "content": "<p>They provide prebiotics and gut-friendly fiber, supporting a healthy digestive system and helping reduce the buildup of toxins in the gut. By balancing the gut microbiome, they also positively influence the skin’s microbiome — helping to minimize the causes of acne, inflammation, irritation, and redness.<br/></p>",
+            "open_by_default": true
+          }
+        },
+        "item_wGGX4D": {
+          "type": "item",
+          "settings": {
+            "title": "Does The Pink help reduce internal heat in the body?",
+            "content": "<p>Yes. The Pink is a healthy drink made with 100% natural ingredients, designed to be gentle on the body — it does not cause breakouts or internal heat. In fact, with its refreshing pineapple flavor, it provides a cooling, revitalizing feeling when consumed.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QUdkMG": {
+          "type": "item",
+          "settings": {
+            "title": "What makes the Vitamin C in this product special?",
+            "content": "<p>Vitamin C acts as a powerful booster that stimulates the body’s natural collagen production while protecting existing collagen from harmful factors. It also plays a key role in the skin’s defense system by neutralizing free radicals, helping to slow down aging, reduce redness, and decrease sun-damaged skin cells by up to 40%.</p><p>Notably, the Vitamin C in The Pink is combined with citric acid, which accelerates the regeneration of fibroblasts in aging skin up to 6 times faster than normal.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_FwXRPR": {
+          "type": "item",
+          "settings": {
+            "title": "Are there any side effects when taking 82X The Pink Collagen?",
+            "content": "<p>When used correctly and with authentic products, 82X The Pink Collagen is completely safe and does not cause side effects, while supporting overall health and skin improvement.</p><p>However, since individual responses may vary, if you experience any unusual symptoms or allergic reactions to the ingredients, you should stop using the product and consult a healthcare professional.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_WaPpKd",
+        "item_wGGX4D",
+        "item_QUdkMG",
+        "item_FwXRPR"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "logo_marquee_eeENDJ": {
+      "type": "logo-marquee",
+      "blocks": {
+        "text_Cwf4pV": {
+          "type": "text",
+          "settings": {
+            "text": "Natural + Organic",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_6iRrYD": {
+          "type": "text",
+          "settings": {
+            "text": "Women's Health",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_jK9TNz": {
+          "type": "text",
+          "settings": {
+            "text": "Easy & Delicious",
+            "font_size": 2,
+            "link": ""
+          }
+        },
+        "text_94QBEf": {
+          "type": "text",
+          "settings": {
+            "text": "essence",
+            "font_size": 2.4,
+            "link": ""
+          }
+        },
+        "text_qYiPUR": {
+          "type": "text",
+          "settings": {
+            "text": "Woman Friendly",
+            "font_size": 2,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_Cwf4pV",
+        "text_6iRrYD",
+        "text_jK9TNz",
+        "text_94QBEf",
+        "text_qYiPUR"
+      ],
+      "name": "Logo Marquee",
+      "settings": {
+        "subheading": "As Featured In",
+        "subheading_gap": 24,
+        "direction": "left",
+        "speed": 32,
+        "logo_height": 44,
+        "gap": 80,
+        "pause_on_hover": true,
+        "background_color": "#1C2B6B",
+        "text_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
@@ -701,7 +771,6 @@
     "image_with_text_9pQ8im",
     "product_ingredients_8E4cqW",
     "related-products",
-    "accordion_section_cmYxRz",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
     "rich_text_FNtXJe",
@@ -709,6 +778,8 @@
     "image_with_text_A96TqF",
     "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
-    "17742594372d116b7c"
+    "17742594372d116b7c",
+    "accordion_section_cmYxRz",
+    "logo_marquee_eeENDJ"
   ]
 }
