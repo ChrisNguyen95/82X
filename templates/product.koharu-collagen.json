@@ -82,6 +82,33 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
+        },
+        "collapsible_tab_Nt6dH9": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits",
+            "icon": "check_mark",
+            "content": "<ul><li>Replenish moisture levels and restore skin suppleness, while grape sprout extract delivers antioxidant protection </li><li>Stimulates natural collagen production up to 3–4 times more efficiently — improving skin firmness, resilience, and overall vitality from within.</li><li>Provide powerful antioxidant defense — visibly improving uneven skin tone and enhancing natural radiance.</li><li>Strengthen cellular integrity, boost glutathione production, and protect against oxidative stress</li></ul><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HB4kEG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to Use",
+            "icon": "check_mark",
+            "content": "<p>Usually, drink about<strong>15 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_CfJXeJ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "check_mark",
+            "content": "<ul><li>Fish collagen peptide (84,000 mg)</li><li>Royal jelly</li><li>HA</li><li>Cherry blossom extract powder</li><li>Fermented plant extract</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -92,7 +119,10 @@
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "trust_badges_MXEzeQ",
-        "buy_buttons"
+        "buy_buttons",
+        "collapsible_tab_Nt6dH9",
+        "collapsible_tab_HB4kEG",
+        "collapsible_tab_CfJXeJ"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -566,9 +596,9 @@
         "content_max_width": 800,
         "heading_color": "#111111",
         "text_color": "#444444",
-        "btn_primary_bg": "#1C2B6B",
-        "btn_primary_color": "#FFFFFF",
-        "background_color": "#D6E8F8",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
         "color_scheme": "",
         "padding_top": 48,
         "padding_bottom": 48
@@ -635,19 +665,19 @@
         "col_gap": 64,
         "table_dosage_gap": 32,
         "table_heading": "Each Bottle Contains",
-        "card_header_bg": "#FFFFFF",
-        "card_bg": "#E8F2FB",
+        "card_header_bg": "#ffffff",
+        "card_bg": "#e8f2fb",
         "card_radius": 16,
-        "row_divider_color": "#C8D8E8",
-        "divider_color": "#A0B8CC",
+        "row_divider_color": "#c8d8e8",
+        "divider_color": "#a0b8cc",
         "full_list_heading": "Full List Of Ingredients:",
         "full_list_text": "<p><br/>Hydrolyzed silk, Glucosamine, Magnesium chloride, Cherry blossom extract powder, Vitamin B2, B6, B1, Elastin, Grape sprout extract, etc...<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>",
         "dosage_heading": "Recommended Dosage",
         "dosage_text": "<p>Usually, drink about <strong>15 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
         "dosage_align": "center",
-        "background_color": "#1C2B6B",
-        "heading_color": "#FFFFFF",
-        "text_color": "#1C2B6B",
+        "background_color": "#1c2b6b",
+        "heading_color": "#ffffff",
+        "text_color": "#1c2b6b",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 60
@@ -811,7 +841,7 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#1C2B6B",
+        "background_color": "#1c2b6b",
         "text_color": "#ffffff",
         "color_scheme": "",
         "padding_top": 32,
