@@ -591,7 +591,8 @@
         "item_FwXRPR"
       ],
       "custom_css": [
-        "{margin-bottom: 6rem}"
+        "{margin-bottom: 6rem;}",
+        "@media screen and (max-width: 749px) {{margin-bottom: 4rem;}}"
       ],
       "name": "Accordion — FAQ",
       "settings": {
