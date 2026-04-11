@@ -590,6 +590,9 @@
         "item_QUdkMG",
         "item_FwXRPR"
       ],
+      "custom_css": [
+        "{margin-bottom: 6rem}"
+      ],
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
@@ -679,7 +682,7 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#1C2B6B",
+        "background_color": "#1c2b6b",
         "text_color": "#ffffff",
         "color_scheme": "",
         "padding_top": 32,
