@@ -3712,3 +3712,6 @@ inbox-online-store-chat {
   border-radius: calc(var(--media-radius) - var(--media-border-width));
   overflow: hidden;
 }
+article.article-template img {
+    margin: 2rem 0;
+}
