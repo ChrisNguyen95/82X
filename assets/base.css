@@ -3715,3 +3715,8 @@ inbox-online-store-chat {
 article.article-template img {
     margin: 2rem 0;
 }
+@media screen and (max-width: 749px) {
+   article.article-template img {
+    margin: 1rem 0;
+}
+}
