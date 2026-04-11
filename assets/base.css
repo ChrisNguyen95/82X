@@ -3709,5 +3709,6 @@ inbox-online-store-chat {
 }
 
 .section .page-width img {
-  border-radius: calc(var(--media-radius) - var(--media-border-width))
+  border-radius: calc(var(--media-radius) - var(--media-border-width));
+  overflow: hidden;
 }
