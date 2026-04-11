@@ -3707,3 +3707,7 @@ span.appstle_dot {
 inbox-online-store-chat {
   bottom: 6.5rem !important
 }
+
+.section .page-width img {
+  border-radius: calc(var(--media-radius) - var(--media-border-width))
+}
