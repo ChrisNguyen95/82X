@@ -570,6 +570,7 @@
         "review_C3rcgR": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Review_image.jpg",
             "star_rating": 5,
             "author": "Lily Wang",
             "location": "Texas, USA",
