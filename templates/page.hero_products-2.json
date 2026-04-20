@@ -507,6 +507,18 @@
             "swatch_shape": "circle"
           }
         },
+        "icon_with_text_QH3VBk": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "star",
+            "heading_1": "<strong>Made in Japan</strong>",
+            "icon_2": "return",
+            "heading_2": "<strong>30 Day Money Back</strong>",
+            "icon_3": "truck",
+            "heading_3": "<strong>Free Shipping in the US</strong>"
+          }
+        },
         "buy_buttons_k7hGdP": {
           "type": "buy_buttons",
           "settings": {
@@ -521,6 +533,7 @@
         "okendo_star_rating_YGjLdB",
         "price_waXQUr",
         "variant_picker_xEiYnF",
+        "icon_with_text_QH3VBk",
         "buy_buttons_k7hGdP"
       ],
       "custom_css": [
@@ -535,7 +548,7 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 100,
