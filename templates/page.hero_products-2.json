@@ -541,12 +541,12 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "82x-placenta",
+        "product": "82x-collagen-classic",
         "color_scheme": "scheme-2",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "media_position": "left",
         "image_zoom": "none",
         "hide_variants": false,
@@ -762,6 +762,33 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "17766951699f9688d2": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_wA3MLb": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "82x-collagen-classic",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_wA3MLb"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -774,6 +801,7 @@
     "clinician_grid_7xrRbe",
     "featured_product_Uy8fFF",
     "testimonial_slider_GTmALH",
-    "accordion_section_NhKxVC"
+    "accordion_section_NhKxVC",
+    "17766951699f9688d2"
   ]
 }
