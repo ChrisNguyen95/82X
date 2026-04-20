@@ -17,95 +17,6 @@
         "padding_bottom": 28
       }
     },
-    "hero_split_eib8jt": {
-      "type": "hero-split",
-      "blocks": {
-        "subtext_qg7ekV": {
-          "type": "subtext",
-          "settings": {
-            "subtext": "Japanese Placenta & Collagen Beauty Drink",
-            "subtext_style": "caption-with-letter-spacing"
-          }
-        },
-        "heading_Yg4xfT": {
-          "type": "heading",
-          "settings": {
-            "heading": "82X Sakura Placenta",
-            "heading_size": "h0"
-          }
-        },
-        "text_kbFUwe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A premium Japanese beauty drink with placenta and collagen that helps brighten skin, improve elasticity, reduce signs of aging, and nourish the body from within.</p>",
-            "text_style": "body"
-          }
-        },
-        "buttons_HxM6wr": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "shopify://pages/82x-quiz",
-            "button_style_secondary_2": true
-          }
-        },
-        "icon_list_NNfKgn": {
-          "type": "icon_list",
-          "settings": {
-            "icon_label_color": "",
-            "icon_1": "shopify://shop_images/Icon_Container.svg",
-            "label_1": "Beauty Placenta",
-            "icon_2": "shopify://shop_images/Icon_rContainer.svg",
-            "label_2": "Fish Collagen",
-            "icon_3": "shopify://shop_images/Icon_Corntainer.svg",
-            "label_3": "Sakura Extract",
-            "icon_4": "shopify://shop_images/Icon_Contairrner.svg",
-            "label_4": "Natural Ingredients",
-            "icon_5": "shopify://shop_images/logo_82XSS_2.png",
-            "label_5": "Made In Japan",
-            "label_6": "",
-            "label_7": "",
-            "label_8": ""
-          }
-        }
-      },
-      "block_order": [
-        "subtext_qg7ekV",
-        "heading_Yg4xfT",
-        "text_kbFUwe",
-        "buttons_HxM6wr",
-        "icon_list_NNfKgn"
-      ],
-      "disabled": true,
-      "name": "Hero Split",
-      "settings": {
-        "image": "shopify://shop_images/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
-        "image_mobile": "shopify://shop_images/Blue_and_White_Illustration_Sea_Desktop_Wallpaper_2.png",
-        "image_fit": "cover",
-        "image_position": "center center",
-        "overlay_opacity": 0,
-        "desktop_height": "adapt",
-        "mobile_height": "large",
-        "desktop_vertical": "middle",
-        "mobile_vertical": "middle",
-        "desktop_horizontal": "left",
-        "desktop_align": "left",
-        "mobile_align": "left",
-        "content_max_width": 55,
-        "content_max_width_mobile": 100,
-        "section_color_scheme": "scheme-3",
-        "show_text_box": false,
-        "color_scheme": "",
-        "icon_size": 48,
-        "padding_top": 64,
-        "padding_bottom": 64,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "image_with_text_k3r8yg": {
       "type": "image-with-text",
       "blocks": {
@@ -338,7 +249,7 @@
         "row_x9iUqb",
         "row_JBKmBm"
       ],
-      "name": "Feature Rows",
+      "name": "82X Fermented",
       "settings": {
         "heading": "82 Fermented Plants: The Key to Your Glow.",
         "heading_size": "h1",
@@ -624,33 +535,10 @@
             "highlights_label": "Highlights:",
             "highlights": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
           }
-        },
-        "clinician_RhTqw6": {
-          "type": "clinician",
-          "settings": {
-            "image": "shopify://shop_images/Rectangle_9_4.jpg",
-            "image_width": 144,
-            "image_ratio": "square",
-            "name": "Dr. Alyssa Dweck",
-            "verified": true,
-            "verified_label": "Verified Clinician",
-            "row1_label": "Specialty",
-            "row1_value": "Integrative Medicine",
-            "row2_label": "Years In Practice",
-            "row2_value": "18",
-            "row3_label": "",
-            "row3_value": "",
-            "review_title": "Placenta peptides and collagen support skin renewal and vitality",
-            "review_text": "<p>This formula combines high-concentration placenta extract with marine collagen peptides, which are widely used in aesthetic nutrition for improving skin hydration, elasticity, and overall skin vitality.Placenta extract contains bioactive peptides and amino acids that may support cellular regeneration and help maintain balanced hormone activity. Combined with collagen</p>",
-            "text_clamp_lines": 3,
-            "highlights_label": "Highlights:",
-            "highlights": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
-          }
         }
       },
       "block_order": [
-        "clinician_tXnjm4",
-        "clinician_RhTqw6"
+        "clinician_tXnjm4"
       ],
       "name": "Clinician Grid",
       "settings": {
@@ -665,10 +553,10 @@
         "left_col_width": 360,
         "card_h_gap": 60,
         "avatar_radius": 8,
-        "show_more_label": "Show more",
-        "show_less_label": "Show less",
-        "load_more_label": "Show More",
-        "button_label": "Show more",
+        "show_more_label": "",
+        "show_less_label": "",
+        "load_more_label": "",
+        "button_label": "",
         "button_link": "",
         "button_style": "solid",
         "button_full_mobile": false,
@@ -755,7 +643,7 @@
         "item_9anaHX",
         "item_DiKQHE"
       ],
-      "name": "Accordion — Benefits",
+      "name": "F.A.Q",
       "settings": {
         "heading": "82X Sakura Placenta has been used for centuries as a traditional remedy for",
         "heading_size": "h1",
@@ -783,11 +671,69 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "ingredient_slider_irT3QF": {
+      "type": "ingredient-slider",
+      "blocks": {
+        "ingredient_PakMPk": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Vitamin E",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_aqD36G": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Grape Extract",
+            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+          }
+        },
+        "ingredient_hxaLKM": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Pineapple Extract",
+            "text": "<p>Improves skin elasticity and firmness.</p>"
+          }
+        },
+        "ingredient_DYXC4w": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Fermented Plant Extract",
+            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_PakMPk",
+        "ingredient_aqD36G",
+        "ingredient_hxaLKM",
+        "ingredient_DYXC4w"
+      ],
+      "name": "Pain Point",
+      "settings": {
+        "title": "Pain Point",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "title_align": "center",
+        "image_ratio": "adapt",
+        "card_bg": "#D9E9F8",
+        "card_radius": 16,
+        "card_text_align": "center",
+        "card_gap_desktop": 20,
+        "card_gap_mobile": 12,
+        "loop_enabled": false,
+        "nav_color": "#1C2E5E",
+        "color_scheme": "",
+        "background_color": "#FFFFFF",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
     "main",
-    "hero_split_eib8jt",
     "image_with_text_k3r8yg",
     "ingredient_slider_HAABeq",
     "feature_rows_3hWfnG",
@@ -795,6 +741,7 @@
     "featured_product_Uy8fFF",
     "testimonial_slider_GTmALH",
     "clinician_grid_7xrRbe",
-    "accordion_section_NhKxVC"
+    "accordion_section_NhKxVC",
+    "ingredient_slider_irT3QF"
   ]
 }
