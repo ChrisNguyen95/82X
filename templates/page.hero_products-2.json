@@ -474,14 +474,30 @@
       "blocks": {
         "title_Q6jUPD": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "heading_size": "h1"
           }
         },
+        "icon_with_text_WJVPhE": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "<strong>Highly rated by customers for: Collagen Quality, Skin Firmness, Joint Support, Immunity Boost, Better Sleep</strong>",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "okendo_star_rating_YGjLdB": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{section.settings.product}}"
+          }
+        },
         "price_waXQUr": {
           "type": "price",
-          "disabled": true,
           "settings": {}
         },
         "variant_picker_xEiYnF": {
@@ -501,6 +517,8 @@
       },
       "block_order": [
         "title_Q6jUPD",
+        "icon_with_text_WJVPhE",
+        "okendo_star_rating_YGjLdB",
         "price_waXQUr",
         "variant_picker_xEiYnF",
         "buy_buttons_k7hGdP"
