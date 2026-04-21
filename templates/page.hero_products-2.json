@@ -769,60 +769,44 @@
         "tag_7hQ8Yr": {
           "type": "tag",
           "settings": {
-            "label": "Digestion"
+            "label": "Collagen Quality"
           }
         },
         "tag_Ekk3Kb": {
           "type": "tag",
           "settings": {
-            "label": "Gut Health"
+            "label": "Skin Firmness"
           }
         },
         "item_QhWce7": {
           "type": "item",
           "settings": {
-            "title": "Skin Cell Regeneration",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Why is the mg count in 82X lower than other brands, yet more effective?",
+            "content": "<p><strong>Because in the world of supplements, Bioavailability is King.</strong> Most \"high-dose\" products boast 300,000mg of raw, oversized collagen molecules. However, since the body cannot process that volume, most of it is simply flushed out as waste.</p><p>Our <strong>120,000mg Liposomal formula</strong> is different. By shrinking the collagen into nano-sized bubbles, we ensure <strong>100% utilization</strong> by your cells. You aren't just drinking more collagen; you are actually absorbing more. Remember: <strong>1mg of Liposomal Collagen delivers the power of 10mg of traditional collagen.</strong></p>",
             "open_by_default": true
           }
         },
         "item_U9Dfby": {
           "type": "item",
           "settings": {
-            "title": "Hormone Balance",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Will it make me break out like other collagen products?",
+            "content": "<p><strong>No—and here is why.</strong> Standard collagen can cause \"internal heat\" and digestive congestion, which often leads to hormonal acne. 82X is the only formula that includes <strong>82 Fermented Plants</strong>. These botanicals act as a natural detoxifier and \"cooling agent,\" ensuring your system stays balanced. You get the glow and the lift without the unwanted breakouts.</p><h3></h3>",
             "open_by_default": false
           }
         },
         "item_7bhjeR": {
           "type": "item",
           "settings": {
-            "title": "Brightens Skin",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Is it safe for long-term use?",
+            "content": "<p>Absolutely. Our formula is designed to work with your body's natural rhythm. By following our <strong>3-Month ON / 1-Month OFF</strong> cycle, you provide your skin with the building blocks it needs while allowing your natural collagen production to stay active and healthy.</p>",
             "open_by_default": false
           }
         },
         "item_QDhg4J": {
           "type": "item",
           "settings": {
-            "title": "Anti-Aging",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_9anaHX": {
-          "type": "item",
-          "settings": {
-            "title": "Boosts Natural Moisture",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
-            "open_by_default": false
-          }
-        },
-        "item_DiKQHE": {
-          "type": "item",
-          "settings": {
-            "title": "Supports Overall Health",
-            "content": "<p>Supports the renewal of skin cells, leaving skin smooth and healthy from within.</p>",
+            "title": "Storage & Use:",
+            "content": "<ul><li><strong>Shake well</strong> before every serving to activate the fermented enzymes.</li><li><strong>Keep refrigerated</strong> after opening. This is a bioactive product; cold storage preserves the potency of the live enzymes and ensures every drop is as effective as the first.</li></ul>",
             "open_by_default": false
           }
         }
@@ -833,13 +817,11 @@
         "item_QhWce7",
         "item_U9Dfby",
         "item_7bhjeR",
-        "item_QDhg4J",
-        "item_9anaHX",
-        "item_DiKQHE"
+        "item_QDhg4J"
       ],
       "name": "F.A.Q",
       "settings": {
-        "heading": "82X Sakura Placenta has been used for centuries as a traditional remedy for",
+        "heading": "<strong>Frequently Asked Questions</strong>",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_italic": false,
