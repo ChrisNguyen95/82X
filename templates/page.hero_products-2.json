@@ -660,6 +660,58 @@
         "padding_bottom": 100
       }
     },
+    "image_with_text_KNeztR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VPVWat": {
+          "type": "heading",
+          "settings": {
+            "heading": "Amazon Verified Purchases",
+            "heading_size": "h1"
+          }
+        },
+        "text_mYYVWd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don’t just take our word for it. Join thousands of women globally who have upgraded their beauty routine to 82X Classic.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_ik9Mkk": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_link_color": "#1C2B6B"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VPVWat",
+        "text_mYYVWd",
+        "button_ik9Mkk"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "full_width": false,
+        "image": "shopify://shop_images/2_d3c8ac71-eefe-4871-9989-13da76a2874b.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "icon_size": 40,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "feature_rows_t9fNc4": {
       "type": "feature-rows",
       "blocks": {
@@ -935,6 +987,7 @@
     "ingredient_slider_MM6bb4",
     "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
+    "image_with_text_KNeztR",
     "feature_rows_t9fNc4",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
