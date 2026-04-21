@@ -385,15 +385,15 @@
         "heading_italic": false,
         "title_align": "center",
         "image_ratio": "adapt",
-        "card_bg": "#D9E9F8",
+        "card_bg": "#d9e9f8",
         "card_radius": 16,
         "card_text_align": "center",
         "card_gap_desktop": 20,
         "card_gap_mobile": 12,
         "loop_enabled": true,
-        "nav_color": "#1C2E5E",
+        "nav_color": "#1c2e5e",
         "color_scheme": "",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "padding_top": 64,
         "padding_bottom": 64
       }
@@ -564,6 +564,70 @@
         "padding_bottom": 100
       }
     },
+    "feature_rows_t9fNc4": {
+      "type": "feature-rows",
+      "blocks": {
+        "row_HcUUw6": {
+          "type": "row",
+          "settings": {
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Radiant Skin And Anti-Aging",
+            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
+            "content_text_align": "left",
+            "content_max_width": 0
+          }
+        },
+        "row_qwfAYX": {
+          "type": "row",
+          "settings": {
+            "icon_position": "right",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Hormonal Balance And Wellness",
+            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
+            "content_text_align": "left",
+            "content_max_width": 0
+          }
+        },
+        "row_tRAt9N": {
+          "type": "row",
+          "settings": {
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "High-Quality Japanese Manufacturing Standards",
+            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
+            "content_text_align": "left",
+            "content_max_width": 0
+          }
+        }
+      },
+      "block_order": [
+        "row_HcUUw6",
+        "row_qwfAYX",
+        "row_tRAt9N"
+      ],
+      "name": "The 82X Ritual",
+      "settings": {
+        "heading": "The Secret To Radiant Beauty With 82X",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "text_align": "center",
+        "col_gap_desktop": 48,
+        "row_gap_desktop": 48,
+        "row_gap_mobile": 48,
+        "heading_color": "#1C2B6B",
+        "text_color": "#333333",
+        "background_color": "#FFFFFF",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "testimonial_slider_GTmALH": {
       "type": "testimonial-slider",
       "blocks": {
@@ -639,7 +703,7 @@
         "heading_align": "center",
         "desktop_layout": "slider",
         "desktop_cols": "3",
-        "card_bg": "#ffffff",
+        "card_bg": "#f0f8fe",
         "card_border_color": "#d9eeff",
         "card_border_width": 1,
         "card_radius": 16,
@@ -809,6 +873,7 @@
     "ingredient_slider_MM6bb4",
     "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
+    "feature_rows_t9fNc4",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
     "accordion_section_NhKxVC"
