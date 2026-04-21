@@ -734,27 +734,18 @@
           "type": "review",
           "settings": {
             "star_rating": 5,
-            "author": "Anna Tran",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "author": "Daisy Nguyen",
+            "location": "",
+            "text": "After about 2 weeks, my skin felt tight, soft and pleasant to the touch. After 3 weeks, the skin looks succulent, plump, and a little brighter. Recently using 82x, I also sleep well, digest better, and eat better. I haven't seen the effect of reducing wrinkles yet, maybe because I've only used 1 bottle. I will probably boldly use the 82x collagen treatment to see the results."
           }
         },
         "review_dAY8pi": {
           "type": "review",
           "settings": {
             "star_rating": 5,
-            "author": "Kevin Pham",
-            "location": "Washington, USA",
-            "text": "After using 2 boxes of Sakura Collagen, I see fewer wrinkles and a more even tone. Even my wife noticed and said I look younger!"
-          }
-        },
-        "review_pqrVaa": {
-          "type": "review",
-          "settings": {
-            "star_rating": 5,
-            "author": "Lisa Nguyen",
-            "location": "California, USA",
-            "text": "I started using 82X Sakura Collagen to improve my skin and balance my hormones, and I was really impressed after just one bottle."
+            "author": "Linda",
+            "location": "",
+            "text": "Good quality product service. I found the taste easy to drink, I found it effective after the 3rd bottle I drank it. I will maintain the product for a long time!"
           }
         },
         "review_Pd3zp8": {
@@ -762,35 +753,24 @@
           "settings": {
             "star_rating": 5,
             "author": "Rachel Thompson",
-            "location": "New York, USA",
-            "text": "I've tried many collagen brands, but Sakura Collagen stands out. My skin feels smooth, and my nails are growing stronger too!"
-          }
-        },
-        "review_VGEhYC": {
-          "type": "review",
-          "settings": {
-            "star_rating": 5,
-            "author": "Anna Tran",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "location": "",
+            "text": "I've tried many collagen brands, but this product stands out. My skin feels smooth, and my nails are growing stronger too!"
           }
         },
         "review_VBRPbL": {
           "type": "review",
           "settings": {
             "star_rating": 5,
-            "author": "Anna Tran",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "author": "Antoinette Cook",
+            "location": "",
+            "text": "I have never slept more solidly since I hit menopause since taking this supplement. I didn’t even know that it was a side effect but as a therapist it makes sense. It doesn’t make you sleepy to clarify it keeps you asleep"
           }
         }
       },
       "block_order": [
         "review_EPtDFH",
         "review_dAY8pi",
-        "review_pqrVaa",
         "review_Pd3zp8",
-        "review_VGEhYC",
         "review_VBRPbL"
       ],
       "name": "Testimonial Slider",
