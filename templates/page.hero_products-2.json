@@ -407,8 +407,8 @@
       ],
       "name": "Product Ingredients",
       "settings": {
-        "image": "shopify://shop_images/4.png",
-        "mobile_image": "shopify://shop_images/4.png",
+        "image": "shopify://shop_images/ssss.jpg",
+        "mobile_image": "shopify://shop_images/ssss.jpg",
         "image_col_width": 50,
         "col_gap": 64,
         "table_dosage_gap": 32,
