@@ -386,7 +386,7 @@
         "card_text_align": "center",
         "card_gap_desktop": 20,
         "card_gap_mobile": 12,
-        "loop_enabled": false,
+        "loop_enabled": true,
         "nav_color": "#1C2E5E",
         "color_scheme": "",
         "background_color": "#FFFFFF",
