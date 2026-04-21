@@ -335,6 +335,65 @@
         "padding_bottom": 24
       }
     },
+    "ingredient_slider_MM6bb4": {
+      "type": "ingredient-slider",
+      "blocks": {
+        "ingredient_8En8jC": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Hydrolyzed Elastin",
+            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+          }
+        },
+        "ingredient_xmLJtN": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Cherry Blossom extract powder",
+            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+          }
+        },
+        "ingredient_HjAxjQ": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Camellia-seed extract",
+            "text": "<p>Improves skin elasticity and firmness.</p>"
+          }
+        },
+        "ingredient_YUkWdP": {
+          "type": "ingredient",
+          "settings": {
+            "title": "82 Fermented Plant Extract",
+            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_8En8jC",
+        "ingredient_xmLJtN",
+        "ingredient_HjAxjQ",
+        "ingredient_YUkWdP"
+      ],
+      "name": "Ingredient Slider",
+      "settings": {
+        "title": "Ingredients You Can Recognize",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "title_align": "center",
+        "image_ratio": "adapt",
+        "card_bg": "#D9E9F8",
+        "card_radius": 16,
+        "card_text_align": "center",
+        "card_gap_desktop": 20,
+        "card_gap_mobile": 12,
+        "loop_enabled": false,
+        "nav_color": "#1C2E5E",
+        "color_scheme": "",
+        "background_color": "#FFFFFF",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "feature_rows_3hWfnG": {
       "type": "feature-rows",
       "blocks": {
@@ -743,6 +802,7 @@
     "ingredient_slider_irT3QF",
     "clinician_grid_7xrRbe",
     "product_ingredients_KiqFW3",
+    "ingredient_slider_MM6bb4",
     "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
     "testimonial_slider_GTmALH",
