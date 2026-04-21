@@ -234,43 +234,64 @@
         "ingredient_row_EUTyJ4": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Porcine Placenta Extract",
-            "amount": "9,000 mg"
+            "name": "Fish Collagen Peptide",
+            "amount": "120,000 mg"
           }
         },
         "ingredient_row_Wzejbx": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Fish Collagen Peptide",
-            "amount": "15,000 mg"
+            "name": "Royal Jelly",
+            "amount": "200 mg"
           }
         },
         "ingredient_row_zHFNyH": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Fermented Plant Extract",
-            "amount": "5,000 mg"
+            "name": "Hyaluronic Acid",
+            "amount": "1-- mg"
           }
         },
         "ingredient_row_AUF3gY": {
           "type": "ingredient_row",
           "settings": {
-            "name": "African Mango Extract",
-            "amount": "5,000 mg"
+            "name": "Vitamin B2",
+            "amount": "34,5 mg"
           }
         },
         "ingredient_row_cr8DfK": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Brewer's Yeast Peptide",
-            "amount": "4,160 mg"
+            "name": "Vitamin B6",
+            "amount": "23,4 mgmg"
           }
         },
         "ingredient_row_GPfxGa": {
           "type": "ingredient_row",
           "settings": {
-            "name": "Pineapple Fruit Extract",
-            "amount": "2,000 mg"
+            "name": "Vitamin B1",
+            "amount": "21,6 mg"
+          }
+        },
+        "ingredient_row_wYLLNV": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin E",
+            "amount": "20 mg"
+          }
+        },
+        "ingredient_row_4qeiP8": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Elastin",
+            "amount": "10 mg"
+          }
+        },
+        "ingredient_row_LRPRqK": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin D",
+            "amount": "55 mg"
           }
         }
       },
@@ -280,7 +301,10 @@
         "ingredient_row_zHFNyH",
         "ingredient_row_AUF3gY",
         "ingredient_row_cr8DfK",
-        "ingredient_row_GPfxGa"
+        "ingredient_row_GPfxGa",
+        "ingredient_row_wYLLNV",
+        "ingredient_row_4qeiP8",
+        "ingredient_row_LRPRqK"
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.pi-content-col {padding-bottom: 5rem; }}"
@@ -299,7 +323,7 @@
         "row_divider_color": "#c8d8e8",
         "divider_color": "#556884",
         "full_list_heading": "Full List Of Ingredients:",
-        "full_list_text": "<p>Hyaluronic Acid, Hydrolyzed Elastin, Japanese Orange Extract, Grape Sprout Extract, Brewer's Yeast Peptide, etc.,</p>",
+        "full_list_text": "<p>Fermented vegetable extract, Cherry blossom extract powder, Glucosamine, Magnesium chloride, Hydrolyzed silk, Acidifier (citric acid, fermented lactic acid), Flavor (Mango flavor, Passion fruit flavor), Sweetener ( stevia, sucralose, acesulfame potassion), Preservative (Sodium benzoate), Water</p>",
         "dosage_heading": "Recommended Dosage",
         "dosage_text": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
         "dosage_align": "center",
