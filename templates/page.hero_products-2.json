@@ -341,29 +341,33 @@
         "ingredient_8En8jC": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/MADE_IN_f467d75e-aa2d-4c33-81b1-525cbeb08856.png",
             "title": "Hydrolyzed Elastin",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+            "text": "<p>Improves skin elasticity and firmness.</p>"
           }
         },
         "ingredient_xmLJtN": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/1_53274b26-b852-4878-aa0d-4f7d01e4d35d.png",
             "title": "Cherry Blossom extract powder",
-            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+            "text": "<p>Brightens skin and reduces inflammation.</p>"
           }
         },
         "ingredient_HjAxjQ": {
           "type": "ingredient",
           "settings": {
-            "title": "Camellia-seed extract",
+            "image": "shopify://shop_images/2_c6c6a960-e612-420b-962e-511085c5e9ab.png",
+            "title": "Deeply hydrates and protects skin barrier.",
             "text": "<p>Improves skin elasticity and firmness.</p>"
           }
         },
         "ingredient_YUkWdP": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/4_cbc4119e-5ba4-48cc-b1ef-28a12fcc85e4.png",
             "title": "82 Fermented Plant Extract",
-            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+            "text": "<p>Boosts digestion and overall immunity.</p>"
           }
         }
       },
