@@ -338,6 +338,18 @@
     "feature_rows_3hWfnG": {
       "type": "feature-rows",
       "blocks": {
+        "row_hg8HiE": {
+          "type": "row",
+          "settings": {
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "",
+            "text": "<p>Your skin can’t be beautiful if your gut is congested. Traditional high-dose collagen is notorious for causing \"internal heat,\" bloating, and stubborn breakouts. We solved this by going back to the roots of Japanese longevity. Our proprietary blend of <strong>82 fermented plants</strong> works as a powerful internal detoxifier. These botanicals are fermented for years to create bioactive enzymes that:</p>",
+            "content_text_align": "left",
+            "content_max_width": 0
+          }
+        },
         "row_4qQVN7": {
           "type": "row",
           "settings": {
@@ -345,8 +357,8 @@
             "icon_position": "left",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "Support Radiant Skin And Anti-Aging",
-            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
+            "title": "Pre-Digest for You",
+            "text": "<p>They break down collagen peptides into an even smaller, \"ready-to-use\" form for effortless absorption.</p>",
             "content_text_align": "left",
             "content_max_width": 1020
           }
@@ -358,8 +370,8 @@
             "icon_position": "right",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "Support Hormonal Balance And Wellness",
-            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
+            "title": "Cool the System",
+            "text": "<p>They act as a natural heat-sink, neutralizing the inflammatory response that typically causes collagen-induced acne.</p>",
             "content_text_align": "right",
             "content_max_width": 1020
           }
@@ -371,14 +383,15 @@
             "icon_position": "left",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "High-Quality Japanese Manufacturing Standards",
-            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
+            "title": "Restore Balance",
+            "text": "<p>They nourish your microbiome, ensuring your body is clean from the inside out so your \"Glass Skin\" can finally shine through.</p>",
             "content_text_align": "left",
             "content_max_width": 1020
           }
         }
       },
       "block_order": [
+        "row_hg8HiE",
         "row_4qQVN7",
         "row_x9iUqb",
         "row_JBKmBm"
@@ -386,7 +399,7 @@
       "name": "82X Fermented",
       "settings": {
         "heading": "82 Fermented Plants: The Key to Your Glow.",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
