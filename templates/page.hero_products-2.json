@@ -570,11 +570,12 @@
         "row_HcUUw6": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Icon_Container2.svg",
             "icon_position": "left",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "Support Radiant Skin And Anti-Aging",
-            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
+            "title": "Adaptation (Days 1–7)",
+            "text": "<ul><li><strong>The Goal:</strong> Prime your gut and detoxify your system.</li><li><strong>The Dose:</strong> <strong>20ml daily</strong> every morning on an empty stomach. This prepares your microbiome for high-efficiency nutrient uptake.</li></ul><p></p>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -582,11 +583,12 @@
         "row_qwfAYX": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Icon.svg",
             "icon_position": "right",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "Support Hormonal Balance And Wellness",
-            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
+            "title": "Transformation (Days 8–90)",
+            "text": "<p><strong>The Goal:</strong> Peak metabolic saturation and structural rebirth.</p><p><strong>The Dose:</strong> <strong>25ml daily</strong>. At this stage, your collagen levels begin to \"stack,\" filling in fine lines and restoring skin elasticity from the inside out.</p>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -594,11 +596,12 @@
         "row_tRAt9N": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
             "icon_position": "left",
             "image_width_desktop": 120,
             "image_width_mobile": 100,
-            "title": "High-Quality Japanese Manufacturing Standards",
-            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
+            "title": "The Cycle",
+            "text": "<p><strong>The Strategy:</strong> <strong>3 Months ON / 1 Month OFF.</strong></p><p>Following 3 bottles (90 days), we recommend a 30-day \"rest\" period to allow your body’s natural collagen production to stabilize and lock in the results.</p>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -611,7 +614,7 @@
       ],
       "name": "The 82X Ritual",
       "settings": {
-        "heading": "The Secret To Radiant Beauty With 82X",
+        "heading": "Optimized for Results. Mastered for You.",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_italic": false,
