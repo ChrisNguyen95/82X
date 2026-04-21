@@ -891,32 +891,55 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_9CBibc": {
-      "type": "rich-text",
+    "logo_content_banner_eFGprn": {
+      "type": "logo-content-banner",
       "blocks": {
-        "button_jExiCA": {
+        "heading_7t8tBe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_jBDkmW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        },
+        "button_XQdDNA": {
           "type": "button",
           "settings": {
             "button_label": "BUY IT NOW",
             "button_link": "#",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style": "primary",
+            "button_full_mobile": false
           }
         }
       },
       "block_order": [
-        "button_jExiCA"
+        "heading_7t8tBe",
+        "text_jBDkmW",
+        "button_XQdDNA"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Logo Content Banner",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "logo_width_desktop": 120,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "center",
+        "mobile_align": "flex-start",
+        "gap_desktop": 48,
+        "gap_mobile": 24,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1C2B6B",
+        "btn_primary_color": "#FFFFFF",
+        "background_color": "#D6E8F8",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "accordion_section_NhKxVC": {
@@ -1019,7 +1042,7 @@
     "image_with_text_KNeztR",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
-    "rich_text_9CBibc",
+    "logo_content_banner_eFGprn",
     "accordion_section_NhKxVC"
   ]
 }
