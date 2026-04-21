@@ -106,36 +106,44 @@
     "ingredient_slider_irT3QF": {
       "type": "ingredient-slider",
       "blocks": {
+        "ingredient_fP6kbc": {
+          "type": "ingredient",
+          "settings": {
+            "title": "The Sagging Paradox",
+            "text": "<p>Focusing only on Collagen while ignoring <strong>Elastin</strong> is like building a house with bricks but no mortar. Without the \"lift\" of Elastin, your skin stays flat, not bouncy.</p>"
+          }
+        },
         "ingredient_PakMPk": {
           "type": "ingredient",
           "settings": {
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
+            "title": "The Absorption Gap: 70% Waste",
+            "text": "<p>Most traditional collagen is destroyed by stomach acid before it ever reaches your skin. If it’s not <strong>Liposomal</strong>, you’re essentially paying for \"expensive urine.\"</p>"
           }
         },
         "ingredient_aqD36G": {
           "type": "ingredient",
           "settings": {
-            "title": "Grape Extract",
-            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
+            "title": "The \"Breakout\" Effect",
+            "text": "<p>High-dose, low-quality collagen often causes internal \"heat\" and hormonal acne. You shouldn't have to choose between fewer wrinkles and more breakouts.</p>"
           }
         },
         "ingredient_hxaLKM": {
           "type": "ingredient",
           "settings": {
-            "title": "Pineapple Extract",
-            "text": "<p>Improves skin elasticity and firmness.</p>"
+            "title": "The Bloating Fear",
+            "text": "<p>Raw collagen powders and cheap liquids are often packed with fillers and thickeners that cause water retention and digestive discomfort.</p>"
           }
         },
         "ingredient_DYXC4w": {
           "type": "ingredient",
           "settings": {
-            "title": "Fermented Plant Extract",
-            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
+            "title": "The Consistency Barrier",
+            "text": "<p>Clunky tubs and messy powders make it hard to stay on track. If your ritual is a chore, you’ll never see the results.</p>"
           }
         }
       },
       "block_order": [
+        "ingredient_fP6kbc",
         "ingredient_PakMPk",
         "ingredient_aqD36G",
         "ingredient_hxaLKM",
