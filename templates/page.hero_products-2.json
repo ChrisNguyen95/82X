@@ -45,7 +45,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "ACTIVATE YOUR 90-DAY TRANSFORMATION",
-            "button_link_1": "#",
+            "button_link_1": "#shopify-section-template--20302847803586__featured_product_Uy8fFF",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -935,9 +935,9 @@
         "content_max_width": 800,
         "heading_color": "#111111",
         "text_color": "#444444",
-        "btn_primary_bg": "#1C2B6B",
-        "btn_primary_color": "#FFFFFF",
-        "background_color": "#D6E8F8",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
         "color_scheme": "",
         "padding_top": 48,
         "padding_bottom": 48
