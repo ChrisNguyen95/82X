@@ -647,7 +647,7 @@
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "82x-collagen-classic",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
