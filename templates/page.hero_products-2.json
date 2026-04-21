@@ -170,170 +170,62 @@
         "padding_bottom": 64
       }
     },
-    "feature_rows_3hWfnG": {
-      "type": "feature-rows",
+    "clinician_grid_7xrRbe": {
+      "type": "clinician-grid",
       "blocks": {
-        "row_4qQVN7": {
-          "type": "row",
+        "clinician_tXnjm4": {
+          "type": "clinician",
           "settings": {
-            "image": "shopify://shop_images/Icon_Container1.png",
-            "icon_position": "left",
-            "image_width_desktop": 120,
-            "image_width_mobile": 100,
-            "title": "Support Radiant Skin And Anti-Aging",
-            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
-            "content_text_align": "left",
-            "content_max_width": 1020
-          }
-        },
-        "row_x9iUqb": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Icon_Container2.png",
-            "icon_position": "right",
-            "image_width_desktop": 120,
-            "image_width_mobile": 100,
-            "title": "Support Hormonal Balance And Wellness",
-            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
-            "content_text_align": "right",
-            "content_max_width": 1020
-          }
-        },
-        "row_JBKmBm": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Icon_Container3.png",
-            "icon_position": "left",
-            "image_width_desktop": 120,
-            "image_width_mobile": 100,
-            "title": "High-Quality Japanese Manufacturing Standards",
-            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
-            "content_text_align": "left",
-            "content_max_width": 1020
+            "image": "shopify://shop_images/Rectangle_94.jpg",
+            "image_width": 144,
+            "image_ratio": "square",
+            "name": "Dr. Mashiro",
+            "verified": true,
+            "verified_label": "",
+            "row1_label": "Specialty",
+            "row1_value": "Integrative Medicine",
+            "row2_label": "Years In Practice",
+            "row2_value": "18",
+            "row3_label": "",
+            "row3_value": "",
+            "review_title": "Advanced Delivery. Zero Waste. Total Transformation.",
+            "review_text": "<p>Traditional collagen molecules are too large and fragile to survive the journey through your digestive system. Most of the nutrients are destroyed by harsh stomach acids before they can ever reach your skin cells.</p><p>Our <strong>Nano-Liposome Shield</strong> acts like a \"Smart Bullet.\" It encapsulates each collagen peptide in a protective lipid bubble that:</p>",
+            "text_clamp_lines": 3,
+            "highlights_label": "Highlights:",
+            "highlights": "Defies Acid\nMimics Nature\nTargeted Delivery"
           }
         }
       },
       "block_order": [
-        "row_4qQVN7",
-        "row_x9iUqb",
-        "row_JBKmBm"
+        "clinician_tXnjm4"
       ],
-      "name": "82X Fermented",
+      "name": "Science Backed",
       "settings": {
-        "heading": "82 Fermented Plants: The Key to Your Glow.",
-        "heading_size": "h1",
+        "heading": "Nano-Liposome The \"Smart Bullet\" of Skincare",
+        "heading_size": "h2",
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
+        "subtext": "",
         "text_align": "center",
-        "col_gap_desktop": 16,
-        "row_gap_desktop": 24,
-        "row_gap_mobile": 24,
-        "heading_color": "#070a13",
-        "text_color": "#070a13",
-        "background_color": "#ffffff",
-        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "ingredient_slider_HAABeq": {
-      "type": "ingredient-slider",
-      "blocks": {
-        "ingredient_CgmT4w": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_1321317051.jpg",
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
-          }
-        },
-        "ingredient_BkaTYd": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_1321317_051.jpg",
-            "title": "Grape Extract",
-            "text": "<p>Supports skin regeneration and anti-aging benefits.</p>"
-          }
-        },
-        "ingredient_9WjGkm": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_132131w7051.jpg",
-            "title": "Pineapple Extract",
-            "text": "<p>Improves skin elasticity and firmness.</p>"
-          }
-        },
-        "ingredient_8KAGQf": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_1s321317051.jpg",
-            "title": "Fermented Plant Extract",
-            "text": "<p>Supports digestion, improves nutrient absorption, and detoxifies the body.</p>"
-          }
-        },
-        "ingredient_aPgET4": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_132131w7051.jpg",
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
-          }
-        },
-        "ingredient_Yjc8Gq": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_132131w7051.jpg",
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
-          }
-        },
-        "ingredient_7gTgUq": {
-          "type": "ingredient",
-          "settings": {
-            "image": "shopify://shop_images/Group_132131w7051.jpg",
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
-          }
-        },
-        "ingredient_FTq7CV": {
-          "type": "ingredient",
-          "settings": {
-            "title": "Vitamin E",
-            "text": "<p>Protects skin from free radicals and maintains moisture.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_CgmT4w",
-        "ingredient_BkaTYd",
-        "ingredient_9WjGkm",
-        "ingredient_8KAGQf",
-        "ingredient_aPgET4",
-        "ingredient_Yjc8Gq",
-        "ingredient_7gTgUq",
-        "ingredient_FTq7CV"
-      ],
-      "disabled": true,
-      "name": "Ingredient Slider",
-      "settings": {
-        "title": "Ingredients You Can Recognize",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "title_align": "center",
-        "image_ratio": "adapt",
-        "card_bg": "#d9e9f8",
-        "card_radius": 16,
-        "card_text_align": "center",
-        "card_gap_desktop": 24,
-        "card_gap_mobile": 12,
-        "loop_enabled": true,
-        "nav_color": "#1c2e5e",
-        "color_scheme": "scheme-2",
-        "background_color": "rgba(0,0,0,0)",
+        "initial_count": 2,
+        "left_col_width": 360,
+        "card_h_gap": 60,
+        "avatar_radius": 8,
+        "show_more_label": "",
+        "show_less_label": "",
+        "load_more_label": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "solid",
+        "button_full_mobile": false,
+        "button_new_tab": false,
+        "verified_color": "#3e9b67",
+        "border_color": "#d9eeff",
+        "show_more_color": "#56baf7",
+        "color_scheme": "scheme-3",
         "padding_top": 64,
-        "padding_bottom": 120
+        "padding_bottom": 64
       }
     },
     "product_ingredients_KiqFW3": {
@@ -419,62 +311,71 @@
         "padding_bottom": 24
       }
     },
-    "clinician_grid_7xrRbe": {
-      "type": "clinician-grid",
+    "feature_rows_3hWfnG": {
+      "type": "feature-rows",
       "blocks": {
-        "clinician_tXnjm4": {
-          "type": "clinician",
+        "row_4qQVN7": {
+          "type": "row",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_94.jpg",
-            "image_width": 144,
-            "image_ratio": "square",
-            "name": "Dr. Alyssa Dweck",
-            "verified": true,
-            "verified_label": "Verified Clinician",
-            "row1_label": "Specialty",
-            "row1_value": "Integrative Medicine",
-            "row2_label": "Years In Practice",
-            "row2_value": "18",
-            "row3_label": "",
-            "row3_value": "",
-            "review_title": "Nutrient-Rich Placenta Extract May Support Hormonal Balance And Metabolic Wellness",
-            "review_text": "<p>“Advanced beauty supplements increasingly combine collagen with placenta extract to address both skin health and internal wellness. Placenta-derived nutrients contain peptides, growth factors, and amino acids that may help support hormonal balance and metabolic function.</p>",
-            "text_clamp_lines": 3,
-            "highlights_label": "Highlights:",
-            "highlights": "Hormonal balance support\nSkin radiance & brightening\nHair, nail & metabolic health"
+            "image": "shopify://shop_images/Icon_Container1.png",
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Radiant Skin And Anti-Aging",
+            "text": "<p>The formula contains 450,000mg of placenta extract, collagen peptides, hyaluronic acid, and essential vitamins, which help support skin cell regeneration, improve elasticity, and reduce visible signs of aging such as wrinkles and sagging skin.</p>",
+            "content_text_align": "left",
+            "content_max_width": 1020
+          }
+        },
+        "row_x9iUqb": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container2.png",
+            "icon_position": "right",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "Support Hormonal Balance And Wellness",
+            "text": "<p>Placenta extract combined with nutrients and botanical extracts may help support female hormonal balance, helping reduce fatigue and discomfort associated with hormonal changes.</p>",
+            "content_text_align": "right",
+            "content_max_width": 1020
+          }
+        },
+        "row_JBKmBm": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Icon_Container3.png",
+            "icon_position": "left",
+            "image_width_desktop": 120,
+            "image_width_mobile": 100,
+            "title": "High-Quality Japanese Manufacturing Standards",
+            "text": "<p>The product is manufactured in Japan with a strict quality control process, ensuring purity, safety, and high standards in each capsule. This gives users peace of mind regarding the origin and quality of the product.</p>",
+            "content_text_align": "left",
+            "content_max_width": 1020
           }
         }
       },
       "block_order": [
-        "clinician_tXnjm4"
+        "row_4qQVN7",
+        "row_x9iUqb",
+        "row_JBKmBm"
       ],
-      "name": "Science Backed",
+      "name": "82X Fermented",
       "settings": {
-        "heading": "Nano-Liposome The \"Smart Bullet\" of Skincare",
-        "heading_size": "h2",
+        "heading": "82 Fermented Plants: The Key to Your Glow.",
+        "heading_size": "h1",
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
-        "subtext": "Clinicians receive product samples and are never compensated to submit evaluations",
         "text_align": "center",
-        "initial_count": 2,
-        "left_col_width": 360,
-        "card_h_gap": 60,
-        "avatar_radius": 8,
-        "show_more_label": "",
-        "show_less_label": "",
-        "load_more_label": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "solid",
-        "button_full_mobile": false,
-        "button_new_tab": false,
-        "verified_color": "#3e9b67",
-        "border_color": "#d9eeff",
-        "show_more_color": "#56baf7",
-        "color_scheme": "scheme-3",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "col_gap_desktop": 16,
+        "row_gap_desktop": 24,
+        "row_gap_mobile": 24,
+        "heading_color": "#070a13",
+        "text_color": "#070a13",
+        "background_color": "#ffffff",
+        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "featured_product_Uy8fFF": {
@@ -803,10 +704,9 @@
     "main",
     "image_with_text_k3r8yg",
     "ingredient_slider_irT3QF",
-    "feature_rows_3hWfnG",
-    "ingredient_slider_HAABeq",
-    "product_ingredients_KiqFW3",
     "clinician_grid_7xrRbe",
+    "product_ingredients_KiqFW3",
+    "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
