@@ -472,8 +472,8 @@
         "row_gap_mobile": 24,
         "heading_color": "#070a13",
         "text_color": "#070a13",
-        "background_color": "#ffffff",
-        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
+        "background_color": "#f0f8fe",
+        "color_scheme": "scheme-4",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -551,7 +551,7 @@
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "82x-collagen-classic",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-3",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
