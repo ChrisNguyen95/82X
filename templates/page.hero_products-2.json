@@ -103,6 +103,95 @@
         "padding_bottom": 48
       }
     },
+    "82x_image_features_BmFVGh": {
+      "type": "82x-image-features",
+      "blocks": {
+        "heading_Q3kPj7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Are You Drinking Collagen or Just Taxing Your Liver?</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_4WXakr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Add a supporting description here.</p>"
+          }
+        },
+        "content_row_CPLNpn": {
+          "type": "content_row",
+          "settings": {
+            "icon_bg_color": "#EBF3FF",
+            "row_heading": "The Absorption Gap: 70% Waste",
+            "row_text": "Most traditional collagen is destroyed by stomach acid before it ever reaches your skin. If it’s not Liposomal, you’re essentially paying for \"expensive urine.\""
+          }
+        },
+        "content_row_YWbDQ6": {
+          "type": "content_row",
+          "settings": {
+            "icon_bg_color": "#EBF3FF",
+            "row_heading": "The \"Breakout\" Effect",
+            "row_text": "High-dose, low-quality collagen often causes internal \"heat\" and hormonal acne. You shouldn't have to choose between fewer wrinkles and more breakouts."
+          }
+        },
+        "content_row_bMzdLT": {
+          "type": "content_row",
+          "settings": {
+            "icon_bg_color": "#EBF3FF",
+            "row_heading": "The Bloating Fear",
+            "row_text": "Raw collagen powders and cheap liquids are often packed with fillers and thickeners that cause water retention and digestive discomfort."
+          }
+        },
+        "content_row_HVazit": {
+          "type": "content_row",
+          "settings": {
+            "icon_bg_color": "#EBF3FF",
+            "row_heading": "The Consistency Barrier",
+            "row_text": "Clunky tubs and messy powders make it hard to stay on track. If your ritual is a chore, you’ll never see the results."
+          }
+        },
+        "content_row_XR8igV": {
+          "type": "content_row",
+          "settings": {
+            "icon_bg_color": "#EBF3FF",
+            "row_heading": "The Sagging Paradox",
+            "row_text": "Focusing only on Collagen while ignoring Elastin is like building a house with bricks but no mortar. Without the \"lift\" of Elastin, your skin stays flat, not bouncy."
+          }
+        },
+        "certified_jhLmBa": {
+          "type": "certified",
+          "settings": {
+            "title": "Proud To Be A Certified B Corporation",
+            "description": "<p>Since 2023, we've been part of a global movement of businesses using profit as a force for good.</p>",
+            "score_bg_color": "#EBF3FF",
+            "score_label": "B Impact Score",
+            "score_value": "85.4",
+            "score_subtitle": "Above Average"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q3kPj7",
+        "text_4WXakr",
+        "content_row_CPLNpn",
+        "content_row_YWbDQ6",
+        "content_row_bMzdLT",
+        "content_row_HVazit",
+        "content_row_XR8igV",
+        "certified_jhLmBa"
+      ],
+      "name": "82X Image + Features",
+      "settings": {
+        "image": "shopify://shop_images/7_baad72d5-9d48-44bc-8346-967b6c086aec.png",
+        "image_position": "right",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "ingredient_slider_irT3QF": {
       "type": "ingredient-slider",
       "blocks": {
@@ -853,6 +942,7 @@
   "order": [
     "main",
     "image_with_text_k3r8yg",
+    "82x_image_features_BmFVGh",
     "ingredient_slider_irT3QF",
     "clinician_grid_7xrRbe",
     "product_ingredients_KiqFW3",
