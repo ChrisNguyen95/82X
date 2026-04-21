@@ -925,7 +925,8 @@
       ],
       "name": "Logo Content Banner",
       "settings": {
-        "logo_width_desktop": 120,
+        "logo": "shopify://shop_images/secured.png",
+        "logo_width_desktop": 216,
         "logo_width_mobile": 80,
         "desktop_vertical_align": "center",
         "mobile_align": "flex-start",
