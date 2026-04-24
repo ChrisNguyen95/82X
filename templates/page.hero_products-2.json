@@ -605,8 +605,15 @@
           "type": "price",
           "settings": {}
         },
+        "bundler_custom_bundle_VFR3TD": {
+          "type": "shopify://apps/bundler/blocks/custom-bundle/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "hakl"
+          }
+        },
         "variant_picker_xEiYnF": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -637,6 +644,7 @@
         "icon_with_text_WJVPhE",
         "okendo_star_rating_YGjLdB",
         "price_waXQUr",
+        "bundler_custom_bundle_VFR3TD",
         "variant_picker_xEiYnF",
         "icon_with_text_QH3VBk",
         "buy_buttons_k7hGdP"
