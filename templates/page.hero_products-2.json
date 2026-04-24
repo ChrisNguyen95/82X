@@ -601,6 +601,13 @@
             "product": "{{section.settings.product}}"
           }
         },
+        "text_mXmRgP": {
+          "type": "text",
+          "settings": {
+            "text": "A premium daily supplement drink formulated with 120,000 mg deep-sea tuna collagen peptides, magnesium chloride, royal jelly, glucosamine, hyaluronic acid, elastin, and a blend of 82 fermented plant extracts. Designed for adults aged 25 - 40 seeking comprehensive nutritional support for skin hydration, joint function, sleep quality, and gut wellness - in one convenient liquid format.",
+            "text_style": "body"
+          }
+        },
         "price_waXQUr": {
           "type": "price",
           "disabled": true,
@@ -644,6 +651,7 @@
         "title_Q6jUPD",
         "icon_with_text_WJVPhE",
         "okendo_star_rating_YGjLdB",
+        "text_mXmRgP",
         "price_waXQUr",
         "bundler_custom_bundle_VFR3TD",
         "variant_picker_xEiYnF",
@@ -667,6 +675,58 @@
         "enable_video_looping": false,
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "logo_content_banner_eFGprn": {
+      "type": "logo-content-banner",
+      "blocks": {
+        "heading_7t8tBe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_jBDkmW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        },
+        "button_XQdDNA": {
+          "type": "button",
+          "settings": {
+            "button_label": "BUY IT NOW",
+            "button_link": "#shopify-section-template--20302847803586__featured_product_Uy8fFF",
+            "button_style": "primary",
+            "button_full_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7t8tBe",
+        "text_jBDkmW",
+        "button_XQdDNA"
+      ],
+      "name": "Logo Content Banner",
+      "settings": {
+        "logo": "shopify://shop_images/secured.png",
+        "logo_width_desktop": 216,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "center",
+        "mobile_align": "flex-start",
+        "gap_desktop": 48,
+        "gap_mobile": 24,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "feature_rows_t9fNc4": {
@@ -730,7 +790,7 @@
         "row_gap_mobile": 48,
         "heading_color": "#1c2b6b",
         "text_color": "#333333",
-        "background_color": "#ffffff",
+        "background_color": "#f0f8fe",
         "color_scheme": "",
         "padding_top": 60,
         "padding_bottom": 60
@@ -781,8 +841,8 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-2",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
         "icon_size": 40,
         "padding_top": 36,
         "padding_bottom": 36
@@ -900,58 +960,6 @@
         "padding_bottom": 36
       }
     },
-    "logo_content_banner_eFGprn": {
-      "type": "logo-content-banner",
-      "blocks": {
-        "heading_7t8tBe": {
-          "type": "heading",
-          "settings": {
-            "heading": "Try It, Risk - Free!",
-            "heading_size": "h1",
-            "heading_tag": "h2"
-          }
-        },
-        "text_jBDkmW": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
-          }
-        },
-        "button_XQdDNA": {
-          "type": "button",
-          "settings": {
-            "button_label": "BUY IT NOW",
-            "button_link": "#shopify-section-template--20302847803586__featured_product_Uy8fFF",
-            "button_style": "primary",
-            "button_full_mobile": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7t8tBe",
-        "text_jBDkmW",
-        "button_XQdDNA"
-      ],
-      "name": "Logo Content Banner",
-      "settings": {
-        "logo": "shopify://shop_images/secured.png",
-        "logo_width_desktop": 216,
-        "logo_width_mobile": 80,
-        "desktop_vertical_align": "center",
-        "mobile_align": "flex-start",
-        "gap_desktop": 48,
-        "gap_mobile": 24,
-        "content_max_width": 800,
-        "heading_color": "#111111",
-        "text_color": "#444444",
-        "btn_primary_bg": "#1c2b6b",
-        "btn_primary_color": "#ffffff",
-        "background_color": "#d6e8f8",
-        "color_scheme": "",
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
-    },
     "accordion_section_NhKxVC": {
       "type": "accordion-section",
       "blocks": {
@@ -1048,11 +1056,11 @@
     "ingredient_slider_MM6bb4",
     "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
+    "logo_content_banner_eFGprn",
     "feature_rows_t9fNc4",
     "image_with_text_KNeztR",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
-    "logo_content_banner_eFGprn",
     "accordion_section_NhKxVC"
   ]
 }
