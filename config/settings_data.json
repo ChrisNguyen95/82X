@@ -212,8 +212,8 @@
           "greeting_message": ""
         }
       },
-      "16605207545338212596": {
-        "type": "shopify://apps/aov-ai-bundle/blocks/aov-offer/0335d423-143c-4ad7-b224-99a1db74a9ee",
+      "5918445685253060206": {
+        "type": "shopify://apps/bundler/blocks/bundler-script-append/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
         "disabled": false,
         "settings": {}
       }

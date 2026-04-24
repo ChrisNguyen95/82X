@@ -61,9 +61,25 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "url": "{{ product.metafields.custom.link_to_amazon.value }}",
+            "text": "Buy on Amazon",
+            "icon": "shopify://shop_images/image_5.png",
+            "show_amazon_icon": true,
+            "btn_style": "custom",
+            "btn_bg_color": "#000000",
+            "btn_text_color": "#ffffff",
+            "btn_width": 100
           }
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
@@ -80,21 +96,6 @@
             "heading_2": "Free Shipping in the US",
             "icon_3": "star",
             "heading_3": "Made in Japan"
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false,
-            "url": "{{ product.metafields.custom.link_to_amazon.value }}",
-            "text": "Buy on Amazon",
-            "icon": "shopify://shop_images/image_5.png",
-            "show_amazon_icon": true,
-            "btn_style": "custom",
-            "btn_bg_color": "#000000",
-            "btn_text_color": "#ffffff",
-            "btn_width": 100
           }
         },
         "collapsible_tab_WFk6Bz": {
@@ -134,9 +135,9 @@
         "price_9UgXc9",
         "text_eFc6pH",
         "variant_picker",
+        "buy_buttons",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "icon_with_text_V96kzb",
-        "buy_buttons",
         "collapsible_tab_WFk6Bz",
         "collapsible_tab_zTWhXa",
         "collapsible_tab_iNVEBB"
