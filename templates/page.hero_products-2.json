@@ -603,6 +603,7 @@
         },
         "price_waXQUr": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "bundler_custom_bundle_VFR3TD": {
