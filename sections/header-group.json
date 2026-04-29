@@ -16,7 +16,6 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "🚚 Free Shipping in the US – Shop Now",
             "link": "shopify://products/82x-collagen-sakura"
