@@ -696,6 +696,39 @@
         "padding_bottom": 60
       }
     },
+    "1777450600510c9ce6": {
+      "type": "apps",
+      "blocks": {
+        "amazon_reviews_masonry_widget_block_product_QRNLiG": {
+          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "showProductPicture": true,
+            "showDate": true,
+            "textStyle": "quoted",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "center"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_masonry_widget_block_product_QRNLiG"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "17742594372d116b7c": {
       "type": "apps",
       "blocks": {
@@ -710,6 +743,7 @@
       "block_order": [
         "okendo_reviews_widget_b4YCyR"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "title": "Customer’s Review",
@@ -874,6 +908,7 @@
     "rich_text_FNtXJe",
     "review_badge_MHhxiE",
     "testimonial_slider_9trVDQ",
+    "1777450600510c9ce6",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
     "logo_marquee_g7pcYc"
