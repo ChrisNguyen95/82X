@@ -19,6 +19,22 @@
             "padding_bottom": 30
           }
         },
+        "okendo_star_rating_HG7A6w": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "amazon_reviews_stars_product_widget_block_gehkne": {
+          "type": "shopify://apps/amazon-reviews/blocks/stars-product-widget-block/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "alignment": "start",
+            "layout": "inline"
+          }
+        },
         "title_BYxPjh": {
           "type": "title",
           "settings": {}
@@ -40,12 +56,6 @@
             "heading_2": "",
             "icon_3": "truck",
             "heading_3": ""
-          }
-        },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
           }
         },
         "price_Tdcm8b": {
@@ -134,14 +144,23 @@
             "content": "<p><strong>120,000mg Deep-Sea Tuna Collagen</strong><br/><em>Kosoteki Technology — &lt;500 Daltons, Liposome Encapsulated</em></p><p><strong>Sakura (Cherry Blossom) Extract </strong><em>Tyrosinase Inhibitor</em></p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/><em>Broad-Spectrum Botanical Blend</em></p><p><strong>Hyaluronic Acid + Elastin </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
             "page": ""
           }
+        },
+        "amazon_reviews_compact_widget_block_product_ckmqw9": {
+          "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "minimize": false
+          }
         }
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
+        "okendo_star_rating_HG7A6w",
+        "amazon_reviews_stars_product_widget_block_gehkne",
         "title_BYxPjh",
         "text_E8GkJn",
         "icon_with_text_pYjCgk",
-        "okendo_star_rating_HG7A6w",
         "price_Tdcm8b",
         "text_7zx6xy",
         "description",
@@ -151,7 +170,8 @@
         "buy_buttons",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
-        "collapsible_tab_G3g7xm"
+        "collapsible_tab_G3g7xm",
+        "amazon_reviews_compact_widget_block_product_ckmqw9"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -248,6 +268,41 @@
         "padding_bottom": 100
       }
     },
+    "17774495825e0d244f": {
+      "type": "apps",
+      "blocks": {
+        "amazon_reviews_carousel_widget_block_product_CyQPfV": {
+          "type": "shopify://apps/amazon-reviews/blocks/carousel-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "autoscroll": true,
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_carousel_widget_block_product_CyQPfV"
+      ],
+      "settings": {
+        "include_margins": false,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "logo_content_banner_fJ9ziz": {
       "type": "logo-content-banner",
       "blocks": {
@@ -288,41 +343,6 @@
         "color_scheme": "",
         "padding_top": 24,
         "padding_bottom": 20
-      }
-    },
-    "17774495825e0d244f": {
-      "type": "apps",
-      "blocks": {
-        "amazon_reviews_carousel_widget_block_product_CyQPfV": {
-          "type": "shopify://apps/amazon-reviews/blocks/carousel-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "settings": {
-            "font": "default",
-            "themeId": "light",
-            "autoscroll": true,
-            "showProductPicture": true,
-            "showDate": true,
-            "fixedReviewsHeight": false,
-            "textStyle": "plain",
-            "alignment": "left",
-            "infoPosition": "top",
-            "ratingStyle": "left"
-          }
-        }
-      },
-      "block_order": [
-        "amazon_reviews_carousel_widget_block_product_CyQPfV"
-      ],
-      "settings": {
-        "include_margins": false,
-        "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "product_ingredients_7RjUJx": {
@@ -846,8 +866,8 @@
     "main",
     "related-products",
     "image_with_text_9pQ8im",
-    "logo_content_banner_fJ9ziz",
     "17774495825e0d244f",
+    "logo_content_banner_fJ9ziz",
     "product_ingredients_7RjUJx",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
