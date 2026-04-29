@@ -65,6 +65,13 @@
             "heading_color": "#070a13",
             "button_link": "https://www.trustpilot.com/review/82xbeauty.com?_gl=1*1tyb1w2*_gcl_au*MTAzOTE0OTEzMC4xNzc1NjE0MjYy*_ga*MTUxMzc0MjQwNS4xNzYzNzA2Njk2*_ga_11HBWMC274*czE3NzU2MTgwNTAkbzEkZzEkdDE3NzU2MTgwNjUkajQ1JGwwJGgw"
           }
+        },
+        "ebay_reviews_compact_widget_block_6KRz4j": {
+          "type": "shopify://apps/ebay-reviews/blocks/compact-widget-block/6ae47d69-fff4-432b-a762-b178008c9165",
+          "settings": {
+            "themeId": "light",
+            "minimize": false
+          }
         }
       },
       "block_order": [
@@ -72,7 +79,8 @@
         "text_iiEzCC",
         "link_list_gQJ7R3",
         "link_list_KJDRtf",
-        "newsletter_MiETy6"
+        "newsletter_MiETy6",
+        "ebay_reviews_compact_widget_block_6KRz4j"
       ],
       "custom_css": [
         "#FooterCountryLabel {display: none;}"
