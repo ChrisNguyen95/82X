@@ -228,6 +228,11 @@
           "position": "top",
           "transparent": 1
         }
+      },
+      "14994789812221754584": {
+        "type": "shopify://apps/ebay-reviews/blocks/product-rating-snippet-embed/6ae47d69-fff4-432b-a762-b178008c9165",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
