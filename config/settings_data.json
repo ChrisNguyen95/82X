@@ -212,10 +212,22 @@
           "greeting_message": ""
         }
       },
-      "5918445685253060206": {
-        "type": "shopify://apps/bundler/blocks/bundler-script-append/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+      "2680175748099902610": {
+        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
         "disabled": false,
         "settings": {}
+      },
+      "2220407886192455742": {
+        "type": "shopify://apps/amazon-reviews/blocks/trust-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": false,
+        "settings": {
+          "font": "default",
+          "themeId": "light",
+          "variant": "message",
+          "message": "Our customers have rated us",
+          "position": "top",
+          "transparent": 1
+        }
       }
     },
     "color_schemes": {
