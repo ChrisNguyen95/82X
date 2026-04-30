@@ -268,6 +268,37 @@
         "padding_bottom": 100
       }
     },
+    "177754175590e78235": {
+      "type": "apps",
+      "blocks": {
+        "pretty_comparison_tables_table_Bfwtfg": {
+          "type": "shopify://apps/pretty-comparison-tables/blocks/table/4ce14980-e26b-4398-92cd-f582d95d4f05",
+          "settings": {
+            "product": "{{product}}",
+            "title_text": "",
+            "title_font_tag": "h2",
+            "section_background_color": "",
+            "desktop_width": "",
+            "mobile_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "pretty_comparison_tables_table_Bfwtfg"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "logo_content_banner_fJ9ziz": {
       "type": "logo-content-banner",
       "blocks": {
@@ -865,6 +896,7 @@
     "main",
     "related-products",
     "image_with_text_9pQ8im",
+    "177754175590e78235",
     "logo_content_banner_fJ9ziz",
     "product_ingredients_7RjUJx",
     "image_with_text_nrjQxn",
