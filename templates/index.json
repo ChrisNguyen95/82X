@@ -305,7 +305,7 @@
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
-        "background_color": "#d9eeff",
+        "background_color": "#ffffff",
         "label_color": "#1c2b6b",
         "color_scheme": "",
         "padding_top": 16,
@@ -318,21 +318,21 @@
         "heading_iXHixr": {
           "type": "heading",
           "settings": {
-            "heading": "Advanced technology from Japan",
-            "heading_size": "h1"
+            "heading": "You've tried everything else, now try something that works",
+            "heading_size": "h2"
           }
         },
         "text_mDfYea": {
           "type": "text",
           "settings": {
-            "text": "<p>82X applied  advanced liposome technology, utilizing small molecule collagen for enhanced absorption and effectiveness in skincare products.</p>",
+            "text": "<p>You’re not alone. We're helping over 10,000 people of all ages stay healthy with our proactive urinary tract products.</p>",
             "text_style": "body"
           }
         },
         "button_p8FMbQ": {
           "type": "button",
           "settings": {
-            "button_label": "shop now",
+            "button_label": "READ REVIEWS",
             "button_link": "shopify://pages/all-review",
             "button_style_secondary": false
           }
