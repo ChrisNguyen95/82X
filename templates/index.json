@@ -648,7 +648,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/Intro-sc.jpg",
+        "image": "shopify://shop_images/Feature_image_left.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
