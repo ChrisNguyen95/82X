@@ -383,48 +383,6 @@
         "padding_bottom": 100
       }
     },
-    "logo_content_banner_fJ9ziz": {
-      "type": "logo-content-banner",
-      "blocks": {
-        "heading_dyW98D": {
-          "type": "heading",
-          "settings": {
-            "heading": "Try It, Risk - Free!",
-            "heading_size": "h1",
-            "heading_tag": "h2"
-          }
-        },
-        "text_nx8xFf": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_dyW98D",
-        "text_nx8xFf"
-      ],
-      "name": "Logo Content Banner",
-      "settings": {
-        "logo": "shopify://shop_images/secured.png",
-        "logo_width_desktop": 316,
-        "logo_width_mobile": 80,
-        "desktop_vertical_align": "center",
-        "mobile_align": "flex-start",
-        "gap_desktop": 48,
-        "gap_mobile": 24,
-        "content_max_width": 800,
-        "heading_color": "#111111",
-        "text_color": "#444444",
-        "btn_primary_bg": "#1c2b6b",
-        "btn_primary_color": "#ffffff",
-        "background_color": "#d6e8f8",
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 20
-      }
-    },
     "product_ingredients_7RjUJx": {
       "type": "product-ingredients",
       "blocks": {
@@ -908,6 +866,48 @@
         "padding_bottom": 48
       }
     },
+    "logo_content_banner_fJ9ziz": {
+      "type": "logo-content-banner",
+      "blocks": {
+        "heading_dyW98D": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nx8xFf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyW98D",
+        "text_nx8xFf"
+      ],
+      "name": "Logo Content Banner",
+      "settings": {
+        "logo": "shopify://shop_images/secured.png",
+        "logo_width_desktop": 316,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "center",
+        "mobile_align": "flex-start",
+        "gap_desktop": 48,
+        "gap_mobile": 24,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
     "logo_marquee_g7pcYc": {
       "type": "logo-marquee",
       "blocks": {
@@ -982,7 +982,6 @@
     "product_tabs_KJinxn",
     "177754175590e78235",
     "image_with_text_9pQ8im",
-    "logo_content_banner_fJ9ziz",
     "product_ingredients_7RjUJx",
     "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
@@ -992,6 +991,7 @@
     "1777450600510c9ce6",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
+    "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
   ]
 }
