@@ -29,7 +29,7 @@
         "text_iti9gR": {
           "type": "text",
           "settings": {
-            "text": "<p>More than 10,000 happy customers have trusted and used 82X Collagen to s<strong>upport their skin and overall health</strong> — powered by premium quality and advanced technology from Japan.<br/></p>",
+            "text": "<p>More than 10,000 happy customers have trusted and used 82X Collagen to <strong>support their skin and overall health</strong> — powered by premium quality and advanced technology from Japan.<br/></p>",
             "text_style": "body"
           }
         },
@@ -753,9 +753,9 @@
         "content_max_width": 800,
         "heading_color": "#111111",
         "text_color": "#444444",
-        "btn_primary_bg": "#1C2B6B",
-        "btn_primary_color": "#FFFFFF",
-        "background_color": "#D6E8F8",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
         "color_scheme": "",
         "padding_top": 48,
         "padding_bottom": 48

@@ -188,7 +188,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 32
       }
     },
     "related-products": {
@@ -226,7 +226,7 @@
             "tab_ref": "",
             "color_scheme": "",
             "show_border": true,
-            "border_color": "#E0E0E0",
+            "border_color": "#e0e0e0",
             "image": "shopify://shop_images/Review_image.jpg",
             "icon_1_image": "shopify://shop_images/made-in-japan_7703f208-f0b3-4495-99c4-8a9909b18e25.png",
             "icon_1_label": "Made In Japan",
@@ -286,8 +286,8 @@
       "name": "Product Tabs",
       "settings": {
         "color_scheme": "",
-        "nav_color": "#1C2B6B",
-        "nav_active_text": "#FFFFFF",
+        "nav_color": "#1c2b6b",
+        "nav_active_text": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
       }
