@@ -525,7 +525,7 @@
       ],
       "name": "Accordion — FAQ",
       "settings": {
-        "heading": "FAQs",
+        "heading": "Questions? Let our Scientific Advisory Board help.",
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_italic": false,
@@ -836,7 +836,6 @@
         "heading_xQLmPV",
         "text_LccU3G"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
