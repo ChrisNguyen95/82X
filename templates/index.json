@@ -747,6 +747,7 @@
         "review_jGnEXy",
         "review_q4bPwc"
       ],
+      "disabled": true,
       "name": "Testimonial Grid (Photo)",
       "settings": {
         "heading": "reviews",
@@ -835,6 +836,7 @@
         "heading_xQLmPV",
         "text_LccU3G"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
