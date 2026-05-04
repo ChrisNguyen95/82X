@@ -39,8 +39,8 @@
         "amazon_reviews_compact_widget_block_product_ckmqw9": {
           "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
           "settings": {
-            "font": "default",
-            "themeId": "light",
+            "font": "theme",
+            "themeId": "dark",
             "minimize": true
           }
         },
