@@ -210,6 +210,119 @@
         "padding_bottom": 28
       }
     },
+    "177754175590e78235": {
+      "type": "apps",
+      "blocks": {
+        "pretty_comparison_tables_table_Bfwtfg": {
+          "type": "shopify://apps/pretty-comparison-tables/blocks/table/4ce14980-e26b-4398-92cd-f582d95d4f05",
+          "settings": {
+            "product": "{{product}}",
+            "title_text": "",
+            "title_font_tag": "h2",
+            "section_background_color": "",
+            "desktop_width": "",
+            "mobile_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "pretty_comparison_tables_table_Bfwtfg"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "product_tabs_KJinxn": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_DBnYjC": {
+          "type": "tab",
+          "settings": {
+            "label": "Why this make different?",
+            "tab_id": "all"
+          }
+        },
+        "row_mgBkDE": {
+          "type": "row",
+          "settings": {
+            "tab_ref": "",
+            "color_scheme": "",
+            "show_border": true,
+            "border_color": "#E0E0E0",
+            "image": "shopify://shop_images/Review_image.jpg",
+            "icon_1_image": "shopify://shop_images/made-in-japan_7703f208-f0b3-4495-99c4-8a9909b18e25.png",
+            "icon_1_label": "Made In Japan",
+            "icon_2_image": "shopify://shop_images/4.svg",
+            "icon_2_label": "Natural Ingredients",
+            "icon_3_image": "shopify://shop_images/2.svg",
+            "icon_3_label": "Fish Collagen",
+            "icon_4_image": "shopify://shop_images/3.svg",
+            "icon_4_label": "Sakura Extract",
+            "heading": "",
+            "description": "",
+            "faq_1_icon": "shopify://shop_images/Icon_Container2.svg",
+            "faq_1_question": "Science-Backed Absorption",
+            "faq_1_subtitle": "120,000mg deep-sea tuna collagen peptides — under 500 Daltons — encapsulated in liposomes for maximum bioavailability. Smaller molecules, deeper delivery, faster results.",
+            "faq_1_answer": "",
+            "faq_1_open": false,
+            "faq_2_icon": "shopify://shop_images/Icon_Container5.svg",
+            "faq_2_question": "Targeted Skin Recovery",
+            "faq_2_subtitle": "Sakura extract inhibits tyrosinase to visibly fade dark spots, melasma, and acne scars. Japanese Orange flavonoids + Vitamin C actively support your skin's own collagen synthesis and UV defense.",
+            "faq_2_answer": "",
+            "faq_2_open": false,
+            "faq_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
+            "faq_3_question": "Clinically Recognized Ingredients",
+            "faq_3_subtitle": "African Mango Seed (Irvingia gabonensis) is studied for its role in metabolic support — targeting lipase activity and stimulating adiponectin, a key hormone in fat regulation.",
+            "faq_3_answer": "",
+            "faq_3_open": false,
+            "faq_4_question": "",
+            "faq_4_subtitle": "",
+            "faq_4_answer": "",
+            "faq_4_open": false,
+            "faq_5_question": "",
+            "faq_5_subtitle": "",
+            "faq_5_answer": "",
+            "faq_5_open": false,
+            "faq_6_question": "",
+            "faq_6_subtitle": "",
+            "faq_6_answer": "",
+            "faq_6_open": false,
+            "faq_7_question": "",
+            "faq_7_subtitle": "",
+            "faq_7_answer": "",
+            "faq_7_open": false,
+            "faq_8_question": "",
+            "faq_8_subtitle": "",
+            "faq_8_answer": "",
+            "faq_8_open": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "tab_DBnYjC",
+        "row_mgBkDE"
+      ],
+      "name": "Product Tabs",
+      "settings": {
+        "color_scheme": "",
+        "nav_color": "#1C2B6B",
+        "nav_active_text": "#FFFFFF",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "image_with_text_9pQ8im": {
       "type": "image-with-text",
       "blocks": {
@@ -249,6 +362,7 @@
         "caption_tcVFHX",
         "subtext_yd7NU6"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -267,37 +381,6 @@
         "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "177754175590e78235": {
-      "type": "apps",
-      "blocks": {
-        "pretty_comparison_tables_table_Bfwtfg": {
-          "type": "shopify://apps/pretty-comparison-tables/blocks/table/4ce14980-e26b-4398-92cd-f582d95d4f05",
-          "settings": {
-            "product": "{{product}}",
-            "title_text": "",
-            "title_font_tag": "h2",
-            "section_background_color": "",
-            "desktop_width": "",
-            "mobile_width": ""
-          }
-        }
-      },
-      "block_order": [
-        "pretty_comparison_tables_table_Bfwtfg"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "logo_content_banner_fJ9ziz": {
@@ -896,8 +979,9 @@
   "order": [
     "main",
     "related-products",
-    "image_with_text_9pQ8im",
     "177754175590e78235",
+    "product_tabs_KJinxn",
+    "image_with_text_9pQ8im",
     "logo_content_banner_fJ9ziz",
     "product_ingredients_7RjUJx",
     "image_with_text_nrjQxn",
