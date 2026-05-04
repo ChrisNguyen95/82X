@@ -96,6 +96,55 @@
         "padding_bottom": 48
       }
     },
+    "82x_banner_yJWLch": {
+      "type": "82x-banner",
+      "blocks": {
+        "heading_FUcerR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Heading Here",
+            "heading_size": "h2"
+          }
+        },
+        "text_ecwBXh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add a supporting description or message here.</p>"
+          }
+        },
+        "button_yTUxqL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FUcerR",
+        "text_ecwBXh",
+        "button_yTUxqL"
+      ],
+      "disabled": true,
+      "name": "82X Banner",
+      "settings": {
+        "image_focal_point": "center",
+        "color_scheme": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "text_color": "#ffffff",
+        "content_align": "left",
+        "content_position_v": "center",
+        "content_max_width": 640,
+        "min_height": 560,
+        "min_height_mobile": 420,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "icon_size": 40,
+        "icons_gap": 24
+      }
+    },
     "hero_split_B6wwGe": {
       "type": "hero-split",
       "blocks": {
@@ -913,6 +962,7 @@
   },
   "order": [
     "image_with_text_XkgVPx",
+    "82x_banner_yJWLch",
     "hero_split_B6wwGe",
     "featured_collection_LKTG3X",
     "icon_badges_ajkPPR",
