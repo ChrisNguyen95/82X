@@ -282,11 +282,11 @@
             "row2_value": "",
             "row3_label": "",
             "row3_value": "",
-            "review_title": "Advanced Delivery. Zero Waste. Total Transformation.",
-            "review_text": "<p>Traditional collagen molecules are too large and fragile to survive the journey through your digestive system. Most of the nutrients are destroyed by harsh stomach acids before they can ever reach your skin cells.</p><p>Our <strong>Nano-Liposome Shield</strong> acts like a <strong>\"Smart Bullet.\"</strong> It encapsulates each collagen peptide in a protective lipid bubble that:</p>",
+            "review_title": "Superior Absorption. Precision Delivery. Cellular Radiance.",
+            "review_text": "<p><strong>Overcoming the Digestion Barrier:</strong> Traditional collagen often breaks down before absorption. Our technology ensures the nutrients stay intact where your skin needs them most.</p><p><strong>The Lipid-Shield Innovation:</strong> Each collagen peptide is protected within a bio-mimetic lipid bubble, bypassing digestion to deliver nutrition directly to your cells.</p>",
             "text_clamp_lines": 5,
             "highlights_label": "Highlights:",
-            "highlights": "Defies Acid\nMimics Nature\nTargeted Delivery"
+            "highlights": "Gastric-Acid Resistant\nBio-Compatible Formula\nEnhanced Bioavailability"
           }
         }
       },
@@ -295,7 +295,7 @@
       ],
       "name": "Science Backed",
       "settings": {
-        "heading": "Nano-Liposome The \"Smart Bullet\" of Skincare",
+        "heading": "Nano-Liposome: The High-Speed Delivery System for Your Skin",
         "heading_size": "h2",
         "heading_tag": "h2",
         "heading_italic": false,
