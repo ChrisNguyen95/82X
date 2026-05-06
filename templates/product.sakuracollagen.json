@@ -51,7 +51,7 @@
         "text_E8GkJn": {
           "type": "text",
           "settings": {
-            "text": "Advanced Japanese anti-aging formula — rebuilt from within, radiant from outside.",
+            "text": "The Gold Standard from Japan",
             "text_style": "subtitle"
           }
         },
@@ -60,7 +60,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "fire",
-            "heading_1": "Highly rated by customers for:Anti-Aging Results, Skin Rejuvenation, Detox & Body Reset, Joint Support, Stress Relief",
+            "heading_1": "Highly rated by customers for:Anti-Aging Results, Skin Rejuvenation, Deep Hydration & Total Wellness Support",
             "icon_2": "return",
             "heading_2": "",
             "icon_3": "truck",
@@ -74,7 +74,7 @@
         "text_7zx6xy": {
           "type": "text",
           "settings": {
-            "text": "Sakura Collagen — Japanese formula for deep anti-aging, 30+. Rejuvenates skin at cellular level, detoxifies, supports joints & restful sleep — all in one premium daily drink.",
+            "text": "<strong>The Ultimate Beauty Ritual:</strong> Formulated with 120,000mg of Deep-Sea Collagen Peptides and a proprietary blend of 82 fermented plants for superior radiance. <strong>Designed for the Modern Woman (35+)</strong>",
             "text_style": "body"
           }
         },
@@ -132,7 +132,7 @@
           "settings": {
             "heading": "Benefits",
             "icon": "star",
-            "content": "<ul><li>Deeply rejuvenates skin, restores firmness and elasticity</li><li>Brightens skin tone, boosts antioxidant protection</li><li>Detoxifies, strengthens immunity, improves gut health</li><li>Supports joint flexibility and bone strength</li><li>Reduces stress, relieves fatigue, deepens sleep quality</li><li>Helps regulate body composition and metabolic balance</li></ul>",
+            "content": "<ul><li>Promotes skin resilience and youthful radiance.</li><li>Supports internal balance and overall well-being.</li><li>Provides structural support for an active lifestyle.</li><li>Helps you stay calm and refreshed throughout the day.</li></ul>",
             "page": ""
           }
         },
@@ -141,7 +141,7 @@
           "settings": {
             "heading": "How to use",
             "icon": "check_mark",
-            "content": "<p>Usually, drink about <strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "content": "<p>Drink <strong>20ml daily</strong> for optimal results (Best taken in the morning or before bedtime). Serve chilled for a refreshing taste</p>",
             "page": ""
           }
         },
@@ -150,7 +150,7 @@
           "settings": {
             "heading": "Star Ingredients",
             "icon": "bottle",
-            "content": "<p><strong>120,000mg Deep-Sea Salmon Collagen</strong><br/><em>Kosoteki Technology — &lt;500 Daltons, Liposome Encapsulated</em></p><p><strong>Sakura (Cherry Blossom) Extract </strong><em>Tyrosinase Inhibitor</em></p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/><em>Broad-Spectrum Botanical Blend</em></p><p><strong>Hyaluronic Acid + Elastin </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
+            "content": "<p><strong>120,000mg Deep-Sea Salmon Collagen</strong><br/>Powered by Liposome Technology for superior absorption</p><p><strong>Sakura (Cherry Blossom) Extract <br/></strong>Natural Brightening Agent</p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/>Harnessing 8 years of traditional Japanese fermentation science</p><p><strong>The Hydration & Bounce Duo </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
             "page": ""
           }
         }
