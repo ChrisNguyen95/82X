@@ -738,7 +738,7 @@
             "image_width_desktop": 120,
             "image_width_mobile": 100,
             "title": "Adaptation (Days 1–7)",
-            "text": "<ul><li><strong>The Goal:</strong> Prime your gut and detoxify your system.</li><li><strong>The Dose:</strong> <strong>20ml daily</strong> every morning on an empty stomach. This prepares your microbiome for high-efficiency nutrient uptake.</li></ul><p></p>",
+            "text": "<ul><li><strong>The Goal: Prepare & Balance.</strong> Establish a healthy internal environment to maximize nutrient uptake.</li><li><strong>The Dose:</strong> <strong>20ml daily</strong> every morning on an empty stomach. This prepares your microbiome for high-efficiency nutrient uptake.</li></ul><p></p>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -751,7 +751,7 @@
             "image_width_desktop": 120,
             "image_width_mobile": 100,
             "title": "Transformation (Days 8–90)",
-            "text": "<p><strong>The Goal:</strong> Peak metabolic saturation and structural rebirth.</p><p><strong>The Dose:</strong> <strong>25ml daily</strong>. At this stage, your collagen levels begin to \"stack,\" filling in fine lines and restoring skin elasticity from the inside out.</p>",
+            "text": "<ul><li><strong>The Goal: Visible Transformation.</strong> Supporting skin resilience, elasticity, and a youthful glow from within.</li><li><strong>The Dose:</strong> <strong>25ml daily</strong>. At this stage, your collagen levels begin to \"stack,\" filling in fine lines and restoring skin elasticity from the inside out.</li></ul>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -764,7 +764,7 @@
             "image_width_desktop": 120,
             "image_width_mobile": 100,
             "title": "The Cycle",
-            "text": "<p><strong>The Strategy:</strong> <strong>3 Months ON / 1 Month OFF.</strong></p><p>Following 3 bottles (90 days), we recommend a 30-day \"rest\" period to allow your body’s natural collagen production to stabilize and lock in the results.</p>",
+            "text": "<p><strong>The Maintenance Cycle: 90 Days On / 30 Days Off.</strong></p><p>Following 3 bottles (90 days), we recommend a 30-day \"rest\" period to allow your body’s natural collagen production to stabilize and lock in the results.</p>",
             "content_text_align": "left",
             "content_max_width": 0
           }
@@ -777,8 +777,8 @@
       ],
       "name": "The 82X Ritual",
       "settings": {
-        "heading": "Optimized for Results. Mastered for You.",
-        "heading_size": "h1",
+        "heading": "Your Journey to Radiant Skin: The 82X Protocol",
+        "heading_size": "h2",
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
