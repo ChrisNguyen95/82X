@@ -272,7 +272,7 @@
         "clinician_tXnjm4": {
           "type": "clinician",
           "settings": {
-            "image": "shopify://shop_images/Feature_image_left.jpg",
+            "image": "shopify://shop_images/Review_image.jpg",
             "image_width": 288,
             "image_ratio": "square",
             "name": "",
