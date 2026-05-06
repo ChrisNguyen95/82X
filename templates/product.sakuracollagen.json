@@ -802,7 +802,7 @@
           "type": "item",
           "settings": {
             "title": "Can 82X Support My Weight Management and Skin Goals Simultaneously?",
-            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea salmon collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
+            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines<strong> 120,000mg of deep-sea salmon collagen</strong> and <strong>Sakura Extract for visible skin</strong> renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
             "open_by_default": true
           }
         },
@@ -810,7 +810,7 @@
           "type": "item",
           "settings": {
             "title": "Why Is This Formula Superior to Regular Collagen Drinks?",
-            "content": "<p>Our Liposomal technology protects Kosoteki peptides (under 500 Daltons) for enhanced bio-availability and deeper skin support.</p>",
+            "content": "<p>Our Liposomal technology protects peptides (under 500 Daltons) for enhanced bio-availability and deeper skin support.</p>",
             "open_by_default": false
           }
         },
