@@ -224,7 +224,7 @@
           "type": "row",
           "settings": {
             "tab_ref": "",
-            "color_scheme": "",
+            "color_scheme": "scheme-2",
             "show_border": true,
             "border_color": "#e0e0e0",
             "image": "shopify://shop_images/Review_image.jpg",
@@ -285,7 +285,7 @@
       ],
       "name": "Product Tabs",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "nav_color": "#1c2b6b",
         "nav_active_text": "#ffffff",
         "padding_top": 60,
