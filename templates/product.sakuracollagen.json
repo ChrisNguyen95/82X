@@ -801,7 +801,7 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "Can this product help me lose weight and improve my skin at the same time?",
+            "title": "Can 82X Support My Weight Management and Skin Goals Simultaneously?",
             "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea salmon collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
             "open_by_default": true
           }
@@ -809,24 +809,24 @@
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "How is this collagen different from regular collagen drinks on the market?",
-            "content": "<p>Most collagen drinks use standard fish collagen that your body absorbs poorly. Ours uses deep-sea salmon collagen with Kosoteki peptides under 500 Daltons — small enough to penetrate the skin's deepest layers. These peptides are also encased in Liposomes, giving them a 99% absorption rate. You're not just consuming collagen; your body is actually using it.</p>",
+            "title": "Why Is This Formula Superior to Regular Collagen Drinks?",
+            "content": "<p>Our Liposomal technology protects Kosoteki peptides (under 500 Daltons) for enhanced bio-availability and deeper skin support.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "I'm over 35 and dealing with deep wrinkles and skin sagging. Will this actually work for me?",
-            "content": "<p>This line was specifically formulated for women 30 and above whose skin has begun losing structural density. The ultra-micro peptide complex works to fill deep wrinkles, restore firmness, and lift sagging areas — addressing the root cause of visible aging rather than masking it on the surface.</p>",
+            "title": "I’m Over 35 with Visible Aging Concerns. Is This Right for Me?",
+            "content": "<p>Yes. Formulated for women 30+, it supports skin density and resilience to help smooth the appearance of fine lines and lift from within.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Is this safe for long-term use? Are there any side effects I should know about?",
-            "content": "<p>The formula is built entirely from natural, food-derived ingredients — fermented plant extracts, marine collagen, fruit extracts, and peptides. There are no stimulants, synthetic hormones, or harsh chemical compounds. It is designed for consistent daily use as part of a healthy lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.</p>",
+            "title": "Is It Safe for Consistent Daily Use?",
+            "content": "<p>Our formula is crafted from premium botanical and marine ingredients. It is designed for long-term support as part of a balanced lifestyle.</p>",
             "open_by_default": false
           }
         }
