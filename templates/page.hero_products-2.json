@@ -516,7 +516,7 @@
             "image_width_desktop": 120,
             "image_width_mobile": 100,
             "title": "Enhanced Bio-Availability",
-            "text": "<p>Our fermentation process breaks down nutrients into a \"ready-to-absorb\" form, making your collagen more effective.</p>",
+            "text": "<p>Our traditional Japanese Fermentation Science process breaks down nutrients into a \"ready-to-absorb\" form, making your collagen more effective.</p>",
             "content_text_align": "left",
             "content_max_width": 1020
           }
@@ -587,7 +587,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "fire",
-            "heading_1": "<strong>Highly rated by customers for: Anti-Aging Results, Skin Rejuvenation, Detox & Body Reset, Joint Support, Stress Relief</strong>",
+            "heading_1": "<strong>Highly rated by customers for: Anti-Aging Results, Skin Rejuvenation, Deep Hydration & Total Wellness Support</strong>",
             "icon_2": "return",
             "heading_2": "",
             "icon_3": "truck",
@@ -603,7 +603,7 @@
         "text_mXmRgP": {
           "type": "text",
           "settings": {
-            "text": "A premium daily supplement drink formulated with 120,000 mg deep-sea salmon collagen peptides, magnesium chloride, royal jelly, glucosamine, hyaluronic acid, elastin, and a blend of 82 fermented plant extracts. Designed for adults aged 25 - 40 seeking comprehensive nutritional support for skin hydration, joint function, sleep quality, and gut wellness - in one convenient liquid format.",
+            "text": "<strong>The Ultimate Beauty Ritual:</strong> Formulated with 120,000mg of Deep-Sea Collagen Peptides and a proprietary blend of 82 fermented plants for superior radiance. <strong>Designed for the Modern Woman (35+)</strong>",
             "text_style": "body"
           }
         },
@@ -627,7 +627,14 @@
             "icon_2": "return",
             "heading_2": "<strong>30 Day Money Back</strong>",
             "icon_3": "truck",
-            "heading_3": "<strong>Free Shipping in the US</strong>"
+            "heading_3": "Fast Shipping: Orders ship within 24 hours"
+          }
+        },
+        "text_wEV6Rp": {
+          "type": "text",
+          "settings": {
+            "text": "<em>Powered by Nano-Liposome Technology</em>",
+            "text_style": "body"
           }
         },
         "buy_buttons_k7hGdP": {
@@ -646,6 +653,7 @@
         "price_waXQUr",
         "variant_picker_xEiYnF",
         "icon_with_text_QH3VBk",
+        "text_wEV6Rp",
         "buy_buttons_k7hGdP"
       ],
       "custom_css": [
