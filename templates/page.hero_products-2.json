@@ -695,7 +695,7 @@
         "button_XQdDNA": {
           "type": "button",
           "settings": {
-            "button_label": "BUY IT NOW",
+            "button_label": "Get Your Glow Today",
             "button_link": "#shopify-section-template--20302847803586__featured_product_Uy8fFF",
             "button_style": "primary",
             "button_full_mobile": false
@@ -991,6 +991,34 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "rich_text_xR7c3Y": {
+      "type": "rich-text",
+      "blocks": {
+        "button_HBCffP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Your Transformation",
+            "button_link": "#shopify-section-template--20302847803586__featured_product_Uy8fFF",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_HBCffP"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -1007,6 +1035,7 @@
     "feature_rows_t9fNc4",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
-    "accordion_section_NhKxVC"
+    "accordion_section_NhKxVC",
+    "rich_text_xR7c3Y"
   ]
 }
