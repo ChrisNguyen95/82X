@@ -109,15 +109,14 @@
         "heading_Q3kPj7": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Are You Drinking Collagen or Just Taxing Your Liver?</strong>",
+            "heading": "<strong>Stop Wasting Your Collagen Ritual</strong>",
             "heading_size": "h2"
           }
         },
         "text_4WXakr": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Add a supporting description here.</p>"
+            "text": "<p>The Hidden Truth Behind Traditional Collagen Absorption.</p>"
           }
         },
         "content_row_CPLNpn": {
@@ -125,7 +124,7 @@
           "settings": {
             "icon": "shopify://shop_images/Icon3.svg",
             "icon_bg_color": "#ebf3ff",
-            "row_heading": "The Absorption Gap: 70% Waste",
+            "row_heading": "Maximize Bioavailability",
             "row_text": "Most traditional collagen is destroyed by stomach acid before it ever reaches your skin. If it’s not Liposomal, you’re essentially paying for \"expensive urine.\""
           }
         },
