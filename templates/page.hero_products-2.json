@@ -37,7 +37,7 @@
         "text_mawtKP": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover a new generation of collagen designed for real absorption — not just intake. 82X Sakura Premium combines 120,000mg of marine collagen with our proprietary Liposome hydrolysis technology — ensuring 100% bioavailability and unmatched absorption.</p>",
+            "text": "<p><strong>Discover a new generation of collagen designed for real absorption — not just intake.</strong> 82X Sakura Premium combines 120,000mg of marine collagen with our proprietary Liposome hydrolysis technology — ensuring 100% bioavailability and unmatched absorption.</p>",
             "text_style": "body"
           }
         },
