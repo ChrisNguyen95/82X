@@ -23,14 +23,14 @@
         "subtext_rBeQbk": {
           "type": "subtext",
           "settings": {
-            "subtext": "Beyond 300,000mg: Why Your Current Collagen is Failing You.",
+            "subtext": "Nourish From Within. Radiate For Years",
             "subtext_style": "body"
           }
         },
         "heading_AakAp4": {
           "type": "heading",
           "settings": {
-            "heading": "82X CLASSIC COLLAGEN",
+            "heading": "82X Sakura Collagen",
             "heading_size": "h1"
           }
         },
@@ -86,7 +86,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
-        "image": "shopify://shop_images/27.10.2020_Vu_Qu_nh-topaz-enhance-3.8x-faceai.jpg",
+        "image": "shopify://shop_images/82X-Sakura-Collagen.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -272,12 +272,12 @@
         "clinician_tXnjm4": {
           "type": "clinician",
           "settings": {
-            "image": "shopify://shop_images/Scientist.png",
-            "image_width": 208,
+            "image": "shopify://shop_images/Feature_image_left.jpg",
+            "image_width": 288,
             "image_ratio": "square",
-            "name": "Mr. Masaru Eshima",
-            "verified": true,
-            "verified_label": "Founded",
+            "name": "",
+            "verified": false,
+            "verified_label": "",
             "row1_label": "",
             "row1_value": "",
             "row2_label": "",
@@ -301,7 +301,7 @@
         "heading_size": "h2",
         "heading_tag": "h2",
         "heading_italic": false,
-        "heading_max_width": 800,
+        "heading_max_width": 1000,
         "subtext": "",
         "text_align": "center",
         "initial_count": 2,
@@ -320,8 +320,8 @@
         "border_color": "#d9eeff",
         "show_more_color": "#56baf7",
         "color_scheme": "scheme-2",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 40,
+        "padding_bottom": 44
       }
     },
     "product_ingredients_KiqFW3": {
