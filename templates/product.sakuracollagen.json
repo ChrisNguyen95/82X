@@ -40,7 +40,7 @@
           "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
           "settings": {
             "font": "theme",
-            "themeId": "dark",
+            "themeId": "light",
             "minimize": true
           }
         },
@@ -176,7 +176,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-5",
         "breadcrumb_link_color": "#556884",
         "breadcrumb_current_color": "#1c2b6b",
         "media_size": "small",
