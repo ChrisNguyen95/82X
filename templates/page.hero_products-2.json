@@ -166,14 +166,13 @@
         },
         "certified_jhLmBa": {
           "type": "certified",
-          "disabled": true,
           "settings": {
-            "title": "Proud To Be A Certified B Corporation",
-            "description": "<p>Since 2023, we've been part of a global movement of businesses using profit as a force for good.</p>",
+            "title": "",
+            "description": "<p><em>\"These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.\"</em></p>",
             "score_bg_color": "#ebf3ff",
-            "score_label": "B Impact Score",
-            "score_value": "85.4",
-            "score_subtitle": "Above Average"
+            "score_label": "",
+            "score_value": "",
+            "score_subtitle": ""
           }
         }
       },
