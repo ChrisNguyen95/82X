@@ -450,6 +450,7 @@
         },
         "ingredient_HjAxjQ": {
           "type": "ingredient",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/2_c6c6a960-e612-420b-962e-511085c5e9ab.png",
             "title": "Deeply hydrates and protects skin barrier.",
@@ -484,7 +485,7 @@
         "card_text_align": "center",
         "card_gap_desktop": 20,
         "card_gap_mobile": 12,
-        "loop_enabled": true,
+        "loop_enabled": false,
         "nav_color": "#1c2e5e",
         "color_scheme": "",
         "background_color": "#ffffff",
