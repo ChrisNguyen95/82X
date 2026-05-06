@@ -37,7 +37,7 @@
         "text_mawtKP": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Discover a new generation of collagen designed for real absorption — not just intake.</strong> 82X Sakura is formulated with ultra-fine collagen peptides and Liposome technology to help support better absorption — so you can see a more hydrated, radiant-looking complexion.</p>",
+            "text": "<p><strong>Discover a new generation of collagen designed for real absorption — not just intake.</strong> </p><p>82X Sakura is formulated with ultra-fine collagen peptides and Liposome technology to help support better absorption. </p><p>So you can see a more hydrated, radiant-looking complexion.</p>",
             "text_style": "body"
           }
         },
