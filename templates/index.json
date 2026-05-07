@@ -488,7 +488,7 @@
         "button_rTbc9J": {
           "type": "button",
           "settings": {
-            "button_label": "Take The Quiz",
+            "button_label": "Discover My Match",
             "button_link": "#",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
