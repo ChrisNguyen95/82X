@@ -33,23 +33,11 @@
             "text": "<p>Over 11 million tons of plastic enter our oceans every year — we are committed to reducing our part of that impact.</p>",
             "text_style": "body"
           }
-        },
-        "buttons_UyCchy": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Join us now",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": true
-          }
         }
       },
       "block_order": [
         "heading_8yGjGg",
-        "text_BkmYwA",
-        "buttons_UyCchy"
+        "text_BkmYwA"
       ],
       "name": "Hero Split",
       "settings": {
