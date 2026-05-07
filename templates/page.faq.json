@@ -140,14 +140,14 @@
           "type": "faq_item",
           "settings": {
             "question": "What is your return policy?",
-            "answer": "<p>If 82x doesn't satisfy your needs, we’ll issue you a refund within 30 days of your first order date (no need to return the product to us). </p>"
+            "answer": "<p>We offer a 30-day satisfaction guarantee on first-time orders. If you’re not completely satisfied, please contact our support team within 30 days of delivery for assistance.</p>"
           }
         },
         "faq_item_gDUAxF": {
           "type": "faq_item",
           "settings": {
-            "question": "Are shipping fees included?",
-            "answer": "<p>If you are in the United States, shipping is free! Let's order your products now!!!<br/><br/></p>"
+            "question": "Do you offer free shipping?",
+            "answer": "<p>We currently offer complimentary shipping within the United States on qualifying orders.</p>"
           }
         },
         "group_pNBtHz": {
@@ -159,8 +159,8 @@
         "faq_item_mDA6Bh": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I buy this product in bulk to save money?",
-            "answer": "<p>You can purchase 82X products in bulk to take advantage of special offers from the brand.</p>"
+            "question": "Do you offer bundle options?",
+            "answer": "<p>Yes. Select 82X formulas are available in curated sets and multi-bottle options designed to support your daily beauty ritual while offering added value.</p>"
           }
         },
         "group_e4kRQT": {
