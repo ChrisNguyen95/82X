@@ -36,11 +36,11 @@
         "buttons_6P76MN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Discover 82X",
+            "button_label_1": "Start Your Ritual",
             "button_link_1": "shopify://products/82x-collagen-sakura",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "shopify://pages/82x-quiz",
+            "button_label_2": "Explore The Collection",
+            "button_link_2": "shopify://collections/all-products",
             "button_style_secondary_2": true
           }
         },
