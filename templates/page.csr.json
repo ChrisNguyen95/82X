@@ -223,6 +223,7 @@
         "logo_jrNFxQ",
         "logo_DarJPY"
       ],
+      "disabled": true,
       "name": "Logo Grid",
       "settings": {
         "subheading": "",
@@ -319,8 +320,8 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
         "icon_size": 40,
         "padding_top": 100,
         "padding_bottom": 100
@@ -387,85 +388,11 @@
         "desktop_content_alignment": "center",
         "mobile_content_alignment": "center",
         "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-ff352567-f53e-455e-82bc-c96b386c6644",
-        "color_scheme": "scheme-931f9ce4-ad46-474c-ab3e-41dc5a85ea05",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
         "icon_size": 40,
         "padding_top": 32,
         "padding_bottom": 32
-      }
-    },
-    "82x_two_columns_ajt4Ex": {
-      "type": "82x-two-columns",
-      "blocks": {
-        "column_XnrCnR": {
-          "type": "column",
-          "settings": {
-            "color_scheme": "scheme-083f8f91-ac8b-4b36-be8b-b52716e98919",
-            "logo": "shopify://shop_images/Social_Media_Icon_9885bacb-0867-4066-8677-60ba7209b4bd.png",
-            "logo_width": 168,
-            "logo_align": "center",
-            "intro_text": "<p>We are proud to partner with Vitamin Angels – a global nutrition organization – to provide essential micronutrients to women and children in difficult circumstances.</p>",
-            "heading_1": "Our impact",
-            "icon_1": "shopify://shop_images/About_text_image.png",
-            "icon_1_text": "Over 70 million women and children supported each year",
-            "icon_2": "shopify://shop_images/2.png",
-            "icon_2_text": "Operating in more than 65 countries",
-            "icon_3": "shopify://shop_images/sssss.png",
-            "icon_3_text": "Contributing to the improvement of nutrition and health for future generations",
-            "icon_4_text": "",
-            "icon_5_text": "",
-            "heading_2": "Commitment",
-            "body_text": "<p>We continue to expand our contributions to ensure that everyone has access to basic nutrition.</p>",
-            "button_label": "Learn more",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "padding_v": 92,
-            "padding_h": 114,
-            "heading_tag": "h3"
-          }
-        },
-        "column_jmQ8yq": {
-          "type": "column",
-          "settings": {
-            "color_scheme": "scheme-fdde575a-7961-48d3-abd2-4b82487dacf7",
-            "logo": "shopify://shop_images/Social_Media_fIcon.png",
-            "logo_width": 168,
-            "logo_align": "center",
-            "intro_text": "<p>82X hợp tác với Eden Reforestation Projects nhằm phục hồi rừng và giảm thiểu biến đổi khí hậu.</p>",
-            "heading_1": "Outstanding results",
-            "icon_1": "shopify://shop_images/1_7f603bdc-791f-4af5-b1d0-4ac793914537.png",
-            "icon_1_text": "Over 1 billion trees have been planted and protected",
-            "icon_2": "shopify://shop_images/2.png",
-            "icon_2_text": "229 projects in 9 countries",
-            "icon_3": "shopify://shop_images/3.png",
-            "icon_3_text": "Creating sustainable jobs for over 50,000 local workers",
-            "icon_4_text": "",
-            "icon_5_text": "",
-            "heading_2": "Impact",
-            "body_text": "<p>We contribute to reducing deforestation, increasing CO₂ absorption, and restoring ecosystems, aiming for a more sustainable environment.</p>",
-            "button_label": "Learn more",
-            "button_link": "shopify://pages/brand-story",
-            "button_style": "primary",
-            "padding_v": 92,
-            "padding_h": 114,
-            "heading_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "column_XnrCnR",
-        "column_jmQ8yq"
-      ],
-      "disabled": true,
-      "name": "Two Columns",
-      "settings": {
-        "color_scheme": "",
-        "full_width": false,
-        "columns_gap": 0,
-        "margin_top": 0,
-        "margin_bottom": 100,
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     }
   },
@@ -477,7 +404,6 @@
     "logo_grid_trPBzy",
     "82x_images_tHFT6W",
     "image_with_text_qkzRmN",
-    "image_with_text_Pre3pM",
-    "82x_two_columns_ajt4Ex"
+    "image_with_text_Pre3pM"
   ]
 }
