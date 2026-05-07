@@ -422,21 +422,21 @@
         "heading_U7BQex": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Our comprehensive and personalized support</strong>",
+            "heading": "Personalized collagen rituals for every stage of your glow",
             "heading_size": "h1"
           }
         },
         "text_EXmR3B": {
           "type": "text",
           "settings": {
-            "text": "<p>Based on your skin condition and age, we will recommend the most suitable options and tailored regimen for you. </p>",
+            "text": "<p>Whether you're focused on hydration, radiance, or visible signs of aging, 82X offers thoughtfully crafted Japanese collagen formulas designed to support your unique beauty ritual.</p>",
             "text_style": "body"
           }
         },
         "button_HEGULY": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
+            "button_label": "Explore The Collection",
             "button_link": "shopify://collections/all-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
@@ -474,14 +474,14 @@
         "heading_YrCKxF": {
           "type": "heading",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
+            "heading": "Discover your ideal Japanese collagen formula",
             "heading_size": "h1"
           }
         },
         "text_gAg4tt": {
           "type": "text",
           "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
+            "text": "<p>Take our quick 2-minute quiz to discover the 82X formula that best fits your lifestyle, beauty goals, and daily routine.</p>",
             "text_style": "body"
           }
         },
