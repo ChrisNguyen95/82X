@@ -54,6 +54,7 @@
         },
         "text_grw7Vf": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "120,000mg deep-sea collagen + Damask Rose Stem Cells — rebuilds skin from the cellular level. Firmer, brighter, deeply hydrated skin in one daily 500ml drink. Daily use recommended · Suitable for women 25+",
             "text_style": "body"
@@ -155,7 +156,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "related-products": {
@@ -210,6 +211,7 @@
         "text_BctwwL",
         "button_6qGJwe"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -743,6 +745,7 @@
         "item_FwXRPR",
         "item_WdrcNm"
       ],
+      "disabled": true,
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
