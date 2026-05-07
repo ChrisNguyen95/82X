@@ -32,6 +32,7 @@
         },
         "icon_with_text_pNFDrM": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "fire",
@@ -100,6 +101,7 @@
         },
         "collapsible_tab_WFk6Bz": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "star",
