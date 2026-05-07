@@ -43,6 +43,7 @@
         },
         "text_dAxeyX": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "450,000mg Placenta + African Mango — whitens, slims, and balances hormones in one daily drink. Japan's most advanced formula for a brighter body and leaner figure.",
             "text_style": "body"
