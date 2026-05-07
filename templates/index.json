@@ -381,7 +381,7 @@
         "button_p8FMbQ": {
           "type": "button",
           "settings": {
-            "button_label": "READ REVIEWS",
+            "button_label": "Explore Reviews",
             "button_link": "shopify://pages/all-review",
             "button_style_secondary": false
           }
