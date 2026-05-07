@@ -675,22 +675,22 @@
         "heading_YFLnJJ": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>From Japan, For Your Radiance Within</strong>",
+            "heading": "From Japan, with a ritual of beauty from within",
             "heading_size": "h1"
           }
         },
         "text_fRTthn": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by the Japanese philosophy of Oubaitori — “each person is a unique individual with their own beauty” — 82X believes that true beauty is the most authentic form, achieved when one finds harmony between appearance, health, and inner strength.   <br/><br/></p>",
+            "text": "<p>Rooted in the Japanese philosophy of intentional self-care, 82X was created to support beauty from within through premium collagen, thoughtful rituals, and everyday moments of nourishment.</p>",
             "text_style": "body"
           }
         },
         "button_r6Tj8K": {
           "type": "button",
           "settings": {
-            "button_label": "ABOUT BRAND STORY",
-            "button_link": "shopify://pages/hero-products",
+            "button_label": "Learn About 82X",
+            "button_link": "shopify://pages/brand-story",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
           }
