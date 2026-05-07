@@ -86,6 +86,7 @@
         },
         "collapsible_tab_Nt6dH9": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "check_mark",
