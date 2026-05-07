@@ -15,29 +15,29 @@
         "subtext_pTPNkw": {
           "type": "subtext",
           "settings": {
-            "subtext": "Premium Japanese Collagen Expert in Beauty Ritual",
+            "subtext": "Japanese Beauty Ritual • Premium Liquid Collagen",
             "subtext_style": "subtitle"
           }
         },
         "heading_gJXVpA": {
           "type": "heading",
           "settings": {
-            "heading": "The Art of J-Beauty, Perfected Within",
+            "heading": "The Japanese collagen ritual for radiant, hydrated skin",
             "heading_size": "h1"
           }
         },
         "text_iti9gR": {
           "type": "text",
           "settings": {
-            "text": "<p>More than 10,000 happy customers have trusted and used 82X Collagen to <strong>support their skin and overall health</strong> — powered by premium quality and advanced technology from Japan.<br/></p>",
+            "text": "<p>Trusted by millions of women worldwide, 82X combines premium Japanese collagen with advanced Liposome technology to help support hydrated, radiant-looking skin — as part of a daily beauty ritual inspired by J-Beauty traditions.</p>",
             "text_style": "body"
           }
         },
         "buttons_6P76MN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://pages/hero-products",
+            "button_label_1": "Discover 82X",
+            "button_link_1": "shopify://products/82x-collagen-sakura",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "shopify://pages/82x-quiz",
