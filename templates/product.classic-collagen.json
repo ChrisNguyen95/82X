@@ -54,6 +54,7 @@
         },
         "text_eFc6pH": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "A premium daily supplement drink formulated with 120,000 mg deep-sea tuna collagen peptides, magnesium chloride, royal jelly, glucosamine, hyaluronic acid, elastin, and a blend of 82 fermented plant extracts. Designed for adults aged 25–40 seeking comprehensive nutritional support for skin hydration, joint function, sleep quality, and gut wellness — in one convenient liquid format.",
             "text_style": "body"
@@ -155,7 +156,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "related-products": {
@@ -264,6 +265,7 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -317,6 +319,7 @@
         "text_WRja8L",
         "button_7HfDTw"
       ],
+      "disabled": true,
       "name": "Logo Content Banner",
       "settings": {
         "logo_width_desktop": 120,
@@ -803,6 +806,7 @@
         "item_FwXRPR",
         "item_kE69jB"
       ],
+      "disabled": true,
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
