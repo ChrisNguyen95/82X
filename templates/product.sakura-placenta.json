@@ -147,7 +147,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "related-products": {
@@ -211,6 +211,7 @@
         "caption_MLBT43",
         "button_6qGJwe"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -355,7 +356,7 @@
         "heading_color": "#ffffff",
         "text_color": "#1c2b6b",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 60
       }
     },
@@ -779,6 +780,7 @@
         "item_FwXRPR",
         "item_8mizyR"
       ],
+      "disabled": true,
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
