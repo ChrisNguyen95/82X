@@ -25,6 +25,7 @@
         },
         "text_kPTJY4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Cellular-level skin repair — rebuilt, restored, and radiant from within.",
             "text_style": "subtitle"
@@ -32,6 +33,7 @@
         },
         "icon_with_text_KnBhzC": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "fire",
@@ -100,6 +102,7 @@
         },
         "collapsible_tab_4RUtKb": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "check_mark",
@@ -112,7 +115,7 @@
           "settings": {
             "heading": "How to Use",
             "icon": "check_mark",
-            "content": "<p>Usually, drink about<strong>15–25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "content": "<p>Usually, drink about <strong>25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
             "page": ""
           }
         },
