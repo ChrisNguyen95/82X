@@ -676,13 +676,13 @@
         "full_list_heading": "Full List Of Ingredients:",
         "full_list_text": "<p><br/>Hydrolyzed silk, Glucosamine, Magnesium chloride, Cherry blossom extract powder, Vitamin B2, B6, B1, Elastin, Grape sprout extract, etc...<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>",
         "dosage_heading": "Recommended Dosage",
-        "dosage_text": "<p>Usually, drink about <strong>15 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_text": "<p>Usually, drink about 2<strong>5 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
         "dosage_align": "center",
         "background_color": "#1c2b6b",
         "heading_color": "#ffffff",
         "text_color": "#1c2b6b",
         "color_scheme": "",
-        "padding_top": 0,
+        "padding_top": 24,
         "padding_bottom": 60
       }
     },
