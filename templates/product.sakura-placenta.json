@@ -178,14 +178,14 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "The Only Formula That Whitens, Slims & Balances",
+            "heading": "A Multi-Beauty Wellness Formula For Daily Radiance",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Other supplements pick one goal. Sakura Placenta targets three.</p><p>450,000mg Shizuoka Placenta fades dark spots and repairs skin at the cellular level. African Mango Seed blocks fat absorption and curbs cravings. EGF & FGF growth factors rebalance estrogen — easing mood swings, hot flashes, and irregular cycles.</p><p>One 500ml bottle. Three transformations. Daily.</p>",
+            "text": "<p>Unlike traditional beauty drinks that focus on just one benefit, 82X Sakura Placenta is crafted with a combination of premium Japanese beauty-focused ingredients designed to support radiant-looking skin, daily wellness, and overall self-care routines.</p><p>Featuring premium placenta extract, marine collagen peptides, botanical ingredients, and beauty-support nutrients, this refined formula is designed to complement modern beauty rituals from within.</p><h3>Designed For Everyday Beauty Rituals</h3><p>One elegant daily formula crafted to support:</p><ul><li>Radiant-looking skin<br/></li><li>Daily hydration support<br/></li><li>Beauty wellness from within<br/></li><li>Modern self-care routines</li></ul>",
             "text_style": "body"
           }
         },
@@ -214,7 +214,6 @@
         "caption_MLBT43",
         "button_6qGJwe"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
