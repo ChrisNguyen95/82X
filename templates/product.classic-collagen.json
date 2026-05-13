@@ -514,40 +514,64 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "How soon will I see results?",
-            "content": "<p>Most customers notice better sleep within a few days and visible skin improvements within 2–4 weeks of consistent use.</p>",
+            "title": "What Can I Expect From Consistent Use?",
+            "content": "<p>Many customers choose 82X as part of their daily beauty and wellness routine. Individual experiences may vary depending on lifestyle, nutrition, and consistency of use.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "Is this just a collagen supplement?",
-            "content": "<p>No — this is a multi-functional wellness formula designed to improve skin, sleep, stress levels, and overall health.</p>",
+            "title": "Is This Only A Collagen Drink?",
+            "content": "<p>82X Sakura Premium is a Japanese beauty wellness formula featuring marine collagen peptides alongside carefully selected ingredients such as hyaluronic acid, royal jelly, fermented plant extracts, vitamins, and minerals.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "Will it make me sleepy during the day?",
-            "content": "<p>No. It helps regulate your natural sleep cycle, so you feel more refreshed and energized during the day.</p>",
+            "title": "Can I Enjoy It Every Day?",
+            "content": "<p>Yes. The formula is designed for daily use as part of a balanced wellness routine.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Who is this best for?",
-            "content": "<p>Anyone experiencing early signs of aging, poor sleep, stress, or looking for a complete inside-out wellness solution.</p>",
+            "title": "Who Is This Product Designed For?",
+            "content": "<p>82X Sakura Premium is designed for adults looking to support their daily beauty, hydration, and overall wellness routine with a premium Japanese collagen formula.</p>",
             "open_by_default": false
           }
         },
         "item_kE69jB": {
           "type": "item",
           "settings": {
-            "title": "Is it safe for daily use?",
-            "content": "<p>Yes. The formula is designed for daily consumption with carefully selected ingredients used in premium Japanese health products.</p>",
+            "title": "Does It Cause Drowsiness?",
+            "content": "<p>The formula is designed to complement your evening wellness ritual without being intended as a sleep aid.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_D8txqM": {
+          "type": "item",
+          "settings": {
+            "title": "How Should I Enjoy 82X Classic Collagen?",
+            "content": "<p>Enjoy one serving daily. Many customers prefer incorporating it into their evening self-care or beauty routine.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_UY8VG3": {
+          "type": "item",
+          "settings": {
+            "title": "Is It Made In Japan?",
+            "content": "<p>Yes. 82X Sakura Premium is crafted in Japan using carefully selected ingredients and premium manufacturing standards.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_MVP7cd": {
+          "type": "item",
+          "settings": {
+            "title": "Is The Formula Tested For Quality?",
+            "content": "<p>Yes. The product is manufactured under quality-controlled standards to help ensure ingredient and product consistency.</p>",
             "open_by_default": false
           }
         }
@@ -557,7 +581,10 @@
         "item_wGGX4D",
         "item_QUdkMG",
         "item_FwXRPR",
-        "item_kE69jB"
+        "item_kE69jB",
+        "item_D8txqM",
+        "item_UY8VG3",
+        "item_MVP7cd"
       ],
       "name": "Accordion — FAQ",
       "settings": {
