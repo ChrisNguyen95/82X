@@ -311,6 +311,7 @@
       "block_order": [
         "pretty_comparison_tables_table_Bfwtfg"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "title": "",
