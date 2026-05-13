@@ -470,6 +470,14 @@
             "content": "<p>Key ingredients include:</p><ul><li>Placenta Extract<br/></li><li>Marine Collagen Peptides<br/></li><li>Hyaluronic Acid<br/></li><li>Elastin<br/></li><li>Coenzyme Q10<br/></li><li>82 Fermented Plant Extracts<br/></li><li>Bird’s Nest</li></ul>",
             "open_by_default": false
           }
+        },
+        "item_qF4fwL": {
+          "type": "item",
+          "settings": {
+            "title": "Is The Product Manufactured In Japan?",
+            "content": "<p>Yes. 82X Classic Placenta is crafted in Japan using carefully selected ingredients and premium manufacturing standards.</p>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
@@ -479,7 +487,8 @@
         "item_FwXRPR",
         "item_iPLMcJ",
         "item_mPwLaR",
-        "item_GgdQcF"
+        "item_GgdQcF",
+        "item_qF4fwL"
       ],
       "name": "Accordion — FAQ",
       "settings": {
