@@ -179,74 +179,20 @@
         "padding_bottom": 28
       }
     },
-    "image_with_text_9pQ8im": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_RjpcJM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Skin hydration & firmness",
-            "heading_size": "h1"
-          }
-        },
-        "text_BctwwL": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Collagen peptides + hyaluronic acid + elastin help maintain skin moisture, elasticity, and smoothness with regular use.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_6qGJwe": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
-          }
-        }
-      },
-      "block_order": [
-        "heading_RjpcJM",
-        "text_BctwwL",
-        "button_6qGJwe"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/27.10.2020_Vu_Qu_nh-topaz-enhance-3.8x-faceai.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "text_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "image_with_text_nrjQxn": {
       "type": "image-with-text",
       "blocks": {
         "heading_EChdjh": {
           "type": "heading",
           "settings": {
-            "heading": "More Than Collagen — A Total Body Reset",
+            "heading": "More Than Collagen — A Daily Beauty & Wellness Ritual",
             "heading_size": "h1"
           }
         },
         "text_gRFxR6": {
           "type": "text",
           "settings": {
-            "text": "<p>Unlike traditional collagen supplements, this advanced formula combines ultra-absorbable peptides with sleep-supporting minerals and gut-healing botanicals to deliver visible results inside and out.</p><ul><li>Smoother, firmer skin</li><li>Deeper sleep & less stress</li><li>Stronger joints & better digestion</li></ul><p></p>",
+            "text": "<p>Crafted with marine collagen peptides, fermented plant extracts, and beauty-focused ingredients, this Japanese formula supports everyday beauty wellness, hydration, and daily balance from within.</p><ul><li>Supports smooth, healthy-looking skin<br/></li><li>Supports everyday wellness and relaxation<br/></li><li>Supports daily mobility and digestive wellness</li></ul>",
             "text_style": "body"
           }
         },
@@ -266,7 +212,6 @@
         "text_gRFxR6",
         "button_Wp8GHa"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
@@ -320,9 +265,9 @@
         "text_WRja8L",
         "button_7HfDTw"
       ],
-      "disabled": true,
       "name": "Logo Content Banner",
       "settings": {
+        "logo": "shopify://shop_images/secured.png",
         "logo_width_desktop": 120,
         "logo_width_mobile": 80,
         "desktop_vertical_align": "center",
@@ -500,199 +445,6 @@
         "color_scheme": "scheme-3",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "rich_text_FNtXJe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rC4VFK": {
-          "type": "heading",
-          "settings": {
-            "heading": "3 parts to our maximum support",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rC4VFK"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_MPF6Qp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_BVQiUU": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_QMU9yn": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_E9mbGP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_BVQiUU",
-        "text_QMU9yn",
-        "button_E9mbGP"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 52,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_A96TqF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UzaWGg": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Collagen Classic</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_DkJYtW": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_w7Wpqp": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UzaWGg",
-        "text_DkJYtW",
-        "button_w7Wpqp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssss.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_b9wzDz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DC4VwY": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>Koharu Collagen</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Mrn3mk": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_f9M46P": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DC4VwY",
-        "text_Mrn3mk",
-        "button_f9M46P"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssssddd.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
         "padding_top": 0,
         "padding_bottom": 100
       }
@@ -908,15 +660,10 @@
   "order": [
     "main",
     "related-products",
-    "image_with_text_9pQ8im",
     "image_with_text_nrjQxn",
     "logo_content_banner_6rVcED",
     "product_ingredients_hATdfY",
     "multicolumn_zHFXty",
-    "rich_text_FNtXJe",
-    "image_with_text_MPF6Qp",
-    "image_with_text_A96TqF",
-    "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
