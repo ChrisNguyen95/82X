@@ -86,11 +86,10 @@
         },
         "collapsible_tab_pY6cc4": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "check_mark",
-            "content": "<ul><li>Reverses biological aging by balancing Estrogen levels and restoring skin from the deepest layer with 450,000mg of premium Placenta.</li><li>Fills deep wrinkles and restores youthful volume and firmness — features ultra-absorbable Fish Collagen Peptides that are 99% biocompatible.</li><li> HA + Elastin + Coenzyme Q10 deliver intense moisture and cellular energy, leaving skin plump, soft, and naturally glowing from within.</li><li>Strengthens the skin’s natural barrier and body immunity while soothing internal inflammation and redness.</li><li> Reduces stress, improves sleep quality, and maintains smooth, supple skin by stabilizing the body's internal environment overnight.</li></ul>",
+            "content": "<ul><li>Crafted with premium Placenta Extract to support radiant, youthful-looking skin<br/></li><li>Marine Collagen Peptides help maintain skin smoothness, softness, and daily hydration support<br/></li><li>Hyaluronic Acid, Elastin, and CoQ10 help support moisture retention and skin suppleness<br/></li><li>Beauty-focused ingredients designed to complement your overnight wellness ritual<br/></li><li>Supports overall beauty wellness and everyday balance from within<br/></li><li>Refined Japanese formula crafted for elegant daily beauty care</li></ul>",
             "page": ""
           }
         },
@@ -175,7 +174,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Not just placenta. Hormonal and cellular harmony.</strong></p><p>Most beauty drinks focus only on hydration. This formula goes further — 450,000mg of \"Happy Pig\" Placenta (equivalent extract) works to balance your internal hormones and stabilize Estrogen levels, the true foundation of feminine vitality. It doesn't just mask aging; it restores the biological functions that keep you young, from deep within. The clinical-grade care your body deserves, in a daily premium formula.</p><p><strong>The numbers speak for themselves:</strong></p><ul><li>450,000mg Pig Placenta Extract — 95% biocompatible with human cells, targeting hormonal balance and melasma prevention.</li><li>15,000mg Fish Collagen Peptides — Ultra-absorbable marine collagen to maintain firm, elastic, and youthful skin.</li><li>82 Fermented Plant Extracts — A powerhouse of enzymes to detoxify the body, boost metabolism, and reduce daily stress.</li><li>Coenzyme Q10 & Bird's Nest — A synergistic blend that powers cellular energy and accelerates skin regeneration.</li><li>Hyaluronic Acid & Elastin — The ultimate duo to seal in moisture and strengthen the skin's structural fiber.</li></ul>",
+            "text": "<p><strong>More Than A Beauty Drink — A Complete Daily Beauty Wellness Ritual</strong></p><p>Many beauty drinks focus on hydration alone. 82X Classic Placenta is crafted with a premium blend of placenta extract, marine collagen peptides, fermented botanicals, and beauty-focused nutrients designed to support radiant-looking skin and everyday wellness from within.</p><p>Carefully developed in Japan, this refined formula combines traditional beauty inspiration with modern wellness ingredients for daily self-care support.</p><ul><li>Supports hydrated, radiant-looking skin<br/></li><li>Complements daily beauty and self-care routines<br/></li><li>Crafted with premium Japanese beauty ingredients<br/></li><li>Designed for consistent daily use</li></ul><p></p><p><strong>Optional FDA Disclaimer (recommended for PDP):</strong><br/><em>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</em></p>",
             "text_style": "body"
           }
         },
@@ -195,7 +194,6 @@
         "text_BctwwL",
         "button_6qGJwe"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
