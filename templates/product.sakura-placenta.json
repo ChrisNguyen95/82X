@@ -362,60 +362,6 @@
         "padding_bottom": 60
       }
     },
-    "image_with_text_nrjQxn": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_EChdjh": {
-          "type": "heading",
-          "settings": {
-            "heading": "15ml Per Day For Deep Nourishment, Hydration & Total Skin Defense",
-            "heading_size": "h1"
-          }
-        },
-        "text_gRFxR6": {
-          "type": "text",
-          "settings": {
-            "text": "<p> Enriched with 82 fermented plant extracts and bioactive peptides, the formula deeply nourishes the skin, restores moisture, and improves overall skin texture. It strengthens the skin’s natural defense against environmental stressors while boosting immunity from within. With consistent daily use (15ml per day), Sakura Placenta helps you achieve firmer, healthier, and more radiant skin over time.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Wp8GHa": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
-          }
-        }
-      },
-      "block_order": [
-        "heading_EChdjh",
-        "text_gRFxR6",
-        "button_Wp8GHa"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Post_288.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "text_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
     "multicolumn_zHFXty": {
       "type": "multicolumn",
       "blocks": {
@@ -475,199 +421,6 @@
         "color_scheme": "scheme-3",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "rich_text_FNtXJe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rC4VFK": {
-          "type": "heading",
-          "settings": {
-            "heading": "3 parts to our maximum support",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rC4VFK"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_MPF6Qp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_BVQiUU": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_QMU9yn": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_E9mbGP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_BVQiUU",
-        "text_QMU9yn",
-        "button_E9mbGP"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 52,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_A96TqF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UzaWGg": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_DkJYtW": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_w7Wpqp": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UzaWGg",
-        "text_DkJYtW",
-        "button_w7Wpqp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssss.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_b9wzDz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DC4VwY": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Mrn3mk": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_f9M46P": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DC4VwY",
-        "text_Mrn3mk",
-        "button_f9M46P"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssssddd.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
         "padding_top": 0,
         "padding_bottom": 100
       }
@@ -737,40 +490,56 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "Who should use the Placenta Sakura product?",
-            "content": "<p>This product is ideal for customers over 30 who are experiencing signs of aging such as wrinkles, sagging skin, dryness, and dullness. It is also suitable for those facing hormonal imbalances or disorders during stages like postpartum, pre-menopause, or menopause. Additionally, it is a good choice for individuals who often feel fatigued, stressed, physically heavy, or are looking to achieve a slimmer, more balanced body shape.</p>",
+            "title": "Who Is 82X Sakura Placenta Designed For?",
+            "content": "<p>82X Sakura Placenta is designed for adults looking to support radiant-looking skin, hydration, and overall beauty wellness as part of a consistent self-care routine.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "I’m over 30, my skin looks dull and dry, and I have hormonal imbalances. Can I use the Sakura Placenta product?",
-            "content": "<p>Yes, you can use the Sakura Placenta product. For best results, combine it with a balanced diet and a healthy lifestyle, including regular exercise, to improve your health both internally and externally.</p>",
+            "title": "Can I Enjoy Sakura Placenta As Part Of My Daily Routine?",
+            "content": "<p>Yes. The formula is designed for daily use and can be incorporated into a balanced wellness and beauty lifestyle.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "Will taking this product cause weight gain?",
-            "content": "<p>Whether you gain weight largely depends on your individual metabolism and how your body absorbs nutrients. 82X products do not contain fat, so they do not cause weight gain.</p>",
+            "title": "Does This Product Support Hydrated And Healthy-Looking Skin?",
+            "content": "<p>82X Sakura Placenta features beauty-focused ingredients such as placenta extract, marine collagen peptides, hyaluronic acid, and botanical extracts designed to support smooth, hydrated, and radiant-looking skin.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Can I take the Collagen line in the morning and the Placenta line in the afternoon?",
-            "content": "<p>To ensure optimal effectiveness, it is recommended to finish one product (such as Collagen) before starting the Placenta line, rather than taking them alternately or splitting them between morning and afternoon. Using both in this way may lead to excess nutrient intake and may not ensure optimal product quality during storage</p>",
+            "title": "Can I Enjoy Different 82X Formulas Together?",
+            "content": "<p>Many customers choose different 82X formulas based on their personal wellness preferences and routines. For best results, follow the suggested serving directions for each product.</p>",
             "open_by_default": false
           }
         },
         "item_8mizyR": {
           "type": "item",
           "settings": {
-            "title": "What time of day is best to use this product for optimal results?",
-            "content": "<p>Experts recommend using the product in the morning between 9-10 am after breakfast or in the evening one hour before bedtime.</p>",
+            "title": "When Is The Best Time To Enjoy Sakura Placenta?",
+            "content": "<p>You can enjoy Sakura Placenta at any time of day that fits your routine. Many customers prefer incorporating it into their morning or evening beauty ritual.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_j9BHPm": {
+          "type": "item",
+          "settings": {
+            "title": "What Makes Sakura Placenta Different From Traditional Beauty Drinks?",
+            "content": "<p>82X Sakura Placenta combines premium placenta extract with marine collagen peptides, sakura-inspired ingredients, fermented botanical extracts, and beauty-support nutrients in one refined Japanese wellness formula.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_z3Viwc": {
+          "type": "item",
+          "settings": {
+            "title": "Is The Formula Manufactured In Japan?",
+            "content": "<p>Yes. 82X Sakura Placenta is crafted in Japan using carefully selected ingredients and premium manufacturing standards.</p>",
             "open_by_default": false
           }
         }
@@ -780,9 +549,10 @@
         "item_wGGX4D",
         "item_QUdkMG",
         "item_FwXRPR",
-        "item_8mizyR"
+        "item_8mizyR",
+        "item_j9BHPm",
+        "item_z3Viwc"
       ],
-      "disabled": true,
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
@@ -790,7 +560,7 @@
         "heading_tag": "h2",
         "heading_italic": false,
         "heading_max_width": 800,
-        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "subtext": "Daily Beauty Wellness Support, Inspired By Japanese Self-Care Rituals",
         "text_align": "center",
         "list_max_width": 860,
         "tag_bg": "#d6e8f8",
@@ -885,12 +655,7 @@
     "related-products",
     "image_with_text_9pQ8im",
     "product_ingredients_3TznKN",
-    "image_with_text_nrjQxn",
     "multicolumn_zHFXty",
-    "rich_text_FNtXJe",
-    "image_with_text_MPF6Qp",
-    "image_with_text_A96TqF",
-    "image_with_text_b9wzDz",
     "review_badge_MHhxiE",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
