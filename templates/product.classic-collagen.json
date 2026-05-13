@@ -238,7 +238,7 @@
         "heading_qyq6xN": {
           "type": "heading",
           "settings": {
-            "heading": "Try It, Risk - Free!",
+            "heading": "Experience 82X, Worry-Free",
             "heading_size": "h1",
             "heading_tag": "h2"
           }
@@ -246,7 +246,7 @@
         "text_WRja8L": {
           "type": "text",
           "settings": {
-            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+            "text": "<p>We want you to feel confident in your daily beauty ritual. If your experience isn’t right for you, our team is here to help.</p>"
           }
         },
         "button_7HfDTw": {
@@ -559,7 +559,6 @@
         "item_FwXRPR",
         "item_kE69jB"
       ],
-      "disabled": true,
       "name": "Accordion — FAQ",
       "settings": {
         "heading": "FAQs",
