@@ -542,6 +542,14 @@
             "content": "<p>Yes. 82X Sakura Placenta is crafted in Japan using carefully selected ingredients and premium manufacturing standards.</p>",
             "open_by_default": false
           }
+        },
+        "item_gTThmk": {
+          "type": "item",
+          "settings": {
+            "title": "What Beauty-Focused Ingredients Are Included?",
+            "content": "<p>Key ingredients include:</p><ul><li>Placenta Extract<br/></li><li>Marine Collagen Peptides<br/></li><li>Sakura-Inspired Ingredients<br/></li><li>Hyaluronic Acid<br/></li><li>Fermented Botanical Extracts<br/></li><li>Beauty-Support Nutrients</li></ul>",
+            "open_by_default": false
+          }
         }
       },
       "block_order": [
@@ -551,7 +559,8 @@
         "item_FwXRPR",
         "item_8mizyR",
         "item_j9BHPm",
-        "item_z3Viwc"
+        "item_z3Viwc",
+        "item_gTThmk"
       ],
       "name": "Accordion — FAQ",
       "settings": {
