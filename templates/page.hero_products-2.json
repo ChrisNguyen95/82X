@@ -322,6 +322,58 @@
         "padding_bottom": 44
       }
     },
+    "image_banner_9pKQDg": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fjk8G4": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_mdVexz": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_aHGMtk": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fjk8G4",
+        "text_mdVexz",
+        "buttons_aHGMtk"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Module_5.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "product_ingredients_KiqFW3": {
       "type": "product-ingredients",
       "blocks": {
@@ -1027,6 +1079,7 @@
     "82x_image_features_BmFVGh",
     "ingredient_slider_irT3QF",
     "clinician_grid_7xrRbe",
+    "image_banner_9pKQDg",
     "product_ingredients_KiqFW3",
     "ingredient_slider_MM6bb4",
     "feature_rows_3hWfnG",
