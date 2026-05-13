@@ -101,11 +101,10 @@
         },
         "collapsible_tab_WFk6Bz": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "star",
-            "content": "<ul><li><strong>Deep-Sea Collagen + HA + Elastin</strong> — Hydrates, firms, and smooths skin from within</li><li><strong>Magnesium + Royal Jelly</strong> — Calms the nervous system for deeper, more restful sleep</li><li><strong>Glucosamine</strong> — Supports cartilage and joint comfort for easy, flexible movement</li><li><strong>82 Fermented Plant Extracts</strong> — Nourishes gut flora, boosts immunity, aids digestion</li></ul>",
+            "content": "<ul><li><strong>Deep-Sea Marine Collagen + Hyaluronic Acid + Elastin</strong> — Supports skin hydration, smooth-looking skin, and everyday beauty wellness</li><li><strong>Magnesium + Royal Jelly</strong> — Supports relaxation and overall wellness as part of your daily routine</li><li><strong>Glucosamine</strong> — Supports joint wellness and everyday mobility</li><li><strong>82 Fermented Plant Extracts</strong> — Supports digestive wellness and overall daily balance</li></ul>",
             "page": ""
           }
         },
