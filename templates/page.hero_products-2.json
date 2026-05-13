@@ -779,6 +779,58 @@
         "padding_bottom": 48
       }
     },
+    "image_banner_DpkT9F": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_CnP46t": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_UahpiW": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_FBLHpq": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CnP46t",
+        "text_UahpiW",
+        "buttons_FBLHpq"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Modlue_2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "feature_rows_t9fNc4": {
       "type": "feature-rows",
       "blocks": {
@@ -1085,6 +1137,7 @@
     "feature_rows_3hWfnG",
     "featured_product_Uy8fFF",
     "logo_content_banner_eFGprn",
+    "image_banner_DpkT9F",
     "feature_rows_t9fNc4",
     "testimonial_slider_GTmALH",
     "17766951699f9688d2",
