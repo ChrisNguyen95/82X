@@ -12,6 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "amazon_reviews_stars_product_widget_block_6TQMtp": {
+          "type": "shopify://apps/amazon-reviews/blocks/stars-product-widget-block/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "alignment": "start",
+            "layout": "inline"
+          }
+        },
         "breadcrumb_Cnkeg9": {
           "type": "breadcrumb",
           "settings": {
@@ -21,10 +30,6 @@
         },
         "title_BYxPjh": {
           "type": "title",
-          "settings": {}
-        },
-        "judge_me_reviews_preview_badge_pnVmPY": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "text_D4wp8p": {
@@ -126,9 +131,9 @@
         }
       },
       "block_order": [
+        "amazon_reviews_stars_product_widget_block_6TQMtp",
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
-        "judge_me_reviews_preview_badge_pnVmPY",
         "text_D4wp8p",
         "icon_with_text_pNFDrM",
         "price_9UgXc9",
@@ -656,80 +661,26 @@
     "1778813366cbfa4b4c": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_L3tDMi": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "amazon_reviews_masonry_widget_block_product_7jjC9N": {
+          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
           "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": true,
-            "empty_state": "empty_widget"
+            "font": "default",
+            "themeId": "light",
+            "showProductPicture": true,
+            "showDate": true,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
           }
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_L3tDMi"
+        "amazon_reviews_masonry_widget_block_product_7jjC9N"
       ],
       "settings": {
         "include_margins": true,
         "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "177881362640625e67": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_WccThB": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_WccThB"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "1778813645877c9fac": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_trzDE6": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_trzDE6"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "Multicolumn",
         "heading_size": "h1",
         "heading_align": "center",
         "heading_max_width": 0,
@@ -751,8 +702,6 @@
     "review_badge_MHhxiE",
     "accordion_section_cmYxRz",
     "logo_marquee_bm3BCd",
-    "1778813366cbfa4b4c",
-    "177881362640625e67",
-    "1778813645877c9fac"
+    "1778813366cbfa4b4c"
   ]
 }
