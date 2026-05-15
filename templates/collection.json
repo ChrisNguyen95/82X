@@ -106,6 +106,15 @@
     },
     "apps_awYBMC": {
       "type": "apps",
+      "blocks": {
+        "vitals_featured_reviews_WUBzWn": {
+          "type": "shopify://apps/vitals/blocks/featured-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_featured_reviews_WUBzWn"
+      ],
       "settings": {
         "include_margins": true,
         "title": "Loved by women who believe in beauty from within",
