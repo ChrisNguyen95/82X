@@ -481,33 +481,6 @@
         "padding_bottom": 80
       }
     },
-    "17742594372d116b7c": {
-      "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_b4YCyR"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "Customer’s Review",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "accordion_section_cmYxRz": {
       "type": "accordion-section",
       "blocks": {
@@ -681,6 +654,35 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "1778813366cbfa4b4c": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_L3tDMi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_L3tDMi"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -691,8 +693,8 @@
     "product_ingredients_hATdfY",
     "multicolumn_zHFXty",
     "review_badge_MHhxiE",
-    "17742594372d116b7c",
     "accordion_section_cmYxRz",
-    "logo_marquee_bm3BCd"
+    "logo_marquee_bm3BCd",
+    "1778813366cbfa4b4c"
   ]
 }
