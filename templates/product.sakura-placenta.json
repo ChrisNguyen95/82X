@@ -51,14 +51,6 @@
           "type": "price",
           "settings": {}
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "disabled": true,
@@ -132,7 +124,6 @@
         "icon_with_text_8XtXVE",
         "text_dAxeyX",
         "price_gqgrfi",
-        "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
         "collapsible_tab_wGfVKx",
