@@ -23,6 +23,10 @@
           "type": "title",
           "settings": {}
         },
+        "vitals_reviews_stars_r7KP6R": {
+          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
         "icon_with_text_8XtXVE": {
           "type": "icon-with-text",
           "disabled": true,
@@ -49,6 +53,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -56,6 +61,7 @@
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -122,6 +128,7 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "vitals_reviews_stars_r7KP6R",
         "icon_with_text_8XtXVE",
         "text_dAxeyX",
         "price_gqgrfi",
@@ -183,7 +190,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p>Unlike traditional beauty drinks that focus on just one benefit, 82X Sakura Placenta is crafted with a combination of premium Japanese beauty-focused ingredients designed to support radiant-looking skin, daily wellness, and overall self-care routines.</p><p>Featuring premium placenta extract, marine collagen peptides, botanical ingredients, and beauty-support nutrients, this refined formula is designed to complement modern beauty rituals from within.</p><h3>Designed For Everyday Beauty Rituals</h3><p>One elegant daily formula crafted to support:</p><ul><li>Radiant-looking skin<br/></li><li>Daily hydration support<br/></li><li>Beauty wellness from within<br/></li><li>Modern self-care routines</li></ul>",
+            "text": "<p>Crafted with premium Japanese-inspired beauty ingredients, 82X Sakura Placenta is designed to support healthy-looking skin, daily beauty wellness, and modern self-care routines from within.</p><p>This refined liquid formula combines Placenta Extract, marine collagen peptides, and beauty-support nutrients to help maintain skin hydration, softness, and overall wellness as part of a balanced lifestyle.</p><h3>Designed For Everyday Beauty Rituals</h3><p>One elegant daily formula designed to support:</p><p>• Healthy-looking, radiant skin<br/>• Daily hydration support<br/>• Beauty and wellness from within<br/>• Everyday self-care and wellness routines</p><p>Formulated for women seeking elevated daily beauty and wellness support in a convenient liquid format.</p>",
             "text_style": "body"
           }
         },
