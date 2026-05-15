@@ -105,9 +105,34 @@
             "btn_width": 100
           }
         },
+        "trust_badges_V9J3VJ": {
+          "type": "trust_badges",
+          "settings": {
+            "show_border": true,
+            "border_color": "#e0e0e0",
+            "bg_color": "#ffffff",
+            "text_color": "#1c2b6b",
+            "icon_size": 24,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "badge_1_icon": "shopify://shop_images/Icon.svg",
+            "badge_1_text": "Coupon Code 15%: NOWORNEVER",
+            "badge_2_text": "",
+            "badge_3_text": "",
+            "badge_4_text": ""
+          }
+        },
         "vitals_countdown_jUiRNG": {
           "type": "shopify://apps/vitals/blocks/countdown/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
           "settings": {}
+        },
+        "inventory_hqFEqK": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
         },
         "collapsible_tab_dHEQRC": {
           "type": "collapsible_tab",
@@ -168,7 +193,9 @@
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
+        "trust_badges_V9J3VJ",
         "vitals_countdown_jUiRNG",
+        "inventory_hqFEqK",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
         "collapsible_tab_G3g7xm",
