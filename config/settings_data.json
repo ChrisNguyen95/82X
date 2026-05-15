@@ -161,13 +161,6 @@
         "disabled": false,
         "settings": {}
       },
-      "733389323033596483": {
-        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-        "disabled": false,
-        "settings": {
-          "show_preview_data": true
-        }
-      },
       "9388344762370057067": {
         "type": "shopify://apps/essential-slide-cart-drawer/blocks/app-embed/824bb1f9-5f36-4608-a60c-1f2b6a6f8834",
         "disabled": false,
@@ -191,11 +184,6 @@
       "1513253815146976218": {
         "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
         "disabled": false,
-        "settings": {}
-      },
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": true,
         "settings": {}
       },
       "15683396631634586217": {
@@ -229,10 +217,12 @@
           "transparent": 1
         }
       },
-      "14994789812221754584": {
-        "type": "shopify://apps/ebay-reviews/blocks/product-rating-snippet-embed/6ae47d69-fff4-432b-a762-b178008c9165",
-        "disabled": false,
-        "settings": {}
+      "733389323033596483": {
+        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": true,
+        "settings": {
+          "show_preview_data": true
+        }
       }
     },
     "color_schemes": {
