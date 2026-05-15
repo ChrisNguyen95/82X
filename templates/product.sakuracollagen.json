@@ -85,6 +85,11 @@
             "swatch_shape": "circle"
           }
         },
+        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -99,11 +104,6 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
-        },
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "disabled": true,
-          "settings": {}
         },
         "icon_with_text_nrh9MX": {
           "type": "icon-with-text",
@@ -156,8 +156,8 @@
         "text_7zx6xy",
         "description",
         "variant_picker",
-        "buy_buttons",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
+        "buy_buttons",
         "icon_with_text_nrh9MX",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
