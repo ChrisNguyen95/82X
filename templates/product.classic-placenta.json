@@ -27,15 +27,11 @@
           "type": "price",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "disabled": true,
+        "text_g8HRBp": {
+          "type": "text",
           "settings": {
-            "show_more_enable": true,
-            "max_lines": 9,
-            "show_more_label": "See More",
-            "show_less_label": "Show less",
-            "show_more_color": "#56baf7"
+            "text": "This premium Japanese-inspired wellness formula is designed to support women’s daily beauty and wellness routines from within. Featuring carefully selected ingredients for skin hydration, relaxation, and nutritional balance, it helps support healthy-looking skin, everyday vitality, and overall wellness as part of a balanced lifestyle. Ideal for women seeking elegant daily beauty care and wellness support in one convenient formula.",
+            "text_style": "body"
           }
         },
         "variant_picker": {
@@ -116,7 +112,7 @@
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
         "price_fWc9Ag",
-        "description",
+        "text_g8HRBp",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
