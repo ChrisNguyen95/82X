@@ -44,12 +44,6 @@
             "heading_3": ""
           }
         },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "price_XqcrzV": {
           "type": "price",
           "settings": {}
@@ -64,6 +58,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -72,18 +67,6 @@
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
-        },
-        "icon_with_text_wFEcbx": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "return",
-            "heading_1": "<strong>30 Day Money Back</strong>",
-            "icon_2": "truck",
-            "heading_2": "<strong>Free Shipping in the US</strong>",
-            "icon_3": "star",
-            "heading_3": "<strong>Japanese Made</strong>"
-          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -127,6 +110,24 @@
             "content": "<ul><li>Fish Collagen Peptide</li><li>Rosa Damascena Extract Powder</li><li>Cherry Blossom Flower Extract <em>(Standardized)</em></li><li>Pineapple Fruit Extract <em>(600 μg Ceramide)</em></li><li>Zinc Gluconate <em>(8.8 mg Zinc)</em></li><li>Magnesium Chloride <em>(5.4 mg Magnesium)</em></li><li>Hyaluronic Acid + Hydrolyzed Elastin</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_tab_V39iML": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Free shipping within the U.S",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_fB9fT3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "30-Day Money-back Guarantee",
+            "icon": "return",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -134,16 +135,16 @@
         "title_BYxPjh",
         "text_kPTJY4",
         "icon_with_text_KnBhzC",
-        "okendo_star_rating_HG7A6w",
         "price_XqcrzV",
         "text_grw7Vf",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
-        "icon_with_text_wFEcbx",
         "buy_buttons",
         "collapsible_tab_4RUtKb",
         "collapsible_tab_MbcfPG",
-        "collapsible_tab_PV4eT9"
+        "collapsible_tab_PV4eT9",
+        "collapsible_tab_V39iML",
+        "collapsible_tab_fB9fT3"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -672,18 +673,6 @@
     },
     "17742594372d116b7c": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_b4YCyR"
-      ],
       "settings": {
         "include_margins": true,
         "title": "Customer’s Review",
