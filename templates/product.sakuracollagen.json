@@ -21,12 +21,17 @@
         },
         "amazon_reviews_stars_product_widget_block_gehkne": {
           "type": "shopify://apps/amazon-reviews/blocks/stars-product-widget-block/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "disabled": true,
           "settings": {
             "font": "theme",
             "themeId": "light",
             "alignment": "start",
             "layout": "inline"
           }
+        },
+        "vitals_reviews_stars_hrrGH7": {
+          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
         },
         "title_BYxPjh": {
           "type": "title",
@@ -143,6 +148,7 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "amazon_reviews_stars_product_widget_block_gehkne",
+        "vitals_reviews_stars_hrrGH7",
         "title_BYxPjh",
         "text_E8GkJn",
         "icon_with_text_pYjCgk",
@@ -822,6 +828,32 @@
         "padding_bottom": 48
       }
     },
+    "1778815538b29b16f1": {
+      "type": "apps",
+      "blocks": {
+        "vitals_product_reviews_WAyRMC": {
+          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {
+            "hide_mock_data": false
+          }
+        }
+      },
+      "block_order": [
+        "vitals_product_reviews_WAyRMC"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "logo_content_banner_fJ9ziz": {
       "type": "logo-content-banner",
       "blocks": {
@@ -947,6 +979,7 @@
     "1777450600510c9ce6",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
+    "1778815538b29b16f1",
     "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
   ]
