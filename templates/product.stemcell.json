@@ -25,23 +25,9 @@
         },
         "text_kPTJY4": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Cellular-level skin repair — rebuilt, restored, and radiant from within.",
+            "text": "Advanced marine collagen formula with botanical stem cell ingredients for daily beauty and wellness support.",
             "text_style": "subtitle"
-          }
-        },
-        "icon_with_text_KnBhzC": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "fire",
-            "heading_1": "<strong>Highly rated by customers for:Skin Firmness, Deep Hydration, Brightening Effect, Anti-Aging Recovery, Immunity Support</strong>",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
           }
         },
         "price_XqcrzV": {
@@ -50,9 +36,8 @@
         },
         "text_grw7Vf": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "120,000mg deep-sea collagen + Damask Rose Stem Cells — rebuilds skin from the cellular level. Firmer, brighter, deeply hydrated skin in one daily 500ml drink. Daily use recommended · Suitable for women 25+",
+            "text": "Formulated with marine collagen peptides and Damask Rose stem cell extract to help support healthy-looking skin hydration, smoothness, and elasticity. Designed as a daily beauty wellness drink for women seeking premium Japanese-inspired nutritional care and radiant-looking skin.",
             "text_style": "body"
           }
         },
@@ -66,6 +51,7 @@
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -85,11 +71,10 @@
         },
         "collapsible_tab_4RUtKb": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Benefits",
             "icon": "check_mark",
-            "content": "<ul><li>Reverses cellular aging, restores skin from the deepest layer with powerful antioxidant protection</li><li>Fills deep wrinkles, restores volume and firmness — zero fat, 99% biocompatible</li><li>HA + Elastin + White Jelly Fungus deliver intense moisture, leaving skin plump, soft, and naturally glowing</li><li>Strengthens skin barrier and body immunity, soothes inflammation and redness</li><li>Detoxifies, supports healthy digestion and gut balance with vitamins, minerals & natural enzymes</li><li>Reduces stress, improves sleep quality, and maintains smooth, supple skin overnight</li></ul>",
+            "content": "<p>• Helps support healthy-looking skin hydration and elasticity<br/>• Marine collagen peptides help maintain smooth, firm-looking skin<br/>• Hyaluronic Acid, Elastin, and White Jelly Mushroom provide moisture support for softer-looking skin<br/>• Antioxidant-rich formula designed for daily beauty and wellness support<br/>• Fermented plant ingredients help support digestive wellness and nutritional balance<br/>• Supports overall wellness and relaxation as part of a balanced lifestyle<br/>• Designed for daily beauty care from within</p>",
             "page": ""
           }
         },
@@ -98,7 +83,7 @@
           "settings": {
             "heading": "How to Use",
             "icon": "check_mark",
-            "content": "<p>Usually, drink about <strong>25 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+            "content": "<p>Usually, drink about 2<strong>5 ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
             "page": ""
           }
         },
@@ -134,7 +119,6 @@
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
         "text_kPTJY4",
-        "icon_with_text_KnBhzC",
         "price_XqcrzV",
         "text_grw7Vf",
         "variant_picker",
@@ -188,14 +172,14 @@
         "heading_RjpcJM": {
           "type": "heading",
           "settings": {
-            "heading": "Why Women Choose This Over Everything Else",
+            "heading": "Why Women Choose This Formula",
             "heading_size": "h1"
           }
         },
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Not just collagen. Cellular-level repair.</strong><br/>Most collagen drinks stop at the surface. This formula goes deeper — Damask Rose Stem Cells activate your skin's own self-repair mechanism, regenerating from the innermost layer. The kind of results you'd expect from a clinic, in a daily 500ml drink.</p><p><strong>The numbers speak for themselves:</strong></p><ul><li>6,000mg fish collagen peptides — ultra-absorbable, zero fat, highly biocompatible</li><li>108mg Rosa Damascena — one of the most potent anti-aging botanicals in the world</li><li>8.8mg Zinc — clinically associated with immunity, inflammation control & skin clarity</li><li>600μg Ceramide from Pineapple — seals and strengthens the skin barrier from within</li></ul>",
+            "text": "<h3>More Than Marine Collagen — Daily Beauty & Wellness Support</h3><p>Many beauty supplements focus on surface-level hydration. This formula combines marine collagen peptides with botanical ingredients and skin-support nutrients to help maintain healthy-looking skin, hydration, and overall wellness as part of a consistent beauty routine.</p><p>Crafted in Japan, this daily liquid formula is designed for women seeking premium beauty-from-within support.</p><h3>Featured Ingredients</h3><p>• <strong>6g Fish Collagen Peptides</strong> — Marine collagen peptides to support skin hydration and elasticity</p><p>• <strong>Rosa Damascena Extract</strong> — Botanical antioxidant support for healthy-looking skin</p><p>• <strong>Zinc</strong> — Essential mineral that supports normal skin health and overall wellness</p><p>• <strong>Pineapple-Derived Ceramide</strong> — Helps support the skin’s natural moisture barrier</p><p>• <strong>Liquid Beauty Formula</strong> — Easy-to-enjoy daily supplement crafted for beauty and wellness support</p>",
             "text_style": "body"
           }
         },
@@ -215,7 +199,6 @@
         "text_BctwwL",
         "button_6qGJwe"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "full_width": false,
