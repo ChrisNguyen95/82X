@@ -23,6 +23,10 @@
           "type": "title",
           "settings": {}
         },
+        "judge_me_reviews_preview_badge_pnVmPY": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "text_D4wp8p": {
           "type": "text",
           "settings": {
@@ -41,12 +45,6 @@
             "heading_2": "",
             "icon_3": "truck",
             "heading_3": ""
-          }
-        },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
           }
         },
         "price_9UgXc9": {
@@ -130,9 +128,9 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "judge_me_reviews_preview_badge_pnVmPY",
         "text_D4wp8p",
         "icon_with_text_pNFDrM",
-        "okendo_star_rating_HG7A6w",
         "price_9UgXc9",
         "text_eFc6pH",
         "variant_picker",
@@ -683,6 +681,35 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1778813510b83a8947": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_p7PCFx": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_p7PCFx"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -695,6 +722,7 @@
     "review_badge_MHhxiE",
     "accordion_section_cmYxRz",
     "logo_marquee_bm3BCd",
-    "1778813366cbfa4b4c"
+    "1778813366cbfa4b4c",
+    "1778813510b83a8947"
   ]
 }
