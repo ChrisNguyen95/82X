@@ -191,14 +191,14 @@
         "breadcrumb_current_color": "#1c2b6b",
         "media_size": "small",
         "constrain_to_viewport": true,
-        "media_fit": "cover",
+        "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 32
+        "padding_bottom": 0
       }
     },
     "related-products": {
