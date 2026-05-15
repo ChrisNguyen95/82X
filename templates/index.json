@@ -809,8 +809,8 @@
         "gap_desktop": 48,
         "gap_mobile": 24,
         "content_max_width": 800,
-        "heading_color": "#1C2B6B",
-        "text_color": "#1C2B6B",
+        "heading_color": "#1c2b6b",
+        "text_color": "#1c2b6b",
         "btn_primary_bg": "#ffffff",
         "btn_primary_color": "#ffffff",
         "background_color": "#f0f8fe",
@@ -819,154 +819,28 @@
         "padding_bottom": 48
       }
     },
-    "testimonial_slider_7t8nhQ": {
-      "type": "testimonial-slider",
-      "blocks": {
-        "review_nfEAET": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/1111.jpg",
-            "star_rating": 5,
-            "author": "Lily Wang",
-            "location": "Texas, USA",
-            "text": "I used to compare my skin to everyone else's and never felt good enough. But after using 82X Sakura Placenta, I realized I don't need 'perfect' glass skin—I just wanted healthy skin.\nMy skin isn't bleached white, but it's even, strong, and clear. Reaching this stable 'good' level feels amazing. I’ve stopped obsessing over every flaw and finally feel comfortable in my own skin. It’s such a relief."
-          }
-        },
-        "review_jGnEXy": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/222.jpg",
-            "star_rating": 5,
-            "author": "Kaede",
-            "location": "Texas, USA",
-            "text": "I have more energy to tackle my day, even with less sleep. Sakura Placenta is a lifesaver. My friends are all asking what my secret is. It's 82X, and it's popular!"
-          }
-        },
-        "review_q4bPwc": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/33.jpg",
-            "star_rating": 5,
-            "author": "Mia Nguyen",
-            "location": "Texas, USA",
-            "text": "As a new mom who recently weaned, I know firsthand the struggle of post-pregnancy skin. My hormones were all over the place, and I was left with stubborn melasma that just wouldn't budge. I tried various creams and serums, but nothing truly addressed the dark spots."
-          }
-        }
-      },
-      "block_order": [
-        "review_nfEAET",
-        "review_jGnEXy",
-        "review_q4bPwc"
-      ],
-      "disabled": true,
-      "name": "Testimonial Grid (Photo)",
-      "settings": {
-        "heading": "reviews",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_align": "center",
-        "desktop_layout": "grid",
-        "desktop_cols": "3",
-        "card_bg": "#ffffff",
-        "card_border_color": "#e0e0e0",
-        "card_border_width": 0,
-        "card_radius": 16,
-        "card_padding": 8,
-        "card_text_align": "center",
-        "card_image_ratio": "natural",
-        "card_image_radius": 16,
-        "card_image_flush": true,
-        "author_color": "#070a13",
-        "review_text_color": "#3d3d3d",
-        "show_stars": false,
-        "star_color": "#f5a623",
-        "star_color_empty": "#d4d4d4",
-        "button_label": "Read all reviews",
-        "button_link": "shopify://pages/all-review",
-        "button_secondary": false,
-        "footer_gap": 40,
-        "card_peek_mobile": 32,
-        "card_gap_mobile": 12,
-        "card_gap_desktop": 24,
-        "show_nav": false,
-        "loop_enabled": true,
-        "nav_color": "#1c2b6b",
-        "color_scheme": "scheme-97864d94-7ccc-4d7d-996d-09ac22e1e061",
-        "background_color": "#ffffff",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "1774448626dae4d65e": {
+    "1778817662afae9406": {
       "type": "apps",
       "blocks": {
-        "okendo_reviews_widget_eyjarP": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "82x-stem-cell-collagen-premium",
-            "widget_type": "combined_widget"
-          }
+        "vitals_featured_reviews_h8itB7": {
+          "type": "shopify://apps/vitals/blocks/featured-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
         }
       },
       "block_order": [
-        "okendo_reviews_widget_eyjarP"
+        "vitals_featured_reviews_h8itB7"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true,
-        "title": "Continue scrolling to discover the thoughts of our community.",
+        "title": "",
         "heading_size": "h1",
         "heading_align": "center",
-        "heading_max_width": 880,
-        "text": "<p>Here’s a space for our customers to share their experiences. We don’t interfere! These reviews are raw and unedited. You can find them by clicking 'reviews' in the menu.</p><p>82X's dietary supplements are not designed to diagnose, treat, cure, or prevent any diseases. Individual results may differ.</p>",
-        "text_max_width": 960,
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
         "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "rich_text_cHyYie": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xQLmPV": {
-          "type": "heading",
-          "settings": {
-            "heading": "Continue scrolling to discover the thoughts of our community.",
-            "heading_size": "h1"
-          }
-        },
-        "text_LccU3G": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Here’s a space for our customers to share their experiences. We don’t interfere! These reviews are raw and unedited. You can find them by clicking 'reviews' in the menu.</p><p>82X's dietary supplements are not designed to diagnose, treat, cure, or prevent any diseases. Individual results may differ.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_xQLmPV",
-        "text_LccU3G"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "custom_liquid_HMKTYQ": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div data-oke-widget=\"\"></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -984,9 +858,6 @@
     "image_with_text_bQNCQa",
     "rich_text_mbAnL8",
     "logo_content_banner_9D8AXn",
-    "testimonial_slider_7t8nhQ",
-    "1774448626dae4d65e",
-    "rich_text_cHyYie",
-    "custom_liquid_HMKTYQ"
+    "1778817662afae9406"
   ]
 }
