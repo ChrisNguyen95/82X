@@ -107,8 +107,9 @@
         },
         "icon_with_text_nrh9MX": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
-            "layout": "vertical",
+            "layout": "horizontal",
             "icon_1": "return",
             "heading_1": "<strong>30 Day Money Back</strong>",
             "icon_2": "truck",
