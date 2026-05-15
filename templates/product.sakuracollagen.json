@@ -19,29 +19,13 @@
             "padding_bottom": 30
           }
         },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "disabled": true,
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "amazon_reviews_stars_product_widget_block_gehkne": {
           "type": "shopify://apps/amazon-reviews/blocks/stars-product-widget-block/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "disabled": true,
           "settings": {
             "font": "theme",
             "themeId": "light",
             "alignment": "start",
             "layout": "inline"
-          }
-        },
-        "amazon_reviews_compact_widget_block_product_ckmqw9": {
-          "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "settings": {
-            "font": "theme",
-            "themeId": "light",
-            "minimize": true
           }
         },
         "title_BYxPjh": {
@@ -158,9 +142,7 @@
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
-        "okendo_star_rating_HG7A6w",
         "amazon_reviews_stars_product_widget_block_gehkne",
-        "amazon_reviews_compact_widget_block_product_ckmqw9",
         "title_BYxPjh",
         "text_E8GkJn",
         "icon_with_text_pYjCgk",
@@ -295,22 +277,6 @@
     },
     "177754175590e78235": {
       "type": "apps",
-      "blocks": {
-        "pretty_comparison_tables_table_Bfwtfg": {
-          "type": "shopify://apps/pretty-comparison-tables/blocks/table/4ce14980-e26b-4398-92cd-f582d95d4f05",
-          "settings": {
-            "product": "{{product}}",
-            "title_text": "Why 82X Stands Out From Ordinary Collagen",
-            "title_font_tag": "h2",
-            "section_background_color": "",
-            "desktop_width": "",
-            "mobile_width": ""
-          }
-        }
-      },
-      "block_order": [
-        "pretty_comparison_tables_table_Bfwtfg"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true,
@@ -771,18 +737,6 @@
     },
     "17742594372d116b7c": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_b4YCyR"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true,
