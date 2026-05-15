@@ -19,16 +19,6 @@
             "padding_bottom": 30
           }
         },
-        "amazon_reviews_stars_product_widget_block_gehkne": {
-          "type": "shopify://apps/amazon-reviews/blocks/stars-product-widget-block/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "disabled": true,
-          "settings": {
-            "font": "theme",
-            "themeId": "light",
-            "alignment": "start",
-            "layout": "inline"
-          }
-        },
         "vitals_reviews_stars_hrrGH7": {
           "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
           "settings": {}
@@ -147,7 +137,6 @@
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
-        "amazon_reviews_stars_product_widget_block_gehkne",
         "vitals_reviews_stars_hrrGH7",
         "title_BYxPjh",
         "text_E8GkJn",
@@ -461,57 +450,30 @@
         "padding_bottom": 60
       }
     },
-    "image_with_text_nrjQxn": {
-      "type": "image-with-text",
+    "1778815538b29b16f1": {
+      "type": "apps",
       "blocks": {
-        "heading_EChdjh": {
-          "type": "heading",
+        "vitals_product_reviews_WAyRMC": {
+          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
           "settings": {
-            "heading": "Unsure about which item suits your needs?",
-            "heading_size": "h1"
-          }
-        },
-        "text_gRFxR6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Start by taking our quick 2-minute quiz.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Wp8GHa": {
-          "type": "button",
-          "settings": {
-            "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
+            "hide_mock_data": false
           }
         }
       },
       "block_order": [
-        "heading_EChdjh",
-        "text_gRFxR6",
-        "button_Wp8GHa"
+        "vitals_product_reviews_WAyRMC"
       ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "text_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 36
       }
     },
     "multicolumn_zHFXty": {
@@ -574,145 +536,12 @@
         "padding_bottom": 100
       }
     },
-    "rich_text_FNtXJe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rC4VFK": {
-          "type": "heading",
-          "settings": {
-            "heading": "3 parts to our maximum support",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rC4VFK"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "review_badge_MHhxiE": {
-      "type": "review-badge",
-      "disabled": true,
-      "name": "Review Badge",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "bg_color": "#d9eeff",
-        "star_color": "#f5b427",
-        "number_color": "#1c2b6b",
-        "title_color": "#1c2b6b",
-        "text_color": "#1c2b6b",
-        "show_stars": true,
-        "star_count": 5,
-        "star_size": 28,
-        "counter_number": "45,893",
-        "counter_prefix": "",
-        "counter_suffix": "",
-        "counter_duration": 1800,
-        "number_size": 96,
-        "number_size_mobile": 88,
-        "title": "5 Star Brand Reviews",
-        "title_size": 20,
-        "title_size_mobile": 18,
-        "text": "Discover why so many recommend our products for effective, lasting results.",
-        "button_label": "READ ALL REVIEWS",
-        "button_link": "",
-        "button_secondary": false,
-        "content_max_width": 680,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "testimonial_slider_9trVDQ": {
-      "type": "testimonial-slider",
-      "blocks": {
-        "review_C3rcgR": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Review_image.jpg",
-            "star_rating": 5,
-            "author": "Lily Wang",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
-          }
-        },
-        "review_jfPCiA": {
-          "type": "review",
-          "settings": {
-            "star_rating": 5,
-            "author": "Kaede",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
-          }
-        },
-        "review_N8mLzT": {
-          "type": "review",
-          "settings": {
-            "star_rating": 5,
-            "author": "Mia Nguyen",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
-          }
-        }
-      },
-      "block_order": [
-        "review_C3rcgR",
-        "review_jfPCiA",
-        "review_N8mLzT"
-      ],
-      "disabled": true,
-      "name": "Testimonial Grid (Photo)",
-      "settings": {
-        "heading": "Quality Ingredients Lead To Happy Customers.",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_align": "center",
-        "desktop_layout": "grid",
-        "desktop_cols": "3",
-        "card_bg": "#ffffff",
-        "card_border_color": "#e0e0e0",
-        "card_border_width": 0,
-        "card_radius": 16,
-        "card_padding": 24,
-        "card_text_align": "center",
-        "card_image_ratio": "3/4",
-        "card_image_radius": 16,
-        "card_image_flush": false,
-        "author_color": "#1c2b6b",
-        "review_text_color": "#3d3d3d",
-        "show_stars": false,
-        "star_color": "#f5a623",
-        "star_color_empty": "#d4d4d4",
-        "button_label": "",
-        "button_link": "",
-        "button_secondary": false,
-        "footer_gap": 40,
-        "card_peek_mobile": 32,
-        "card_gap_mobile": 12,
-        "card_gap_desktop": 24,
-        "show_nav": true,
-        "loop_enabled": true,
-        "nav_color": "#1c2b6b",
-        "color_scheme": "",
-        "background_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "1777450600510c9ce6": {
       "type": "apps",
       "blocks": {
         "amazon_reviews_masonry_widget_block_product_QRNLiG": {
           "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "disabled": true,
           "settings": {
             "font": "default",
             "themeId": "light",
@@ -738,22 +567,6 @@
         "text_max_width": 0,
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "17742594372d116b7c": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "title": "Customer’s Review",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -826,32 +639,6 @@
         "color_scheme": "",
         "padding_top": 100,
         "padding_bottom": 48
-      }
-    },
-    "1778815538b29b16f1": {
-      "type": "apps",
-      "blocks": {
-        "vitals_product_reviews_WAyRMC": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {
-            "hide_mock_data": false
-          }
-        }
-      },
-      "block_order": [
-        "vitals_product_reviews_WAyRMC"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
       }
     },
     "logo_content_banner_fJ9ziz": {
@@ -971,15 +758,10 @@
     "177754175590e78235",
     "image_with_text_9pQ8im",
     "product_ingredients_7RjUJx",
-    "image_with_text_nrjQxn",
-    "multicolumn_zHFXty",
-    "rich_text_FNtXJe",
-    "review_badge_MHhxiE",
-    "testimonial_slider_9trVDQ",
-    "1777450600510c9ce6",
-    "17742594372d116b7c",
-    "accordion_section_cmYxRz",
     "1778815538b29b16f1",
+    "multicolumn_zHFXty",
+    "1777450600510c9ce6",
+    "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
   ]
