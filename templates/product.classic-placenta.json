@@ -23,11 +23,9 @@
           "type": "title",
           "settings": {}
         },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
-          }
+        "price_fWc9Ag": {
+          "type": "price",
+          "settings": {}
         },
         "description": {
           "type": "description",
@@ -42,6 +40,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -49,25 +48,8 @@
         },
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
           "settings": {}
-        },
-        "trust_badges_MXEzeQ": {
-          "type": "trust_badges",
-          "settings": {
-            "show_border": false,
-            "border_color": "#e0e0e0",
-            "bg_color": "#ffffff",
-            "text_color": "#070a13",
-            "icon_size": 26,
-            "margin_top": 24,
-            "margin_bottom": 0,
-            "badge_1_icon": "shopify://shop_images/Icon_8781c137-7e13-4dfa-8baf-2952f06b3cf5.png",
-            "badge_1_text": "Free shipping",
-            "badge_2_icon": "shopify://shop_images/sack-money.png",
-            "badge_2_text": "60 Day Money Back",
-            "badge_3_text": "",
-            "badge_4_text": ""
-          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -115,11 +97,10 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
-        "okendo_star_rating_HG7A6w",
+        "price_fWc9Ag",
         "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
-        "trust_badges_MXEzeQ",
         "buy_buttons",
         "collapsible_tab_pY6cc4",
         "collapsible_tab_pGYyk6",
@@ -174,7 +155,7 @@
         "text_BctwwL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>More Than A Beauty Drink — A Complete Daily Beauty Wellness Ritual</strong></p><p>Many beauty drinks focus on hydration alone. 82X Classic Placenta is crafted with a premium blend of placenta extract, marine collagen peptides, fermented botanicals, and beauty-focused nutrients designed to support radiant-looking skin and everyday wellness from within.</p><p>Carefully developed in Japan, this refined formula combines traditional beauty inspiration with modern wellness ingredients for daily self-care support.</p><ul><li>Supports hydrated, radiant-looking skin<br/></li><li>Complements daily beauty and self-care routines<br/></li><li>Crafted with premium Japanese beauty ingredients<br/></li><li>Designed for consistent daily use</li></ul><p></p><p><strong>Optional FDA Disclaimer (recommended for PDP):</strong><br/><em>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</em></p>",
+            "text": "<p><strong>More Than A Beauty Drink — A Complete Daily Beauty Wellness Ritual</strong></p><p>Many beauty drinks focus on hydration alone. 82X Classic Placenta is crafted with a premium blend of placenta extract, marine collagen peptides, fermented botanicals, and beauty-focused nutrients designed to support radiant-looking skin and everyday wellness from within.</p><p>Carefully developed in Japan, this refined formula combines traditional beauty inspiration with modern wellness ingredients for daily self-care support.</p><ul><li>Supports hydrated, radiant-looking skin<br/></li><li>Complements daily beauty and self-care routines<br/></li><li>Crafted with premium Japanese beauty ingredients<br/></li><li>Designed for consistent daily use</li></ul><p><br/><em>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</em></p>",
             "text_style": "body"
           }
         },
@@ -387,18 +368,6 @@
     },
     "17742594372d116b7c": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_b4YCyR"
-      ],
       "settings": {
         "include_margins": true,
         "title": "Customer’s Review",
