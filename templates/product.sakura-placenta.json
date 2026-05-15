@@ -36,17 +36,10 @@
             "heading_3": ""
           }
         },
-        "okendo_star_rating_HG7A6w": {
-          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "text_dAxeyX": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "450,000mg Placenta + African Mango — whitens, slims, and balances hormones in one daily drink. Japan's most advanced formula for a brighter body and leaner figure.",
+            "text": "Formulated with Placenta Extract and African Mango as part of a premium Japanese-inspired beauty and wellness drink. Designed to support healthy-looking skin, daily wellness balance, and body wellness routines in one convenient liquid formula.",
             "text_style": "body"
           }
         },
@@ -64,18 +57,6 @@
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
           "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
           "settings": {}
-        },
-        "icon_with_text_e76dQM": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "return",
-            "heading_1": "<strong>30 Days Money Back</strong>",
-            "icon_2": "truck",
-            "heading_2": "<strong>Free Shipping in the US</strong>",
-            "icon_3": "star",
-            "heading_3": "<strong>Japanese Made</strong>"
-          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -118,22 +99,40 @@
             "content": "<ul><li>450,000mg Shizuoka \"Happy Pig\" Placenta</li><li>African Mango Seed Extract</li><li>Yeast Peptide</li><li>Japanese Orange 5,000mg</li><li>Sakura (Cherry Blossom) Extract</li><li>Coconut Water Powder + Kiwi Seed Extract</li><li>Coenzyme Q10</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_tab_Dd6wUg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "30-Day Money-back Guarante",
+            "icon": "return",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_r7NMnP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Free shipping within the U.S",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
         "icon_with_text_8XtXVE",
-        "okendo_star_rating_HG7A6w",
         "text_dAxeyX",
         "price_gqgrfi",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
-        "icon_with_text_e76dQM",
         "buy_buttons",
         "collapsible_tab_wGfVKx",
         "collapsible_tab_e7MetA",
-        "collapsible_tab_aHcqkU"
+        "collapsible_tab_aHcqkU",
+        "collapsible_tab_Dd6wUg",
+        "collapsible_tab_r7NMnP"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -458,18 +457,6 @@
     },
     "17742594372d116b7c": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_b4YCyR": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_b4YCyR"
-      ],
       "settings": {
         "include_margins": true,
         "title": "Customer’s Review",
