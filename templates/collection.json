@@ -43,7 +43,7 @@
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": true,
+        "show_rating": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
@@ -106,18 +106,6 @@
     },
     "apps_awYBMC": {
       "type": "apps",
-      "blocks": {
-        "okendo_reviews_widget_TnYjjb": {
-          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
-          "settings": {
-            "product": "82x-stem-cell-collagen-premium",
-            "widget_type": "combined_widget"
-          }
-        }
-      },
-      "block_order": [
-        "okendo_reviews_widget_TnYjjb"
-      ],
       "settings": {
         "include_margins": true,
         "title": "Loved by women who believe in beauty from within",
