@@ -332,347 +332,35 @@
         "padding_bottom": 60
       }
     },
-    "image_with_text_nrjQxn": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_EChdjh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why 82X Stemcell Stands Above The Rest",
-            "heading_size": "h1"
-          }
-        },
-        "text_gRFxR6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Unlike other 82X lines, it delivers a powerful triple-action effect: supporting a slimmer body, assisting in weight management, and promoting deep detoxification. This means you’re not only improving your appearance, but also optimizing your body from within.</p><p>At the core of its difference is the fusion of rose stem cells and collagen - a combination that actively repairs, regenerates, and extends the lifespan of your cells. The result? Stronger internal health, visibly younger skin, and a body that feels lighter, healthier, and more balanced over time.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Wp8GHa": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "TRY RISK FREE",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "primary",
-            "button_link_color": "#1c2b6b"
-          }
-        }
-      },
-      "block_order": [
-        "heading_EChdjh",
-        "text_gRFxR6",
-        "button_Wp8GHa"
-      ],
-      "disabled": true,
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Artboard_2_da5419ca-ff3b-4521-97cd-643a7741ce90.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "text_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 36,
-        "padding_bottom": 100
-      }
-    },
-    "multicolumn_zHFXty": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_qGDqjL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Rectangle_38.jpg",
-            "title": "<em><strong>Dr. Alyssa Dweck</strong></em>",
-            "text": "<p><strong>Board-certified Gynecologist; CMO Bonafide Health, LLC</strong></p><p>“High-quality placental extract + bioactive collagen peptides support skin regeneration, elasticity, and natural glow from within.”</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_NG6rbL": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Rectangdle_38.jpg",
-            "title": "<em><strong>Dr. Payal Bhandari</strong></em>",
-            "text": "<p><strong>Integrative Functional Medicine Physician</strong></p><p>“Packed with peptides & amino acids, it nourishes the skin and body, helping balance hormones and reduce signs of aging.”</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_8J8ytE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Rectangled38.jpg",
-            "title": "<em><strong>Dr. Katherine Klos</strong></em>",
-            "text": "<p><strong>Dermatologist</strong></p><p>“Improves skin smoothness, pore appearance, and hydration in 4–6 weeks — a complete inside-out beauty solution.”</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_qGDqjL",
-        "column_NG6rbL",
-        "column_8J8ytE"
-      ],
-      "disabled": true,
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Meet the doctors and scientists helping 82x make a difference",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 760,
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "MEET OUR ADVISORS",
-        "button_link": "shopify://pages/hero-products",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "rich_text_FNtXJe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_rC4VFK": {
-          "type": "heading",
-          "settings": {
-            "heading": "3 parts to our maximum support",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rC4VFK"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_with_text_MPF6Qp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_BVQiUU": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Sakura Placenta - White & Contour</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_QMU9yn": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_E9mbGP": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_BVQiUU",
-        "text_QMU9yn",
-        "button_E9mbGP"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/Pictures_container.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 52,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_A96TqF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UzaWGg": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>82X Collagen Classic – Liquid Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_DkJYtW": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_w7Wpqp": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UzaWGg",
-        "text_DkJYtW",
-        "button_w7Wpqp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssss.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "image_with_text_b9wzDz": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DC4VwY": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>Koharu Collagen – Premium Japanese Marine Collagen Drink</em>",
-            "heading_size": "h1"
-          }
-        },
-        "text_Mrn3mk": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Brightens and evens skin tone: Helps reduce dark spots, melasma, and pigmentation for a clearer and more radiant complexion.</li><li>Supports anti-aging and skin rejuvenation: Placenta extract and collagen help stimulate cell renewal, improve skin elasticity, and reduce signs of aging.</li><li>Balances female hormones: Supports hormonal health, helping improve mood balance and overall feminine wellness</li><li>Helps with body shaping and metabolism: Ingredients such as African mango extract may support fat metabolism and weight management.</li><li>Strengthens hair and nails: Rich amino acids and nutrients help promote healthier hair growth and stronger nails.</li><li>Supports detox and immunity: Helps the body remove toxins and maintain overall wellness</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_f9M46P": {
-          "type": "button",
-          "settings": {
-            "button_label": "Supplement Facts",
-            "button_link": "shopify://pages/hero-products",
-            "button_style": "link",
-            "button_link_color": "#56baf7"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DC4VwY",
-        "text_Mrn3mk",
-        "button_f9M46P"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.image-with-text__heading {font-size: 2.4rem; }}"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "full_width": false,
-        "image": "shopify://shop_images/ssssddd.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "mobile_layout": "image_first",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-24a064db-ab3d-4dd5-bf23-2f7bfddbde72",
-        "icon_size": 40,
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
-    },
-    "review_badge_MHhxiE": {
-      "type": "review-badge",
-      "disabled": true,
-      "name": "Review Badge",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "bg_color": "#d9eeff",
-        "star_color": "#f5b427",
-        "number_color": "#1c2b6b",
-        "title_color": "#1c2b6b",
-        "text_color": "#1c2b6b",
-        "show_stars": true,
-        "star_count": 5,
-        "star_size": 28,
-        "counter_number": "45,893",
-        "counter_prefix": "",
-        "counter_suffix": "",
-        "counter_duration": 1800,
-        "number_size": 96,
-        "number_size_mobile": 88,
-        "title": "5 Star Brand Reviews",
-        "title_size": 20,
-        "title_size_mobile": 18,
-        "text": "Discover why so many recommend our products for effective, lasting results.",
-        "button_label": "READ ALL REVIEWS",
-        "button_link": "",
-        "button_secondary": false,
-        "content_max_width": 680,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "17742594372d116b7c": {
       "type": "apps",
+      "blocks": {
+        "vitals_product_reviews_VEtwYt": {
+          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {
+            "hide_mock_data": false
+          }
+        },
+        "amazon_reviews_carousel_widget_block_product_VTFzXH": {
+          "type": "shopify://apps/amazon-reviews/blocks/carousel-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "autoscroll": true,
+            "showProductPicture": true,
+            "showDate": true,
+            "fixedReviewsHeight": false,
+            "textStyle": "plain",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "left"
+          }
+        }
+      },
+      "block_order": [
+        "vitals_product_reviews_VEtwYt",
+        "amazon_reviews_carousel_widget_block_product_VTFzXH"
+      ],
       "settings": {
         "include_margins": true,
         "title": "Customer’s Review",
@@ -840,13 +528,6 @@
     "related-products",
     "image_with_text_9pQ8im",
     "product_ingredients_XtHimA",
-    "image_with_text_nrjQxn",
-    "multicolumn_zHFXty",
-    "rich_text_FNtXJe",
-    "image_with_text_MPF6Qp",
-    "image_with_text_A96TqF",
-    "image_with_text_b9wzDz",
-    "review_badge_MHhxiE",
     "17742594372d116b7c",
     "accordion_section_cmYxRz",
     "logo_marquee_DpGpLG"
