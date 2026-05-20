@@ -106,7 +106,8 @@
             "margin_bottom": 0,
             "badge_1_icon": "shopify://shop_images/Icon.svg",
             "badge_1_text": "Freeshipping within US. Delivered in 3 - 5 Business Days",
-            "badge_2_text": "",
+            "badge_2_icon": "shopify://shop_images/secured.png",
+            "badge_2_text": "30-Day Money-back Guarantee",
             "badge_3_text": "",
             "badge_4_text": ""
           }
@@ -149,15 +150,6 @@
             "content": "<p><strong>120,000mg Deep-Sea Salmon Collagen</strong><br/>Powered by Liposome Technology for superior absorption</p><p><strong>Sakura (Cherry Blossom) Extract <br/></strong>Natural Brightening Agent</p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/>Harnessing 8 years of traditional Japanese fermentation science</p><p><strong>The Hydration & Bounce Duo </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
             "page": ""
           }
-        },
-        "collapsible_tab_7UwFjP": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "30-Day Money-back Guarantee",
-            "icon": "return",
-            "content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -177,8 +169,7 @@
         "inventory_hqFEqK",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
-        "collapsible_tab_G3g7xm",
-        "collapsible_tab_7UwFjP"
+        "collapsible_tab_G3g7xm"
       ],
       "settings": {
         "enable_sticky_info": true,
