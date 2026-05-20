@@ -436,7 +436,7 @@
         "button_HEGULY": {
           "type": "button",
           "settings": {
-            "button_label": "Explore The Collection",
+            "button_label": "Shop Best-Sellers Now",
             "button_link": "shopify://collections/all-products",
             "button_style": "primary",
             "button_link_color": "#1c2b6b"
