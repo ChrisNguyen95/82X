@@ -66,17 +66,6 @@
             "text_style": "body"
           }
         },
-        "description": {
-          "type": "description",
-          "disabled": true,
-          "settings": {
-            "show_more_enable": true,
-            "max_lines": 9,
-            "show_more_label": "See More",
-            "show_less_label": "Show less",
-            "show_more_color": "#56baf7"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "disabled": true,
@@ -116,7 +105,7 @@
             "margin_top": 0,
             "margin_bottom": 0,
             "badge_1_icon": "shopify://shop_images/Icon.svg",
-            "badge_1_text": "Coupon Code 15%: NOWORNEVER",
+            "badge_1_text": "Freeshipping within US",
             "badge_2_text": "",
             "badge_3_text": "",
             "badge_4_text": ""
@@ -161,15 +150,6 @@
             "page": ""
           }
         },
-        "collapsible_tab_9tFtyM": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Freeshipping within US",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible_tab_7UwFjP": {
           "type": "collapsible_tab",
           "settings": {
@@ -189,7 +169,6 @@
         "icon_with_text_pYjCgk",
         "price_Tdcm8b",
         "text_7zx6xy",
-        "description",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
@@ -199,7 +178,6 @@
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
         "collapsible_tab_G3g7xm",
-        "collapsible_tab_9tFtyM",
         "collapsible_tab_7UwFjP"
       ],
       "settings": {
