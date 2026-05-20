@@ -103,7 +103,7 @@
             "text_color": "#1c2b6b",
             "icon_size": 24,
             "margin_top": -24,
-            "margin_bottom": -24,
+            "margin_bottom": -16,
             "badge_1_icon": "shopify://shop_images/Icon.svg",
             "badge_1_text": "Freeshipping within US. Delivered in 3 - 5 Business Days",
             "badge_2_icon": "shopify://shop_images/secured.png",
