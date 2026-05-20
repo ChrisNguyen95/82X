@@ -38,54 +38,10 @@
         "padding_top": 20,
         "padding_bottom": 40
       }
-    },
-    "featured_collection_EqaKty": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "all-products",
-        "products_to_show": 4,
-        "subheading": "",
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "loop_enabled": true,
-        "nav_color": "#1C2B6B",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "heading_align": "center",
-        "card_content_align": "left",
-        "card_title_lines": 2,
-        "card_desc_lines": 2,
-        "card_image_bg": "#EEF3FF",
-        "card_image_radius": 16,
-        "price_color": "",
-        "show_desc": false,
-        "show_view_btn": true,
-        "view_btn_label": "VIEW PRODUCT",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer",
-    "featured_collection_EqaKty"
+    "cart-footer"
   ]
 }
