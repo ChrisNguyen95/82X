@@ -112,6 +112,18 @@
             "badge_4_text": ""
           }
         },
+        "icon_with_text_QtiHtM": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "lightning_bolt",
+            "heading_1": "Enjoy 15% Off with NOWORNEVER",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
         "vitals_countdown_jUiRNG": {
           "type": "shopify://apps/vitals/blocks/countdown/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
           "settings": {}
@@ -165,6 +177,7 @@
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
         "trust_badges_V9J3VJ",
+        "icon_with_text_QtiHtM",
         "vitals_countdown_jUiRNG",
         "inventory_hqFEqK",
         "collapsible_tab_dHEQRC",
