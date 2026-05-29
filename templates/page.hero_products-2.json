@@ -417,6 +417,7 @@
         "text_mdVexz",
         "buttons_aHGMtk"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Module_5.png",
@@ -867,6 +868,7 @@
         "text_UahpiW",
         "buttons_FBLHpq"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/Modlue_2.png",
