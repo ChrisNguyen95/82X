@@ -108,8 +108,10 @@
             "badge_1_text": "Freeshipping within US. Delivered in 3 - 5 Business Days",
             "badge_2_icon": "shopify://shop_images/secured.png",
             "badge_2_text": "30-Day Money-back Guarantee",
-            "badge_3_text": "",
-            "badge_4_text": ""
+            "badge_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
+            "badge_3_text": "Trusted by thousands of US customers since 2020",
+            "badge_4_icon": "shopify://shop_images/Icon3.svg",
+            "badge_4_text": "Made in Japan"
           }
         },
         "icon_with_text_QtiHtM": {
@@ -127,10 +129,12 @@
         },
         "vitals_countdown_jUiRNG": {
           "type": "shopify://apps/vitals/blocks/countdown/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "disabled": true,
           "settings": {}
         },
         "inventory_hqFEqK": {
           "type": "inventory",
+          "disabled": true,
           "settings": {
             "text_style": "body",
             "inventory_threshold": 10,
