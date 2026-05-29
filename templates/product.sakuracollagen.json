@@ -62,7 +62,7 @@
         "text_7zx6xy": {
           "type": "text",
           "settings": {
-            "text": "<strong>The Ultimate Beauty Ritual:</strong> Formulated with 120,000mg of Deep-Sea Collagen Peptides and a proprietary blend of 82 fermented plants for superior radiance. <strong>Designed for the Modern Woman (35+)</strong>",
+            "text": "Japanese Liquid Collagen with Liposome Technology. Beauty from Within - 120,000mg Marine Collagen - Advanced Liposome Delivery - Made in Japan",
             "text_style": "body"
           }
         },
@@ -114,6 +114,7 @@
         },
         "icon_with_text_QtiHtM": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "lightning_bolt",
