@@ -693,22 +693,10 @@
             "heading_size": "h1"
           }
         },
-        "icon_with_text_WJVPhE": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "fire",
-            "heading_1": "<strong>Highly rated by customers for: Anti-Aging Results, Skin Rejuvenation, Deep Hydration & Total Wellness Support</strong>",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
         "text_mXmRgP": {
           "type": "text",
           "settings": {
-            "text": "<strong>The Ultimate Beauty Ritual:</strong> Formulated with 120,000mg of Deep-Sea Collagen Peptides and a proprietary blend of 82 fermented plants for superior radiance. <strong>Designed for the Modern Woman (35+)</strong>",
+            "text": "<strong>The Ultimate Beauty Ritual:</strong> Formulated with 120,000mg of Deep-Sea Collagen Peptides and a proprietary blend of 82 fermented plants for superior radiance. <strong>Designed for the Modern Woman.</strong>",
             "text_style": "body"
           }
         },
@@ -752,7 +740,6 @@
       },
       "block_order": [
         "title_Q6jUPD",
-        "icon_with_text_WJVPhE",
         "text_mXmRgP",
         "price_waXQUr",
         "variant_picker_xEiYnF",
