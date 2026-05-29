@@ -583,6 +583,7 @@
         "ingredient_HjAxjQ",
         "ingredient_YUkWdP"
       ],
+      "disabled": true,
       "name": "Ingredient Slider",
       "settings": {
         "title": "Ingredients You Can Recognize",
