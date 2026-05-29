@@ -38,7 +38,7 @@
         "text_E8GkJn": {
           "type": "text",
           "settings": {
-            "text": "<em>An elevated beauty-focused collagen ritual</em>",
+            "text": "<em>An elevated beauty-focused collagen ritual. </em>Less than $8/day.",
             "text_style": "subtitle"
           }
         },
@@ -144,9 +144,9 @@
         "collapsible_tab_dHEQRC": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Benefits",
+            "heading": "Best For",
             "icon": "star",
-            "content": "<ul><li>Promotes skin resilience and youthful radiance.</li><li>Supports internal balance and overall well-being.</li><li>Provides structural support for an active lifestyle.</li><li>Helps you stay calm and refreshed throughout the day.</li></ul>",
+            "content": "<p>✓ Visible signs of aging<br/>✓ Dull skin and uneven tone<br/>✓ Hair & nail support<br/>✓ Daily beauty wellness</p>",
             "page": ""
           }
         },
@@ -203,7 +203,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 24
       }
     },
     "related-products": {
@@ -223,6 +223,63 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "rich_text_6hBmwB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QgXeKR": {
+          "type": "heading",
+          "settings": {
+            "heading": "See Why Customers Love It →",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QgXeKR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1777450600510c9ce6": {
+      "type": "apps",
+      "blocks": {
+        "amazon_reviews_masonry_widget_block_product_QRNLiG": {
+          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "showProductPicture": true,
+            "showDate": true,
+            "textStyle": "quoted",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "center"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_masonry_widget_block_product_QRNLiG"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "product_tabs_KJinxn": {
@@ -437,39 +494,6 @@
         "padding_bottom": 36
       }
     },
-    "1777450600510c9ce6": {
-      "type": "apps",
-      "blocks": {
-        "amazon_reviews_masonry_widget_block_product_QRNLiG": {
-          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "settings": {
-            "font": "default",
-            "themeId": "light",
-            "showProductPicture": true,
-            "showDate": true,
-            "textStyle": "quoted",
-            "alignment": "left",
-            "infoPosition": "top",
-            "ratingStyle": "center"
-          }
-        }
-      },
-      "block_order": [
-        "amazon_reviews_masonry_widget_block_product_QRNLiG"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "accordion_section_cmYxRz": {
       "type": "accordion-section",
       "blocks": {
@@ -654,10 +678,11 @@
   "order": [
     "main",
     "related-products",
+    "rich_text_6hBmwB",
+    "1777450600510c9ce6",
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
     "1778815538b29b16f1",
-    "1777450600510c9ce6",
     "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
