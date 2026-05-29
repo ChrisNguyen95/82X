@@ -737,6 +737,10 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "vitals_trust_zanBf8": {
+          "type": "shopify://apps/vitals/blocks/trust/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -746,7 +750,8 @@
         "variant_picker_xEiYnF",
         "icon_with_text_QH3VBk",
         "text_wEV6Rp",
-        "buy_buttons_k7hGdP"
+        "buy_buttons_k7hGdP",
+        "vitals_trust_zanBf8"
       ],
       "custom_css": [
         ".product-form__submit {width: 100%; max-width: 100%;}"
@@ -754,7 +759,7 @@
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "82x-collagen-sakura",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-2",
         "secondary_background": false,
         "media_size": "small",
         "constrain_to_viewport": true,
@@ -769,15 +774,6 @@
     },
     "1780027396797d3449": {
       "type": "apps",
-      "blocks": {
-        "vitals_trust_XyJ8CK": {
-          "type": "shopify://apps/vitals/blocks/trust/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "vitals_trust_XyJ8CK"
-      ],
       "settings": {
         "include_margins": true,
         "title": "",
