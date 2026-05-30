@@ -35,36 +35,16 @@
           "type": "title",
           "settings": {}
         },
-        "text_E8GkJn": {
+        "text_7zx6xy": {
           "type": "text",
           "settings": {
-            "text": "<strong>Approx. 25 Days Of Daily Use (20ml/day).  Less Than $6 Per Day</strong>",
+            "text": "<strong>500ml bottle • Recommended serving: 20ml daily •  Less than $6 per day</strong>",
             "text_style": "subtitle"
-          }
-        },
-        "icon_with_text_pYjCgk": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "fire",
-            "heading_1": "Highly rated by customers for:Anti-Aging Results, Skin Rejuvenation, Deep Hydration & Total Wellness Support",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
           }
         },
         "price_Tdcm8b": {
           "type": "price",
           "settings": {}
-        },
-        "text_7zx6xy": {
-          "type": "text",
-          "settings": {
-            "text": "Japanese Liquid Collagen with Liposome Technology. Beauty from Within - 120,000mg Marine Collagen - Advanced Liposome Delivery - Made in Japan",
-            "text_style": "body"
-          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -109,36 +89,9 @@
             "badge_2_icon": "shopify://shop_images/secured.png",
             "badge_2_text": "30-Day Money-back Guarantee",
             "badge_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
-            "badge_3_text": "Trusted by thousands of US customers since 2020",
+            "badge_3_text": "500ml bottle • Recommended serving: 20ml daily •  Less than $6 per day",
             "badge_4_icon": "shopify://shop_images/Icon3.svg",
             "badge_4_text": "Made in Japan"
-          }
-        },
-        "icon_with_text_QtiHtM": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "lightning_bolt",
-            "heading_1": "Enjoy 15% Off with NOWORNEVER",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
-        "vitals_countdown_jUiRNG": {
-          "type": "shopify://apps/vitals/blocks/countdown/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "disabled": true,
-          "settings": {}
-        },
-        "inventory_hqFEqK": {
-          "type": "inventory",
-          "disabled": true,
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 10,
-            "show_inventory_quantity": true
           }
         },
         "collapsible_tab_dHEQRC": {
@@ -174,17 +127,12 @@
         "amazon_reviews_compact_widget_block_product_CWJFJf",
         "vitals_reviews_stars_hrrGH7",
         "title_BYxPjh",
-        "text_E8GkJn",
-        "icon_with_text_pYjCgk",
-        "price_Tdcm8b",
         "text_7zx6xy",
+        "price_Tdcm8b",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
         "trust_badges_V9J3VJ",
-        "icon_with_text_QtiHtM",
-        "vitals_countdown_jUiRNG",
-        "inventory_hqFEqK",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
         "collapsible_tab_G3g7xm"
