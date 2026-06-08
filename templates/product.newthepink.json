@@ -1,0 +1,638 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "breadcrumb_Cnkeg9": {
+          "type": "breadcrumb",
+          "settings": {
+            "padding_top": 30,
+            "padding_bottom": 30
+          }
+        },
+        "amazon_reviews_compact_widget_block_product_CWJFJf": {
+          "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "minimize": false
+          }
+        },
+        "vitals_reviews_stars_hrrGH7": {
+          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "title_BYxPjh": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_7zx6xy": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>25-Day Japanese Beauty Ritual • Less Than $6 Per Day</strong>",
+            "text_style": "subtitle"
+          }
+        },
+        "price_Tdcm8b": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "url": "",
+            "text": "Buy on Amazon",
+            "icon": "shopify://shop_images/image_5.png",
+            "show_amazon_icon": false,
+            "btn_style": "custom",
+            "btn_bg_color": "#000000",
+            "btn_text_color": "#ffffff",
+            "btn_width": 100
+          }
+        },
+        "trust_badges_V9J3VJ": {
+          "type": "trust_badges",
+          "settings": {
+            "show_border": true,
+            "border_color": "#e0e0e0",
+            "bg_color": "#ffffff",
+            "text_color": "#1c2b6b",
+            "icon_size": 24,
+            "margin_top": -24,
+            "margin_bottom": -16,
+            "badge_1_icon": "shopify://shop_images/Icon.svg",
+            "badge_1_text": "Freeshipping within US. Delivered in 3 - 5 Business Days",
+            "badge_2_icon": "shopify://shop_images/secured.png",
+            "badge_2_text": "30-Day Money-back Guarantee",
+            "badge_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
+            "badge_3_text": "500ml bottle • Recommended serving: 20ml daily •  Less than $6 per day",
+            "badge_4_icon": "shopify://shop_images/Icon3.svg",
+            "badge_4_text": "Made in Japan"
+          }
+        },
+        "collapsible_tab_dHEQRC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Best For",
+            "icon": "star",
+            "content": "<p>✓ Visible signs of aging<br/>✓ Dull skin and uneven tone<br/>✓ Hair & nail support<br/>✓ Daily beauty wellness</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_zCAaTq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use",
+            "icon": "check_mark",
+            "content": "<p>Drink <strong>25ml daily</strong> for optimal results (Best taken in the morning or before bedtime). Serve chilled for a refreshing taste</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_G3g7xm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Star Ingredients",
+            "icon": "bottle",
+            "content": "<p><strong>120,000mg Deep-Sea Salmon Collagen</strong><br/>Powered by Liposome Technology for superior absorption</p><p><strong>Sakura (Cherry Blossom) Extract <br/></strong>Natural Brightening Agent</p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/>Harnessing 8 years of traditional Japanese fermentation science</p><p><strong>The Hydration & Bounce Duo </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_Cnkeg9",
+        "amazon_reviews_compact_widget_block_product_CWJFJf",
+        "vitals_reviews_stars_hrrGH7",
+        "title_BYxPjh",
+        "text_7zx6xy",
+        "price_Tdcm8b",
+        "variant_picker",
+        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
+        "buy_buttons",
+        "trust_badges_V9J3VJ",
+        "collapsible_tab_dHEQRC",
+        "collapsible_tab_zCAaTq",
+        "collapsible_tab_G3g7xm"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-3",
+        "breadcrumb_link_color": "#556884",
+        "breadcrumb_current_color": "#1c2b6b",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "columns",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_6hBmwB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QgXeKR": {
+          "type": "heading",
+          "settings": {
+            "heading": "See Why Customers Love It →",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QgXeKR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1777450600510c9ce6": {
+      "type": "apps",
+      "blocks": {
+        "amazon_reviews_masonry_widget_block_product_QRNLiG": {
+          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "settings": {
+            "font": "default",
+            "themeId": "light",
+            "showProductPicture": true,
+            "showDate": true,
+            "textStyle": "quoted",
+            "alignment": "left",
+            "infoPosition": "top",
+            "ratingStyle": "center"
+          }
+        }
+      },
+      "block_order": [
+        "amazon_reviews_masonry_widget_block_product_QRNLiG"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "product_tabs_KJinxn": {
+      "type": "product-tabs",
+      "blocks": {
+        "tab_DBnYjC": {
+          "type": "tab",
+          "settings": {
+            "label": "Why It Works",
+            "tab_id": "all"
+          }
+        },
+        "row_mgBkDE": {
+          "type": "row",
+          "settings": {
+            "tab_ref": "",
+            "color_scheme": "scheme-2",
+            "show_border": true,
+            "border_color": "#e0e0e0",
+            "image": "shopify://shop_images/Review_image.jpg",
+            "icon_1_image": "shopify://shop_images/made-in-japan_7703f208-f0b3-4495-99c4-8a9909b18e25.png",
+            "icon_1_label": "Made In Japan",
+            "icon_2_image": "shopify://shop_images/4.svg",
+            "icon_2_label": "Natural Ingredients",
+            "icon_3_image": "shopify://shop_images/2.svg",
+            "icon_3_label": "Fish Collagen",
+            "icon_4_image": "shopify://shop_images/3.svg",
+            "icon_4_label": "Sakura Extract",
+            "heading": "",
+            "description": "",
+            "faq_1_icon": "shopify://shop_images/Icon_Container2.svg",
+            "faq_1_question": "Deep Cellular Absorption",
+            "faq_1_subtitle": "120,000mg of premium marine collagen peptides are delivered through advanced liposome technology, helping your body absorb nutrients more efficiently for visible skin renewal and lasting hydration.",
+            "faq_1_answer": "<p><strong>Benefits:</strong></p><p>✓ Smoother-looking skin</p><p>✓ Improved elasticity</p><p>✓ Enhanced daily hydration</p>",
+            "faq_1_open": false,
+            "faq_2_icon": "shopify://shop_images/Icon_Container5.svg",
+            "faq_2_question": "Radiance & Age-Defying Support",
+            "faq_2_subtitle": "Japanese Sakura Extract, Royal Jelly, Hyaluronic Acid, and essential vitamins work together to support your skin's natural renewal process and help maintain a brighter, more youthful appearance.",
+            "faq_2_answer": "<p><strong>Benefits:</strong></p><p>✓ Brighter complexion</p><p>✓ More even skin tone</p><p>✓ Reduced appearance of fine lines</p>",
+            "faq_2_open": false,
+            "faq_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
+            "faq_3_question": "Beauty & Wellness From Within",
+            "faq_3_subtitle": "82X's proprietary blend of fermented botanicals and metabolic-support ingredients helps nourish the body from within while supporting everyday beauty and wellness goals.",
+            "faq_3_answer": "<p><strong>Benefits:</strong></p><p>✓ Daily beauty support</p><p>✓ Healthy metabolism support</p><p>✓ Feel refreshed and energized</p>",
+            "faq_3_open": false,
+            "faq_4_question": "",
+            "faq_4_subtitle": "",
+            "faq_4_answer": "",
+            "faq_4_open": false,
+            "faq_5_question": "",
+            "faq_5_subtitle": "",
+            "faq_5_answer": "",
+            "faq_5_open": false,
+            "faq_6_question": "",
+            "faq_6_subtitle": "",
+            "faq_6_answer": "",
+            "faq_6_open": false,
+            "faq_7_question": "",
+            "faq_7_subtitle": "",
+            "faq_7_answer": "",
+            "faq_7_open": false,
+            "faq_8_question": "",
+            "faq_8_subtitle": "",
+            "faq_8_answer": "",
+            "faq_8_open": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "tab_DBnYjC",
+        "row_mgBkDE"
+      ],
+      "name": "Product Tabs",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "nav_color": "#1c2b6b",
+        "nav_active_text": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "product_ingredients_7RjUJx": {
+      "type": "product-ingredients",
+      "blocks": {
+        "ingredient_row_8EMgQA": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Fish Collagen Peptide",
+            "amount": "120,000 mg"
+          }
+        },
+        "ingredient_row_7b68Dy": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Royal Jelly",
+            "amount": "200 mg"
+          }
+        },
+        "ingredient_row_nk4HzP": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Hyaluronic Acid",
+            "amount": "100 mg"
+          }
+        },
+        "ingredient_row_h3DqkR": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B2",
+            "amount": "34,5 mg"
+          }
+        },
+        "ingredient_row_gWw3qh": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B6",
+            "amount": "23,4 mg"
+          }
+        },
+        "ingredient_row_yqQLfJ": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin B1",
+            "amount": "21,6 mg"
+          }
+        },
+        "ingredient_row_nYnJPg": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin E",
+            "amount": "20 mg"
+          }
+        },
+        "ingredient_row_VThHQm": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Elastin",
+            "amount": "10 mg"
+          }
+        },
+        "ingredient_row_K4F7qx": {
+          "type": "ingredient_row",
+          "settings": {
+            "name": "Vitamin D",
+            "amount": "55 mg"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_row_8EMgQA",
+        "ingredient_row_7b68Dy",
+        "ingredient_row_nk4HzP",
+        "ingredient_row_h3DqkR",
+        "ingredient_row_gWw3qh",
+        "ingredient_row_yqQLfJ",
+        "ingredient_row_nYnJPg",
+        "ingredient_row_VThHQm",
+        "ingredient_row_K4F7qx"
+      ],
+      "name": "Product Ingredients",
+      "settings": {
+        "image": "shopify://shop_images/4_492a5343-30a4-4430-b065-2796f8e9e55b.png",
+        "mobile_image": "shopify://shop_images/4_492a5343-30a4-4430-b065-2796f8e9e55b.png",
+        "image_col_width": 50,
+        "col_gap": 64,
+        "table_dosage_gap": 32,
+        "table_heading": "Key Ingredients",
+        "card_header_bg": "#ffffff",
+        "card_bg": "#e8f2fb",
+        "card_radius": 16,
+        "row_divider_color": "#c8d8e8",
+        "divider_color": "#a0b8cc",
+        "full_list_heading": "Nutrient Support:",
+        "full_list_text": "<p>Fermented vegetable extract, African Mango extract, Yeast peptide, Cherry blossom extract powder, Pineapple fruit extract, Glucosamin, Magnesium chloride, Camellia-seed Extract, Coconut water powder, Kiwi seed extract, Cyclic oligosaccharide, Unshu mikan extract, Acidifier (citric acid, fermented lactic acid), Flavor (Mango flavor, Passion fruit flavor), Sweetener ( stevia, sucralose, acesulfame potassion), Preservative (Sodium benzoate), Water</p>",
+        "dosage_heading": "Recommended Dosage",
+        "dosage_text": "<p>Usually, drink about <strong>25ml per day</strong>, and it can be diluted with water or fruit juice according to your preference.</p>",
+        "dosage_align": "center",
+        "background_color": "#1c2b6b",
+        "heading_color": "#ffffff",
+        "text_color": "#1c2b6b",
+        "color_scheme": "",
+        "padding_top": 44,
+        "padding_bottom": 60
+      }
+    },
+    "1778815538b29b16f1": {
+      "type": "apps",
+      "blocks": {
+        "vitals_product_reviews_WAyRMC": {
+          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {
+            "hide_mock_data": false
+          }
+        }
+      },
+      "block_order": [
+        "vitals_product_reviews_WAyRMC"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "accordion_section_cmYxRz": {
+      "type": "accordion-section",
+      "blocks": {
+        "item_WaPpKd": {
+          "type": "item",
+          "settings": {
+            "title": "Can 82X Support My Weight Management and Skin Goals Simultaneously?",
+            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea salmon collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
+            "open_by_default": true
+          }
+        },
+        "item_wGGX4D": {
+          "type": "item",
+          "settings": {
+            "title": "Why Is This Formula Superior to Regular Collagen Drinks?",
+            "content": "<p>Our Liposomal technology protects Kosoteki peptides (under 500 Daltons) for enhanced bio-availability and deeper skin support.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_QUdkMG": {
+          "type": "item",
+          "settings": {
+            "title": "I’m Over 35 with Visible Aging Concerns. Is This Right for Me?",
+            "content": "<p>Yes. Formulated for women 30+, it supports skin density and resilience to help smooth the appearance of fine lines and lift from within.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_FwXRPR": {
+          "type": "item",
+          "settings": {
+            "title": "Is It Safe for Consistent Daily Use?",
+            "content": "<p>Our formula is crafted from premium botanical and marine ingredients. It is designed for long-term support as part of a balanced lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.</p>",
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "item_WaPpKd",
+        "item_wGGX4D",
+        "item_QUdkMG",
+        "item_FwXRPR"
+      ],
+      "name": "Accordion — FAQ",
+      "settings": {
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_max_width": 800,
+        "subtext": "Rejuvenate and Protect Your Natural Beauty",
+        "text_align": "center",
+        "list_max_width": 860,
+        "tag_bg": "#d6e8f8",
+        "tag_color": "#1c2b6b",
+        "divider_color": "#e0e0e0",
+        "title_color": "#111111",
+        "body_color": "#555555",
+        "icon_color": "#111111",
+        "card_style": true,
+        "card_bg": "#d6e8f8",
+        "card_radius": 20,
+        "card_padding_v": 64,
+        "card_padding_h": 48,
+        "heading_color": "#111111",
+        "subtext_color": "#555555",
+        "section_bg": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
+    },
+    "logo_content_banner_fJ9ziz": {
+      "type": "logo-content-banner",
+      "blocks": {
+        "heading_dyW98D": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It, Risk - Free!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nx8xFf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're not satisfied with our product, simply contact us and we'll give you a full, 100% hassle-free refund.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dyW98D",
+        "text_nx8xFf"
+      ],
+      "name": "Logo Content Banner",
+      "settings": {
+        "logo": "shopify://shop_images/secured.png",
+        "logo_width_desktop": 160,
+        "logo_width_mobile": 80,
+        "desktop_vertical_align": "center",
+        "mobile_align": "flex-start",
+        "gap_desktop": 48,
+        "gap_mobile": 24,
+        "content_max_width": 800,
+        "heading_color": "#111111",
+        "text_color": "#444444",
+        "btn_primary_bg": "#1c2b6b",
+        "btn_primary_color": "#ffffff",
+        "background_color": "#d6e8f8",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "logo_marquee_g7pcYc": {
+      "type": "logo-marquee",
+      "blocks": {
+        "text_rAFXhQ": {
+          "type": "text",
+          "settings": {
+            "text": "Science Backed",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_AXwBPG": {
+          "type": "text",
+          "settings": {
+            "text": "Woman Friendly",
+            "font_size": 2.2,
+            "link": ""
+          }
+        },
+        "text_GqARzm": {
+          "type": "text",
+          "settings": {
+            "text": "Japanese Made",
+            "font_size": 2,
+            "link": ""
+          }
+        },
+        "text_bjUkPF": {
+          "type": "text",
+          "settings": {
+            "text": "Natural + Organic",
+            "font_size": 2.4,
+            "link": ""
+          }
+        },
+        "text_qdk3yP": {
+          "type": "text",
+          "settings": {
+            "text": "Easy & Delicious",
+            "font_size": 2,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_rAFXhQ",
+        "text_AXwBPG",
+        "text_GqARzm",
+        "text_bjUkPF",
+        "text_qdk3yP"
+      ],
+      "name": "Logo Marquee",
+      "settings": {
+        "subheading": "As Featured In",
+        "subheading_gap": 24,
+        "direction": "left",
+        "speed": 32,
+        "logo_height": 44,
+        "gap": 80,
+        "pause_on_hover": true,
+        "background_color": "#1c2b6b",
+        "text_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "rich_text_6hBmwB",
+    "1777450600510c9ce6",
+    "product_tabs_KJinxn",
+    "product_ingredients_7RjUJx",
+    "1778815538b29b16f1",
+    "accordion_section_cmYxRz",
+    "logo_content_banner_fJ9ziz",
+    "logo_marquee_g7pcYc"
+  ]
+}
