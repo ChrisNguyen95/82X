@@ -583,36 +583,30 @@
         "heading_EyU4YC": {
           "type": "heading",
           "settings": {
-            "heading": "You've Tried Everything Else, Now Try Something That Works",
-            "heading_size": "h1"
+            "heading": "One Bottle. Every Routine.",
+            "heading_size": "h2"
           }
         },
         "text_xU4NGE": {
           "type": "text",
           "settings": {
-            "text": "<p>Describe your product or share a benefit here.</p>",
+            "text": "<h4>Designed to fit seamlessly into the moments that make up your day.</h4><p>From busy mornings and long commutes to workouts, weekend getaways, and everything in between, The Pink was created to go wherever life takes you.</p><p>No mixing. No preparation. No complicated routines.</p><p>Just a simple beauty ritual you can enjoy anytime, anywhere.</p>",
             "text_style": "body"
-          }
-        },
-        "button_hE4iDr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_EyU4YC",
-        "text_xU4NGE",
-        "button_hE4iDr"
+        "text_xU4NGE"
       ],
       "name": "Image Grid With Text",
       "settings": {
         "image_1": "shopify://shop_images/client-1.png",
         "image_2": "shopify://shop_images/client-2.png",
         "image_3": "shopify://shop_images/client-3.png",
+        "image_4": "shopify://shop_images/Client-4.png",
+        "image_5": "shopify://shop_images/client-5.png",
+        "image_6": "shopify://shop_images/client-6.png",
         "image_gap": 8,
         "image_gap_mobile": 6,
         "image_border_radius": 8,
