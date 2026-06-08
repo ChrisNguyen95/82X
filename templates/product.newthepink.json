@@ -511,6 +511,48 @@
         "padding_bottom": 60
       }
     },
+    "image_with_text_wh4Tne": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zbaLUq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready-To-Drink Convenience",
+            "heading_size": "h2"
+          }
+        },
+        "text_iyCAei": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>No powders. No shaking. No mixing. Simply open and enjoy anytime, anywhere.</li><li>Whether you're at work, heading to the gym, traveling, or enjoying a quiet moment at home, The Pink fits naturally into your routine.</li><li>Light, fruity, and enjoyable without the heavy aftertaste often associated with traditional collagen supplements.</li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zbaLUq",
+        "text_iyCAei"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "full_width": false,
+        "image": "shopify://shop_images/Taste.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "mobile_layout": "image_first",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "icon_size": 40,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_6hBmwB": {
       "type": "rich-text",
       "blocks": {
@@ -567,32 +609,80 @@
         "item_WaPpKd": {
           "type": "item",
           "settings": {
-            "title": "Can 82X Support My Weight Management and Skin Goals Simultaneously?",
-            "content": "<p>Yes — and that's exactly what makes the Sakura line unique. Most beauty supplements target only skin. Ours combines 120,000mg of deep-sea salmon collagen and Sakura Extract for visible skin renewal with African Mango Seed Extract and Yeast Peptide for fat metabolism and appetite control. You support both goals in a single 500ml daily bottle.</p>",
+            "title": "What makes The Pink different from collagen powders?",
+            "content": "<p>The Pink is a ready-to-drink beauty beverage designed for convenience.</p><p>No mixing. No measuring. No preparation.</p><p>Each bottle combines marine collagen peptides, Vitamin C, Ceramide, Hyaluronic Acid, B Vitamins, and 82 fermented plant extracts in a refreshing pineapple-flavored drink that fits easily into your daily routine.</p><p>Simply chill, open, and enjoy.</p>",
             "open_by_default": true
           }
         },
         "item_wGGX4D": {
           "type": "item",
           "settings": {
-            "title": "Why Is This Formula Superior to Regular Collagen Drinks?",
-            "content": "<p>Our Liposomal technology protects Kosoteki peptides (under 500 Daltons) for enhanced bio-availability and deeper skin support.</p>",
+            "title": "Will I actually enjoy the taste?",
+            "content": "<p>Yes.</p><p>The Pink features a light and refreshing pineapple flavor that was created to be easy and enjoyable to drink every day.</p><p>Unlike many traditional collagen supplements, it doesn't have a heavy texture or require mixing into other beverages.</p><p>Many customers tell us that consistency becomes easier because they genuinely enjoy drinking it.</p>",
             "open_by_default": false
           }
         },
         "item_QUdkMG": {
           "type": "item",
           "settings": {
-            "title": "I’m Over 35 with Visible Aging Concerns. Is This Right for Me?",
-            "content": "<p>Yes. Formulated for women 30+, it supports skin density and resilience to help smooth the appearance of fine lines and lift from within.</p>",
+            "title": "When should I drink The Pink?",
+            "content": "<p>Anytime that works for your routine.</p><p>Many customers enjoy it:</p><p>• In the morning before work</p><p>• As an afternoon refreshment</p><p>• After a workout</p><p>• While traveling</p><p>• During their skincare or self-care routine</p><p>The most important factor is consistency.</p>",
             "open_by_default": false
           }
         },
         "item_FwXRPR": {
           "type": "item",
           "settings": {
-            "title": "Is It Safe for Consistent Daily Use?",
-            "content": "<p>Our formula is crafted from premium botanical and marine ingredients. It is designed for long-term support as part of a balanced lifestyle. As with any supplement, we recommend consulting your physician if you are pregnant, nursing, or managing a medical condition.</p>",
+            "title": "How many bottles should I drink per day?",
+            "content": "<p>We recommend 1 bottles daily as part of your beauty and wellness routine.</p><p>Consistency is key when incorporating collagen and beauty-supporting nutrients into your lifestyle.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_LY7Cwi": {
+          "type": "item",
+          "settings": {
+            "title": "How long should I take The Pink?",
+            "content": "<p>The Pink is designed as a daily beauty ritual.</p><p>Many customers choose to make it part of their long-term wellness routine, just like skincare, hydration, and healthy nutrition habits.</p><p>Individual experiences may vary.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_EMAcVb": {
+          "type": "item",
+          "settings": {
+            "title": "Does The Pink contain sugar?",
+            "content": "<p>No. The Pink contains zero sugar and zero fat, making it an easy addition to a balanced lifestyle.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_9xBfDT": {
+          "type": "item",
+          "settings": {
+            "title": "Will it cause weight gain?",
+            "content": "<p>The Pink is low calorie, sugar-free, and fat-free.</p><p>It was designed to fit comfortably into health-conscious lifestyles.</p><p>If you have specific dietary concerns, we recommend consulting your healthcare professional.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_6DPFWc": {
+          "type": "item",
+          "settings": {
+            "title": "Is The Pink suitable for sensitive skin?",
+            "content": "<p>The Pink was developed in Japan using carefully selected ingredients and is enjoyed by many women as part of their daily beauty routine.</p><p>If you have specific allergies, sensitivities, or medical concerns, please consult your healthcare professional before use.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_wqVcRt": {
+          "type": "item",
+          "settings": {
+            "title": "Why does The Pink include Vitamin C, Ceramide, and Hyaluronic Acid?",
+            "content": "<p>These ingredients were selected to complement collagen as part of a beauty-from-within approach.</p><p>Together, they help support hydration, skin wellness, and a healthy-looking complexion as part of your daily routine.</p>",
+            "open_by_default": false
+          }
+        },
+        "item_AWWwx6": {
+          "type": "item",
+          "settings": {
+            "title": "Can I drink The Pink while traveling?",
+            "content": "<p>Absolutely.</p><p>Each bottle contains just 100ml, making it compact, portable, and easy to take wherever life takes you.</p><p>Many customers keep The Pink in their bag, office fridge, gym bag, or carry-on luggage.</p>",
             "open_by_default": false
           }
         }
@@ -601,7 +691,13 @@
         "item_WaPpKd",
         "item_wGGX4D",
         "item_QUdkMG",
-        "item_FwXRPR"
+        "item_FwXRPR",
+        "item_LY7Cwi",
+        "item_EMAcVb",
+        "item_9xBfDT",
+        "item_6DPFWc",
+        "item_wqVcRt",
+        "item_AWWwx6"
       ],
       "name": "Accordion — FAQ",
       "settings": {
@@ -750,6 +846,7 @@
     "image_with_text_WiNine",
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
+    "image_with_text_wh4Tne",
     "rich_text_6hBmwB",
     "1778815538b29b16f1",
     "accordion_section_cmYxRz",
