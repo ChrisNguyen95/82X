@@ -577,6 +577,81 @@
         "padding_bottom": 52
       }
     },
+    "testimonial_slider_PAgbDR": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "review_hhGa6a": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Lily Wang",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_jmPLqz": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Kaede",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        },
+        "review_6M6THq": {
+          "type": "review",
+          "settings": {
+            "star_rating": 5,
+            "author": "Mia Nguyen",
+            "location": "Texas, USA",
+            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+          }
+        }
+      },
+      "block_order": [
+        "review_hhGa6a",
+        "review_jmPLqz",
+        "review_6M6THq"
+      ],
+      "name": "Testimonial Grid (Photo)",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_italic": false,
+        "heading_align": "center",
+        "desktop_layout": "grid",
+        "desktop_cols": "3",
+        "card_bg": "#FFFFFF",
+        "card_border_color": "#E0E0E0",
+        "card_border_width": 0,
+        "card_radius": 16,
+        "card_padding": 24,
+        "card_text_align": "center",
+        "card_image_ratio": "3/4",
+        "card_image_radius": 16,
+        "card_image_flush": false,
+        "author_color": "#1C2B6B",
+        "review_text_color": "#3D3D3D",
+        "show_stars": false,
+        "star_color": "#F5A623",
+        "star_color_empty": "#D4D4D4",
+        "button_label": "",
+        "button_link": "",
+        "button_secondary": false,
+        "footer_gap": 40,
+        "card_peek_mobile": 32,
+        "card_gap_mobile": 12,
+        "card_gap_desktop": 24,
+        "show_nav": true,
+        "loop_enabled": true,
+        "nav_color": "#1C2B6B",
+        "color_scheme": "",
+        "background_color": "#FFFFFF",
+        "padding_top": 20,
+        "padding_bottom": 60
+      }
+    },
     "1778815538b29b16f1": {
       "type": "apps",
       "blocks": {
@@ -848,6 +923,7 @@
     "product_ingredients_7RjUJx",
     "image_with_text_wh4Tne",
     "rich_text_6hBmwB",
+    "testimonial_slider_PAgbDR",
     "1778815538b29b16f1",
     "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
