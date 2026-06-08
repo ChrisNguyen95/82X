@@ -101,9 +101,9 @@
             "badge_2_icon": "shopify://shop_images/secured.png",
             "badge_2_text": "30-Day Money-back Guarantee",
             "badge_3_icon": "shopify://shop_images/Icon_Container_72361cc4-d14f-4c1e-8bb4-9827ad9b477d.svg",
-            "badge_3_text": "500ml bottle • Recommended serving: 20ml daily •  Less than $6 per day",
+            "badge_3_text": "10 Ready-to-Drink Bottles • Just 100ml Each • Perfect for Work, Gym & Travel",
             "badge_4_icon": "shopify://shop_images/Icon3.svg",
-            "badge_4_text": "Made in Japan"
+            "badge_4_text": "Made in Japan • Inspired by Japanese Beauty-From-Within Rituals"
           }
         },
         "collapsible_tab_dHEQRC": {
@@ -184,30 +184,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "rich_text_6hBmwB": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_QgXeKR": {
-          "type": "heading",
-          "settings": {
-            "heading": "See Why Customers Love It →",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_QgXeKR"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-5",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "1777450600510c9ce6": {
@@ -429,6 +405,30 @@
         "padding_bottom": 60
       }
     },
+    "rich_text_6hBmwB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QgXeKR": {
+          "type": "heading",
+          "settings": {
+            "heading": "See Why Customers Love It →",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QgXeKR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1778815538b29b16f1": {
       "type": "apps",
       "blocks": {
@@ -639,10 +639,10 @@
   "order": [
     "main",
     "related-products",
-    "rich_text_6hBmwB",
     "1777450600510c9ce6",
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
+    "rich_text_6hBmwB",
     "1778815538b29b16f1",
     "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
