@@ -24,7 +24,12 @@
           "settings": {
             "font": "default",
             "themeId": "light",
-            "minimize": false
+            "variant": "basic",
+            "minimize": false,
+            "slideType": "rating",
+            "showDate": true,
+            "alignment": "center",
+            "layout": "stacked"
           }
         },
         "vitals_reviews_stars_hrrGH7": {
@@ -38,13 +43,20 @@
         "text_7zx6xy": {
           "type": "text",
           "settings": {
-            "text": "<strong>25-Day Japanese Beauty Ritual • Less Than $6 Per Day</strong>",
+            "text": "<strong>Glow Brighter. Feel More Energized. Every Day.</strong>",
             "text_style": "subtitle"
           }
         },
         "price_Tdcm8b": {
           "type": "price",
           "settings": {}
+        },
+        "text_G76dTR": {
+          "type": "text",
+          "settings": {
+            "text": "Japanese Beauty Drink with Collagen Peptides, Vitamin C, Ceramide & Hyaluronic Acid to support radiant skin and daily vitality.",
+            "text_style": "body"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -99,7 +111,7 @@
           "settings": {
             "heading": "Best For",
             "icon": "star",
-            "content": "<p>✓ Visible signs of aging<br/>✓ Dull skin and uneven tone<br/>✓ Hair & nail support<br/>✓ Daily beauty wellness</p>",
+            "content": "<p>✓ Brighter-Looking Skin</p><p>✓ Daily Energy Support</p><p>✓ Zero Sugar</p><p>✓ Ready-to-Drink</p><p>✓ Made in Japan</p>",
             "page": ""
           }
         },
@@ -129,6 +141,7 @@
         "title_BYxPjh",
         "text_7zx6xy",
         "price_Tdcm8b",
+        "text_G76dTR",
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
