@@ -577,78 +577,55 @@
         "padding_bottom": 52
       }
     },
-    "testimonial_slider_PAgbDR": {
-      "type": "testimonial-slider",
+    "image_grid_with_text_xtETgi": {
+      "type": "image-grid-with-text",
       "blocks": {
-        "review_hhGa6a": {
-          "type": "review",
+        "heading_EyU4YC": {
+          "type": "heading",
           "settings": {
-            "star_rating": 5,
-            "author": "Lily Wang",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "heading": "You've Tried Everything Else, Now Try Something That Works",
+            "heading_size": "h1"
           }
         },
-        "review_jmPLqz": {
-          "type": "review",
+        "text_xU4NGE": {
+          "type": "text",
           "settings": {
-            "star_rating": 5,
-            "author": "Kaede",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "text": "<p>Describe your product or share a benefit here.</p>",
+            "text_style": "body"
           }
         },
-        "review_6M6THq": {
-          "type": "review",
+        "button_hE4iDr": {
+          "type": "button",
           "settings": {
-            "star_rating": 5,
-            "author": "Mia Nguyen",
-            "location": "Texas, USA",
-            "text": "I was skeptical, but after 3 weeks of 82X Sakura Collagen, I saw a real difference. My face looks smoother, and I no longer need heavy foundation."
+            "button_label": "Learn more",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "review_hhGa6a",
-        "review_jmPLqz",
-        "review_6M6THq"
+        "heading_EyU4YC",
+        "text_xU4NGE",
+        "button_hE4iDr"
       ],
-      "name": "Testimonial Grid (Photo)",
+      "name": "Image Grid With Text",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_italic": false,
-        "heading_align": "center",
-        "desktop_layout": "grid",
-        "desktop_cols": "3",
-        "card_bg": "#FFFFFF",
-        "card_border_color": "#E0E0E0",
-        "card_border_width": 0,
-        "card_radius": 16,
-        "card_padding": 24,
-        "card_text_align": "center",
-        "card_image_ratio": "3/4",
-        "card_image_radius": 16,
-        "card_image_flush": false,
-        "author_color": "#1C2B6B",
-        "review_text_color": "#3D3D3D",
-        "show_stars": false,
-        "star_color": "#F5A623",
-        "star_color_empty": "#D4D4D4",
-        "button_label": "",
-        "button_link": "",
-        "button_secondary": false,
-        "footer_gap": 40,
-        "card_peek_mobile": 32,
-        "card_gap_mobile": 12,
-        "card_gap_desktop": 24,
-        "show_nav": true,
-        "loop_enabled": true,
-        "nav_color": "#1C2B6B",
-        "color_scheme": "",
-        "background_color": "#FFFFFF",
-        "padding_top": 20,
+        "image_1": "shopify://shop_images/client-1.png",
+        "image_2": "shopify://shop_images/client-2.png",
+        "image_3": "shopify://shop_images/client-3.png",
+        "image_gap": 8,
+        "image_gap_mobile": 6,
+        "image_border_radius": 8,
+        "image_aspect_ratio": "adapt",
+        "layout": "image_first",
+        "mobile_layout": "text_first",
+        "gap_desktop": 48,
+        "gap_mobile": 32,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "padding_top": 60,
         "padding_bottom": 60
       }
     },
@@ -923,7 +900,7 @@
     "product_ingredients_7RjUJx",
     "image_with_text_wh4Tne",
     "rich_text_6hBmwB",
-    "testimonial_slider_PAgbDR",
+    "image_grid_with_text_xtETgi",
     "1778815538b29b16f1",
     "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
