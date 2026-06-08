@@ -401,8 +401,8 @@
       "name": "Product Tabs",
       "settings": {
         "color_scheme": "scheme-1",
-        "nav_color": "#1c2b6b",
-        "nav_active_text": "#ffffff",
+        "nav_color": "#ffe5ec",
+        "nav_active_text": "#070a13",
         "padding_top": 60,
         "padding_bottom": 60
       }
