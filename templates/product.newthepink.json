@@ -485,6 +485,7 @@
         "ingredient_row_VThHQm",
         "ingredient_row_K4F7qx"
       ],
+      "disabled": true,
       "name": "Product Ingredients",
       "settings": {
         "image": "shopify://shop_images/20260608-100757.png",
