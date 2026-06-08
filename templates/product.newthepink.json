@@ -668,7 +668,7 @@
         "text_color": "#444444",
         "btn_primary_bg": "#1c2b6b",
         "btn_primary_color": "#ffffff",
-        "background_color": "#d6e8f8",
+        "background_color": "#ffe5ec",
         "color_scheme": "",
         "padding_top": 24,
         "padding_bottom": 20
@@ -734,8 +734,8 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#1c2b6b",
-        "text_color": "#ffffff",
+        "background_color": "#ffffff",
+        "text_color": "#070a13",
         "color_scheme": "",
         "padding_top": 32,
         "padding_bottom": 32
