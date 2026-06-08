@@ -620,7 +620,7 @@
         "body_color": "#555555",
         "icon_color": "#111111",
         "card_style": true,
-        "card_bg": "#d6e8f8",
+        "card_bg": "#ffe5ec",
         "card_radius": 20,
         "card_padding_v": 64,
         "card_padding_h": 48,
