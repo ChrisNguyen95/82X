@@ -19,22 +19,20 @@
             "padding_bottom": 30
           }
         },
-        "amazon_reviews_compact_widget_block_product_CWJFJf": {
-          "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "loox_reviews_loox_rating_8NdnKV": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "font": "default",
-            "themeId": "light",
-            "variant": "basic",
-            "minimize": false,
-            "slideType": "rating",
-            "showDate": true,
-            "alignment": "center",
-            "layout": "stacked"
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
           }
-        },
-        "vitals_reviews_stars_hrrGH7": {
-          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {}
         },
         "title_BYxPjh": {
           "type": "title",
@@ -85,6 +83,10 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
+        },
+        "appstle_bundles_appstle_volume_discount_bundle_kdiM4K": {
+          "type": "shopify://apps/appstle-bundles/blocks/appstle-volume-discount-bundle/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
+          "settings": {}
         },
         "trust_badges_V9J3VJ": {
           "type": "trust_badges",
@@ -137,8 +139,7 @@
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
-        "amazon_reviews_compact_widget_block_product_CWJFJf",
-        "vitals_reviews_stars_hrrGH7",
+        "loox_reviews_loox_rating_8NdnKV",
         "title_BYxPjh",
         "text_7zx6xy",
         "price_Tdcm8b",
@@ -146,6 +147,7 @@
         "variant_picker",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
+        "appstle_bundles_appstle_volume_discount_bundle_kdiM4K",
         "trust_badges_V9J3VJ",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
