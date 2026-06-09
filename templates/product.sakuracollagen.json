@@ -21,10 +21,16 @@
         },
         "amazon_reviews_compact_widget_block_product_CWJFJf": {
           "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "disabled": true,
           "settings": {
             "font": "default",
             "themeId": "light",
-            "minimize": false
+            "variant": "basic",
+            "minimize": false,
+            "slideType": "rating",
+            "showDate": true,
+            "alignment": "center",
+            "layout": "stacked"
           }
         },
         "vitals_reviews_stars_hrrGH7": {
