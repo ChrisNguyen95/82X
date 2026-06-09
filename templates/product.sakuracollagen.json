@@ -202,32 +202,6 @@
         "padding_bottom": 52
       }
     },
-    "1778815538b29b16f1": {
-      "type": "apps",
-      "blocks": {
-        "vitals_product_reviews_WAyRMC": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {
-            "hide_mock_data": false
-          }
-        }
-      },
-      "block_order": [
-        "vitals_product_reviews_WAyRMC"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "1777450600510c9ce6": {
       "type": "apps",
       "blocks": {
@@ -243,10 +217,24 @@
             "infoPosition": "top",
             "ratingStyle": "center"
           }
+        },
+        "loox_reviews_loox_dynamic_section_TpEYJn": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
         }
       },
       "block_order": [
-        "amazon_reviews_masonry_widget_block_product_QRNLiG"
+        "amazon_reviews_masonry_widget_block_product_QRNLiG",
+        "loox_reviews_loox_dynamic_section_TpEYJn"
       ],
       "settings": {
         "include_margins": true,
@@ -632,7 +620,6 @@
     "main",
     "related-products",
     "rich_text_6hBmwB",
-    "1778815538b29b16f1",
     "1777450600510c9ce6",
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
