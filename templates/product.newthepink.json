@@ -120,12 +120,13 @@
           "settings": {
             "heading": "How to use",
             "icon": "check_mark",
-            "content": "<p>Drink <strong>25ml daily</strong> for optimal results (Best taken in the morning or before bedtime). Serve chilled for a refreshing taste</p>",
+            "content": "<p>10 Ready-to-Drink Bottles • Just 100ml Each • Perfect for Work, Gym & Travel</p>",
             "page": ""
           }
         },
         "collapsible_tab_G3g7xm": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Star Ingredients",
             "icon": "bottle",
