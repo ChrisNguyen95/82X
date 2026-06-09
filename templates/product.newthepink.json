@@ -883,8 +883,8 @@
         "logo_height": 44,
         "gap": 80,
         "pause_on_hover": true,
-        "background_color": "#ffffff",
-        "text_color": "#070a13",
+        "background_color": "#1C2B6B",
+        "text_color": "#ffffff",
         "color_scheme": "",
         "padding_top": 32,
         "padding_bottom": 32
