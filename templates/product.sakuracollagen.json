@@ -208,6 +208,7 @@
       "blocks": {
         "amazon_reviews_masonry_widget_block_product_QRNLiG": {
           "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+          "disabled": true,
           "settings": {
             "font": "default",
             "themeId": "light",
@@ -633,10 +634,10 @@
     "main",
     "related-products",
     "rich_text_6hBmwB",
+    "1778815538b29b16f1",
     "1777450600510c9ce6",
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
-    "1778815538b29b16f1",
     "accordion_section_cmYxRz",
     "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
