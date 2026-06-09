@@ -630,15 +630,22 @@
     "1778815538b29b16f1": {
       "type": "apps",
       "blocks": {
-        "vitals_product_reviews_WAyRMC": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+        "loox_reviews_loox_dynamic_section_AB8rQR": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "hide_mock_data": false
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
       "block_order": [
-        "vitals_product_reviews_WAyRMC"
+        "loox_reviews_loox_dynamic_section_AB8rQR"
       ],
       "settings": {
         "include_margins": true,
