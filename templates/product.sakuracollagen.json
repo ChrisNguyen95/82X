@@ -217,24 +217,10 @@
             "infoPosition": "top",
             "ratingStyle": "center"
           }
-        },
-        "loox_reviews_loox_dynamic_section_TpEYJn": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "reviews_to_display": "",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 20,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
         }
       },
       "block_order": [
-        "amazon_reviews_masonry_widget_block_product_QRNLiG",
-        "loox_reviews_loox_dynamic_section_TpEYJn"
+        "amazon_reviews_masonry_widget_block_product_QRNLiG"
       ],
       "settings": {
         "include_margins": true,
@@ -506,6 +492,39 @@
         "padding_bottom": 48
       }
     },
+    "1781019326ac629d84": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_yVDxgY": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_yVDxgY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "logo_content_banner_fJ9ziz": {
       "type": "logo-content-banner",
       "blocks": {
@@ -624,6 +643,7 @@
     "product_tabs_KJinxn",
     "product_ingredients_7RjUJx",
     "accordion_section_cmYxRz",
+    "1781019326ac629d84",
     "logo_content_banner_fJ9ziz",
     "logo_marquee_g7pcYc"
   ]
