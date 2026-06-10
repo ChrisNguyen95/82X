@@ -23,8 +23,24 @@
           "type": "title",
           "settings": {}
         },
+        "loox_reviews_loox_rating_QFpGih": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
         "text_kPTJY4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Advanced marine collagen formula with botanical stem cell ingredients for daily beauty and wellness support.",
             "text_style": "subtitle"
@@ -40,19 +56,6 @@
             "text": "Formulated with marine collagen peptides and Damask Rose stem cell extract to help support healthy-looking skin hydration, smoothness, and elasticity. Designed as a daily beauty wellness drink for women seeking premium Japanese-inspired nutritional care and radiant-looking skin.",
             "text_style": "body"
           }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "disabled": true,
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -118,11 +121,10 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "loox_reviews_loox_rating_QFpGih",
         "text_kPTJY4",
         "price_XqcrzV",
         "text_grw7Vf",
-        "variant_picker",
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
         "collapsible_tab_4RUtKb",
         "collapsible_tab_MbcfPG",
@@ -318,12 +320,6 @@
     "17742594372d116b7c": {
       "type": "apps",
       "blocks": {
-        "vitals_product_reviews_VEtwYt": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {
-            "hide_mock_data": false
-          }
-        },
         "amazon_reviews_carousel_widget_block_product_VTFzXH": {
           "type": "shopify://apps/amazon-reviews/blocks/carousel-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
           "settings": {
@@ -338,11 +334,24 @@
             "infoPosition": "top",
             "ratingStyle": "left"
           }
+        },
+        "loox_reviews_loox_dynamic_section_HYtmjd": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
         }
       },
       "block_order": [
-        "vitals_product_reviews_VEtwYt",
-        "amazon_reviews_carousel_widget_block_product_VTFzXH"
+        "amazon_reviews_carousel_widget_block_product_VTFzXH",
+        "loox_reviews_loox_dynamic_section_HYtmjd"
       ],
       "settings": {
         "include_margins": true,
