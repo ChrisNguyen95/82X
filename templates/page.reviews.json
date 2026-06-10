@@ -12,15 +12,92 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".main-page-title {text-align: center}"
+        ".main-page-title {text-align: center;}"
       ],
       "settings": {
         "padding_top": 48,
-        "padding_bottom": 100
+        "padding_bottom": 48
+      }
+    },
+    "17810773789f2b24f8": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_video_slider_YnPUei": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "show-by-tag": false,
+            "layout": "spotlight",
+            "shadow": "",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": true,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_YnPUei"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1781077384e3e12b88": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_RCWJJe": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_RCWJJe"
+      ],
+      "settings": {
+        "include_margins": true,
+        "title": "",
+        "heading_size": "h1",
+        "heading_align": "center",
+        "heading_max_width": 0,
+        "text": "",
+        "text_max_width": 0,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "17810773789f2b24f8",
+    "1781077384e3e12b88"
   ]
 }
