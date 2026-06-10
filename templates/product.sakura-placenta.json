@@ -23,21 +23,19 @@
           "type": "title",
           "settings": {}
         },
-        "vitals_reviews_stars_r7KP6R": {
-          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {}
-        },
-        "icon_with_text_8XtXVE": {
-          "type": "icon-with-text",
-          "disabled": true,
+        "loox_reviews_loox_rating_FMgH7R": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "layout": "vertical",
-            "icon_1": "fire",
-            "heading_1": "<strong>Highly rated by customers for:Skin Whitening, Body Contouring, Hormonal Balance, Dark Spot Fading, Detox & Immunity</strong>",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
           }
         },
         "text_dAxeyX": {
@@ -120,8 +118,7 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
-        "vitals_reviews_stars_r7KP6R",
-        "icon_with_text_8XtXVE",
+        "loox_reviews_loox_rating_FMgH7R",
         "text_dAxeyX",
         "price_gqgrfi",
         "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
@@ -350,15 +347,22 @@
     "17742594372d116b7c": {
       "type": "apps",
       "blocks": {
-        "vitals_product_reviews_Jc9NyY": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+        "loox_reviews_loox_dynamic_section_zMBHYb": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "hide_mock_data": false
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
       "block_order": [
-        "vitals_product_reviews_Jc9NyY"
+        "loox_reviews_loox_dynamic_section_zMBHYb"
       ],
       "settings": {
         "include_margins": true,
