@@ -23,6 +23,21 @@
           "type": "title",
           "settings": {}
         },
+        "loox_reviews_loox_rating_aXFb4C": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
         "price_fWc9Ag": {
           "type": "price",
           "settings": {}
@@ -41,11 +56,6 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
-        },
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "disabled": true,
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -111,10 +121,10 @@
       "block_order": [
         "breadcrumb_Cnkeg9",
         "title_BYxPjh",
+        "loox_reviews_loox_rating_aXFb4C",
         "price_fWc9Ag",
         "text_g8HRBp",
         "variant_picker",
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "buy_buttons",
         "collapsible_tab_pY6cc4",
         "collapsible_tab_pGYyk6",
@@ -293,15 +303,22 @@
     "17742594372d116b7c": {
       "type": "apps",
       "blocks": {
-        "vitals_product_reviews_qxTCk6": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+        "loox_reviews_loox_dynamic_section_CcPfVj": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "hide_mock_data": false
+            "reviews_to_display": "",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
       "block_order": [
-        "vitals_product_reviews_qxTCk6"
+        "loox_reviews_loox_dynamic_section_CcPfVj"
       ],
       "settings": {
         "include_margins": true,

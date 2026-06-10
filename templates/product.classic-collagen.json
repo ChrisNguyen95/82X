@@ -301,13 +301,6 @@
             "ratingStyle": "left"
           }
         },
-        "vitals_product_reviews_yBhRXg": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "disabled": true,
-          "settings": {
-            "hide_mock_data": false
-          }
-        },
         "loox_reviews_loox_dynamic_section_VxP3Kg": {
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -324,7 +317,6 @@
       },
       "block_order": [
         "amazon_reviews_masonry_widget_block_product_7jjC9N",
-        "vitals_product_reviews_yBhRXg",
         "loox_reviews_loox_dynamic_section_VxP3Kg"
       ],
       "settings": {
