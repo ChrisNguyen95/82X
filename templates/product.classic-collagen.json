@@ -63,7 +63,7 @@
             "show_gift_card_recipient": false,
             "url": "",
             "text": "Buy on Amazon",
-            "show_amazon_icon": true,
+            "show_amazon_icon": false,
             "btn_style": "custom",
             "btn_bg_color": "#000000",
             "btn_text_color": "#ffffff",
