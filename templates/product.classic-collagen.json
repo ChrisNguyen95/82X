@@ -82,9 +82,8 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false,
-            "url": "{{ product.metafields.custom.link_to_amazon.value }}",
+            "url": "",
             "text": "Buy on Amazon",
-            "icon": "shopify://shop_images/image_5.png",
             "show_amazon_icon": true,
             "btn_style": "custom",
             "btn_bg_color": "#000000",
