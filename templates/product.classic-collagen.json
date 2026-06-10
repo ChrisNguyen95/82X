@@ -45,19 +45,6 @@
             "text_style": "subtitle"
           }
         },
-        "icon_with_text_pNFDrM": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "fire",
-            "heading_1": "Highly rated by customers for: Collagen Quality, Skin Firmness, Joint Support, Immunity Boost, Better Sleep",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
         "price_9UgXc9": {
           "type": "price",
           "settings": {}
@@ -67,14 +54,6 @@
           "settings": {
             "text": "A premium liquid supplement formulated with marine collagen peptides, magnesium, royal jelly, glucosamine, hyaluronic acid, elastin, and a blend of fermented plant extracts. Designed to support daily beauty and wellness routines for adults seeking nutritional support for: healthy-looking skin hydration and elasticity, joint and mobility support, relaxation and restful wellness routines, digestive and gut wellness support",
             "text_style": "body"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
           }
         },
         "buy_buttons": {
@@ -90,11 +69,6 @@
             "btn_text_color": "#ffffff",
             "btn_width": 100
           }
-        },
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx": {
-          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-          "disabled": true,
-          "settings": {}
         },
         "collapsible_tab_WFk6Bz": {
           "type": "collapsible_tab",
@@ -147,12 +121,9 @@
         "title_BYxPjh",
         "loox_reviews_loox_rating_Uf4xDd",
         "text_D4wp8p",
-        "icon_with_text_pNFDrM",
         "price_9UgXc9",
         "text_eFc6pH",
-        "variant_picker",
         "buy_buttons",
-        "appstle_subscription_appstle_subscription_product_page_widget_Wrhfdx",
         "collapsible_tab_WFk6Bz",
         "collapsible_tab_zTWhXa",
         "collapsible_tab_iNVEBB",
