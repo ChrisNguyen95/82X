@@ -280,6 +280,7 @@
           "settings": {
             "font": "default",
             "themeId": "light",
+            "reviewsType": "image_first",
             "showProductPicture": true,
             "showDate": true,
             "textStyle": "plain",
@@ -596,39 +597,6 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
-    },
-    "17810149700d4cdd29": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_dynamic_section_cfEmmB": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "reviews_to_display": "",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 20,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_dynamic_section_cfEmmB"
-      ],
-      "settings": {
-        "include_margins": true,
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "heading_align": "center",
-        "heading_max_width": 0,
-        "text": "",
-        "text_max_width": 0,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -639,7 +607,6 @@
     "1778813366cbfa4b4c",
     "product_ingredients_hATdfY",
     "accordion_section_cmYxRz",
-    "logo_marquee_bm3BCd",
-    "17810149700d4cdd29"
+    "logo_marquee_bm3BCd"
   ]
 }
