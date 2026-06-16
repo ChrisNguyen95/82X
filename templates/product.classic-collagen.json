@@ -114,6 +114,10 @@
             "content": "",
             "page": ""
           }
+        },
+        "lavar_payment_badge_GKFKma": {
+          "type": "shopify://apps/lavar/blocks/payment-badge/2745f432-7710-4b6e-a8d3-de346dc5d440",
+          "settings": {}
         }
       },
       "block_order": [
@@ -128,7 +132,8 @@
         "collapsible_tab_zTWhXa",
         "collapsible_tab_iNVEBB",
         "collapsible_tab_jLkRL3",
-        "collapsible_tab_QKBy8T"
+        "collapsible_tab_QKBy8T",
+        "lavar_payment_badge_GKFKma"
       ],
       "settings": {
         "enable_sticky_info": true,
