@@ -190,11 +190,6 @@
           "greeting_message": ""
         }
       },
-      "5134484470793087125": {
-        "type": "shopify://apps/vitals/blocks/app-embed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-        "disabled": false,
-        "settings": {}
-      },
       "2680175748099902610": {
         "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
         "disabled": false,
@@ -224,6 +219,11 @@
       },
       "10508887350528622030": {
         "type": "shopify://apps/appstle-bundles/blocks/appstle-bundle/8909921b-2d24-4d68-9b12-9d045d3dcb0a",
+        "disabled": false,
+        "settings": {}
+      },
+      "7465990195487237579": {
+        "type": "shopify://apps/ea-sticky-cart/blocks/app-embed-block/a725b883-a528-4381-b4d8-4a870dad14a6",
         "disabled": false,
         "settings": {}
       }
