@@ -137,6 +137,10 @@
             "content": "<p><strong>120,000mg Deep-Sea Salmon Collagen</strong><br/>Powered by Liposome Technology for superior absorption</p><p><strong>Sakura (Cherry Blossom) Extract <br/></strong>Natural Brightening Agent</p><p><strong>Japanese Orange + Kiwi Seed Extract </strong><em>Vitamin C & Flavonoid Complex</em></p><p><strong>Coconut Water Powder </strong><em>Deep Skin Hydration</em></p><p><strong>African Mango Seed Extract </strong><em>Irvingia Gabonensis</em></p><p><strong>Yeast Peptide </strong><em>Appetite & Craving Regulation</em></p><p><strong>82 Fermented Plant Extracts</strong><br/>Harnessing 8 years of traditional Japanese fermentation science</p><p><strong>The Hydration & Bounce Duo </strong><em>Hydration & Resilience Duo</em></p><p><strong>Magnesium Chloride + Royal Jelly + Vitamin E <br/></strong><em>Stress & Sleep Support Complex</em></p>",
             "page": ""
           }
+        },
+        "lavar_payment_badge_cgkByX": {
+          "type": "shopify://apps/lavar/blocks/payment-badge/2745f432-7710-4b6e-a8d3-de346dc5d440",
+          "settings": {}
         }
       },
       "block_order": [
@@ -152,7 +156,8 @@
         "trust_badges_V9J3VJ",
         "collapsible_tab_dHEQRC",
         "collapsible_tab_zCAaTq",
-        "collapsible_tab_G3g7xm"
+        "collapsible_tab_G3g7xm",
+        "lavar_payment_badge_cgkByX"
       ],
       "settings": {
         "enable_sticky_info": true,
