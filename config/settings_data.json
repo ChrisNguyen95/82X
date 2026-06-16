@@ -226,6 +226,11 @@
         "type": "shopify://apps/ea-sticky-cart/blocks/app-embed-block/a725b883-a528-4381-b4d8-4a870dad14a6",
         "disabled": false,
         "settings": {}
+      },
+      "14960293953149298449": {
+        "type": "shopify://apps/lavar/blocks/lavar/2745f432-7710-4b6e-a8d3-de346dc5d440",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
