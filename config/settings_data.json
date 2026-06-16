@@ -222,13 +222,13 @@
         "disabled": false,
         "settings": {}
       },
-      "7465990195487237579": {
-        "type": "shopify://apps/ea-sticky-cart/blocks/app-embed-block/a725b883-a528-4381-b4d8-4a870dad14a6",
+      "14960293953149298449": {
+        "type": "shopify://apps/lavar/blocks/lavar/2745f432-7710-4b6e-a8d3-de346dc5d440",
         "disabled": false,
         "settings": {}
       },
-      "14960293953149298449": {
-        "type": "shopify://apps/lavar/blocks/lavar/2745f432-7710-4b6e-a8d3-de346dc5d440",
+      "9388344762370057067": {
+        "type": "shopify://apps/essential-cart-drawer/blocks/app-embed/824bb1f9-5f36-4608-a60c-1f2b6a6f8834",
         "disabled": false,
         "settings": {}
       }
