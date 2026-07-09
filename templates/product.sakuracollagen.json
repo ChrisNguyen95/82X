@@ -19,26 +19,13 @@
             "padding_bottom": 30
           }
         },
-        "amazon_reviews_compact_widget_block_product_CWJFJf": {
-          "type": "shopify://apps/amazon-reviews/blocks/compact-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "disabled": true,
-          "settings": {
-            "font": "default",
-            "themeId": "light",
-            "variant": "basic",
-            "minimize": false,
-            "slideType": "rating",
-            "showDate": true,
-            "alignment": "center",
-            "layout": "stacked"
-          }
-        },
         "title_BYxPjh": {
           "type": "title",
           "settings": {}
         },
         "loox_reviews_loox_rating_6tqGPU": {
           "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -145,7 +132,6 @@
       },
       "block_order": [
         "breadcrumb_Cnkeg9",
-        "amazon_reviews_compact_widget_block_product_CWJFJf",
         "title_BYxPjh",
         "loox_reviews_loox_rating_6tqGPU",
         "text_7zx6xy",
@@ -221,25 +207,6 @@
     },
     "1777450600510c9ce6": {
       "type": "apps",
-      "blocks": {
-        "amazon_reviews_masonry_widget_block_product_QRNLiG": {
-          "type": "shopify://apps/amazon-reviews/blocks/masonry-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "settings": {
-            "font": "default",
-            "themeId": "light",
-            "reviewsType": "image_first",
-            "showProductPicture": true,
-            "showDate": true,
-            "textStyle": "quoted",
-            "alignment": "left",
-            "infoPosition": "top",
-            "ratingStyle": "center"
-          }
-        }
-      },
-      "block_order": [
-        "amazon_reviews_masonry_widget_block_product_QRNLiG"
-      ],
       "settings": {
         "include_margins": true,
         "title": "",
@@ -445,9 +412,9 @@
         "loox_reviews_loox_dynamic_section_yVDxgY": {
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "reviews_to_display": "",
+            "reviews_to_display": "product_reviews_only",
             "default_tab": "automatic",
-            "only_photos": false,
+            "only_photos": true,
             "aggregated": false,
             "limit": 20,
             "hide_thumbnails": false,
